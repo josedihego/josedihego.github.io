@@ -60,10 +60,13 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Professor at <a href='https://portal.ifba.edu.br/' target='_blank'>IFBA</a> (since 2010).<br>Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at <a href='https://www.cin.ufpe.br' target='_blank'>CIn-UFPE</a>"
   links:
+  - label: "Email"
+    icon: "fas fa-fw fa-envelope"
+    url: "mailto:josedihego@gmail.com"
   - label: "Google Classroom"
     icon: "fas fa-fw fa-link"
     url: "https://classroom.google.com/u/1/"
-  - label: "YouTube"
+  - label: "YouTube Channel"
     icon: "fab fa-fw fa-youtube"
     url: "https://www.youtube.com/@josedihego"
   - label: "LinkedIn"
@@ -72,13 +75,19 @@ author:
   - label: "GitHub"
     icon: "fab fa-fw fa-github"
     url: "https://github.com/josedihego"
-  - label: "Amazon"
+  - label: "My Books on Amazon"
     icon: "fab fa-fw fa-amazon"
     url: "https://www.amazon.com/author/josedihego"
+  - label: "Lattes CV"
+    icon: "fas fa-fw fa-link"
+    url: "http://lattes.cnpq.br/1085956076115293"
 
 
 footer:
   links:
+  - label: "Email"
+    icon: "fas fa-fw fa-envelope"
+    url: "mailto:josedihego@gmail.com"
   - label: "Google Classroom"
     icon: "fas fa-fw fa-link"
     url: "https://classroom.google.com/u/1/"
@@ -94,6 +103,9 @@ footer:
   - label: "Amazon"
     icon: "fab fa-fw fa-amazon"
     url: "https://www.amazon.com/author/josedihego"
+  - label: "Lattes CV"
+    icon: "fas fa-fw fa-link"
+    url: "http://lattes.cnpq.br/1085956076115293"
 
 
 defaults:

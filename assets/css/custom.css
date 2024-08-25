@@ -1,0 +1,29 @@
+.paper-title {
+
+    font-size: 0.9em; /* Adjust this value as needed */
+  }
+
+  .doi-title {
+    font-size: 0.7em; /* Adjust this value as needed */
+  }
+
+  .author-title {
+    font-size: 0.8em; /* Adjust this value as needed */
+  }
+
+
+  .education-title {
+    font-size: 0.9em; /* Adjust this value as needed */
+  }
+
+  .general-title {
+    font-size: 0.9em; /* Adjust this value as needed */
+  }
+
+  .general-title-medium {
+    font-size: 0.8em; /* Adjust this value as needed */
+  }
+
+  .general-title-little {
+    font-size: 0.7em; /* Adjust this value as needed */
+  }
