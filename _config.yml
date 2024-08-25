@@ -13,14 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: Prof. José Dihego
+email: josedihego@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+ Professor at Federal Institute of Education, Science and Technology of Bahia - IFBA (since 2010). Education: Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at CIn-UFPE. Interested in Formal Methods, Programming Languages ​​and Mobile Development. 
+twitter_username: 
+github_username: josedihego
 minimal_mistakes_skin: default
 search: true
 
@@ -58,34 +56,45 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "José Dihego"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Professor at <a href='https://portal.ifba.edu.br/' target='_blank'>IFBA</a> (since 2010).<br>Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at <a href='https://www.cin.ufpe.br' target='_blank'>CIn-UFPE</a>"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+  - label: "Google Classroom"
+    icon: "fas fa-fw fa-link"
+    url: "https://classroom.google.com/u/1/"
+  - label: "YouTube"
+    icon: "fab fa-fw fa-youtube"
+    url: "https://www.youtube.com/@josedihego"
+  - label: "LinkedIn"
+    icon: "fab fa-fw fa-linkedin"
+    url: "https://www.linkedin.com/in/josedihego"
+  - label: "GitHub"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/josedihego"
+  - label: "Amazon"
+    icon: "fab fa-fw fa-amazon"
+    url: "https://www.amazon.com/author/josedihego"
+
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+  - label: "Google Classroom"
+    icon: "fas fa-fw fa-link"
+    url: "https://classroom.google.com/u/1/"
+  - label: "YouTube"
+    icon: "fab fa-fw fa-youtube"
+    url: "https://www.youtube.com/@josedihego"
+  - label: "LinkedIn"
+    icon: "fab fa-fw fa-linkedin"
+    url: "https://www.linkedin.com/in/josedihego"
+  - label: "GitHub"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/josedihego"
+  - label: "Amazon"
+    icon: "fab fa-fw fa-amazon"
+    url: "https://www.amazon.com/author/josedihego"
+
 
 defaults:
   # _posts
