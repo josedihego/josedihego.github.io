@@ -3,6 +3,8 @@ main:
     url: /
   - title: "My apps"
     url: /apps/
+  - title: "Youtube"
+    url: /youtube/  
   - title: "Teaching[pt-br]"
     url: /teaching/
   - title: "Courses[pt-br]"
