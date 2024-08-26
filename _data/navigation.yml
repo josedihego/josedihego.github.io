@@ -1,7 +1,9 @@
 main:
   - title: "Home"
     url: /
-  - title: "Teaching[PT-BR]"
+  - title: "Teaching[pt-br]"
     url: /teaching/
+  - title: "Courses[pt-br]"
+    url: /courses/
   - title: "About"
     url: /about/

@@ -7,18 +7,16 @@ author_profile: true
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-
 #### Interests
-- <span class="education-title">
-Formal Methods </span> 
+- <span class="education-title">Formal Methods</span> 
 - <span class="education-title">Programming Languages</span> 
 - <span class="education-title">Mobile Development</span> 
  
 
 #### Education
-- <span class="education-title">PhD in Computer Science, 2016 UFPE - Brazil </span> 
-- <span class="education-title">MSc in Computer Science, 2010 UFPE - Brazil </span> 
-- <span class="education-title">BSc in Computer Science, 2008 UFPE - Brazil </span> 
+- <span class="education-title">PhD in Computer Science, 2016 UFPE - Brazil</span> 
+- <span class="education-title">MSc in Computer Science, 2010 UFPE - Brazil</span> 
+- <span class="education-title">BSc in Computer Science, 2008 UFPE - Brazil</span> 
 
 #### Mobile Apps
  
@@ -34,7 +32,6 @@ Formal Methods </span>
 
 
 #### Selected publications
-
 
 - <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span>  <span class="doi-title">[[DOI]](https://arxiv.org/abs/2005.10295) </span> <br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
@@ -53,7 +50,7 @@ José Dihego, Augusto Sampaio, Marcel Oliveira</span>
 
 ## Professional Address
 
-<span class="general-title-little">Federal Institute of Education, Science and Technology of Bahia (IFBA)</span>
+<span class="general-title">Federal Institute of Education, Science and Technology of Bahia (IFBA)</span>
 
-<span class="general-title-little">Address: R. Emídio dos Santos, s/n - Barbalho, Salvador - BA, 40301-015</span>
+<span class="general-title">Address: R. Emídio dos Santos, s/n - Barbalho, Salvador - BA, 40301-015</span>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.2509220753486!2d-38.50325958965805!3d-12.963279687298526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71604df54e0265b%3A0xfcb98df08aee6867!2sIFBA%20-%20Campus%20Salvador!5e1!3m2!1sen!2sbr!4v1724614744533!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

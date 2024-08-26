@@ -13,24 +13,12 @@ author_profile: true
 - <span class="general-title-medium ">Segundas-feiras das 16:30h às 18:30h</span>
 - <span class="general-title-medium ">Quartas-feiras das 10:40h às 12:00h</span>
 
-Onde?
+### Locais de atendimentos
 
 - <span class="general-title-medium">Primeira opção: BLOCO E (LAB 1, LAB 2, LAB 3 ou LAB 4, primeiro andar)</span>
 - <span class="general-title-medium">Segunda opção: BLOCO L (LAB 5, primeiro andar)</span>
 - <span class="general-title-medium">Terceira opção: BLOCO D (em uma sala de aula no primeiro andar)</span>
 
-
-### Disciplinas de informática/programação e afins 
-
-- <span class="general-title-medium">
-    <a href="https://github.com/josedihego/programacaoC" target="_blank">TODOS OS CÓDIGOS DA DISCIPLINA AQUI NO GITHUB</a>
-  </span>
-
-### Disciplinas avançadas programação/algoritmos
-
-- <span class="general-title-medium">
-    <a href="https://github.com/josedihego/ADS-ALG-C" target="_blank">TODOS OS CÓDIGOS DA DISCIPLINA AQUI NO GITHUB</a>
-  </span>
 
 ### Datas importantes Integrado
 - <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade I - 11/05/2024</span>
