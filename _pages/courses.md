@@ -11,7 +11,15 @@ author_profile: true
 #### Superior
 
 - <span class="education-title">[Algoritmos e Estruturas de Dados (ADS - INF-006)](/algoritmos/)</span>
+- <span class="education-title">[Análise e Modelagem de Sistemas](/ams/)</span>
+- <span class="education-title">[Desenvolvimento Mobile](/mobile/)</span>
+- <span class="education-title">[Programação para redes de computadores em Python](/redespython/)</span>
 
+#### Curta duração
+
+- <span class="education-title">[Criptografia](/cripto/)</span>
+- <span class="education-title">[Arduino](/arduino/)</span>
+- <span class="education-title">[Python - Problemas/Soluções](/problemas/)</span>
 #### Integrado
 
 - <span class="education-title">[Química (INF081 - INFORMÁTICA - I)](/quimica/)</span>

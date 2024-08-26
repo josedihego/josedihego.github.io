@@ -1,6 +1,8 @@
 main:
   - title: "Home"
     url: /
+  - title: "My apps"
+    url: /apps/
   - title: "Teaching[pt-br]"
     url: /teaching/
   - title: "Courses[pt-br]"
