@@ -20,6 +20,8 @@ author_profile: true
 - <span class="education-title">[Criptografia](/cripto/)</span>
 - <span class="education-title">[Arduino](/arduino/)</span>
 - <span class="education-title">[Python - Problemas/Soluções](/problemas/)</span>
+  
+  
 #### Integrado
 
 - <span class="education-title">[Química (INF081 - INFORMÁTICA - I)](/quimica/)</span>
