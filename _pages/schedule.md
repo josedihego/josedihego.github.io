@@ -1,7 +1,7 @@
 ---
 title: ""
 layout: single
-permalink: /teaching/
+permalink: /schedule/
 author_profile: true
 ---
 
