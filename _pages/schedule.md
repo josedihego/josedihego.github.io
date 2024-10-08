@@ -11,7 +11,7 @@ author_profile: true
 ### Horários de atendimentos
 
 - <span class="general-title-medium ">Segundas-feiras das 18:40h às 20:20h</span>
-- <span class="general-title-medium ">Quartas-feiras das 16:00h às 18:00h</span>
+- <span class="general-title-medium ">Terças-feiras das 16:00h às 18:00h</span>
 
 ### Locais de atendimentos
 
