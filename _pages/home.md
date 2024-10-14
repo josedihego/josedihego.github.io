@@ -33,6 +33,8 @@ author_profile: true
 
 #### Selected publications
 
+- <span class="paper-title">An integrated framework for analysing simulating and testing UML models</span>  <span class="doi-title">[[CONF LINK]](https://sbmf24.ifes.edu.br/) </span> <br><span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span> 
+- 
 - <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span>  <span class="doi-title">[[DOI]](https://arxiv.org/abs/2005.10295) </span> <br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
 -  <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span> <span class="doi-title">[[DOI]](https://doi.org/10.1016/j.jss.2020.110598)</span> <br><span class="author-title">
