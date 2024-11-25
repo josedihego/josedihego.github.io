@@ -5,7 +5,9 @@ permalink: /logicaprog/
 author_profile: true
 ---
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+</script>
 
 ## INF027 - LÓGICA DE PROGRAMAÇÃO -  ADS
 
