@@ -33,21 +33,27 @@ author_profile: true
 
 #### Selected publications
 
-- <span class="paper-title">An integrated framework for analysing simulating and testing UML models</span>  <span class="doi-title" target="_blank" rel="noopener noreferrer">[[DOI]](https://doi.org/10.1007/978-3-031-78116-2_6) </span> <br><span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span> 
-  
-- <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span>  <span class="doi-title" target="_blank" rel="noopener noreferrer">[[DOI]](https://arxiv.org/abs/2005.10295) </span> <br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
--  <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span> <span class="doi-title" target="_blank" rel="noopener noreferrer">[[DOI]](https://doi.org/10.1016/j.jss.2020.110598)</span> <br><span class="author-title">
+<span class="paper-title">An integrated framework for analysing simulating and testing UML models</span>
+<span class="doi-title"><a href="https://doi.org/10.1007/978-3-031-78116-2_6" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br>
+<span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span>
+
+
+- <span class="paper-title">An integrated framework for analysing simulating and testing UML models</span>  <span class="doi-title">[[DOI]](https://doi.org/10.1007/978-3-031-78116-2_6) </span> <br><span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span> 
+  
+- <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span>  <span class="doi-title">[[DOI]](https://arxiv.org/abs/2005.10295) </span> <br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
+
+-  <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span> <span class="doi-title">[[DOI]](https://doi.org/10.1016/j.jss.2020.110598)</span> <br><span class="author-title">
 José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
-- <span class="paper-title">Aspect-Oriented Development of Trustworthy Component-based Systems</span> <span class="doi-title" target="_blank" rel="noopener noreferrer">[[DOI]](https://doi.org/10.1007/978-3-319-25150-9_25)</span> <br><span class="author-title">
+- <span class="paper-title">Aspect-Oriented Development of Trustworthy Component-based Systems</span> <span class="doi-title">[[DOI]](https://doi.org/10.1007/978-3-319-25150-9_25)</span> <br><span class="author-title">
  José Dihego, Augusto Sampaio</span> 
 
 
-- <span class="paper-title">Constructive extensibility of trustworthy component-based systems</span> <span class="doi-title" target="_blank" rel="noopener noreferrer">[[DOI]](https://doi.org/10.1145/2695664.2695916)</span> <br><span class="author-title">
+- <span class="paper-title">Constructive extensibility of trustworthy component-based systems</span> <span class="doi-title">[[DOI]](https://doi.org/10.1145/2695664.2695916)</span> <br><span class="author-title">
  José Dihego, Augusto Sampaio, Marcel Vinícius Medeiros Oliveira </span> 
 
-- <span class="paper-title">Algebraic Laws for Process Subtyping</span> <span class="doi-title" target="_blank" rel="noopener noreferrer">[[DOI]](https://doi.org/10.1007/978-3-642-41202-8_2)</span> <br> <span class="author-title">
+- <span class="paper-title">Algebraic Laws for Process Subtyping</span> <span class="doi-title">[[DOI]](https://doi.org/10.1007/978-3-642-41202-8_2)</span> <br> <span class="author-title">
  José Dihego, Pedro R. G. Antonino, Augusto Sampaio</span> 
 
 ## Professional Address
