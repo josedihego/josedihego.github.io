@@ -71,21 +71,27 @@ author:
   - label: "Google Classroom"
     icon: "fas fa-fw fa-link"
     url: "https://classroom.google.com/u/1/"
+    new_tab: true
   - label: "YouTube Channel"
     icon: "fab fa-fw fa-youtube"
     url: "https://www.youtube.com/@josedihego"
+    new_tab: true
   - label: "LinkedIn"
     icon: "fab fa-fw fa-linkedin"
     url: "https://www.linkedin.com/in/josedihego"
+    new_tab: true
   - label: "GitHub"
     icon: "fab fa-fw fa-github"
     url: "https://github.com/josedihego"
+    new_tab: true
   - label: "My Books on Amazon"
     icon: "fab fa-fw fa-amazon"
     url: "https://www.amazon.com/author/josedihego"
+    new_tab: true
   - label: "Lattes CV"
     icon: "fas fa-fw fa-link"
     url: "http://lattes.cnpq.br/1085956076115293"
+    new_tab: true
 
 
 footer:
@@ -96,21 +102,27 @@ footer:
   - label: "Google Classroom"
     icon: "fas fa-fw fa-link"
     url: "https://classroom.google.com/u/1/"
+    new_tab: true
   - label: "YouTube"
     icon: "fab fa-fw fa-youtube"
     url: "https://www.youtube.com/@josedihego"
+    new_tab: true
   - label: "LinkedIn"
     icon: "fab fa-fw fa-linkedin"
     url: "https://www.linkedin.com/in/josedihego"
+    new_tab: true
   - label: "GitHub"
     icon: "fab fa-fw fa-github"
     url: "https://github.com/josedihego"
+    new_tab: true
   - label: "Amazon"
     icon: "fab fa-fw fa-amazon"
     url: "https://www.amazon.com/author/josedihego"
+    new_tab: true
   - label: "Lattes CV"
     icon: "fas fa-fw fa-link"
     url: "http://lattes.cnpq.br/1085956076115293"
+    new_tab: true
 
 
 defaults:

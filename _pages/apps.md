@@ -143,7 +143,7 @@ Made with Flame by PhD José Dihego - josedihego.com
   </li>
   <li>
     <a href="https://agua-boa-agora.web.app/#/">
-      <i class="fas fa-fw fa-link"></i> App Store
+      <i class="fas fa-fw fa-link"></i> Web site
     </a>
   </li>
 </ul>
