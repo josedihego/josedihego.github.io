@@ -16,7 +16,7 @@ Having these two "keys", the receiver can reveal the encrypted message.
 <br>
 Made with Flutter by PhD José Dihego - josedihego.net
 <br></span>
-<span class="general-title-medium">Download:</span>
+- <span class="general-title-medium">Download:</span>
 <ul>
   <li>
     <a href="https://play.google.com/store/apps/details?id=net.josedihego.binaire" target="_blank" rel="noopener noreferrer">
@@ -29,10 +29,6 @@ Made with Flutter by PhD José Dihego - josedihego.net
     </a>
   </li>
 </ul>
-- <span class="general-title-medium">Download:</span> 
-  - [<i class="fab fa-google-play"></i> Google Play](https://play.google.com/store/apps/details?id=net.josedihego.binaire)
-  - [<i class="fab fa-apple"></i> App Store](https://apps.apple.com/br/app/binaire/id6450267197?l=en)
-
 
 ####  <img src="{{ '/assets/images/ennubon.png' | relative_url }}" width="50" height="50"/> **EnnuBon**
 - <span class="general-title-medium">
