@@ -20,12 +20,12 @@ author_profile: true
 
 #### Mobile Apps
  
-<a href="https://play.google.com/store/apps/developer?id=José+Dihego+da+Silva+Oliveira" target="_blank">
+<a href="https://play.google.com/store/apps/developer?id=José+Dihego+da+Silva+Oliveira" target="_blank" rel="noopener noreferrer">
   <i class="fab fa-google-play" style="font-size:24px;"></i>
  Android apps on Google Play
 </a>
  
-<a href="https://apps.apple.com/us/developer/jose-dihego-da-silva-oliveira/id1234567890" target="_blank">
+<a href="https://apps.apple.com/us/developer/jose-dihego-da-silva-oliveira/id1234567890" target="_blank" rel="noopener noreferrer">
   <i class="fab fa-app-store-ios" style="font-size:24px;"></i>
   iOS apps on Apple Store
 </a>
@@ -35,25 +35,19 @@ author_profile: true
 
 
 - <span class="paper-title">An integrated framework for analysing simulating and testing UML models</span>
-<span class="doi-title"><a href="https://doi.org/10.1007/978-3-031-78116-2_6" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br>
-<span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span>
+<span class="doi-title"><a href="https://doi.org/10.1007/978-3-031-78116-2_6" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span>
   
-- <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span>  
-<span class="doi-title"><a href="https://arxiv.org/abs/2005.10295" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br>
+- <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span><span class="doi-title"><a href="https://arxiv.org/abs/2005.10295" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br>
   <span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
--  <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span> <span class="doi-title"><a href="https://doi.org/10.1016/j.jss.2020.110598" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">
-José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
+-  <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span><span class="doi-title"><a href="https://doi.org/10.1016/j.jss.2020.110598" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
-- <span class="paper-title">Aspect-Oriented Development of Trustworthy Component-based Systems</span> <span class="doi-title"><a href="https://doi.org/10.1007/978-3-319-25150-9_25" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">
- José Dihego, Augusto Sampaio</span> 
+- <span class="paper-title">Aspect-Oriented Development of Trustworthy Component-based Systems</span><span class="doi-title"><a href="https://doi.org/10.1007/978-3-319-25150-9_25" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">José Dihego, Augusto Sampaio</span> 
 
 
-- <span class="paper-title">Constructive extensibility of trustworthy component-based systems</span> <span class="doi-title"><a href="https://doi.org/10.1145/2695664.2695916" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">
- José Dihego, Augusto Sampaio, Marcel Vinícius Medeiros Oliveira </span> 
+- <span class="paper-title">Constructive extensibility of trustworthy component-based systems</span><span class="doi-title"><a href="https://doi.org/10.1145/2695664.2695916" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Vinícius Medeiros Oliveira </span> 
 
-- <span class="paper-title">Algebraic Laws for Process Subtyping</span><span class="doi-title"><a href="https://doi.org/10.1007/978-3-642-41202-8_2" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br> <span class="author-title">
- José Dihego, Pedro R. G. Antonino, Augusto Sampaio</span> 
+- <span class="paper-title">Algebraic Laws for Process Subtyping</span><span class="doi-title"><a href="https://doi.org/10.1007/978-3-642-41202-8_2" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br> <span class="author-title">José Dihego, Pedro R. G. Antonino, Augusto Sampaio</span> 
 
 ## Professional Address
 
