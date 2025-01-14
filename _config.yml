@@ -152,3 +152,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+
+header:
+  navigation: true
+  responsive_navigation: true # Ensure this is set

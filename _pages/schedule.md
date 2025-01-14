@@ -28,6 +28,6 @@ author_profile: true
 
 ### Datas importantes Superior
 
-- <span class="general-title-medium">Término do 1º Semestre (2024.1) / Último dia para publicação dos resultados parciais das disciplinas do semestre 2024.1 - 29/06/2024</span>
-- <span class="general-title-medium">Período de Provas Finais - 04/07/2024 a 10/07/2024</span>
-- <span class="general-title-medium">Último dia para lançamento das notas no semestre letivo 2023.1 no SUAP - 13/07/2024</span>
+- <span class="general-title-medium">Término do 2º Semestre (2024.2) / Último dia para publicação dos resultados parciais das disciplinas do semestre 2024.2 - 08/03/2025</span>
+- <span class="general-title-medium">Período de Provas Finais - 10/03/2025 a 14/03/2025</span>
+- <span class="general-title-medium">Término do semestre letivo/Último dia para publicação dos resultados finais das disciplinas do semestre - 15/03/2025</span>
