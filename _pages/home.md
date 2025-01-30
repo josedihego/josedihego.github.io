@@ -37,9 +37,6 @@ author_profile: true
 - <span class="paper-title">An integrated framework for analysing simulating and testing UML models</span>
 <span class="doi-title"><a href="https://doi.org/10.1007/978-3-031-78116-2_6" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span>
   
-- <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span><span class="doi-title"><a href="https://arxiv.org/abs/2005.10295" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br>
-  <span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
-
 -  <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span><span class="doi-title"><a href="https://doi.org/10.1016/j.jss.2020.110598" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
 - <span class="paper-title">Aspect-Oriented Development of Trustworthy Component-based Systems</span><span class="doi-title"><a href="https://doi.org/10.1007/978-3-319-25150-9_25" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">José Dihego, Augusto Sampaio</span> 
