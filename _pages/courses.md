@@ -24,6 +24,10 @@ author_profile: true
   
   
 #### Integrado
+- <span class="education-title">[Lógica de Programação - Eletrônica - 9822-G2](/generalC/)</span>
+- <span class="education-title">[Lógica de Programação - Automação - 5821](/generalC/)</span>
+- <span class="education-title">[Informática Básica - Edificações - 1811](/generalC/)</span>
+- <span class="education-title">[Informática Básica - Edificações - 1813](/generalC/)</span>
 
 - <span class="education-title">[Química (INF081 - INFORMÁTICA - I)](/quimica/)</span>
 - <span class="education-title">[Eletrônica (LPR082 - LÓGICA DE PROGRAMAÇÃO - II )](/eletronica/)</span>
