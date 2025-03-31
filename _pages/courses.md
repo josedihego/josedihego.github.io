@@ -28,7 +28,6 @@ author_profile: true
 - <span class="education-title">[Lógica de Programação - Automação - 5821](/generalC/)</span>
 - <span class="education-title">[Informática Básica - Edificações - 1811](/generalC/)</span>
 - <span class="education-title">[Informática Básica - Edificações - 1813](/generalC/)</span>
-
 - <span class="education-title">[Química (INF081 - INFORMÁTICA - I)](/quimica/)</span>
 - <span class="education-title">[Eletrônica (LPR082 - LÓGICA DE PROGRAMAÇÃO - II )](/eletronica/)</span>
 - <span class="education-title">[Automação (LPR082 - LÓGICA DE PROGRAMAÇÃO - II )](/automacao/)</span>
