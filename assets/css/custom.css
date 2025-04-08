@@ -27,3 +27,16 @@
   .general-title-little {
     font-size: 0.7em; /* Adjust this value as needed */
   }
+
+
+  .feed-item {
+    background: #f5f8fa;
+    border-left: 4px solid #1da1f2;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-family: system-ui, sans-serif;
+  }
+  .feed-item:hover {
+    background: #e8f0fe;
+  }

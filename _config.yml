@@ -153,7 +153,11 @@ tag_archive:
   type: liquid
   path: /tags/
 
-
+collections:
+  news:
+    output: true
+    permalink: /news/:path/
+    
 header:
   navigation: true
   responsive_navigation: true # Ensure this is set
