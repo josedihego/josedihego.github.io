@@ -5,7 +5,7 @@ layout: single
 author_profile: false
 ---
 
-<h2>📢 Latest Updates</h2>
+<h2>📰 Notícias 🗒️</h2>
 
 {% assign sorted_news = site.news | sort: "date" | reverse %}
 {% for item in sorted_news %}
