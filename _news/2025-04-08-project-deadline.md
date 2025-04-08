@@ -1,6 +1,6 @@
 ---
-title: "Project Deadline Extended"
-date: 2025-04-08 14:00:00
+title: "Lista 1 algoritmos no ar"
+date: 2025-04-08 10:55:00
 ---
 
-📢 The project deadline has been extended to **April 15th**. Make sure to update your group planning!
+🧠 Lista 1 de algoritmos no ar pessoal!!! 🙏
