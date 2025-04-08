@@ -1,5 +1,5 @@
 ---
-title: "Course News"
+title: "Notícias"
 permalink: /news/
 layout: single
 author_profile: false
