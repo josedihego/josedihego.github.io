@@ -1,5 +1,6 @@
 ---
 title: ""
+math: true
 layout: single
 permalink: /logicaprog/
 author_profile: true
