@@ -1,9 +1,9 @@
 ---
 title: ""
-math: true
 layout: single
 permalink: /logicaprog/
 author_profile: true
+mathjax: true 
 ---
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
