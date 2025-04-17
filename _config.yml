@@ -29,6 +29,11 @@ lunr:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
@@ -59,13 +64,6 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
 
 
 author:
