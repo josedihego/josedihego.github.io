@@ -1,9 +1,9 @@
 ---
 title: ""
+mathjax: true 
 layout: single
 permalink: /logicaprog/
 author_profile: true
-mathjax: true 
 ---
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
@@ -15,10 +15,6 @@ mathjax: true
    
 #### Questões
 ## 1. Calculadora de operações básicas com validação
-
-$$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
 
 Escreva um programa que:
 1. Solicite ao usuário dois números e uma operação matemática (`+`, `-`, `*`, `/`).
