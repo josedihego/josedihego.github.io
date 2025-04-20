@@ -9,7 +9,7 @@ main:
     url: /schedule/
   - title: "Courses <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /courses/
-  - title: "News <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
-    url: /news/
+  #- title: "News <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
+   # url: /news/
   - title: "About"
     url: /about/
