@@ -5,6 +5,9 @@ layout: single
 permalink: /logicaprog/
 author_profile: true
 ---
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 ## INF027 - LÓGICA DE PROGRAMAÇÃO -  ADS
