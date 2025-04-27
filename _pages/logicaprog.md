@@ -16,7 +16,15 @@ author_profile: true
 #### Github da disciplina com TODOS os códigos
  
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
-   
+
+
+<div class="tabs">
+  <button class="tab-button active" onclick="openTab('tab1')">Básicos</button>
+  <button class="tab-button" onclick="openTab('tab2')">Avançados</button>
+
+  <div id="tab1" class="tab-content active markdown-content">
+
+
 ###  Questões (variáveis, comandos de decisão)
 
 ## 1. Calculadora de operações básicas com validação
@@ -307,3 +315,12 @@ $ Digite as coordenadas do vetor 1 (x1 y1): 1 0
 $ Digite as coordenadas do vetor 2 (x2 y2): 0 1 
 $ O ângulo entre os vetores é 90.00 graus.
 ```
+
+
+</div>
+
+  <div id="tab2" class="tab-content markdown-content">
+    ## 6. Validador de CPF
+    ... (rest of your advanced exercises in Markdown)
+  </div>
+</div>
