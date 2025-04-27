@@ -10,39 +10,12 @@ author_profile: true
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-<script>
-function openTab(tabName) {
-  var i, tabContent, tabButtons;
-  tabContent = document.getElementsByClassName("tab-content");
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = "none";
-  }
-  tabButtons = document.getElementsByClassName("tab-button");
-  for (i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].className = tabButtons[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  event.currentTarget.className += " active";
-}
-
-// Initially open the first tab
-document.addEventListener('DOMContentLoaded', function() {
-  openTab('tab1'); // Changed to 'tab1' to match your HTML
-});
-</script>
 
 ## INF027 - LÓGICA DE PROGRAMAÇÃO -  ADS
 
 #### Github da disciplina com TODOS os códigos
  
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
-
-
-<div class="tabs">
-  <button class="tab-button active" onclick="openTab('tab1')">Básicos</button>
-  <button class="tab-button" onclick="openTab('tab2')">Avançados</button>
-
-  <div id="tab1" class="tab-content active markdown-content">
 
 
 ###  Questões (variáveis, comandos de decisão)
@@ -335,12 +308,3 @@ $ Digite as coordenadas do vetor 1 (x1 y1): 1 0
 $ Digite as coordenadas do vetor 2 (x2 y2): 0 1 
 $ O ângulo entre os vetores é 90.00 graus.
 ```
-
-
-</div>
-
-  <div id="tab2" class="tab-content markdown-content">
-    ## 6. Validador de CPF
-    ... (rest of your advanced exercises in Markdown)
-  </div>
-</div>
