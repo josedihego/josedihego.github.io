@@ -1,7 +1,7 @@
 ---
 title: ""
 mathjax: true 
-layout: splash
+layout: single
 permalink: /logicaprog/
 author_profile: true
 ---
@@ -17,8 +17,6 @@ author_profile: true
  
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
    
-{% tabs %}
-{% tab Set 1 %}
 
 ####  Set 1 - Questões
 ## 1. Calculadora de operações básicas com validação
@@ -310,18 +308,3 @@ $ Digite as coordenadas do vetor 2 (x2 y2): 0 1
 $ O ângulo entre os vetores é 90.00 graus.
 ```
 
-{% endtab %}
-
-
-{% tabs %}
-{% tab Set 2 %}
-
-**Exemplo de execução**:
-
-```bash 
-$ Digite as coordenadas do vetor 1 (x1 y1): 1 0 
-$ Digite as coordenadas do vetor 2 (x2 y2): 0 1 
-$ O ângulo entre os vetores é 90.00 graus.
-```
-
-{% endtab %}
