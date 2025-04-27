@@ -10,13 +10,17 @@ author_profile: true
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
+
 ## INF027 - LÓGICA DE PROGRAMAÇÃO -  ADS
 
 #### Github da disciplina com TODOS os códigos
  
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
    
-#### Questões
+{% tabs %}
+{% tab Set 1 %}
+
+####  Set 1 - Questões
 ## 1. Calculadora de operações básicas com validação
 
 Escreva um programa que:
@@ -305,3 +309,5 @@ $ Digite as coordenadas do vetor 1 (x1 y1): 1 0
 $ Digite as coordenadas do vetor 2 (x2 y2): 0 1 
 $ O ângulo entre os vetores é 90.00 graus.
 ```
+
+{% endtab %}
