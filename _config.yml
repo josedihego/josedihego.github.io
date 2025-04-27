@@ -57,6 +57,7 @@ include:
 #   - vendor/ruby/
 
 # Plugins (previously gems:)
+remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
