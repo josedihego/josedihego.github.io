@@ -1,7 +1,6 @@
 ---
 title: ""
 mathjax: true 
-#layout: single
 layout: splash
 permalink: /logicaprog/
 author_profile: true
