@@ -65,7 +65,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - minimal-mistakes-jekyll 
+
 
 
 author:
