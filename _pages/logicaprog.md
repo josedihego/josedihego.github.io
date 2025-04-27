@@ -311,3 +311,17 @@ $ O ângulo entre os vetores é 90.00 graus.
 ```
 
 {% endtab %}
+
+
+{% tabs %}
+{% tab Set 2 %}
+
+**Exemplo de execução**:
+
+```bash 
+$ Digite as coordenadas do vetor 1 (x1 y1): 1 0 
+$ Digite as coordenadas do vetor 2 (x2 y2): 0 1 
+$ O ângulo entre os vetores é 90.00 graus.
+```
+
+{% endtab %}
