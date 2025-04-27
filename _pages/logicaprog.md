@@ -10,15 +10,7 @@ author_profile: true
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-
-## INF027 - LÓGICA DE PROGRAMAÇÃO -  ADS
-
-#### Github da disciplina com TODOS os códigos
- 
- - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
-
-
-
+<script>
 function openTab(tabName) {
   var i, tabContent, tabButtons;
   tabContent = document.getElementsByClassName("tab-content");
@@ -35,8 +27,16 @@ function openTab(tabName) {
 
 // Initially open the first tab
 document.addEventListener('DOMContentLoaded', function() {
-  openTab('basicos');
+  openTab('tab1'); // Changed to 'tab1' to match your HTML
 });
+</script>
+
+## INF027 - LÓGICA DE PROGRAMAÇÃO -  ADS
+
+#### Github da disciplina com TODOS os códigos
+ 
+ - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
+
 
 <div class="tabs">
   <button class="tab-button active" onclick="openTab('tab1')">Básicos</button>
