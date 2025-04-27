@@ -18,6 +18,26 @@ author_profile: true
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
 
 
+
+function openTab(tabName) {
+  var i, tabContent, tabButtons;
+  tabContent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+  tabButtons = document.getElementsByClassName("tab-button");
+  for (i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  event.currentTarget.className += " active";
+}
+
+// Initially open the first tab
+document.addEventListener('DOMContentLoaded', function() {
+  openTab('basicos');
+});
+
 <div class="tabs">
   <button class="tab-button active" onclick="openTab('tab1')">Básicos</button>
   <button class="tab-button" onclick="openTab('tab2')">Avançados</button>
