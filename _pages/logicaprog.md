@@ -17,13 +17,7 @@ author_profile: true
  
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
    
-
-<div class="tab">
-  <button class="tablinks active" onclick="openTab(event, 'set1')">Set 1</button>
-  <button class="tablinks" onclick="openTab(event, 'set2')">Set 2</button>
-</div>
-
-### Set 1 - Questões (variáveis, comandos de decisão) {: #set1 .tabcontent style="display:block;"}
+###  Questões (variáveis, comandos de decisão)
 
 ## 1. Calculadora de operações básicas com validação
 
@@ -313,5 +307,3 @@ $ Digite as coordenadas do vetor 1 (x1 y1): 1 0
 $ Digite as coordenadas do vetor 2 (x2 y2): 0 1 
 $ O ângulo entre os vetores é 90.00 graus.
 ```
-
-### Set 2 - Questões (variáveis, comandos de decisão) {: #set2 .tabcontent style="display:block;"}
