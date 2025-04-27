@@ -19,12 +19,12 @@ author_profile: true
    
 
 <div class="tab">
-  <button onclick="openTab('set1')">Set 1</button>
-  <button onclick="openTab('set2')">Set 2</button>
+  <button class="tablinks active" onclick="openTab(event, 'set1')">Set 1</button>
+  <button class="tablinks" onclick="openTab(event, 'set2')">Set 2</button>
 </div>
-<div id="set1" class="tabcontent">
 
-####  Set 1 - Questões (variáveis, comandos de decisão)
+### Set 1 - Questões (variáveis, comandos de decisão) {: #set1 .tabcontent style="display:block;"}
+
 ## 1. Calculadora de operações básicas com validação
 
 Escreva um programa que:
@@ -314,28 +314,4 @@ $ Digite as coordenadas do vetor 2 (x2 y2): 0 1
 $ O ângulo entre os vetores é 90.00 graus.
 ```
 
-</div>
-
-<div id="set2" class="tabcontent" style="display:none">
-  ## Set 2 - Outros exercícios
-  (Other exercises here)
-</div>
-
-<script>
-function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-}
-</script>
-
-<style>
-.tab button {
-  padding: 10px;
-  margin-right: 5px;
-  font-size: 16px;
-}
-</style>
+### Set 2 - Questões (variáveis, comandos de decisão) {: #set2 .tabcontent style="display:block;"}
