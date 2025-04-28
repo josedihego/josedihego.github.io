@@ -18,9 +18,9 @@ author_profile: true
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
 
 
-###  Questões (variáveis, comandos de decisão)
+##  Questões (variáveis, comandos de decisão)
 
-## 1. Calculadora de operações básicas com validação
+### 1. Calculadora de operações básicas com validação
 
 Escreva um programa que:
 1. Solicite ao usuário dois números e uma operação matemática (`+`, `-`, `*`, `/`).
@@ -36,7 +36,7 @@ $ Digite a operação (+, -, *, /): /
 $ Resultado: 2.00
 ```
 
-## 2. Classificação de triângulos
+### 2. Classificação de triângulos
 
 Escreva um programa que:
 1. Solicite ao usuário três lados de um triângulo.
@@ -55,7 +55,7 @@ $ Digite o lado 3: 8
 $ O triângulo é Isósceles.
 ```
 
-## 3. Menu de conversão de temperaturas
+### 3. Menu de conversão de temperaturas
 
 Crie um programa que:
 1. Exiba um menu com as seguintes opções:  
@@ -81,7 +81,7 @@ $ Digite a temperatura em Celsius: 25
 $ Resultado: 77.00 °F
 ```
 
-## 4. Jogo: Par ou Ímpar
+### 4. Jogo: Par ou Ímpar
 
 Escreva um programa que:
 1. Solicite ao usuário um número inteiro entre 1 e 100.
@@ -95,7 +95,7 @@ $ Digite um número entre 1 e 100: 42
 $ O número é Par.
 ```
 
-## 5. Cálculo do IMC com mensagens personalizadas
+### 5. Cálculo do IMC com mensagens personalizadas
 
 Crie um programa que:
 1. Solicite ao usuário seu peso (em kg) e sua altura (em metros).
@@ -114,7 +114,7 @@ $ Digite sua altura (m): 1.75
 $ Seu IMC é 22.86. Categoria: Peso normal.
 ```
 
-## 6. Validador de CPF
+### 6. Validador de CPF
 
 Escreva um programa que:
 1. Solicite ao usuário um número de CPF com 11 dígitos.
@@ -134,7 +134,7 @@ $ Digite o CPF (apenas números): 12345678909
 $ CPF inválido.
 ```
 
-## 7. Cálculo de raízes reais de uma equação quadrática
+### 7. Cálculo de raízes reais de uma equação quadrática
 
 Crie um programa que:
 1. Solicite ao usuário os coeficientes $$a$$, $$b$$, e $$c$$ de uma equação quadrática $$ ax^2 + bx + c = 0 $$.
@@ -152,7 +152,7 @@ $ Raízes reais: x1 = 2.00, x2 = 1.00
 ```
 
 
-## 8. Classificação de números perfeitos, abundantes e deficientes
+### 8. Classificação de números perfeitos, abundantes e deficientes
 
 Escreva um programa que:
 1. Solicite ao usuário um número inteiro positivo.
@@ -169,7 +169,7 @@ $ Digite um número: 28
 $ O número é Perfeito.
 ```
 
-## 9. Verificar se um ponto está dentro de um triângulo
+### 9. Verificar se um ponto está dentro de um triângulo
 
 Escreva um programa que:
 1. Solicite as coordenadas dos três vértices de um triângulo ($$A(x1, y1)$$, $$B(x2, y2)$$, $$C(x3, y3)$$).
@@ -187,7 +187,7 @@ $ Digite o ponto (x y): 2 2
 $ O ponto está dentro do triângulo.
 ```
 
-## 10. Detectar interseção entre dois círculos
+### 10. Detectar interseção entre dois círculos
 Crie um programa que:
 1. Solicite os centros e os raios de dois círculos $$C1(x1, y1, r1)$$ e $$C2(x2, y2, r2)$$.
 2. Calcule a distância entre os centros.
@@ -205,7 +205,7 @@ $ Digite o centro e raio do segundo círculo (x2 y2 r2): 7 0 3
 $ Os círculos são tangentes.
 ```
 
-## 11. Verificar colinearidade de três pontos
+### 11. Verificar colinearidade de três pontos
 
 Escreva um programa que:
 1. Solicite as coordenadas de três pontos $$P1(x1, y1)$$, $$P2(x2, y2)$$, $$P3(x3, y3)$$.
@@ -228,7 +228,7 @@ $ Os pontos são colineares.
 ```
 
 
-## 12. Verificar se um ponto está dentro de um círculo e fora de um quadrado
+### 12. Verificar se um ponto está dentro de um círculo e fora de um quadrado
 
 Crie um programa que:
 1. Solicite as coordenadas do centro e o raio de um círculo $$C(x, y, r)$$.
@@ -248,7 +248,7 @@ $ O ponto está dentro do círculo e fora do quadrado.
 ```
 
 
-## 13. Determinar o tipo de quadrilátero dado pelos vértices
+### 13. Determinar o tipo de quadrilátero dado pelos vértices
 
 Escreva um programa que:
 1. Solicite as coordenadas dos quatro vértices de um quadrilátero ($$A, B, C, D$$).
@@ -268,7 +268,7 @@ $ O quadrilátero é um Retângulo.
 ```
 
 
-## 14. Verificar se dois retângulos se sobrepõem
+### 14. Verificar se dois retângulos se sobrepõem
 
 Escreva um programa que:
 1. Solicite as coordenadas dos vértices opostos de dois retângulos $$R1(x1, y1, x2, y2)$$ e $$R2(x3, y3, x4, y4)$$.
@@ -286,7 +286,7 @@ $ Digite os vértices opostos do segundo retângulo (x3 y3 x4 y4): 3 3 6 6
 $ Os retângulos se sobrepõem.
 ```
 
-## 15. Determinar o ângulo entre dois vetores
+### 15. Determinar o ângulo entre dois vetores
 
 Escreva um programa que:
 1. Solicite as coordenadas de dois vetores no plano 2D: $$ v1(x1, y1)$$ e $$v2(x2, y2)$$.
