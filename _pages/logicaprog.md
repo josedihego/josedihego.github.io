@@ -20,6 +20,8 @@ author_profile: true
 
 ##  Questões (variáveis, comandos de decisão)
 
+<br><span style="margin-left:2em;">
+
 ### 1. Calculadora de operações básicas com validação
 
 Escreva um programa que:
@@ -27,6 +29,7 @@ Escreva um programa que:
 2. Use um bloco **if/else** para validar se a operação é válida.
 3. Se for válida, use **switch** para realizar a operação e exibir o resultado.
 4. Caso a operação seja divisão, verifique se o divisor é zero. Caso seja, exiba a mensagem **"Divisão por zero não permitida"** e termine o programa.
+<span>
 
 **Exemplo de execução**:
 ```bash
