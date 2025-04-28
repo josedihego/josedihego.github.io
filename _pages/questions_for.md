@@ -124,3 +124,37 @@ $ Resultado: 12 não é um número perfeito
 $ Digite um número positivo: -5  
 $ Erro: O número deve ser positivo!  
 ```
+
+### . Números de Armstrong (Narcisistas)
+Escreva um programa que:
+1. Solicite ao usuário um número inteiro positivo ($$N > 0$$).
+2. Verifique se N é um número de Armstrong (também chamado de narcisista).
+3. Exiba o resultado da verificação.
+
+**Definição Matemática:**
+Um número de $$k$$ dígitos é um número de Armstrong se a soma de cada um de seus dígitos elevados a $$k$$ é igual ao próprio número.
+- Exemplo: $$153 = 1^3 + 5^3 + 3^3 $$(pois 153 tem 3 dıˊgitos)
+- Exemplo: 153 = 13+53+33(pois 153 tem 3 dıˊgitos)
+
+**Tarefas do Programa:**
+1. alcular o número de dígitos (k) do número.
+2. Verificar se a soma dos dígitos elevados a k é igual ao número original.
+3. Exibir uma mensagem clara indicando se é ou não um número de Armstrong.
+
+**Exemplo de execução**:
+```bash
+$ Digite um número positivo: 407  
+$ Resultado: 407 é um número de Armstrong (4³ + 0³ + 7³ = 407)  
+```
+
+**Exemplo de execução**:
+```bash
+$ Digite um número positivo: 123  
+$ Resultado: 123 não é um número de Armstrong (1³ + 2³ + 3³ = 36 ≠ 123)  
+```
+
+**Exemplo de execução**:
+```bash
+$ Digite um número positivo: -22  
+$ Erro: O número deve ser positivo!   
+```
