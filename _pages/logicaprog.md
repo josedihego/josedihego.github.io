@@ -20,4 +20,4 @@ author_profile: true
 
 ##  Questões (variáveis, comandos de decisão)
 
- - <span class="education-title">Questões (variáveis, comandos de decisão)(/questions_if/)</span>
+ - <span class="education-title">[Questões (variáveis, comandos de decisão)](/questions_if/)</span>
