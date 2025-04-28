@@ -75,11 +75,11 @@ $ Soma dos pares até 10: 30
 Solicite ao usuário que informe um número inteiro não negativo ($$N \geq 0$$)
 
 1. Teste se o número é válido (não negativo)
-2 . Calcule e exiba o fatorial de $$N$$ (usando um laço de repetição)
+2. Calcule e exiba o fatorial de $$N$$ (usando um laço de repetição)
 
 **Lembrete**:
-- \( 0! = 1 \)
-- \( N! = N \times (N-1) \times (N-2) \times \cdots \times 1 \)
+- $$ 0! = 1 $$
+- $$ N! = N \times (N-1) \times (N-2) \times \cdots \times 1 $$
 
 **Exemplo de execução**:
 ```bash
