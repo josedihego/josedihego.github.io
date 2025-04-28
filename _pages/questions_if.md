@@ -14,7 +14,7 @@ author_profile: true
 <span class="education-title">[VOLTAR](/logicaprog/)</span>
 
 
-##  Questões (variáveis, comandos de decisão)
+##  Questões (variáveis e comandos de decisão)
 
 ### 1. Calculadora de operações básicas com validação
 

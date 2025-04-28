@@ -18,6 +18,10 @@ author_profile: true
  - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
 
 
-##  Questões (variáveis, comandos de decisão)
+##  Questões (variáveis e comandos de decisão)
 
  - <span class="education-title">[Questões (variáveis, comandos de decisão)](/questions_if/)</span>
+  
+##  Questões (comandos de repetição)
+
+ - <span class="education-title">[Questões (comandos de repetição)](/questions_for/)</span>
