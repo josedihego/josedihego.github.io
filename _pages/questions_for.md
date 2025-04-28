@@ -92,3 +92,35 @@ $ 5! = 120
 $ Digite um número não negativo: -3  
 $ Erro: O número deve ser não negativo!  
 ```
+
+
+### 5. Números Perfeitos
+Escreva um programa que:
+1. Solicite ao usuário que informe um número inteiro positivo ($$N > 0$$)
+2. Verifique se $$N$$ é um número perfeito
+3. Exiba o resultado da verificação
+
+**Lembrete**:
+Um número é perfeito quando a soma de seus divisores próprios (excluindo ele mesmo) é igual ao número.
+Exemplo: $$6 = 1+2+3$$
+
+
+**Exemplo de execução**:
+```bash
+$ Digite um número positivo: 28  
+$ Resultado: 28 é um número perfeito  
+```
+
+
+**Exemplo de execução**:
+```bash
+$ Digite um número positivo: 12  
+$ Resultado: 12 não é um número perfeito  
+```
+
+
+**Exemplo de execução**:
+```bash
+$ Digite um número positivo: -5  
+$ Erro: O número deve ser positivo!  
+```
