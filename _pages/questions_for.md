@@ -2,7 +2,7 @@
 title: ""
 mathjax: true 
 layout: single
-permalink: /questions_if/
+permalink: /questions_for/
 author_profile: true
 ---
 
