@@ -20,8 +20,6 @@ author_profile: true
 
 ##  Questões (variáveis, comandos de decisão)
 
-<details>
-
 ### 1. Calculadora de operações básicas com validação
 
 Escreva um programa que:
@@ -38,7 +36,7 @@ $ Digite o segundo número: 5
 $ Digite a operação (+, -, *, /): /
 $ Resultado: 2.00
 ```
-</details>
+
 ### 2. Classificação de triângulos
 
 Escreva um programa que:
