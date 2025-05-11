@@ -27,7 +27,7 @@ author_profile: true
 
 ### Datas importantes Superior
 
-- <span class="general-title-medium">Término das aulas/Último dia para publicação dos resultados parciais das disciplinas do semestre - 09/08</span>
+- <span class="general-title-medium">Término das aulas/Último dia para publicação dos resultados parciais das disciplinas do semestre - 09/08/2025</span>
 - <span class="general-title-medium">Provas Finais  - 11 a 15/08/2025</span>
 - <span class="general-title-medium">Último dia para publicação dos resultados finais das disciplinas do semestre - 16/08/2025</span>
 - <span class="general-title-medium">Término do semestre letivo/Último dia para publicação dos resultados finais das disciplinas do semestre - 15/03/2025</span>
