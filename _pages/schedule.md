@@ -20,13 +20,14 @@ author_profile: true
 
 
 ### Datas importantes Integrado
-- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade I - 11/05/2024</span>
-- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade II - 18/11/2024</span>
-- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade III - 17/02/2025</span>
+- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade I - 01/07/2025</span>
+- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade II - 21/10/2025</span>
+- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade III - 31/01/2026</span>
 
 
 ### Datas importantes Superior
 
-- <span class="general-title-medium">Término do 2º Semestre (2024.2) / Último dia para publicação dos resultados parciais das disciplinas do semestre 2024.2 - 08/03/2025</span>
-- <span class="general-title-medium">Período de Provas Finais - 10/03/2025 a 14/03/2025</span>
+- <span class="general-title-medium">Término das aulas/Último dia para publicação dos resultados parciais das disciplinas do semestre - 09/08</span>
+- <span class="general-title-medium">Provas Finais  - 11 a 15/08/2025</span>
+- <span class="general-title-medium">Último dia para publicação dos resultados finais das disciplinas do semestre - 16/08/2025</span>
 - <span class="general-title-medium">Término do semestre letivo/Último dia para publicação dos resultados finais das disciplinas do semestre - 15/03/2025</span>
