@@ -3,8 +3,8 @@ main:
     url: /
   - title: "My apps"
     url: /apps/
-  - title: "Youtube"
-    url: /youtube/  
+  #- title: "Youtube"
+  #  url: /youtube/  
   - title: "Schedule <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /schedule/
   - title: "Courses <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
