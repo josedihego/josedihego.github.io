@@ -111,10 +111,10 @@ footer:
     icon: "fas fa-fw fa-link"
     url: "https://classroom.google.com/u/1/"
     new_tab: true
-  - label: "YouTube"
-    icon: "fab fa-fw fa-youtube"
-    url: "https://www.youtube.com/@josedihego"
-    new_tab: true
+  #- label: "YouTube"
+  #  icon: "fab fa-fw fa-youtube"
+  #  url: "https://www.youtube.com/@josedihego"
+  #  new_tab: true
   - label: "LinkedIn"
     icon: "fab fa-fw fa-linkedin"
     url: "https://www.linkedin.com/in/josedihego"
