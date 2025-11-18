@@ -14,9 +14,9 @@ author_profile: true
  
 
 #### Education
-- <span class="education-title">PhD in Computer Science, 2016 UFPE - Brazil</span> 
-- <span class="education-title">MSc in Computer Science, 2010 UFPE - Brazil</span> 
-- <span class="education-title">BSc in Computer Science, 2008 UFPE - Brazil</span> 
+- <span class="education-title">PhD in Computer Science, 2016 UFPE - Brazil</span><span class="doi-title"><a href="https://drive.google.com/file/d/1o2ebNJ8OmKo23rNcTv-97Jzzs-rEPqhE/view?usp=drive_link" target="_blank" rel="noopener noreferrer">[PDF]</a></span><span class="doi-title"><a href="https://www.repositorio.ufpe.br/handle/123456789/19522" target="_blank" rel="noopener noreferrer">[Repo]</a></span> 
+- <span class="education-title">MSc in Computer Science, 2010 UFPE - Brazil</span><span class="doi-title"><a href="https://drive.google.com/file/d/1EOZVxCfB_jia1Dx-MPKoAqs8_z4HtRxN/view?usp=drive_link" target="_blank" rel="noopener noreferrer">[PDF]</a></span><span class="doi-title"><a href="https://www.repositorio.ufpe.br/handle/123456789/2660" target="_blank" rel="noopener noreferrer">[Repo]</a></span>  
+- <span class="education-title">BSc in Computer Science, 2008 UFPE - Brazil</span><span class="doi-title"><a href="https://drive.google.com/file/d/1MFuxt_-J5zLWGaxqcb2p9GfOUZSzICLa/view?usp=drive_link" target="_blank" rel="noopener noreferrer">[PDF]</a></span><span class="doi-title"><a href="https://www.cin.ufpe.br/~tg/2008-2/" target="_blank" rel="noopener noreferrer">[Repo]</a></span>  
 
 #### Mobile Apps
  
