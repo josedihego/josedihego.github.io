@@ -1,6 +1,8 @@
 main:
   - title: "Home"
     url: /
+  - title: "BitBrabo"
+    url: https://bitbrabo.josedihego.net/
   - title: "My apps"
     url: /apps/
   #- title: "Youtube"
