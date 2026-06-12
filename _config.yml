@@ -71,7 +71,7 @@ plugins:
 author:
   name   : "José Dihego"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Professor at <a href='https://portal.ifba.edu.br/' target='_blank'>IFBA</a> (since 2010).<br>Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at <a href='https://www.cin.ufpe.br' target='_blank'>CIn-UFPE</a>"
+  bio    : "Full Professor (Professor Titular <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>) at <a href='https://portal.ifba.edu.br/' target='_blank'>IFBA</a>.<br>Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at <a href='https://www.cin.ufpe.br' target='_blank'>CIn-UFPE</a>"
   links:
   - label: "Email"
     icon: "fas fa-fw fa-envelope"
