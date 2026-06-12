@@ -1,7 +1,7 @@
 main:
   - title: "Home"
     url: /
-  - title: "BitBrabo <img src='/assets/images/bitbrabo.svg' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
+  - title: "BitBrabo <img src='/assets/images/bitbrabo.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: https://bitbrabo.josedihego.net/
   - title: "My apps"
     url: /apps/
