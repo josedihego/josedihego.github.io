@@ -33,6 +33,8 @@ author_profile: true
 
 #### Selected publications
 
+- <span class="paper-title">An integrated framework for the validation and verification of UML models</span>&nbsp;
+<span class="doi-title"><a href="https://doi.org/10.1016/j.scico.2026.103527" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span>
 
 - <span class="paper-title">An integrated framework for analysing simulating and testing UML models</span>&nbsp;
 <span class="doi-title"><a href="https://doi.org/10.1007/978-3-031-78116-2_6" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">Gustavo Carvalho, José Dihego, Augusto Sampaio</span>
