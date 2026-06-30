@@ -20,13 +20,13 @@ author_profile: true
 
 
 ### Calendário Integrado
-<object data="/assets/pdfs/integrado.pdf" type="application/pdf" width="100%" height="600px">
+<object data="/assets/pdfs/integrado.pdf" type="application/pdf" width="100%" height="150px">
     <p>Navegar não suporta visualização de PDF, baixe o PDF <a href="/assets/your-first-file.pdf">Baixar PDF</a>.</p>
 </object>
 
 
 ### Calendário Superior
 
-<object data="/assets/pdfs/superior.pdf" type="application/pdf" width="100%" height="600px">
+<object data="/assets/pdfs/superior.pdf" type="application/pdf" width="100%" height="150px">
     <p>Navegar não suporta visualização de PDF, baixe o PDF<a href="/assets/your-second-file.pdf">Baixar PDF</a>.</p>
 </object>
