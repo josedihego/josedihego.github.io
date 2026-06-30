@@ -19,15 +19,12 @@ author_profile: true
 - <span class="general-title-medium">Terceira opção: BLOCO D (em uma sala de aula no primeiro andar)</span>
 
 
-### Datas importantes Integrado
-- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade I - 01/07/2025</span>
-- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade II - 21/10/2025</span>
-- <span class="general-title-medium">Último dia para lançamento de notas no SUAP da Unidade III - 31/01/2026</span>
+### Calendário Integrado
+<object data="assets/pdfs/integrado.pdf" type="application/pdf" width="100%" height="600px">
+    <p>Navegar não suporta visualização de PDF, baixe o PDF <a href="/assets/your-first-file.pdf">Baixar PDF</a>.</p>
+</object>
 
-
-### Datas importantes Superior
-
-- <span class="general-title-medium">Término das aulas/Último dia para publicação dos resultados parciais das disciplinas do semestre - 09/08/2025</span>
-- <span class="general-title-medium">Provas Finais  - 11 a 15/08/2025</span>
-- <span class="general-title-medium">Último dia para publicação dos resultados finais das disciplinas do semestre - 16/08/2025</span>
-- <span class="general-title-medium">Término do semestre letivo/Último dia para publicação dos resultados finais das disciplinas do semestre - 15/03/2025</span>
+### Calendário Superior
+<br> <object data="assets/pdfs/superior.pdf" type="application/pdf" width="100%" height="600px">
+    <p>Navegar não suporta visualização de PDF, baixe o PDF<a href="/assets/your-second-file.pdf">Baixar PDF</a>.</p>
+</object>
