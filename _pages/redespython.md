@@ -12,7 +12,7 @@ author_profile: true
 #### Github da disciplina
  
 
-[![GitHub](https://img.shields.io/badge/GitHub-arduino_projects-blue?logo=github)](https://github.com/josedihego/python_redes)
+[![GitHub](https://img.shields.io/badge/GitHub_josedihego-redes_pyton-blue?logo=github)](https://github.com/josedihego/python_redes)
 
 
 #### Slides

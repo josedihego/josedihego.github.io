@@ -11,4 +11,4 @@ author_profile: true
 
 Projetos Arduíno selecionados:
 
-[![GitHub](https://img.shields.io/badge/GitHub-arduino_projects-blue?logo=github)](https://github.com/josedihego/arduino_projects)
+[![GitHub](https://img.shields.io/badge/GitHub_josedihego-arduino_projetos_selecionados-blue?logo=github)](https://github.com/josedihego/arduino_projects)

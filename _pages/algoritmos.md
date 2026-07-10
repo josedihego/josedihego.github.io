@@ -12,10 +12,10 @@ author_profile: true
 #### Github da disciplina
 
 ##### Implementações em C
-[![GitHub](https://img.shields.io/badge/GitHub-arduino_projects-blue?logo=github)](https://github.com/josedihego/ADS-ALG-C)
+[![GitHub](https://img.shields.io/badge/GitHub_josedihego-algoritmos_linguagem_C-blue?logo=github)](https://github.com/josedihego/ADS-ALG-C)
 
 ##### Implementações em Python
-[![GitHub](https://img.shields.io/badge/GitHub-arduino_projects-blue?logo=github)](https://github.com/josedihego/alg.codigo.2022.2)
+[![GitHub](https://img.shields.io/badge/GitHub_josedihego-algoritmos_linguagem_python-blue?logo=github)](https://github.com/josedihego/alg.codigo.2022.2)
 
 #### Livro texto
  - <span class="education-title">[Livro texto ](https://resources.oreilly.com/examples/9781565924536/-/tree/master)</span> 
