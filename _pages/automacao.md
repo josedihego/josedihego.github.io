@@ -11,7 +11,7 @@ author_profile: true
 
 #### Github da disciplina com TODOS os códigos
  
- - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
+[![GitHub](https://img.shields.io/badge/GitHub-arduino_projects-blue?logo=github)](https://github.com/josedihego/programacaoC)
    
 
 #### Slides

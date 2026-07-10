@@ -11,7 +11,9 @@ author_profile: true
 
 #### Github da disciplina
  
- - <span class="education-title">[Github com código](https://github.com/josedihego/python_redes)</span> 
+
+[![GitHub](https://img.shields.io/badge/GitHub-arduino_projects-blue?logo=github)](https://github.com/josedihego/python_redes)
+
 
 #### Slides
  - <span class="education-title">[Slide 1](https://drive.google.com/file/d/1qrsUNwHyxvJQZXDJeHJlH5QJMGaFM6zX/view?usp=sharing)</span> 
