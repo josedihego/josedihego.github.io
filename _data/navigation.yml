@@ -5,6 +5,8 @@ main:
     url: https://bitbrabo.josedihego.net/
   - title: "My apps"
     url: /apps/
+  - title: "Arduino <img src='/assets/images/arduino.png' alt='Brazilian flag' style='width:30px;height:20px vertical-align:middle;'/>"
+    url: https://josedihego.net/arduino  
   #- title: "Youtube"
   #  url: /youtube/  
   - title: "Schedule <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
