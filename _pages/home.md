@@ -34,8 +34,7 @@ author_profile: true
 #### Selected publications
 - <span class="paper-title">Constructive extensibility of trustworthy component-based systems</span>&nbsp;<span class="doi-title"><a href="https://doi.org/10.1145/2695664.2695916" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Vinícius Medeiros Oliveira </span> 
 
-- <span clas - <span class="education-title">[Github](https://github.com/josedihego/programacaoC)</span> 
-s="paper-title">Algebraic Laws for Process Subtyping</span>&nbsp;<span class="doi-title"><a href="https://doi.org/10.1007/978-3-642-41202-8_2" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br> <span class="author-title">José Dihego, Pedro R. G. Antonino, Augusto Sampaio</span> 
+- <span clas - <span class="education-title">Algebraic Laws for Process Subtyping</span>&nbsp;<span class="doi-title"><a href="https://doi.org/10.1007/978-3-642-41202-8_2" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br> <span class="author-title">José Dihego, Pedro R. G. Antonino, Augusto Sampaio</span> 
   
 -  <span class="paper-title">A refinement checking based strategy for component-based systems evolution</span>&nbsp;<span class="doi-title"><a href="https://doi.org/10.1016/j.jss.2020.110598" target="_blank" rel="noopener noreferrer">[DOI]</a></span><br><span class="author-title">José Dihego, Augusto Sampaio, Marcel Oliveira</span> 
 
