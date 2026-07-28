@@ -12,9 +12,36 @@ Como professor no Instituto Federal da Bahia (IFBA) – Campus Salvador, tenho o
 
 ## 2026
 
+### FinTrack: Um Repositório Inteligente para Organização e Recuperação de Comprovantes de Transações Financeiras
+* **Aluno(a):** Jeferson Leandro de Oliveira dos Reis Santana
+* **Documento:** [Baixar Trabalho (PDF)](https://drive.google.com/file/d/1sx47GG1RiOlcakWopi9JGZj9AXGbfXSY/view?usp=sharing)
+
+<details>
+  <summary><strong>Resumo:</strong> A necessidade de organizar, preservar e recuperar comprovantes de transações financeiras é recorrente e crescente; contudo, as soluções disponíveis... <em>(Clique para expandir)</em></summary>
+  <p>A necessidade de organizar, preservar e recuperar comprovantes de transações financeiras é recorrente e crescente; contudo, as soluções disponíveis para essa finalidade não foram concebidas especificamente para o contexto de transações financeiras realizadas cotidianamente por pessoas físicas no Brasil. As alternativas existentes atendem a propósitos distintos, como digitalização genérica de documentos, armazenamento em nuvem, gestão de despesas corporativas ou controle financeiro pessoal, e não atendem de forma integrada às necessidades de gestão ágil desses documentos no dia a dia.</p>
+  <p>Diante desse cenário, este trabalho tem como objetivo geral desenvolver o FinTrack, um aplicativo móvel Android concebido como um repositório inteligente de comprovantes de transações financeiras, orientado ao uso cotidiano. A solução utiliza técnicas de reconhecimento óptico de caracteres (OCR), processamento de linguagem natural (PLN) e enriquecimento de dados fiscais e cadastrais. Esses recursos viabilizam o escaneamento, a importação, a organização semântica e a recuperação eficiente desses documentos, incorporando princípios de privacidade e autonomia dos dados do usuário.</p>
+  <p>A solução desenvolvida tem como público-alvo pessoas físicas no contexto brasileiro que realizam transações financeiras cotidianamente e precisam armazenar, organizar e recuperar comprovantes físicos digitalizados ou arquivos de comprovantes nativamente digitais de forma prática. O foco principal recai sobre usuários com autonomia para gerenciar suas próprias compras, pagamentos e transferências, especialmente adultos, mas sem excluir usuários jovens que já realizam operações financeiras e acumulam notas fiscais, recibos ou arquivos de comprovantes nativamente digitais. Dessa forma, a solução se direciona ao uso pessoal e recorrente, e não a cenários corporativos de contabilidade ou auditoria.</p>
+</details>
+
+
+## 2025
+
+### Desenvolvimento de um Aplicativo Educacional com Gamificação para o Apoio ao Aprendizado de Programação
+* **Aluno(a):** Victor Lopes dos Santos
+* **Documento:** [Baixar Trabalho (PDF)](https://drive.google.com/file/d/1XkD03AR8uwmclRBAMIIKjWHtaLc3DM0S/view?usp=sharing)
+
+<details>
+  <summary><strong>Resumo:</strong> As dificuldades enfrentadas pelos estudantes que ingressam nos cursos da área de tecnologia podem ser consequências de diversos fatores... <em>(Clique para expandir)</em></summary>
+  <p>As dificuldades enfrentadas pelos estudantes que ingressam nos cursos da área de tecnologia podem ser consequências de diversos fatores, entre eles a falta de engajamento e metodologias adequadas de ensino. A alta evasão nos cursos de tecnologia tem sido um dos principais desafios enfrentados pelas instituições de ensino superior, muitas vezes relacionada à dificuldade inicial de adaptação e à complexidade das disciplinas introdutórias de programação. Uma estratégia promissora para tornar esse processo mais atrativo é o uso da gamificação no ensino, que aplica elementos de jogos, para aumentar o engajamento e a motivação dos estudantes. Por meio de trilhas de aprendizado, o estudante pode avançar por etapas estruturadas que refletem seu progresso e o ajudam a visualizar sua evolução ao longo do curso. O uso de um sistema de pontos e conquistas reforça o engajamento, recompensando o esforço e estimulando a superação de desafios cada vez mais complexos. Além disso, a inclusão de exercícios práticos e feedback imediato permite que o estudante aprenda de forma ativa, corrigindo erros rapidamente e consolidando o conhecimento adquirido de maneira dinâmica. Essa abordagem busca transformar o aprendizado em uma experiência mais dinâmica e satisfatória, contribuindo para reduzir a evasão e melhorar o desempenho acadêmico.</p>
+  <p>Dessa forma, este trabalho tem como objetivo desenvolver um aplicativo de aprendizagem multi-plataforma centralizado na ideia de gamificação para auxiliar os estudantes no aprendizado dos fundamentos de programação, de modo mais interativo e envolvente. O aplicativo, desenvolvido para as plataformas Android e iOS utilizando o framework Flutter, abrangerá desde conceitos básicos até tópicos intermediários da programação. A gamificação será utilizada para promover a motivação e a prática contínua, sem substituir a educação formal, mas atuando como uma ferramenta complementar. Acredita-se que a aplicação contribua para a redução das taxas de reprovação em disciplinas de programação e para a melhor preparação dos estudantes frente às demandas do mercado de tecnologia. Ressalta-se, entretanto, que a mensuração desses resultados será objeto de estudos e validações em trabalhos futuros.</p>
+  <p><strong>Palavras-chave:</strong> Ensino de programação. Gamificação. Aplicativos educacionais. Aplicativo mobile.</p>
+</details>
 
 ## 2023
 
+### FerryBim – Sistema de Agendamento de Travessias
+* **Aluno(a):** Gabriel Ferreira de Jesus
+* **Documento:** [Baixar Trabalho (PDF)](https://drive.google.com/file/d/1ulLMvyDgrM9Tdii6SH7UP9zFjSPJ2fgw/view?usp=sharing)
 
 ## 2021
 
