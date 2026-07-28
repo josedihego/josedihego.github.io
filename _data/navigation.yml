@@ -9,13 +9,13 @@ main:
     url: https://josedihego.net/arduino  
   #- title: "Youtube"
   #  url: /youtube/  
-  - title: "Schedule <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
-    url: /schedule/
   - title: "Courses <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /courses/
   #- title: "News <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
    # url: /news/
   - title: "Orientações <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /tccs/
+  - title: "Schedule <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
+    url: /schedule/  
   - title: "About"
     url: /about/
