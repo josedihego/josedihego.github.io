@@ -1,6 +1,6 @@
 ---
 title: "Trabalhos Orientados"
-permalink: /trabalhos-orientados/
+permalink: /ttcs/
 layout: single
 author_profile: true
 toc: true
