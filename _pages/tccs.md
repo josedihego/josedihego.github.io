@@ -27,6 +27,7 @@ Como professor no Instituto Federal da Bahia (IFBA) – Campus Salvador, tenho o
 
 ## 2025
 
+
 ### Desenvolvimento de um Aplicativo Educacional com Gamificação para o Apoio ao Aprendizado de Programação
 * **Aluno(a):** Victor Lopes dos Santos
 * **Instituição:** Instituto Federal da Bahia (IFBA)
@@ -38,6 +39,19 @@ Como professor no Instituto Federal da Bahia (IFBA) – Campus Salvador, tenho o
   <p>Dessa forma, este trabalho tem como objetivo desenvolver um aplicativo de aprendizagem multi-plataforma centralizado na ideia de gamificação para auxiliar os estudantes no aprendizado dos fundamentos de programação, de modo mais interativo e envolvente. O aplicativo, desenvolvido para as plataformas Android e iOS utilizando o framework Flutter, abrangerá desde conceitos básicos até tópicos intermediários da programação. A gamificação será utilizada para promover a motivação e a prática contínua, sem substituir a educação formal, mas atuando como uma ferramenta complementar. Acredita-se que a aplicação contribua para a redução das taxas de reprovação em disciplinas de programação e para a melhor preparação dos estudantes frente às demandas do mercado de tecnologia. Ressalta-se, entretanto, que a mensuração desses resultados será objeto de estudos e validações em trabalhos futuros.</p>
   <p><strong>Palavras-chave:</strong> Ensino de programação. Gamificação. Aplicativos educacionais. Aplicativo mobile.</p>
 </details>
+
+### Portal Literário do Sertão: Especificação, Análise e Implementação
+* **Aluno(a):** José Wilson Passos dos Santos Júnior
+* **Orientadora:** Profa. Dra. Juliana de Souza Gomes Nogueira
+* **Coorientador:** Prof. Dr. José Dihego da Silva de Oliveira
+* **Documento:** [Baixar Trabalho (PDF)](https://drive.google.com/file/d/1oVB75oEiw76CSP25i3i3vHFeNyC6dnUA/view?usp=sharing)
+
+<details>
+  <summary><strong>Resumo</strong> <em>(Clique para expandir)</em></summary>
+  <p>Este trabalho apresenta o processo de especificação, análise, projeto e implementação do Portal Literário do Sertão, uma plataforma digital multimídia. O objetivo da pesquisa foi aplicar os princípios da Engenharia de Software para desenvolver uma solução tecnológica que promova a cultura regional e amplie a acessibilidade de obras literárias através de múltiplos formatos (texto, áudio e vídeo). A metodologia envolveu o levantamento de requisitos funcionais e não funcionais, a modelagem do sistema utilizando diagramas UML (Casos de Uso e Classes) e a prototipagem de interfaces. A implementação utilizou uma arquitetura moderna, com Node.js no back-end, PostgreSQL como banco de dados e Vue.js no front-end, garantindo uma solução robusta, escalável e em conformidade com a Lei Geral de Proteção de Dados (LGPD). Como resultado, foi entregue uma plataforma funcional que permite o cadastro de autores, a submissão e o consumo de obras em diferentes mídias. O trabalho conclui que a aplicação sistemática de metodologias de desenvolvimento de software foi fundamental para traduzir um problema cultural em uma solução tecnológica eficaz e de alto impacto social.</p>
+  <p><strong>Palavras-chave:</strong> Portal literário; cultura regional; desenvolvimento web; proteção de dados; literatura.</p>
+</details>
+
 
 ## 2023
 
