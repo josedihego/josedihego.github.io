@@ -14,6 +14,7 @@ Como professor no Instituto Federal da Bahia (IFBA) – Campus Salvador, tenho o
 
 ### FinTrack: Um Repositório Inteligente para Organização e Recuperação de Comprovantes de Transações Financeiras
 * **Aluno(a):** Jeferson Leandro de Oliveira dos Reis Santana
+* **Instituição:** Instituto Federal da Bahia (IFBA)
 * **Documento:** [Baixar Trabalho (PDF)](https://drive.google.com/file/d/1sx47GG1RiOlcakWopi9JGZj9AXGbfXSY/view?usp=sharing)
 
 <details>
@@ -28,6 +29,7 @@ Como professor no Instituto Federal da Bahia (IFBA) – Campus Salvador, tenho o
 
 ### Desenvolvimento de um Aplicativo Educacional com Gamificação para o Apoio ao Aprendizado de Programação
 * **Aluno(a):** Victor Lopes dos Santos
+* **Instituição:** Instituto Federal da Bahia (IFBA)
 * **Documento:** [Baixar Trabalho (PDF)](https://drive.google.com/file/d/1XkD03AR8uwmclRBAMIIKjWHtaLc3DM0S/view?usp=sharing)
 
 <details>
@@ -41,7 +43,13 @@ Como professor no Instituto Federal da Bahia (IFBA) – Campus Salvador, tenho o
 
 ### FerryBim – Sistema de Agendamento de Travessias
 * **Aluno(a):** Gabriel Ferreira de Jesus
+* **Instituição:** Instituto Federal da Bahia (IFBA)
 * **Documento:** [Baixar Trabalho (PDF)](https://drive.google.com/file/d/1ulLMvyDgrM9Tdii6SH7UP9zFjSPJ2fgw/view?usp=sharing)
+
+<details>
+  <summary><strong>Resumo</strong> <em>(Clique para expandir)</em></summary>
+  <p>No mundo contemporâneo, a eficiência logística desempenha um papel fundamental em diversos setores, inclusive o de transportes. Em particular o setor de travessias, que envolve deslocamento de pessoas, veículos ou qualquer tipo de carga em áreas geograficamente desafiadores. Nesse sentido, esse Trabalho de Conclusão de Curso (TCC) aborda a implementação de um sistema de agendamento de travessias que otimizará a forma como as travessias são gerenciadas. Este estudo tem como objetivo principal explorar como a aplicação de tecnologias e métodos de otimização podem resolver problemas preexistentes no agendamento de travessias.</p>
+</details>
 
 ## 2021
 
