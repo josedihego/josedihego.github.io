@@ -3,13 +3,13 @@ main:
     url: /
   - title: "BitBrabo <img src='/assets/images/bitbrabo.png' alt='Brazilian flag' style='width:30px;height:20px vertical-align:middle;'/>"
     url: https://bitbrabo.josedihego.net/
-  - title: "My apps"
+  - title: "Apps <img src='/assets/images/apps.png' alt='Brazilian flag' style='width:18px;height:18px vertical-align:middle;'/>"
     url: /apps/
   - title: "Arduino <img src='/assets/images/arduino.png' alt='Brazilian flag' style='width:18px;height:18px vertical-align:middle;'/>"
     url: https://josedihego.net/arduino  
   #- title: "Youtube"
   #  url: /youtube/  
-  - title: "Courses <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
+  - title: "Courses <img src='/assets/images/courses.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /courses/
   #- title: "News <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
    # url: /news/
