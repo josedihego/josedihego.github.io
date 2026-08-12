@@ -15,7 +15,7 @@ main:
    # url: /news/
   - title: "Supervision <img src='/assets/images/school.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /tccs/
-  - title: "Schedule <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
+  - title: "Schedule <img src='/assets/images/br.png' alt='Brazilian flag' style='width:24px;height:15px vertical-align:middle;'/>"
     url: /schedule/  
   - title: "About"
     url: /about/
