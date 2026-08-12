@@ -13,7 +13,7 @@ main:
     url: /courses/
   #- title: "News <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
    # url: /news/
-  - title: "Supervision <i class='fas fa-graduation-cap' style='color: red;'></i>"
+  - title: "Supervision <img src='/assets/images/school.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /tccs/
   - title: "Schedule <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px vertical-align:middle;'/>"
     url: /schedule/  
