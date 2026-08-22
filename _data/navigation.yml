@@ -1,5 +1,5 @@
 main:
-  - title: "Home<img src='/assets/images/home.png' alt='Brazilian flag' style='width:24px;height:18px vertical-align:middle;'/>"
+  - title: "Home"
     url: /
   - title: "BitBrabo <img src='/assets/images/bitbrabo.png' alt='Brazilian flag' style='width:30px;height:20px vertical-align:middle;'/>"
     url: https://bitbrabo.josedihego.net/
