@@ -1,7 +1,7 @@
 ---
 title: ""
 layout: single
-permalink: /apps/
+permalink: /apps_deactivated/
 author_profile: true
 ---
 
