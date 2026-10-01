@@ -92,10 +92,10 @@ author:
     icon: "fab fa-fw fa-github"
     url: "https://github.com/josedihego"
     new_tab: true
-  - label: "My Books on Amazon"
-    icon: "fab fa-fw fa-amazon"
-    url: "https://www.amazon.com/author/josedihego"
-    new_tab: true
+ # - label: "My Books on Amazon"
+ #   icon: "fab fa-fw fa-amazon"
+ #   url: "https://www.amazon.com/author/josedihego"
+  #  new_tab: true
   - label: "Lattes CV"
     icon: "fas fa-fw fa-link"
     url: "http://lattes.cnpq.br/1085956076115293"
@@ -123,10 +123,10 @@ footer:
     icon: "fab fa-fw fa-github"
     url: "https://github.com/josedihego"
     new_tab: true
-  - label: "Amazon"
-    icon: "fab fa-fw fa-amazon"
-    url: "https://www.amazon.com/author/josedihego"
-    new_tab: true
+  #- label: "Amazon"
+  #  icon: "fab fa-fw fa-amazon"
+  #  url: "https://www.amazon.com/author/josedihego"
+   # new_tab: true
   - label: "Lattes CV"
     icon: "fas fa-fw fa-link"
     url: "http://lattes.cnpq.br/1085956076115293"
