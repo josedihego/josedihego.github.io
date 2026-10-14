@@ -1,0 +1,9 @@
+<!-- Open external links in a new tab (included at the end of <body> by Minimal Mistakes) -->
+<script>
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    if (/^https?:$/.test(a.protocol) && a.hostname !== location.hostname) {
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+    }
+  });
+</script>
