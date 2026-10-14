@@ -3,7 +3,7 @@ permalink: /about/
 title: "About"
 ---
 
-<p class="home-intro">Full Professor (Professor Titular <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px;vertical-align:middle;'/>) at the Federal Institute of Education, Science and Technology of Bahia – <a href="https://portal.ifba.edu.br/">IFBA</a>.</p>
+<p class="home-intro">Full Professor (Professor Titular <img src='/assets/images/br-flag.svg' alt='Brazilian flag' style='width:20px;height:14px;vertical-align:middle;border-radius:2px;'/>) at the Federal Institute of Education, Science and Technology of Bahia – <a href="https://portal.ifba.edu.br/">IFBA</a>.</p>
 
 Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all at <a href="https://www.cin.ufpe.br">CIn-UFPE</a>.
 

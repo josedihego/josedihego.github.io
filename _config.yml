@@ -3,7 +3,7 @@ title: Prof. José Dihego
 subtitle: 真実は勝つ
 email: josedihego@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
- Full Professor (Professor Titular <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px;vertical-align:middle;'/>) at Federal Institute of Education, Science and Technology of Bahia - IFBA (since 2010). Education: Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at CIn-UFPE. Interested in Formal Methods, Programming Languages ​​and Mobile Development. 
+ Full Professor (Professor Titular <img src='/assets/images/br-flag.svg' alt='Brazilian flag' style='width:20px;height:14px;vertical-align:middle;border-radius:2px;'/>) at Federal Institute of Education, Science and Technology of Bahia - IFBA (since 2010). Education: Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at CIn-UFPE. Interested in Formal Methods, Programming Languages ​​and Mobile Development. 
 twitter_username: 
 github_username: josedihego
 minimal_mistakes_skin: contrast
@@ -54,7 +54,7 @@ plugins:
 author:
   name   : "José Dihego"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Full Professor (Professor Titular <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px;vertical-align:middle;'/>) at <a href='https://portal.ifba.edu.br/' target='_blank'>IFBA</a>.<br>Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at <a href='https://www.cin.ufpe.br' target='_blank'>CIn-UFPE</a>"
+  bio    : "Full Professor (Professor Titular <img src='/assets/images/br-flag.svg' alt='Brazilian flag' style='width:20px;height:14px;vertical-align:middle;border-radius:2px;'/>) at <a href='https://portal.ifba.edu.br/' target='_blank'>IFBA</a>.<br>Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at <a href='https://www.cin.ufpe.br' target='_blank'>CIn-UFPE</a>"
   links:
   - label: "Email"
     icon: "fas fa-fw fa-envelope"
