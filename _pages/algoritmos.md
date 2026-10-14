@@ -4,7 +4,6 @@ layout: single
 permalink: /algoritmos/
 author_profile: true
 ---
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 ## Algoritmos e Estruturas de Dados (ADS - INF-006)

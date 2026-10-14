@@ -5,7 +5,6 @@ permalink: /apps_deactivated/
 author_profile: true
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 #### <img src="{{ '/assets/images/binaire.png' | relative_url }}" width="50" height="50"/> **Binaire**

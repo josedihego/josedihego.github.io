@@ -5,7 +5,6 @@ permalink: /schedule/
 author_profile: true
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 ### Horários de atendimentos
@@ -20,13 +19,18 @@ author_profile: true
 
 
 ### Calendário Integrado
-<object data="/assets/pdfs/integrado.pdf" type="application/pdf" width="100%" height="50px">
-    <p>Navegar não suporta visualização de PDF, baixe o PDF <a href="/assets/your-first-file.pdf">Baixar PDF</a>.</p>
+
+[Baixar PDF](/assets/pdfs/integrado.pdf)
+
+<object data="/assets/pdfs/integrado.pdf" type="application/pdf" width="100%" height="600px">
+    <p>Seu navegador não suporta visualização de PDF, baixe o PDF <a href="/assets/pdfs/integrado.pdf">Baixar PDF</a>.</p>
 </object>
 
 
 ### Calendário Superior
 
-<object data="/assets/pdfs/superior.pdf" type="application/pdf" width="100%" height="50px">
-    <p>Navegar não suporta visualização de PDF, baixe o PDF<a href="/assets/your-second-file.pdf">Baixar PDF</a>.</p>
+[Baixar PDF](/assets/pdfs/superior.pdf)
+
+<object data="/assets/pdfs/superior.pdf" type="application/pdf" width="100%" height="600px">
+    <p>Seu navegador não suporta visualização de PDF, baixe o PDF <a href="/assets/pdfs/superior.pdf">Baixar PDF</a>.</p>
 </object>

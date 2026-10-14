@@ -5,7 +5,6 @@ permalink: /courses/
 author_profile: true
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 #### Superior

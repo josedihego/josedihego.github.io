@@ -4,7 +4,6 @@ layout: single
 permalink: /eletronica/
 author_profile: true
 ---
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 ## LPR082 - LÓGICA DE PROGRAMAÇÃO - II -  ELETRÔNICA

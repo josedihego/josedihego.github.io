@@ -4,7 +4,6 @@ layout: single
 permalink: /arduino/
 author_profile: true
 ---
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 ## Arduino

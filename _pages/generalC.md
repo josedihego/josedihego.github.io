@@ -4,7 +4,6 @@ layout: single
 permalink: /generalC/
 author_profile: true
 ---
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 ## Lógica de Programação  #  Informática Básica # Informática Aplicada
