@@ -4,27 +4,15 @@ layout: single
 permalink: /courses/
 author_profile: true
 ---
-#### Superior
 
-- <span class="education-title">[Algoritmos e Estruturas de Dados (ADS - INF-006)](/algoritmos/)</span>
-- <span class="education-title">[Lógica de Programação (ADS - INF-027)](/logicaprog/)</span>
-- <span class="education-title">[Análise e Modelagem de Sistemas](/ams/)</span>
-- <span class="education-title">[Desenvolvimento Mobile](/mobile/)</span>
-- <span class="education-title">[Programação para redes de computadores em Python](/redespython/)</span>
-
-#### Curta duração
-
-- <span class="education-title">[Criptografia](/cripto/)</span>
-- <span class="education-title">[Arduino](/arduino/)</span>
-- <span class="education-title">[Python - Problemas/Soluções](/problemas/)</span>
-  
-  
-#### Integrado
-- <span class="education-title">[Lógica de Programação - Eletrônica - 9822-G1](/generalC/)</span>
-- <span class="education-title">[Lógica de Programação - Automação - 5821](/generalC/)</span>
-- <span class="education-title">[Informática Básica - Edificações - 1811](/generalC/)</span>
-- <span class="education-title">[Informática Básica - Edificações - 1813](/generalC/)</span>
-- <span class="education-title">[Química (INF081 - INFORMÁTICA - I)](/quimica/)</span>
-- <span class="education-title">[Eletrônica (LPR082 - LÓGICA DE PROGRAMAÇÃO - II )](/eletronica/)</span>
-- <span class="education-title">[Automação (LPR082 - LÓGICA DE PROGRAMAÇÃO - II )](/automacao/)</span>
-- <span class="education-title">[Mecânica ( INF681 - INFORMÁTICA)](/mecanica/)</span>
+{% for g in site.data.courses %}
+<h2 class="group-title"><i class="fas {{ g.icon }}" aria-hidden="true"></i> {{ g.group }}</h2>
+<div class="course-grid">
+  {% for c in g.courses %}
+  <a class="course-card" href="{{ c.url }}">
+    <strong>{{ c.title }}</strong>
+    {% if c.code %}<span class="course-code">{{ c.code }}</span>{% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% endfor %}

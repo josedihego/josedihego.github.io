@@ -179,3 +179,266 @@
 .feed-item:hover {
   background: var(--c-surface-hover);
 }
+
+/* Courses index */
+.page__content .group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1.5em;
+}
+
+.group-title i {
+  color: var(--c-accent);
+  font-size: 0.85em;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75em;
+}
+
+.page__content a.course-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5em;
+  padding: 0.85em 1em;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  background: var(--c-surface);
+  color: inherit;
+  font-size: 0.9em;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.page__content a.course-card:hover {
+  background: var(--c-surface-hover);
+  border-color: var(--c-accent);
+}
+
+.course-code {
+  align-self: flex-start;
+  padding: 0.05em 0.5em;
+  border-radius: 999px;
+  background: var(--c-accent-soft);
+  color: var(--c-accent);
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+/* Course pages: repository cards, slide tiles, link lists */
+.page__content a.repo-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  margin: 0 0 0.75em;
+  padding: 0.8em 1em;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  background: var(--c-surface);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.page__content a.repo-card:hover {
+  background: var(--c-surface-hover);
+  border-color: var(--c-accent);
+}
+
+.repo-card i {
+  font-size: 1.8em;
+}
+
+.repo-card span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.repo-card small {
+  overflow: hidden;
+  color: var(--c-muted);
+  font-size: 0.75em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page__content ul.slide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.6em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page__content ul.slide-grid li {
+  margin: 0;
+}
+
+.slide-grid a,
+.link-list a {
+  display: block;
+  padding: 0.55em 0.8em;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-surface);
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.slide-grid a {
+  text-align: center;
+}
+
+.slide-grid a:hover,
+.link-list a:hover {
+  border-color: var(--c-accent);
+  background: var(--c-surface-hover);
+}
+
+.page__content ul.link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page__content ul.link-list li {
+  margin: 0 0 0.5em;
+}
+
+/* Schedule */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.info-card {
+  padding: 1em 1.2em;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  background: var(--c-surface);
+  font-size: 0.9em;
+}
+
+.page__content .info-card h2 {
+  margin: 0 0 0.5em;
+  padding: 0;
+  border: 0;
+  font-size: 1em;
+}
+
+.info-card h2 i {
+  margin-right: 0.3em;
+  color: var(--c-accent);
+}
+
+.info-card p,
+.info-card ol {
+  margin: 0;
+}
+
+.download-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin-bottom: 1em;
+}
+
+.page__content a.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background: var(--c-accent);
+  color: #fff;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page__content a.download-btn {
+    color: #1b1d21;
+  }
+}
+
+.page__content a.download-btn:hover {
+  filter: brightness(1.1);
+}
+
+.pdf-embed {
+  width: 100%;
+  height: 600px;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+}
+
+/* Phones: single-column grids; hide inline PDFs (mobile browsers can't embed them, the buttons remain) */
+@media (max-width: 500px) {
+  .course-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-section {
+    display: none;
+  }
+}
+
+/* About */
+.contact-box {
+  margin-top: 1.5em;
+  padding: 1.2em;
+  border-left: 4px solid var(--c-accent);
+  border-radius: 8px;
+  background: var(--c-surface);
+}
+
+.contact-box p {
+  margin: 0 0 0.8em;
+}
+
+/* Supervision (TCCs) */
+.tccs-page .page__content h3 {
+  margin-top: 1.8em;
+  padding-left: 0.7em;
+  border-left: 4px solid var(--c-accent);
+  font-size: 1.1em;
+  line-height: 1.35;
+}
+
+.tccs-page .page__content h3 + ul {
+  padding-left: 0.7em;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+.tccs-page .page__content h3 + ul li {
+  margin: 0.15em 0;
+}
+
+.tccs-page .page__content details {
+  margin-left: 0.7em;
+  padding: 0.6em 1em;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-surface);
+  font-size: 0.9em;
+}
+
+.tccs-page .page__content summary {
+  cursor: pointer;
+}
+
+.tccs-page .page__content details[open] summary {
+  margin-bottom: 0.6em;
+}

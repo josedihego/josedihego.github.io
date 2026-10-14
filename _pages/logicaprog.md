@@ -3,18 +3,16 @@ title: "Lógica de Programação – ADS (INF027)"
 layout: single
 permalink: /logicaprog/
 author_profile: true
+classes: course-page
 ---
 [← Cursos](/courses/){: .back-link}
 
-#### Github da disciplina com TODOS os códigos
- 
-[![GitHub](https://img.shields.io/badge/GitHub_josedihego-logica_programacao-blue?logo=github)](https://github.com/josedihego/programacaoC)
+## Código
 
+<a class="repo-card" href="https://github.com/josedihego/programacaoC"><i class="fab fa-github" aria-hidden="true"></i><span><strong>Código da disciplina</strong><small>github.com/josedihego/programacaoC</small></span></a>
 
-##  Questões (variáveis e comandos de decisão)
+## Listas de exercícios
 
- - <span class="education-title">[Questões (variáveis, comandos de decisão)](/questions_if/)</span>
-  
-##  Questões (comandos de repetição)
-
- - <span class="education-title">[Questões (comandos de repetição)](/questions_for/)</span>
+- [Questões: variáveis e comandos de decisão](/questions_if/)
+- [Questões: comandos de repetição](/questions_for/)
+{: .link-list}

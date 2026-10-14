@@ -1,0 +1,26 @@
+# Courses listed on /courses/, grouped by level
+- group: "Superior"
+  icon: "fa-building-columns"
+  courses:
+    - { title: "Algoritmos e Estruturas de Dados", code: "ADS · INF-006", url: "/algoritmos/" }
+    - { title: "Lógica de Programação", code: "ADS · INF-027", url: "/logicaprog/" }
+    - { title: "Análise e Modelagem de Sistemas", code: "ADS", url: "/ams/" }
+    - { title: "Desenvolvimento Mobile", code: "ADS", url: "/mobile/" }
+    - { title: "Programação para Redes de Computadores em Python", code: "ADS", url: "/redespython/" }
+- group: "Curta duração"
+  icon: "fa-bolt"
+  courses:
+    - { title: "Criptografia", url: "/cripto/" }
+    - { title: "Arduino", url: "/arduino/" }
+    - { title: "Python – Problemas e Soluções", url: "/problemas/" }
+- group: "Integrado"
+  icon: "fa-school"
+  courses:
+    - { title: "Lógica de Programação – Eletrônica", code: "9822-G1", url: "/generalC/" }
+    - { title: "Lógica de Programação – Automação", code: "5821", url: "/generalC/" }
+    - { title: "Informática Básica – Edificações", code: "1811", url: "/generalC/" }
+    - { title: "Informática Básica – Edificações", code: "1813", url: "/generalC/" }
+    - { title: "Informática I – Química", code: "INF081", url: "/quimica/" }
+    - { title: "Lógica de Programação II – Eletrônica", code: "LPR082", url: "/eletronica/" }
+    - { title: "Lógica de Programação II – Automação", code: "LPR082", url: "/automacao/" }
+    - { title: "Informática – Mecânica", code: "INF681", url: "/mecanica/" }

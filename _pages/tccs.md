@@ -6,6 +6,7 @@ author_profile: true
 toc: true
 toc_label: "Ano de Conclusão"
 toc_icon: "graduation-cap"
+classes: tccs-page
 ---
 
 Como professor no Instituto Federal da Bahia (IFBA) – Campus Salvador, tenho o privilégio de orientar jovens pesquisadores em seus projetos acadêmicos/técnicos. Abaixo está a lista de trabalhos de conclusão de curso, iniciação científica e projetos práticos desenvolvidos sob minha orientação. Esta lista está em constante construção e trabalhos mais antigos ainda não foram catalogados.
