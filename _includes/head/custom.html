@@ -1,6 +1,6 @@
 <!-- Site-wide custom styles (included in <head> by Minimal Mistakes) -->
-<link rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}?v={{ site.time | date: '%s' }}" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 {% if page.mathjax %}
 <!-- MathJax 3: renders $$...$$ (converted by kramdown to \(...\) / \[...\]) -->
