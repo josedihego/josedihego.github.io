@@ -1,12 +1,9 @@
 ---
-title: ""
+title: "Cursos"
 layout: single
 permalink: /courses/
 author_profile: true
 ---
-
-
-
 #### Superior
 
 - <span class="education-title">[Algoritmos e Estruturas de Dados (ADS - INF-006)](/algoritmos/)</span>

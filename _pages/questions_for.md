@@ -1,19 +1,11 @@
 ---
-title: ""
+title: "Questões: comandos de repetição"
 mathjax: true 
 layout: single
 permalink: /questions_for/
 author_profile: true
 ---
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
-
-<span class="education-title">[VOLTAR](/logicaprog/)</span>
-
-
-##  Questões (comandos de repetição)
+[← Lógica de Programação – ADS](/logicaprog/){: .back-link}
 
 ### 1. Decidir primalidade
 

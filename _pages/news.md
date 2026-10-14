@@ -1,12 +1,9 @@
 ---
-title: ""
+title: "Notícias"
 permalink: /news/
 layout: single
 author_profile: false
 ---
-
-<h1>📰 Notícias 📰</h1>
-
 {% assign sorted_news = site.news | sort: "date" | reverse %}
 {% for item in sorted_news %}
   <div class="feed-item">

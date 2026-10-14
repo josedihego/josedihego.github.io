@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Informática – Técnico em Mecânica (INF681)"
 layout: single
 permalink: /mecanica/
 author_profile: true
 ---
-
-
-## INF681 - INFORMÁTICA  - TÉCNICO EM MECÂNICA
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina com TODOS os códigos
  

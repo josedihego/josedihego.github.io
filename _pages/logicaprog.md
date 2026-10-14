@@ -1,16 +1,10 @@
 ---
-title: ""
-mathjax: true 
+title: "Lógica de Programação – ADS (INF027)"
 layout: single
 permalink: /logicaprog/
 author_profile: true
 ---
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
-
-## INF027 - LÓGICA DE PROGRAMAÇÃO -  ADS
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina com TODOS os códigos
  

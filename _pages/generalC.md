@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Lógica de Programação · Informática Básica · Informática Aplicada"
 layout: single
 permalink: /generalC/
 author_profile: true
 ---
-
-
-## Lógica de Programação  #  Informática Básica # Informática Aplicada
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina com TODOS os códigos
  

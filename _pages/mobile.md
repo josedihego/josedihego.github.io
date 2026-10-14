@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Desenvolvimento Mobile"
 layout: single
 permalink: /mobile/
 author_profile: true
 ---
-
-
-## Desenvolvimento Mobile
+[← Cursos](/courses/){: .back-link}
 
 #### Slides
  - <span class="education-title">[Slide 1](https://drive.google.com/file/d/1nIqoQVmZDlnxaU14coIfubqxQHMM7LA-/view?usp=drive_link)</span> 

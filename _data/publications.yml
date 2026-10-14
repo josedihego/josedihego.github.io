@@ -1,0 +1,25 @@
+# Selected publications shown on the home page (newest first is automatic: sorted by year)
+- title: "An integrated framework for the validation and verification of UML models"
+  authors: "Gustavo Carvalho, José Dihego, Augusto Sampaio"
+  year: 2026
+  doi: "10.1016/j.scico.2026.103527"
+- title: "An integrated framework for analysing simulating and testing UML models"
+  authors: "Gustavo Carvalho, José Dihego, Augusto Sampaio"
+  year: 2024
+  doi: "10.1007/978-3-031-78116-2_6"
+- title: "A refinement checking based strategy for component-based systems evolution"
+  authors: "José Dihego, Augusto Sampaio, Marcel Oliveira"
+  year: 2020
+  doi: "10.1016/j.jss.2020.110598"
+- title: "Constructive extensibility of trustworthy component-based systems"
+  authors: "José Dihego, Augusto Sampaio, Marcel Vinícius Medeiros Oliveira"
+  year: 2015
+  doi: "10.1145/2695664.2695916"
+- title: "Aspect-Oriented Development of Trustworthy Component-based Systems"
+  authors: "José Dihego, Augusto Sampaio"
+  year: 2015
+  doi: "10.1007/978-3-319-25150-9_25"
+- title: "Algebraic Laws for Process Subtyping"
+  authors: "José Dihego, Pedro R. G. Antonino, Augusto Sampaio"
+  year: 2013
+  doi: "10.1007/978-3-642-41202-8_2"

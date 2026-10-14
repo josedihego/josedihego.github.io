@@ -1,12 +1,9 @@
 ---
-title: ""
+title: "Atendimento e Calendários"
 layout: single
 permalink: /schedule/
 author_profile: true
 ---
-
-
-
 ### Horários de atendimentos
 
 - <span class="general-title-medium ">Segundas-feiras das 18:40h às 20:20h</span>

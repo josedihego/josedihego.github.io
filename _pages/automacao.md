@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Lógica de Programação II – Automação Industrial (LPR082)"
 layout: single
 permalink: /automacao/
 author_profile: true
 ---
-
-
-## LPR082 - LÓGICA DE PROGRAMAÇÃO - II - AUTOMAÇÃO INDUSTRIAL
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina com TODOS os códigos
  

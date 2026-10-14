@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Programação para Redes de Computadores em Python"
 layout: single
 permalink: /redespython/
 author_profile: true
 ---
-
-
-## Programação para redes de computadores em Python
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina
  

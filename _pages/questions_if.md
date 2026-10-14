@@ -1,19 +1,11 @@
 ---
-title: ""
+title: "Questões: variáveis e comandos de decisão"
 mathjax: true 
 layout: single
 permalink: /questions_if/
 author_profile: true
 ---
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
-
-<span class="education-title">[VOLTAR](/logicaprog/)</span>
-
-
-##  Questões (variáveis e comandos de decisão)
+[← Lógica de Programação – ADS](/logicaprog/){: .back-link}
 
 ### 1. Calculadora de operações básicas com validação
 

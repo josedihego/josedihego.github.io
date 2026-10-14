@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Algoritmos e Estruturas de Dados (ADS – INF006)"
 layout: single
 permalink: /algoritmos/
 author_profile: true
 ---
-
-
-## Algoritmos e Estruturas de Dados (ADS - INF-006)
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina
 

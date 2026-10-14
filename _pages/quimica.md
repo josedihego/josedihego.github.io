@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Informática I – Química (INF081)"
 layout: single
 permalink: /quimica/
 author_profile: true
 ---
-
-
-## QUÍMICA  - INF081 - INFORMÁTICA - I 
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina com TODOS os códigos
  

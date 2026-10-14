@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Análise e Modelagem de Sistemas"
 layout: single
 permalink: /ams/
 author_profile: true
 ---
-
-
-## Análise e Modelagem de Sistemas
+[← Cursos](/courses/){: .back-link}
 
 #### Slides
  - <span class="education-title">[Slide 1](https://drive.google.com/file/d/1OBe12i1-ksyu6vYoCtiI0_6ZL9jGX0o6/view?usp=drive_link)</span>

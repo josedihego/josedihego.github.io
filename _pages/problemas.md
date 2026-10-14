@@ -1,9 +1,10 @@
 ---
-title: ""
+title: "Python – Problemas e Soluções"
 layout: single
 permalink: /problemas/
 author_profile: true
 ---
+[← Cursos](/courses/){: .back-link}
 
 ### Soluções
 

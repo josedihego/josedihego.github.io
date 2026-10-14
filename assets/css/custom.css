@@ -1,42 +1,181 @@
-.paper-title {
+/* Colors shared by the custom components below; dark values follow the visitor's system setting */
+:root {
+  --c-surface: #f5f7fa;
+  --c-surface-hover: #e8f0fe;
+  --c-border: #dde3ea;
+  --c-muted: #5f6b7a;
+  --c-accent: #1a73e8;
+  --c-accent-soft: #e8f0fe;
+}
 
-    font-size: 0.9em; /* Adjust this value as needed */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-surface: #2a2d33;
+    --c-surface-hover: #33373e;
+    --c-border: #41464f;
+    --c-muted: #a3acb8;
+    --c-accent: #8ab4f8;
+    --c-accent-soft: #263445;
   }
+}
 
-  .doi-title {
-    font-size: 0.7em; /* Adjust this value as needed */
-  }
+/* Legacy text classes used across the course pages (kept for compatibility, sizes evened out) */
+.paper-title,
+.education-title,
+.general-title {
+  font-size: 1em;
+}
 
-  .author-title {
-    font-size: 0.8em; /* Adjust this value as needed */
-  }
+.general-title-medium {
+  font-size: 0.9em;
+}
 
+.general-title-little,
+.doi-title {
+  font-size: 0.8em;
+}
 
-  .education-title {
-    font-size: 0.9em; /* Adjust this value as needed */
-  }
+.author-title {
+  font-size: 0.85em;
+  color: var(--c-muted);
+}
 
-  .general-title {
-    font-size: 0.9em; /* Adjust this value as needed */
-  }
+/* Back link at the top of course and exercise pages */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1em;
+  font-size: 0.85em;
+  text-decoration: none;
+}
 
-  .general-title-medium {
-    font-size: 0.8em; /* Adjust this value as needed */
-  }
+/* Home page */
+.home-intro {
+  font-size: 1.05em;
+  line-height: 1.6;
+}
 
-  .general-title-little {
-    font-size: 0.7em; /* Adjust this value as needed */
-  }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0 0 1.5em;
+  padding: 0;
+  list-style: none;
+}
 
+.chips li {
+  margin: 0;
+  padding: 0.25em 0.8em;
+  border-radius: 999px;
+  background: var(--c-accent-soft);
+  color: var(--c-accent);
+  font-size: 0.8em;
+  font-weight: 600;
+}
 
-  .feed-item {
-    background: #f5f8fa;
-    border-left: 4px solid #1da1f2;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    font-family: system-ui, sans-serif;
-  }
-  .feed-item:hover {
-    background: #e8f0fe;
-  }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.page__content a.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  padding: 1em 1.1em;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  background: var(--c-surface);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.page__content a.card:hover {
+  background: var(--c-surface-hover);
+  border-color: var(--c-accent);
+  transform: translateY(-2px);
+}
+
+.card i {
+  font-size: 1.4em;
+  color: var(--c-accent);
+}
+
+.card span {
+  font-size: 0.8em;
+  color: var(--c-muted);
+  line-height: 1.4;
+}
+
+.pub-list,
+.edu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pub-list li {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+  margin: 0 0 1em;
+}
+
+.pub-year {
+  flex: none;
+  min-width: 3.2em;
+  padding: 0.1em 0.5em;
+  border-radius: 6px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  font-size: 0.75em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.pub-title {
+  display: block;
+  font-size: 0.95em;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pub-authors {
+  font-size: 0.85em;
+  color: var(--c-muted);
+}
+
+.edu-list li {
+  margin: 0 0 0.6em;
+}
+
+.page__content a.tag {
+  display: inline-block;
+  margin-left: 0.3em;
+  padding: 0.05em 0.55em;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  font-size: 0.75em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.page__content a.tag:hover {
+  border-color: var(--c-accent);
+}
+
+/* News feed */
+.feed-item {
+  background: var(--c-surface);
+  border-left: 4px solid var(--c-accent);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.feed-item:hover {
+  background: var(--c-surface-hover);
+}

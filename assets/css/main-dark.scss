@@ -1,0 +1,9 @@
+---
+# Dark version of the theme, loaded only when the visitor's system prefers dark mode
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";

@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Lógica de Programação II – Eletrônica (LPR082)"
 layout: single
 permalink: /eletronica/
 author_profile: true
 ---
-
-
-## LPR082 - LÓGICA DE PROGRAMAÇÃO - II -  ELETRÔNICA
+[← Cursos](/courses/){: .back-link}
 
 #### Github da disciplina com TODOS os códigos
  

@@ -1,12 +1,10 @@
 ---
-title: ""
+title: "Criptografia"
 layout: single
 permalink: /cripto/
 author_profile: true
 ---
-
-
-## Criptografia
+[← Cursos](/courses/){: .back-link}
 
 #### Slides e código
  - <span class="education-title">[Data Encryption Standard (DES) - Slides](https://drive.google.com/file/d/1sNldBcozCrk2vWdYD0bK-261XTuejUE1/view?usp=drive_link)</span> 

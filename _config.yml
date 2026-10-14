@@ -1,5 +1,6 @@
 # Site settings
-title: Prof. José Dihego 真実は勝つ
+title: Prof. José Dihego
+subtitle: 真実は勝つ
 email: josedihego@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
  Full Professor (Professor Titular <img src='/assets/images/br.png' alt='Brazilian flag' style='width:18px;height:12px;vertical-align:middle;'/>) at Federal Institute of Education, Science and Technology of Bahia - IFBA (since 2010). Education: Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at CIn-UFPE. Interested in Formal Methods, Programming Languages ​​and Mobile Development. 
@@ -23,8 +24,6 @@ kramdown:
 remote_theme: mmistakes/minimal-mistakes@4.28.1
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
@@ -44,7 +43,6 @@ include:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -146,7 +144,6 @@ defaults:
       comments: true
       share: true
       related: true
-      mathjax: true
   # _pages
   - scope:
       path: "_pages"
@@ -154,7 +151,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      mathjax: true
 
 category_archive:
   type: liquid

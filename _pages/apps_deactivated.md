@@ -1,12 +1,9 @@
 ---
-title: ""
+title: "Apps"
 layout: single
 permalink: /apps_deactivated/
 author_profile: true
 ---
-
-
-
 #### <img src="{{ '/assets/images/binaire.png' | relative_url }}" width="50" height="50"/> **Binaire**
 - <span class="general-title-medium">The Binaire encrypts/decrypts text using the market flagship encryption algorithm Advanced Encryption Standard (AES), a symmetric block cypher used by governments and corporations worldwide.<br>
 The user provides a text then Binaire produces two "keys", which can be stored locally or shared by any means.

@@ -1,2 +1,8 @@
 <!-- Site-wide custom styles (included in <head> by Minimal Mistakes) -->
+<link rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+{% if page.mathjax %}
+<!-- MathJax 3: renders $$...$$ (converted by kramdown to \(...\) / \[...\]) -->
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+{% endif %}
