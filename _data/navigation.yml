@@ -1,17 +1,17 @@
 main:
+  - title: "<i class='fas fa-book' aria-hidden='true'></i> Courses"
+    url: /courses/
+  - title: "<i class='fas fa-graduation-cap' aria-hidden='true'></i> Supervision"
+    url: /tccs/
+  - title: "<i class='fas fa-calendar-days' aria-hidden='true'></i> Schedule"
+    url: /schedule/
   - title: "<i class='fas fa-laptop-code' aria-hidden='true'></i> BitBrabo"
     url: https://bitbrabo.josedihego.net/
   - title: "<i class='fas fa-microchip' aria-hidden='true'></i> Arduino"
     url: /arduino/
   #- title: "Youtube"
   #  url: /youtube/
-  - title: "<i class='fas fa-book' aria-hidden='true'></i> Courses"
-    url: /courses/
   #- title: "News"
   #  url: /news/
-  - title: "<i class='fas fa-graduation-cap' aria-hidden='true'></i> Supervision"
-    url: /tccs/
-  - title: "<i class='fas fa-calendar-days' aria-hidden='true'></i> Schedule"
-    url: /schedule/
   - title: "About"
     url: /about/
