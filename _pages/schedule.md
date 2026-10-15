@@ -29,14 +29,14 @@ author_profile: true
 
 <div class="pdf-section">
   <h3>Calendário Integrado</h3>
-  <object class="pdf-embed" data="/assets/pdfs/integrado.pdf" type="application/pdf" width="100%" height="600">
+  <object class="pdf-embed" data="/assets/pdfs/integrado.pdf#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600">
     <p>Seu navegador não suporta visualização de PDF. <a href="/assets/pdfs/integrado.pdf">Baixar PDF</a>.</p>
   </object>
 </div>
 
 <div class="pdf-section">
   <h3>Calendário Superior</h3>
-  <object class="pdf-embed" data="/assets/pdfs/superior.pdf" type="application/pdf" width="100%" height="600">
+  <object class="pdf-embed" data="/assets/pdfs/superior.pdf#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600">
     <p>Seu navegador não suporta visualização de PDF. <a href="/assets/pdfs/superior.pdf">Baixar PDF</a>.</p>
   </object>
 </div>
