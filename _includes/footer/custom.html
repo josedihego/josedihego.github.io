@@ -1,9 +1,42 @@
-<!-- Open external links in a new tab (included at the end of <body> by Minimal Mistakes) -->
+<!-- Site-wide scripts (included at the end of <body>, before the theme's own scripts) -->
 <script>
+  // Open external links in a new tab
   document.querySelectorAll('a[href]').forEach(function (a) {
     if (/^https?:$/.test(a.protocol) && a.hostname !== location.hostname) {
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
+    }
+  });
+
+  // Light/dark toggle at the right end of the masthead (outside the nav, so the theme's menu sizing accounts for it)
+  (function () {
+    var wrap = document.querySelector('.masthead__inner-wrap');
+    if (!wrap || !window.setTheme) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'theme-toggle';
+    function render() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.innerHTML = '<i class="fas ' + (dark ? 'fa-sun' : 'fa-moon') + '" aria-hidden="true"></i>';
+      btn.setAttribute('aria-label', dark ? 'Mudar para tema claro' : 'Mudar para tema escuro');
+      btn.title = btn.getAttribute('aria-label');
+    }
+    btn.addEventListener('click', function () {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      window.setTheme(dark ? 'light' : 'dark');
+      render();
+    });
+    render();
+    wrap.appendChild(btn);
+  })();
+
+  // Keyboard shortcut: "/" or Ctrl/Cmd+K opens search
+  document.addEventListener('keydown', function (e) {
+    var t = e.target;
+    if (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return;
+    if (e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) {
+      var toggle = document.querySelector('.search__toggle');
+      if (toggle) { e.preventDefault(); toggle.click(); }
     }
   });
 </script>

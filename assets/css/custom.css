@@ -1,21 +1,110 @@
-/* Colors shared by the custom components below; dark values follow the visitor's system setting */
+/* Colors shared by the custom components below.
+   Dark values apply when the system prefers dark (unless the visitor chose light) or when dark was chosen. */
 :root {
-  --c-surface: #f5f7fa;
-  --c-surface-hover: #e8f0fe;
-  --c-border: #dde3ea;
-  --c-muted: #5f6b7a;
-  --c-accent: #1a73e8;
-  --c-accent-soft: #e8f0fe;
+  --c-surface: #f6f8fb;
+  --c-surface-hover: #eef2ff;
+  --c-border: #e3e8ef;
+  --c-muted: #5b6573;
+  --c-accent: #1d4ed8;
+  --c-accent-soft: #e8eeff;
+  --c-on-accent: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --c-surface: #2a2d33;
-    --c-surface-hover: #33373e;
-    --c-border: #41464f;
+  :root:not([data-theme="light"]) {
+    --c-surface: #2c313c;
+    --c-surface-hover: #343b49;
+    --c-border: #3d4452;
     --c-muted: #a3acb8;
-    --c-accent: #8ab4f8;
-    --c-accent-soft: #263445;
+    --c-accent: #93b4ff;
+    --c-accent-soft: #2a3557;
+    --c-on-accent: #10131a;
+  }
+}
+
+:root[data-theme="dark"] {
+  --c-surface: #2c313c;
+  --c-surface-hover: #343b49;
+  --c-border: #3d4452;
+  --c-muted: #a3acb8;
+  --c-accent: #93b4ff;
+  --c-accent-soft: #2a3557;
+  --c-on-accent: #10131a;
+}
+
+/* Smooth cross-fade between pages (ignored by browsers without support) */
+@view-transition {
+  navigation: auto;
+}
+
+/* Typography: tighter large headings */
+.page__title,
+.page__content h1,
+.page__content h2 {
+  letter-spacing: -0.02em;
+}
+
+.site-title {
+  letter-spacing: -0.01em;
+}
+
+/* Masthead light/dark toggle (inserted by footer/custom.html, right of the menu) */
+.masthead__inner-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.masthead__menu {
+  flex: 1;
+  min-width: 0;
+}
+
+.theme-toggle {
+  flex: none;
+  margin: 0 0 0 0.5rem;
+  padding: 0.35rem 0.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--c-accent);
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  opacity: 0.75;
+}
+
+/* Lighter footer */
+.page__footer {
+  border-top: 1px solid var(--c-border);
+}
+
+/* Phones/tablets: hide the "Follow" button (links are in the footer) */
+@media (max-width: 1023px) {
+  .author__urls-wrapper {
+    display: none;
+  }
+}
+
+/* Masthead: slightly tighter menu so all items fit with Inter */
+.greedy-nav .visible-links a {
+  margin: 0 0.6rem;
+  font-size: 0.92em;
+}
+
+/* Home: the intro already says what the sidebar bio says */
+.home-page .author__bio {
+  display: none;
+}
+
+.home-page .author__urls-wrapper {
+  margin-top: 0.5em;
+}
+
+/* Home on phones/tablets: the intro sits right below, so skip the profile block */
+@media (max-width: 1023px) {
+  .home-page .sidebar {
+    display: none;
   }
 }
 
@@ -359,16 +448,10 @@
   padding: 0.5em 1em;
   border-radius: 8px;
   background: var(--c-accent);
-  color: #fff;
+  color: var(--c-on-accent);
   font-size: 0.85em;
   font-weight: 600;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .page__content a.download-btn {
-    color: #1b1d21;
-  }
 }
 
 .page__content a.download-btn:hover {

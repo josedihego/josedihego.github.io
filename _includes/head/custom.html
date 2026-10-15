@@ -1,6 +1,33 @@
-<!-- Site-wide custom styles (included in <head> by Minimal Mistakes) -->
-<link rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}?v={{ site.time | date: '%s' }}" media="(prefers-color-scheme: dark)">
+<!-- Site-wide custom head (included in <head> by Minimal Mistakes) -->
+<link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<meta name="theme-color" content="#1d4ed8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+<!-- Dark theme: follows the system setting; the toggle in the masthead can override it -->
+<link id="dark-css" rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}?v={{ site.time | date: '%s' }}" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<script>
+  (function () {
+    var key = 'theme', mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function saved() { try { return localStorage.getItem(key); } catch (e) { return null; } }
+    function apply(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.getElementById('dark-css').media = theme === 'dark' ? 'all' : 'not all';
+    }
+    window.setTheme = function (theme) {
+      try { localStorage.setItem(key, theme); } catch (e) {}
+      apply(theme);
+    };
+    apply(saved() || (mq.matches ? 'dark' : 'light'));
+    if (mq.addEventListener) {
+      mq.addEventListener('change', function (e) { if (!saved()) apply(e.matches ? 'dark' : 'light'); });
+    }
+  })();
+</script>
 
 {% if page.mathjax %}
 <!-- MathJax 3: renders $$...$$ (converted by kramdown to \(...\) / \[...\]) -->

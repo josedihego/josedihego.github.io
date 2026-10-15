@@ -3,6 +3,7 @@ title: "Prof. José Dihego"
 layout: single
 permalink: /
 author_profile: true
+classes: home-page
 ---
 
 <p class="home-intro">Full Professor at the Federal Institute of Bahia (<a href="https://portal.ifba.edu.br/">IFBA</a>), Campus Salvador, since 2010. PhD in Computer Science from <a href="https://www.cin.ufpe.br">CIn-UFPE</a>.</p>
