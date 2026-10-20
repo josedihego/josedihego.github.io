@@ -676,3 +676,41 @@
     padding: 0 1em 1em;
   }
 }
+
+.files-hint {
+  font-size: 0.85em;
+  color: var(--c-muted);
+}
+
+.lesson-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.9em 0 0;
+}
+
+.page__content a.file-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.4em 0.85em;
+  border: 1px solid var(--c-accent);
+  border-radius: 8px;
+  color: var(--c-accent);
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page__content a.file-btn:hover {
+  background: var(--c-accent-soft);
+}
+
+/* The 30–50 min in-class task stands out from the rest of the lesson */
+.lesson-activity {
+  margin: 0.9em 0 0;
+  padding: 0.2em 1em 0.8em;
+  border-left: 4px solid var(--c-accent);
+  border-radius: 6px;
+  background: var(--c-accent-soft);
+}

@@ -11,16 +11,21 @@ Plano de Aula da disciplina de Informática.
 
 ## Ferramentas
 
+Todas funcionam no navegador, sem instalar nada: basta uma conta Google e uma conta no Scratch.
+
 <ul class="tool-legend">
   <li><span class="tool tool--planilhas">Planilhas</span> a mesma lógica como fórmula do Google Planilhas (nomes em PT-BR: <code>SE</code>, <code>RAIZ</code>, <code>SOMA</code>…)</li>
   <li><span class="tool tool--documentos">Documentos</span> Google Documentos: Diário de Bordo e registro das atividades</li>
   <li><span class="tool tool--python">Python</span> linguagem principal, executada no <a href="https://colab.research.google.com/">Google Colab</a></li>
-  <li><span class="tool tool--scratch">Scratch</span> a mesma lógica em blocos (<a href="https://scratch.mit.edu/">scratch.mit.edu</a>)</li>
+  <li><span class="tool tool--scratch">Scratch</span> a mesma lógica em blocos, no editor on-line (<a href="https://scratch.mit.edu/projects/editor/">scratch.mit.edu</a>)</li>
   <li><span class="tool">Python Tutor</span> visualiza a execução linha a linha (<a href="https://pythontutor.com/">pythontutor.com</a>)</li>
-  <li><span class="tool">Fluxogramas</span> <a href="http://www.flowgorithm.org/">Flowgorithm</a> ou <a href="https://app.diagrams.net/">diagrams.net</a></li>
+  <li><span class="tool">Fluxogramas</span> <a href="https://app.diagrams.net/">diagrams.net</a> ou <em>Inserir → Desenho</em> no Google Documentos</li>
   <li><span class="tool">Blockly Games</span> desafios de lógica em blocos (<a href="https://blockly.games/?lang=pt-br">blockly.games</a>)</li>
 </ul>
 
+<p class="files-hint"><strong>Arquivos das aulas:</strong> os exemplos em Python abrem direto no Colab. Os projetos do Scratch são baixados e abertos no editor on-line em <em>Arquivo → Carregar do seu computador</em>.</p>
+
+{% assign colab = "https://colab.research.google.com/github/josedihego/josedihego.github.io/blob/master/assets/infobasica/python/" %}
 {% for u in site.data.infobasica %}
 <h2 class="unit-title" id="unidade-{{ u.unidade }}"><span class="unit-num">Unidade {{ u.unidade }}</span> {{ u.titulo }}</h2>
 <p class="unit-summary">{{ u.resumo | markdownify | remove: '<p>' | remove: '</p>' }}</p>
@@ -42,6 +47,16 @@ Plano de Aula da disciplina de Informática.
         {% for m in a.material %}<li>{{ m | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
         {% endfor %}
       </ul>
+      {% if a.python or a.scratch %}
+      <div class="lesson-files">
+        {% if a.python %}<a class="file-btn" href="{{ colab }}{{ a.python }}" target="_blank" rel="noopener"><i class="fab fa-python" aria-hidden="true"></i> Exemplo em Python (abrir no Colab)</a>{% endif %}
+        {% if a.scratch %}<a class="file-btn" href="/assets/infobasica/scratch/{{ a.scratch }}" download><i class="fas fa-puzzle-piece" aria-hidden="true"></i> Projeto Scratch (.sb3)</a>{% endif %}
+      </div>
+      {% endif %}
+      <div class="lesson-activity">
+        <h4>Atividade em sala · {{ a.atividade.tempo }}</h4>
+        <p>{{ a.atividade.descricao | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      </div>
       <h4>Exercícios propostos</h4>
       <ol>
         {% for e in a.exercicios %}<li>{{ e | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
