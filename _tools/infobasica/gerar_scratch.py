@@ -259,24 +259,233 @@ def aula26(p):
         p.diga(p.junte('Quantidade: ', p.tamanho(nomes)), 2)])
     return 'Listas: no Scratch o primeiro item é a posição 1; no Python é a posição 0.'
 
-def aula30(p):
-    area = p.var('area')
-    ret = p.definir('área do retângulo %s por %s', ['largura', 'comprimento'],
-                    [p.mude(area, p.op('multiply', p.parametro('largura'), p.parametro('comprimento')))])
-    p.script(p.bandeira(), [
-        p.chame(ret, [5, 4]),
-        p.diga(p.junte_varios('Área: ', area, ' m²'), 3)])
-    return 'Meus Blocos: o bloco criado recebe largura e comprimento (parâmetros) e guarda o resultado na variável "area", já que blocos do Scratch não devolvem valor como o return do Python.'
+# --- blocos extras usados nos níveis 1 e 3 ---
+def tecla(p, nome): return p.bloco('event_whenkeypressed', campos={'KEY_OPTION': [nome, None]})
+def deslize(p, segundos, x, y): return p.bloco('motion_glidesecstoxy', num={'SECS': segundos, 'X': x, 'Y': y})
+def pense(p, msg, segundos=2): return p.bloco('looks_thinkforsecs', txt={'MESSAGE': msg}, num={'SECS': segundos})
+def absoluto(p, valor): return p.bloco('operator_mathop', num={'NUM': valor}, campos={'OPERATOR': ['abs', None]})
+def duas_casas(p, valor): return p.op('divide', p.arredonde(p.op('multiply', valor, 100)), 100)
 
-projetos = {3: aula03, 4: aula04, 6: aula06, 8: aula08, 9: aula09, 10: aula10,
-            13: aula13, 16: aula16, 17: aula17, 18: aula18, 26: aula26, 30: aula30}
+
+def aula03_1(p):
+    p.script(p.bandeira(), [p.va_para(0, 0), p.diga('Olá! Eu sou o Robô.', 2), p.mova(100), p.diga('Vamos aprender Scratch!', 2)])
+    return 'Sequência: os blocos executam de cima para baixo, um de cada vez.'
+
+def aula03_3(p):
+    nome, curso, cidade = p.var('nome'), p.var('curso'), p.var('cidade')
+    p.script(p.bandeira(), [
+        p.va_para(-150, 0),
+        p.pergunte('Qual é o seu nome?'), p.mude(nome, p.resposta()),
+        p.pergunte('Qual é o seu curso?'), p.mude(curso, p.resposta()),
+        p.pergunte('Em que cidade você mora?'), p.mude(cidade, p.resposta()),
+        p.diga(p.junte_varios('Olá, ', nome, '!'), 2), deslize(p, 1, 0, 0),
+        p.diga(p.junte_varios('Você estuda ', curso, '.'), 2), deslize(p, 1, 150, 0),
+        p.diga(p.junte_varios('E mora em ', cidade, '. Aperte espaço!'), 2)])
+    p.script(tecla(p, 'space'), [p.gire(180), p.gire(180), p.diga('Até logo!', 2)])
+    return 'Dois eventos: a bandeira verde inicia o diálogo e a tecla espaço inicia outro script. "Deslize" anima o ator entre as falas.'
+
+def aula04_1(p):
+    p.script(p.bandeira(), [p.diga('Olá, mundo!', 2)])
+    return 'O menor programa possível: um evento e um bloco "diga", como print("Olá, mundo!").'
+
+def aula04_3(p):
+    p.script(p.bandeira(), [
+        p.va_para(0, 0), p.diga('Nome: Ana Souza', 2), deslize(p, 1, 0, 100),
+        p.diga('Curso: Edificações', 2), deslize(p, 1, 0, -100),
+        p.diga('Turma: 1º ano', 2), deslize(p, 1, 0, 0), pense(p, 'Gostei de programar!', 2)])
+    return 'Cartão animado: "diga", "pense" e "deslize" em sequência.'
+
+def aula06_1(p):
+    p.script(p.bandeira(), [p.pergunte('Qual é o seu nome?'), p.diga(p.junte('Olá, ', p.resposta()), 2)])
+    return '"Pergunte e espere" mostra a pergunta; o bloco "resposta" guarda o que foi digitado.'
+
+def aula06_3(p):
+    anterior, atual, preco, consumo, valor = p.var('leitura_anterior'), p.var('leitura_atual'), p.var('preco_kwh'), p.var('consumo'), p.var('valor')
+    p.script(p.bandeira(), [
+        p.pergunte('Leitura anterior (kWh):'), p.mude(anterior, p.resposta()),
+        p.pergunte('Leitura atual (kWh):'), p.mude(atual, p.resposta()),
+        p.pergunte('Preço do kWh (R$):'), p.mude(preco, p.resposta()),
+        p.mude(consumo, p.op('subtract', atual, anterior)),
+        p.mude(valor, p.op('add', p.op('multiply', consumo, preco), 12)),
+        p.diga(p.junte_varios('Consumo: ', consumo, ' kWh'), 2),
+        p.diga(p.junte('Valor da conta: R$ ', duas_casas(p, valor)), 3)])
+    return 'Conta de energia: consumo = leitura atual − anterior; valor = consumo × preço + taxa fixa de R$ 12.'
+
+def aula08_1(p):
+    p.script(p.bandeira(), [
+        p.diga(p.junte('5 > 3 é ', p.compara('gt', 5, 3)), 2),
+        p.diga(p.junte('5 = 3 é ', p.compara('equals', 5, 3)), 2),
+        p.diga(p.junte('5 < 3 é ', p.compara('lt', 5, 3)), 2)])
+    return 'Blocos hexagonais de comparação devolvem true (verdadeiro) ou false (falso).'
+
+def aula08_3(p):
+    ano = p.var('ano')
+    def divisivel(n): return p.compara('equals', p.op('mod', ano, n), 0)
+    p.script(p.bandeira(), [
+        p.pergunte('Ano:'), p.mude(ano, p.resposta()),
+        p.diga(p.junte('Bissexto: ', p.ou(p.e(divisivel(4), p.nao(divisivel(100))), divisivel(400))), 3)])
+    return 'Ano bissexto: (divisível por 4 e não por 100) ou divisível por 400. O bloco "resto de ... por ..." é o % do Python.'
+
+def aula09_1(p):
+    numero = p.var('numero')
+    p.script(p.bandeira(), [
+        p.pergunte('Número inteiro:'), p.mude(numero, p.resposta()),
+        p.se_senao(p.compara('equals', p.op('mod', numero, 2), 0), [p.diga('Par', 2)], [p.diga('Ímpar', 2)])])
+    return 'Par ou ímpar: resto da divisão por 2 igual a zero.'
+
+def aula09_3(p):
+    medida, diferenca = p.var('medida'), p.var('diferenca')
+    p.script(p.bandeira(), [
+        p.pergunte('Medida da peça (mm):'), p.mude(medida, p.resposta()),
+        p.mude(diferenca, absoluto(p, p.op('subtract', medida, 50))),
+        p.se_senao(p.compara('gt', diferenca, 0.2),
+                   [p.diga(p.junte('Reprovada. Diferença: ', duas_casas(p, diferenca)), 3)],
+                   [p.diga(p.junte('Aprovada. Diferença: ', duas_casas(p, diferenca)), 3)])])
+    return 'Controle de qualidade: o bloco "abs" (valor absoluto) mede a distância até 50 mm; a tolerância é 0,2 mm.'
+
+def aula10_1(p):
+    ph = p.var('ph')
+    p.script(p.bandeira(), [
+        p.pergunte('pH da solução:'), p.mude(ph, p.resposta()),
+        p.se_senao(p.compara('lt', ph, 7), [p.diga('Ácido', 2)], [
+            p.se_senao(p.compara('equals', ph, 7), [p.diga('Neutro', 2)], [p.diga('Básico', 2)])])])
+    return 'Três faixas com um "se ... senão" dentro de outro.'
+
+def aula10_3(p):
+    velocidade, limite, excesso = p.var('velocidade'), p.var('limite'), p.var('excesso')
+    p.script(p.bandeira(), [
+        p.pergunte('Velocidade medida (km/h):'), p.mude(velocidade, p.resposta()),
+        p.pergunte('Limite da via (km/h):'), p.mude(limite, p.resposta()),
+        p.mude(excesso, p.op('multiply', p.op('divide', p.op('subtract', velocidade, limite), limite), 100)),
+        p.se_senao(p.nao(p.compara('gt', excesso, 0)), [p.diga('Sem multa', 3)], [
+            p.se_senao(p.nao(p.compara('gt', excesso, 20)), [p.diga('Multa leve', 3)], [
+                p.se_senao(p.nao(p.compara('gt', excesso, 50)), [p.diga('Multa grave', 3)], [p.diga('Multa gravíssima', 3)])])])])
+    return 'Classificador de multas: o excesso é calculado em percentual e comparado com 0, 20 e 50.'
+
+def aula13_1(p):
+    volta = p.var('volta')
+    p.script(p.bandeira(), [p.mude(volta, 1), p.repita(5, [p.diga(p.junte('Volta ', volta), 1), p.adicione(volta, 1)]), p.diga('Fim', 1)])
+    return '"Repita 5 vezes" com uma variável que conta as voltas.'
+
+def aula13_3(p):
+    numero, multiplicador = p.var('numero'), p.var('multiplicador')
+    p.script(p.bandeira(), [
+        p.pergunte('Tabuada do:'), p.mude(numero, p.resposta()), p.mude(multiplicador, 1),
+        p.repita(10, [p.diga(p.junte_varios(numero, ' x ', multiplicador, ' = ', p.op('multiply', numero, multiplicador)), 1),
+                      p.adicione(multiplicador, 1)])])
+    return 'Tabuada: o multiplicador vai de 1 a 10 dentro do "repita".'
+
+def aula16_1(p):
+    contador = p.var('contador')
+    p.script(p.bandeira(), [p.mude(contador, 1),
+                            p.repita_ate(p.compara('gt', contador, 5), [p.diga(contador, 1), p.adicione(contador, 1)]),
+                            p.diga('Fim', 1)])
+    return '"Repita até que contador > 5": o laço para quando a condição fica verdadeira.'
+
+def aula16_3(p):
+    soma, quantidade, nota = p.var('soma'), p.var('quantidade'), p.var('nota')
+    def ler(): return [p.pergunte('Nota (negativo para terminar):'), p.mude(nota, p.resposta())]
+    p.script(p.bandeira(), [p.mude(soma, 0), p.mude(quantidade, 0)] + ler() + [
+        p.repita_ate(p.compara('lt', nota, 0), [
+            p.se_senao(p.compara('gt', nota, 10), [p.diga('Nota acima de 10 ignorada', 1)],
+                       [p.mude(soma, p.op('add', soma, nota)), p.adicione(quantidade, 1)])] + ler()),
+        p.se_senao(p.compara('gt', quantidade, 0),
+                   [p.diga(p.junte('Média: ', duas_casas(p, p.op('divide', soma, quantidade))), 3)],
+                   [p.diga('Nenhuma nota válida', 3)])])
+    return 'Lê notas até um valor negativo, ignora notas acima de 10 e mostra a média das válidas.'
+
+def aula17_1(p):
+    p.script(p.bandeira(), [p.diga(p.junte('Saiu: ', p.aleatorio(1, 6)), 2)])
+    return 'Um dado: "número aleatório entre 1 e 6". Clique na bandeira várias vezes.'
+
+def aula17_3(p):
+    setes = p.var('setes')
+    p.script(p.bandeira(), [
+        p.mude(setes, 0),
+        p.repita(1000, [p.se(p.compara('equals', p.op('add', p.aleatorio(1, 6), p.aleatorio(1, 6)), 7), [p.adicione(setes, 1)])]),
+        p.diga(p.junte_varios('Soma 7 em ', p.op('divide', setes, 10), '% das vezes (teoria: 16,7%)'), 4)])
+    return 'Dois dados, 1000 vezes: em quantas a soma dá 7?'
+
+def aula18_1(p):
+    secreto = p.var('secreto')
+    p.script(p.bandeira(), [
+        p.mude(secreto, p.aleatorio(1, 10)), p.pergunte('Adivinhe (1 a 10):'),
+        p.se_senao(p.compara('equals', p.resposta(), secreto), [p.diga('Acertou!', 2)], [p.diga(p.junte('Errou! Era ', secreto), 2)])])
+    return 'Um palpite só: sorteio e uma decisão. Esconda a variável "secreto" do palco.'
+
+def aula18_3(p):
+    secreto, palpite, tentativas, acertou = p.var('secreto'), p.var('palpite'), p.var('tentativas'), p.var('acertou')
+    p.script(p.bandeira(), [
+        p.mude(secreto, p.aleatorio(1, 100)), p.mude(tentativas, 0), p.mude(acertou, 'não'),
+        p.repita_ate(p.ou(p.compara('equals', acertou, 'sim'), p.compara('equals', tentativas, 7)), [
+            p.pergunte(p.junte_varios('Tentativa ', p.op('add', tentativas, 1), ' de 7:')),
+            p.mude(palpite, p.resposta()), p.adicione(tentativas, 1),
+            p.se(p.compara('equals', palpite, secreto), [p.mude(acertou, 'sim')]),
+            p.se(p.compara('lt', palpite, secreto), [p.diga('O número secreto é MAIOR', 1)]),
+            p.se(p.compara('gt', palpite, secreto), [p.diga('O número secreto é MENOR', 1)])]),
+        p.se_senao(p.compara('equals', acertou, 'sim'),
+                   [p.diga(p.junte_varios('Acertou em ', tentativas, ' tentativas!'), 4)],
+                   [p.diga(p.junte('Acabaram as tentativas. Era ', secreto), 4)])])
+    return 'No máximo 7 tentativas: o laço para quando acerta OU quando chega a 7.'
+
+def aula26_1(p):
+    cores = p.lista('cores')
+    p.script(p.bandeira(), [
+        p.apague_lista(cores), p.insira(cores, 'vermelho'), p.insira(cores, 'verde'), p.insira(cores, 'azul'),
+        p.diga(p.junte('Primeira: ', p.item(cores, 1)), 2),
+        p.diga(p.junte('Quantidade: ', p.tamanho(cores)), 2),
+        p.insira(cores, 'amarelo'), p.diga(p.junte('Última: ', p.item(cores, 'last')), 2)])
+    return 'Lista de cores: inserir, pegar item pela posição e ver o tamanho.'
+
+def aula26_3(p):
+    meses, numero = p.lista('meses'), p.var('numero')
+    nomes = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    p.script(p.bandeira(), [p.apague_lista(meses)] + [p.insira(meses, m) for m in nomes] + [
+        p.pergunte('Número do mês (1 a 12):'), p.mude(numero, p.resposta()),
+        p.se_senao(p.e(p.nao(p.compara('lt', numero, 1)), p.nao(p.compara('gt', numero, 12))),
+                   [p.diga(p.item(meses, numero), 2)], [p.diga('Mês inválido', 2)])])
+    return 'Nome do mês: o número digitado é usado como posição na lista (no Scratch começa em 1).'
+
+def aula30_1(p):
+    saudacao = p.definir('saudação para %s', ['nome'], [p.diga(p.junte('Olá, ', p.parametro('nome')), 2)])
+    p.script(p.bandeira(), [p.chame(saudacao, ['Ana']), p.chame(saudacao, ['Caio'])])
+    return 'Meus Blocos: um bloco novo com um parâmetro, usado duas vezes.'
+
+def aula30_2(p):
+    celsius, fahrenheit = p.var('celsius'), p.var('fahrenheit')
+    converter = p.definir('converter %s °C', ['c'],
+                          [p.mude(fahrenheit, p.op('add', p.op('divide', p.op('multiply', p.parametro('c'), 9), 5), 32))])
+    p.script(p.bandeira(), [p.mude(celsius, 0), p.repita(6, [
+        p.chame(converter, [celsius]), p.diga(p.junte_varios(celsius, ' °C = ', fahrenheit, ' °F'), 1), p.adicione(celsius, 20)])])
+    return 'O bloco "converter" guarda o resultado na variável fahrenheit; o "repita" monta a tabela de 0 a 100 °C.'
+
+def aula30_3(p):
+    area_ret, area_circ = p.var('area_retangulo'), p.var('area_circulo')
+    ret = p.definir('área do retângulo %s por %s', ['largura', 'comprimento'],
+                    [p.mude(area_ret, p.op('multiply', p.parametro('largura'), p.parametro('comprimento')))])
+    circ = p.definir('área do círculo de raio %s', ['raio'],
+                     [p.mude(area_circ, p.op('multiply', 3.1416, p.op('multiply', p.parametro('raio'), p.parametro('raio'))))])
+    p.script(p.bandeira(), [p.chame(ret, [5, 4]), p.chame(circ, [0.3]),
+                            p.diga(p.junte_varios('Área útil: ', duas_casas(p, p.op('subtract', area_ret, area_circ)), ' m²'), 3)])
+    return 'Dois blocos próprios usados juntos: sala de 5 × 4 m menos uma coluna circular de raio 0,3 m.'
+
+
+projetos = {}
+for n in (3, 4, 6, 8, 9, 10, 13, 16, 17, 18, 26, 30):
+    projetos[(n, 1)] = globals()[f'aula{n:02d}_1']
+    projetos[(n, 2)] = globals().get(f'aula{n:02d}_2') or globals()[f'aula{n:02d}']   # nível 2 = exemplo original da aula
+    projetos[(n, 3)] = globals()[f'aula{n:02d}_3']
+NIVEIS = {1: 'Básico', 2: 'Intermediário', 3: 'Avançado'}
 
 if __name__ == "__main__":  # uso: python3 _tools/infobasica/gerar_scratch.py <raiz do site>
+    import glob
     site = sys.argv[1]
     destino = os.path.join(site, 'assets/infobasica/scratch')
     os.makedirs(destino, exist_ok=True)
-    for n, f in projetos.items():
-        p = Projeto(f'aula{n:02d}')
+    for antigo in glob.glob(os.path.join(destino, '*.sb3')):
+        os.remove(antigo)
+    for (n, k), f in sorted(projetos.items()):
+        p = Projeto(f'aula{n:02d}_{k}')
         comentario = f(p)
-        p.salvar(os.path.join(destino, f'aula{n:02d}.sb3'), f'Aula {n}. {comentario}')
-    print('ok', sorted(projetos))
+        p.salvar(os.path.join(destino, f'aula{n:02d}_nivel{k}.sb3'), f'Aula {n}, nível {k} ({NIVEIS[k]}). {comentario}')
+    print(len(projetos), 'projetos')

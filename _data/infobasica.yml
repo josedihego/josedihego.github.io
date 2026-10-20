@@ -1,6 +1,7 @@
 # Plano de aulas de Informática (Edificações, Química, Mecânica), rendered by /infobasica/
 # 36 encontros de 2 h, em 3 unidades de 12; cada unidade termina com avaliação e reavaliação.
-# Tudo roda no navegador. Exemplos: assets/infobasica/python (Colab) e assets/infobasica/scratch (.sb3).
+# Tudo roda no navegador. Python: _tools/infobasica/python -> assets/infobasica/python (Colab);
+# Scratch: _tools/infobasica/gerar_scratch.py -> assets/infobasica/scratch. Ver _tools/infobasica/README.md.
 - unidade: 1
   titulo: "Algoritmos, variáveis e decisões. Interação com Documentos"
   resumo: "Do algoritmo no papel ao primeiro programa em Python: sequência, variáveis, entrada de dados, cálculos e decisões, com cada etapa registrada no Google Documentos."
@@ -18,9 +19,15 @@
         tempo: "40 min"
         descricao: "**Algoritmo testado por um colega.** No Diário de Bordo, escreva o algoritmo de uma tarefa do seu curso, com 10 a 15 passos. Um colega lê e *executa* o algoritmo ao pé da letra, marcando os passos ambíguos ou faltando. Reescreva a versão final."
       exercicios:
-        - "Escreva, no Diário de Bordo, um algoritmo de até 10 passos para preparar um café."
-        - "Escreva o algoritmo de uma tarefa do seu curso (ex.: medir a área de um cômodo, diluir uma solução, trocar uma ferramenta no torno)."
-        - "Conclua os níveis 1 a 5 do Labirinto do Blockly Games e registre no Google Documentos o que cada bloco faz."
+        basico:
+          - "Escreva, no Diário de Bordo, um algoritmo de até 10 passos para preparar um café."
+          - "Conclua os níveis 1 a 5 do Labirinto do Blockly Games."
+        intermediario:
+          - "Escreva o algoritmo de uma tarefa do seu curso (medir a área de um cômodo, diluir uma solução, trocar uma ferramenta no torno)."
+          - "Registre no Google Documentos o que cada bloco do Labirinto faz."
+        avancado:
+          - "Conclua os níveis 6 a 10 do Labirinto e explique no Google Documentos a estratégia usada nos níveis com repetição."
+          - "Reescreva o algoritmo do café prevendo problemas (falta de água, falta de pó)."
 
     - n: 2
       tema: "Fluxogramas e pensamento computacional"
@@ -34,9 +41,13 @@
         tempo: "40 min"
         descricao: "**Fluxograma do orçamento de pintura.** No diagrams.net, desenhe o fluxograma que lê largura e altura de uma parede e a área de uma janela, calcula a área a pintar e a quantidade de latas (1 lata cobre 18 m²). Exporte como imagem e cole no Diário de Bordo."
       exercicios:
-        - "Desenhe o fluxograma do cálculo da área de um terreno retangular."
-        - "Desenhe o fluxograma que lê uma nota e informa *Aprovado* ou *Reprovado* (média 7,0)."
-        - "Conclua os níveis 6 a 10 do Labirinto (Blockly Games) e cole uma captura de tela no Diário de Bordo."
+        basico:
+          - "Desenhe o fluxograma do cálculo da área de um terreno retangular."
+        intermediario:
+          - "Desenhe o fluxograma que lê uma nota e informa *Aprovado* ou *Reprovado* (média 7,0)."
+          - "Cole no Diário de Bordo uma captura de tela do Labirinto até o nível 10."
+        avancado:
+          - "Desenhe o fluxograma de um caixa de supermercado que soma 3 produtos, lê o valor pago e calcula o troco, avisando quando o pagamento não for suficiente."
 
     - n: 3
       tema: "Primeiros programas no Scratch: eventos e sequência"
@@ -46,14 +57,20 @@
         - "[Scratch](https://scratch.mit.edu/): conta da turma, palco, atores, blocos de *Eventos*, *Aparência* e *Sensores*."
         - "Blocos `quando bandeira verde for clicada`, `diga`, `pergunte e espere` e `resposta`."
         - "Exemplo: ator que pergunta o nome e responde com uma saudação."
-      scratch: "aula03.sb3"
+      scratch: [aula03_nivel1.sb3, aula03_nivel2.sb3, aula03_nivel3.sb3]
       atividade:
         tempo: "45 min"
         descricao: "**Diálogo interativo no Scratch.** Crie uma cena com dois atores que conversam: um pergunta o nome e o curso do usuário, o outro responde usando as respostas, e os dois se movem durante a conversa. Cole o link do projeto no Diário de Bordo."
       exercicios:
-        - "Faça um ator perguntar seu nome e sua idade e responder com uma frase usando os dois dados."
-        - "Crie uma pequena animação de 5 passos (mover, girar, mudar fantasia) acionada pela tecla espaço."
-        - "Escreva, no Google Documentos, o fluxograma equivalente ao programa da questão 1."
+        basico:
+          - "Faça um ator dizer seu nome e seu curso, um de cada vez."
+          - "Faça o ator andar 100 passos depois de falar."
+        intermediario:
+          - "Faça um ator perguntar seu nome e sua idade e responder com uma frase usando os dois dados."
+          - "Crie uma animação de 5 passos (mover, girar, mudar fantasia) acionada pela tecla espaço."
+        avancado:
+          - "Crie uma história com 3 perguntas e respostas montadas com o bloco `junte`, mudando a posição do ator a cada fala."
+          - "Escreva no Google Documentos o fluxograma equivalente ao seu programa."
 
     - n: 4
       tema: "Primeiro programa em Python no Google Colab"
@@ -64,15 +81,19 @@
         - "Python: `print`, textos entre aspas e comentários com `#` (exemplo comentado no Colab)."
         - "Comparação lado a lado: bloco `diga` (Scratch) × `print` (Python)."
         - "Google Documentos: colar o código com fonte monoespaçada e uma captura de tela da execução no Diário de Bordo."
-      python: "aula04.ipynb"
-      scratch: "aula04.sb3"
+      python: [aula04_nivel1.ipynb, aula04_nivel2.ipynb, aula04_nivel3.ipynb]
+      scratch: [aula04_nivel1.sb3, aula04_nivel2.sb3, aula04_nivel3.sb3]
       atividade:
         tempo: "30 min"
         descricao: "**Cartão de apresentação.** No Colab, imprima um cartão com bordas de `*` contendo nome, curso, turma e uma frase sobre você. Faça o mesmo no Scratch e cole as duas versões (código e captura de tela) no Diário de Bordo."
       exercicios:
-        - "Escreva um programa que imprime seu nome, turma e curso, um em cada linha."
-        - "Imprima um cartão de identificação com bordas feitas de `*`."
-        - "Refaça o exercício 1 no Scratch e compare os dois códigos no Diário de Bordo."
+        basico:
+          - "Escreva um programa que imprime seu nome, turma e curso, um em cada linha."
+        intermediario:
+          - "Imprima um cartão de identificação com bordas feitas de `*`."
+          - "Refaça o exercício anterior no Scratch e compare os dois códigos no Diário de Bordo."
+        avancado:
+          - "Imprima um desenho (casa ou foguete) feito com caracteres e uma legenda, usando repetição de texto como `\"*\" * 10`."
 
     - n: 5
       tema: "Variáveis, tipos e atribuição"
@@ -81,17 +102,25 @@
       material:
         - "Python: variáveis de cada tipo e cálculos com elas (exemplo comentado no Colab)."
         - "[Python Tutor](https://pythontutor.com/python-compiler.html#mode=edit) para ver as variáveis mudando a cada linha."
-        - "Planilhas: a célula como variável. Largura em `A2`, comprimento em `B2` e, em `C2`, `=A2*B2`."
         - "Função `type()` e conversão entre tipos."
         - "Google Documentos: tabela de variáveis (nome, tipo, valor) no Diário de Bordo."
-      python: "aula05.ipynb"
+      planilhas:
+        - "Largura em `A2` (4,5) e comprimento em `B2` (3,2); em `C2`, `=A2*B2` calcula a área."
+        - "Em `D2`, `=2*(A2+B2)` calcula o perímetro; mude `A2` e veja `C2` e `D2` se atualizarem sozinhos."
+        - "Orçamento de piso: preço do m² em `E2` e, em `F2`, `=C2*1,1*E2` (área com 10% de perda × preço), formatado como moeda."
+      python: [aula05_nivel1.ipynb, aula05_nivel2.ipynb, aula05_nivel3.ipynb]
       atividade:
         tempo: "40 min"
         descricao: "**Orçamento de piso.** Com variáveis para largura, comprimento, preço do m² e 10% de perda, calcule a área, a área com perda e o custo total. Resolva no Colab e na planilha, e monte no Google Documentos a tabela de variáveis (nome, tipo, valor)."
       exercicios:
-        - "Calcule a área e o perímetro de um retângulo de 4,5 m × 3,2 m em Python e na planilha."
-        - "Calcule a média de três notas guardadas em variáveis e imprima o resultado."
-        - "Execute no Python Tutor um programa que troca o valor de duas variáveis e explique, no Google Documentos, o que aconteceu."
+        basico:
+          - "Crie variáveis para seu nome, idade e altura e imprima as três."
+        intermediario:
+          - "Calcule a área e o perímetro de um retângulo de 4,5 m × 3,2 m em Python e na planilha."
+          - "Calcule a média de três notas guardadas em variáveis."
+        avancado:
+          - "Troque o valor de duas variáveis sem perder nenhum, execute no Python Tutor e explique no Google Documentos o que aconteceu."
+          - "Converta o texto `\"12.50\"` em número e calcule o dobro."
 
     - n: 6
       tema: "Entrada e saída de dados"
@@ -100,17 +129,24 @@
       material:
         - "Python: `input()` sempre devolve texto; `float()` e `int()` convertem para número (exemplo comentado no Colab)."
         - "Scratch: `pergunte e espere`, `resposta` e variáveis."
-        - "Planilhas: células de entrada destacadas por cor e célula de resultado protegida."
         - "Google Documentos: registrar exemplos de execução (entrada → saída esperada → saída obtida)."
-      python: "aula06.ipynb"
-      scratch: "aula06.sb3"
+      planilhas:
+        - "Célula de entrada colorida `B1` (preço) e, em `B2`, `=B1*2` (preço de duas unidades)."
+        - "Preço em `B1`, desconto (%) em `B2` e preço final em `B3`: `=B1-B1*B2/100`."
+        - "Conta de energia: leitura anterior em `B1`, atual em `B2`, preço do kWh em `B3`, taxa fixa em `B4`; consumo `=B2-B1` e valor `=ARRED((B2-B1)*B3+B4; 2)`."
+      python: [aula06_nivel1.ipynb, aula06_nivel2.ipynb, aula06_nivel3.ipynb]
+      scratch: [aula06_nivel1.sb3, aula06_nivel2.sb3, aula06_nivel3.sb3]
       atividade:
         tempo: "40 min"
         descricao: "**Conta de energia.** Leia a leitura anterior e a atual do medidor, o preço do kWh e a taxa fixa; mostre o consumo e o valor da conta com 2 casas decimais. Registre no Google Documentos três execuções (entrada → saída esperada → saída obtida)."
       exercicios:
-        - "Leia a temperatura em °C e mostre em °F e em K."
-        - "Leia o preço de um produto e o percentual de desconto e mostre o preço final."
-        - "Leia o consumo de um mês em kWh e o preço do kWh e mostre o valor da conta."
+        basico:
+          - "Leia seu nome e sua cidade e mostre uma frase com os dois."
+        intermediario:
+          - "Leia a temperatura em °C e mostre em °F e em K."
+          - "Leia o preço de um produto e o percentual de desconto e mostre o preço final."
+        avancado:
+          - "Conta de energia: leia as leituras do medidor, o preço do kWh e o acréscimo da bandeira tarifária (R$ por kWh) e mostre o valor da conta com taxa fixa."
 
     - n: 7
       tema: "Operadores aritméticos e a biblioteca math"
@@ -119,17 +155,24 @@
       material:
         - "Python: `import math`, potência `**`, divisão inteira `//` e resto `%` (exemplo comentado no Colab)."
         - "Conversão de unidades: minutos em horas e minutos; litros em m³."
-        - "Planilhas: `=RAIZ()`, `=POTÊNCIA()`, `=PI()`, `=ARRED()`, `=QUOCIENTE()`, `=MOD()`."
         - "Google Documentos: escrever as fórmulas com o editor de equações (*Inserir → Equação*)."
-      python: "aula07.ipynb"
+      planilhas:
+        - "`=17+5`, `=17/5`, `=17^2` (potência) e `=MOD(17; 5)` (resto da divisão)."
+        - "Raio em `A2`; área `=ARRED(PI()*A2^2; 2)` e comprimento `=ARRED(2*PI()*A2; 2)`."
+        - "Segundos em `A2`; horas `=QUOCIENTE(A2; 3600)`, minutos `=QUOCIENTE(MOD(A2; 3600); 60)` e segundos `=MOD(A2; 60)`."
+      python: [aula07_nivel1.ipynb, aula07_nivel2.ipynb, aula07_nivel3.ipynb]
       atividade:
         tempo: "45 min"
         descricao: "**Caixa d'água cilíndrica.** Leia o diâmetro e a altura e mostre o volume em m³ e em litros. Depois leia a vazão de uma torneira (L/min) e mostre o tempo para encher a caixa em horas e minutos, usando `//` e `%`. Escreva as fórmulas com o editor de equações do Google Documentos."
       exercicios:
-        - "Leia o raio e mostre a área e o comprimento de uma circunferência."
-        - "Leia uma duração em segundos e mostre em horas, minutos e segundos."
-        - "Leia a diagonal de uma tela em polegadas e mostre em centímetros."
-        - "Contexto do curso: volume de uma caixa d'água cilíndrica, massa de soluto para uma concentração ou velocidade de corte de uma ferramenta (escolha um)."
+        basico:
+          - "Leia dois números e mostre soma, diferença, produto, divisão, divisão inteira e resto."
+        intermediario:
+          - "Leia o raio e mostre a área e o comprimento de uma circunferência."
+          - "Leia uma duração em segundos e mostre em horas, minutos e segundos."
+        avancado:
+          - "Caixa d'água cilíndrica: volume em m³ e em litros e o tempo para encher com uma vazão dada."
+          - "Contexto do curso: massa de soluto para uma concentração ou velocidade de corte de uma ferramenta (escolha um)."
 
     - n: 8
       tema: "Expressões lógicas: relacionais, E, OU, NÃO"
@@ -137,18 +180,25 @@
       objetivo: "Construir expressões booleanas com `== != < > <= >=` e `and`, `or`, `not`, e montar tabelas-verdade."
       material:
         - "Python: `True`/`False`, `and`, `or`, `not` e a precedência dos operadores (exemplo comentado no Colab)."
-        - "Planilhas: `=E(A2>=16; A2<18)`, `=OU()`, `=NÃO()`."
         - "Scratch: blocos hexagonais de *Operadores* (`e`, `ou`, `não`)."
         - "Google Documentos: tabelas-verdade montadas como tabela no documento."
-      python: "aula08.ipynb"
-      scratch: "aula08.sb3"
+      planilhas:
+        - "Idade em `A2`; `=A2>=16` mostra VERDADEIRO ou FALSO."
+        - "`=E(A2>=16; A2<18)` (voto facultativo) e `=OU(A2<16; A2>=70)`."
+        - "Ano em `A2`; bissexto: `=OU(E(MOD(A2; 4)=0; MOD(A2; 100)<>0); MOD(A2; 400)=0)`."
+      python: [aula08_nivel1.ipynb, aula08_nivel2.ipynb, aula08_nivel3.ipynb]
+      scratch: [aula08_nivel1.sb3, aula08_nivel2.sb3, aula08_nivel3.sb3]
       atividade:
         tempo: "35 min"
         descricao: "**Ano bissexto em uma expressão.** Escreva uma única expressão lógica que diga se um ano é bissexto (divisível por 4 e não por 100, ou divisível por 400). Teste com 1900, 2000, 2024 e 2025 e registre no Google Documentos uma tabela com o valor de cada parte da expressão."
       exercicios:
-        - "Monte no Google Documentos a tabela-verdade de `E` e de `OU` para duas variáveis."
-        - "Leia o comprimento de três segmentos e informe se eles podem formar um triângulo."
-        - "Leia um ano e informe `True` se ele for bissexto."
+        basico:
+          - "Monte no Google Documentos a tabela-verdade de `E` e de `OU` para duas variáveis."
+        intermediario:
+          - "Leia a idade e mostre `True`/`False` para *maior de idade* e *voto facultativo*."
+          - "Leia o comprimento de três segmentos e informe se eles podem formar um triângulo."
+        avancado:
+          - "Escreva uma única expressão que diga se um ano é bissexto e teste com 1900, 2000, 2024 e 2025."
 
     - n: 9
       tema: "Decisão simples e composta: if / else"
@@ -157,17 +207,25 @@
       material:
         - "Python: `if`/`else`; o recuo (indentação) define o bloco (exemplo comentado no Colab)."
         - "Scratch: bloco `se ... então ... senão`."
-        - "Planilhas: `=SE(D2>=7; \"Aprovado\"; \"Reprovado\")`."
         - "Google Documentos: fluxograma do `if/else` com *Inserir → Desenho*."
-      python: "aula09.ipynb"
-      scratch: "aula09.sb3"
+      planilhas:
+        - "`=SE(MOD(A2; 2)=0; \"Par\"; \"Ímpar\")`."
+        - "Média em `D2`: `=SE(D2>=7; \"Aprovado\"; \"Reprovado\")`."
+        - "10 medidas em `A2:A11` e `=SE(ABS(A2-50)<=0,2; \"Aprovada\"; \"Reprovada\")`, com formatação condicional pintando de vermelho as reprovadas."
+      python: [aula09_nivel1.ipynb, aula09_nivel2.ipynb, aula09_nivel3.ipynb]
+      scratch: [aula09_nivel1.sb3, aula09_nivel2.sb3, aula09_nivel3.sb3]
       atividade:
         tempo: "40 min"
         descricao: "**Controle de qualidade.** Leia a medida de uma peça e informe *Aprovada* se estiver entre 49,8 mm e 50,2 mm, senão *Reprovada*. Faça em Python, no Scratch e na planilha com `SE` para 10 peças, e desenhe o fluxograma no Google Documentos."
       exercicios:
-        - "Leia um número inteiro e informe se ele é par ou ímpar (use `%`)."
-        - "Leia a idade e informe se a pessoa já pode votar."
-        - "Leia o pH de uma solução e informe se ela é ácida ou básica/neutra."
+        basico:
+          - "Leia um número inteiro e informe se ele é par ou ímpar (use `%`)."
+        intermediario:
+          - "Leia duas notas e informe *Aprovado* ou *Reprovado*."
+          - "Leia o pH de uma solução e informe se ela é ácida ou básica/neutra."
+        avancado:
+          - "Leia a medida de uma peça e informe se está dentro da tolerância de 50 ± 0,2 mm, mostrando a diferença."
+          - "Faça a mesma verificação para 10 peças na planilha."
 
     - n: 10
       tema: "Decisões encadeadas: if / elif / else"
@@ -176,18 +234,24 @@
       material:
         - "Python: `elif` só é testado quando as condições anteriores são falsas (exemplo comentado no Colab)."
         - "Scratch: blocos `se ... senão` dentro de outros."
-        - "Planilhas: `=SES(B2>=9; \"A\"; B2>=7; \"B\"; B2>=5; \"C\"; VERDADEIRO; \"D\")`."
         - "Google Documentos: relatório curto com título, enunciado, código e testes, usando estilos de título e sumário automático."
-      python: "aula10.ipynb"
-      scratch: "aula10.sb3"
+      planilhas:
+        - "pH em `A2`: `=SE(A2<7; \"Ácido\"; SE(A2=7; \"Neutro\"; \"Básico\"))`."
+        - "Nota em `B2`: `=SES(B2>=9; \"A\"; B2>=7; \"B\"; B2>=5; \"C\"; VERDADEIRO; \"D\")`."
+        - "Velocidade em `A2`, limite em `B2`, excesso `=(A2-B2)/B2` em `C2` e `=SES(C2<=0; \"Sem multa\"; C2<=20%; \"Leve\"; C2<=50%; \"Grave\"; VERDADEIRO; \"Gravíssima\")`."
+      python: [aula10_nivel1.ipynb, aula10_nivel2.ipynb, aula10_nivel3.ipynb]
+      scratch: [aula10_nivel1.sb3, aula10_nivel2.sb3, aula10_nivel3.sb3]
       atividade:
         tempo: "50 min"
         descricao: "**Classificador de multas.** Leia a velocidade medida e o limite da via e informe: sem multa, leve (até 20% acima), grave (até 50% acima) ou gravíssima. Resolva em Python e na planilha com `SES`, e escreva um relatório curto no Google Documentos com títulos e sumário automático."
       exercicios:
-        - "Leia uma nota de 0 a 10 e mostre o conceito em Python, no Scratch e na planilha."
-        - "Leia o pH e classifique em ácido, neutro ou básico."
-        - "Leia a velocidade de um veículo numa via de 60 km/h e informe: sem multa, multa leve (até 20% acima) ou multa grave."
-        - "Escreva no Google Documentos o relatório de um dos exercícios, com sumário automático."
+        basico:
+          - "Leia o pH e classifique em ácido, neutro ou básico."
+        intermediario:
+          - "Leia uma nota de 0 a 10 e mostre o conceito A, B, C ou D em Python, no Scratch e na planilha."
+        avancado:
+          - "Leia a velocidade e o limite da via e classifique a multa em 4 faixas, mostrando o percentual de excesso."
+          - "Escreva no Google Documentos o relatório de um dos exercícios, com sumário automático."
 
     - n: 11
       tema: "Avaliação da Unidade 1"
@@ -200,8 +264,12 @@
         tempo: "50 min"
         descricao: "**Questão principal da prova.** Programa completo com entrada de dados, cálculo e decisão encadeada, com o raciocínio registrado no Google Documentos."
       exercicios:
-        - "Questões da avaliação (aplicadas em sala)."
-        - "Autoavaliação no Diário de Bordo: o que eu já sei, o que ainda preciso praticar."
+        basico:
+          - "Refaça, sem consultar, dois exemplos de nível 1 das aulas 5 a 10."
+        intermediario:
+          - "Simulado: resolva um exercício de nível 2 de cada aula da unidade."
+        avancado:
+          - "Simulado: programa de orçamento com entrada, cálculo e decisão encadeada, documentado no Google Documentos."
 
     - n: 12
       tema: "Reavaliação da Unidade 1"
@@ -215,8 +283,12 @@
         tempo: "40 min"
         descricao: "**Desafio para quem já foi aprovado:** calculadora de tarifa de estacionamento (1ª hora R$ 5, demais R$ 3, máximo R$ 20 por dia), em Python e documentada no Google Documentos. Os demais fazem a nova prova."
       exercicios:
-        - "Questões da reavaliação (aplicadas em sala)."
-        - "Lista de desafios para quem já foi aprovado na unidade."
+        basico:
+          - "Refaça as questões que você errou na avaliação, com a correção comentada ao lado."
+        intermediario:
+          - "Resolva a nova prova (quem não atingiu a média)."
+        avancado:
+          - "Desafio: tarifa de estacionamento (1ª hora R$ 5, demais R$ 3, máximo R$ 20 por dia), documentada no Google Documentos."
 
 - unidade: 2
   titulo: "Lógica de repetição. Interação com planilhas e gráficos"
@@ -229,16 +301,24 @@
       material:
         - "Python: `range(início, fim, passo)`; o fim não entra (exemplo comentado no Colab)."
         - "Scratch: blocos `repita 10 vezes` e `sempre`."
-        - "Planilhas: arrastar série e `=SEQUÊNCIA(10; 1; 1; 1)`."
-      python: "aula13.ipynb"
-      scratch: "aula13.sb3"
+      planilhas:
+        - "Digite 1 em `A1` e 2 em `A2`, selecione as duas células e arraste para baixo até 10."
+        - "`=SEQUÊNCIA(21; 1; 0; 5)` gera os múltiplos de 5 de 0 a 100."
+        - "Tabuada: número em `B1`, `=SEQUÊNCIA(10)` em `A3` e `=$B$1*A3` em `B3`, arrastada para baixo (o `$` fixa a célula)."
+      python: [aula13_nivel1.ipynb, aula13_nivel2.ipynb, aula13_nivel3.ipynb]
+      scratch: [aula13_nivel1.sb3, aula13_nivel2.sb3, aula13_nivel3.sb3]
       atividade:
         tempo: "35 min"
         descricao: "**Tabuada formatada.** Leia um número e mostre a tabuada de 1 a 10 no formato `7 x 3 = 21`. Na planilha, gere a mesma tabuada com `=SEQUÊNCIA()` e uma fórmula ao lado, e compare."
       exercicios:
-        - "Imprima os múltiplos de 5 entre 0 e 100."
-        - "Imprima uma contagem regressiva de 10 até 1 e depois *Lançar!*."
-        - "Imprima a tabuada de um número lido do teclado."
+        basico:
+          - "Imprima os números de 1 a 10."
+          - "Imprima os múltiplos de 5 entre 0 e 100."
+        intermediario:
+          - "Imprima uma contagem regressiva de 10 até 1 e depois *Lançar!*."
+          - "Imprima a tabuada de um número lido do teclado."
+        avancado:
+          - "Imprima as tabuadas de 1 a 5, uma depois da outra (um laço dentro do outro)."
 
     - n: 14
       tema: "Acumuladores: somas e médias"
@@ -247,15 +327,21 @@
       material:
         - "Python: o acumulador começa em zero antes do laço e soma dentro dele (exemplo comentado no Colab)."
         - "Python Tutor para acompanhar o acumulador volta a volta."
-        - "Planilhas: `=SOMA()` e `=MÉDIA()` como a versão pronta do mesmo laço."
-      python: "aula14.ipynb"
+      planilhas:
+        - "Gastos de segunda a domingo em `B2:B8` e total `=SOMA(B2:B8)`."
+        - "Média `=MÉDIA(B2:B8)` e total acumulado dia a dia em `C2` com `=SOMA($B$2:B2)`, arrastado para baixo."
+        - "N em `A2`: `=FATORIAL(A2)` e a soma de 1 a N com `=SOMA(SEQUÊNCIA(A2))`, comparada com `=A2*(A2+1)/2`."
+      python: [aula14_nivel1.ipynb, aula14_nivel2.ipynb, aula14_nivel3.ipynb]
       atividade:
         tempo: "40 min"
         descricao: "**Gastos da semana.** Leia o gasto de cada dia e mostre o total, a média e o fatorial de 7 (para treinar o acumulador de produto). Monte a mesma tabela na planilha com `SOMA` e `MÉDIA` e um gráfico de colunas por dia."
       exercicios:
-        - "Leia o gasto de cada dia da semana e mostre o total e a média diária."
-        - "Calcule a soma dos números de 1 a N e compare com a fórmula `N * (N + 1) / 2`."
-        - "Calcule o fatorial de N."
+        basico:
+          - "Calcule a soma dos números de 1 a 100."
+        intermediario:
+          - "Leia o gasto de cada dia da semana e mostre o total e a média diária."
+        avancado:
+          - "Leia N e mostre a soma de 1 a N (comparando com `N * (N + 1) / 2`) e o fatorial de N."
 
     - n: 15
       tema: "Contadores, maior e menor"
@@ -264,15 +350,21 @@
       material:
         - "Python: contador dentro de um `if`; variáveis `maior` e `menor` iniciadas com valores extremos (exemplo comentado no Colab)."
         - "Exemplo: temperaturas máximas de um mês."
-        - "Planilhas: `=CONT.SE(B2:B31; \">30\")`, `=MÁXIMO()`, `=MÍNIMO()`."
-      python: "aula15.ipynb"
+      planilhas:
+        - "Temperaturas em `B2:B8`: `=MÁXIMO(B2:B8)` e `=MÍNIMO(B2:B8)`."
+        - "`=CONT.SE(B2:B8; \">30\")` conta os dias acima de 30 °C."
+        - "*Formatar → Formatação condicional* pintando os dias acima de 30 °C, e gráfico de linhas das temperaturas."
+      python: [aula15_nivel1.ipynb, aula15_nivel2.ipynb, aula15_nivel3.ipynb]
       atividade:
         tempo: "45 min"
         descricao: "**Estação meteorológica.** Leia 7 temperaturas e mostre a maior, a menor e quantos dias passaram de 30 °C. Na planilha, use `MÁXIMO`, `MÍNIMO`, `CONT.SE`, formatação condicional para os dias quentes e um gráfico de linha."
       exercicios:
-        - "Leia as temperaturas de 7 dias e mostre a maior, a menor e quantos dias passaram de 30 °C."
-        - "Leia as idades de 10 pessoas e conte quantas são menores de idade."
-        - "Faça a mesma análise na planilha e compare os resultados."
+        basico:
+          - "Conte quantos números pares existem entre 1 e 50."
+        intermediario:
+          - "Leia as temperaturas de 7 dias e mostre a maior, a menor e quantos dias passaram de 30 °C."
+        avancado:
+          - "Leia as notas de N estudantes e mostre a média, a maior nota e o percentual de aprovados."
 
     - n: 16
       tema: "Repetição com condição: while"
@@ -282,16 +374,23 @@
         - "Python: poupança que rende todo mês. Em quantos meses o valor dobra? (exemplo comentado no Colab)"
         - "Validação de entrada: repetir a pergunta até o valor ser válido."
         - "Scratch: `repita até que`. Fluxograma do `while` × fluxograma do `for`."
-        - "Planilhas: a mesma poupança mês a mês, uma linha por mês, e gráfico do saldo."
-      python: "aula16.ipynb"
-      scratch: "aula16.sb3"
+      planilhas:
+        - "Saldo inicial em `B2` e, em `B3`, `=B2*1,01` arrastado para baixo: uma linha por mês."
+        - "Taxa numa célula fixa: `=B2*(1+$E$1)`; na coluna C, `=SE(B3>=2*$B$2; \"Dobrou\"; \"\")` marca os meses em que o valor já dobrou."
+        - "Três colunas com as taxas de 0,5%, 1% e 2% ao mês e um gráfico de linhas com as três curvas."
+      python: [aula16_nivel1.ipynb, aula16_nivel2.ipynb, aula16_nivel3.ipynb]
+      scratch: [aula16_nivel1.sb3, aula16_nivel2.sb3, aula16_nivel3.sb3]
       atividade:
         tempo: "40 min"
         descricao: "**Quando o dinheiro dobra?** Calcule em quantos meses uma aplicação dobra com taxas de 0,5%, 1% e 2% ao mês. Na planilha, monte o saldo mês a mês para as três taxas e um gráfico com as três curvas."
       exercicios:
-        - "Calcule em quantos meses uma aplicação dobra de valor, dada a taxa mensal."
-        - "Leia notas até que o usuário digite um valor negativo e mostre a média das notas válidas."
-        - "Peça uma senha até que o usuário acerte ou erre 3 vezes."
+        basico:
+          - "Mostre os números de 1 a 5 usando `while`."
+        intermediario:
+          - "Calcule em quantos meses uma aplicação dobra de valor, dada a taxa mensal."
+          - "Peça uma senha até que o usuário acerte ou erre 3 vezes."
+        avancado:
+          - "Leia notas até que o usuário digite um valor negativo, ignore notas acima de 10 e mostre a média das notas válidas."
 
     - n: 17
       tema: "Números aleatórios"
@@ -299,18 +398,25 @@
       objetivo: "Gerar números aleatórios com o módulo `random` e usá-los em sorteios e simulações."
       material:
         - "Python: `import random` e `random.randint(a, b)` (exemplo comentado no Colab)."
-        - "Scratch: `número aleatório entre 1 e 10`; Planilhas: `=ALEATÓRIOENTRE(1; 10)`."
+        - "Scratch: bloco `número aleatório entre 1 e 10`."
         - "Frequência de resultados em muitas repetições."
-        - "Planilhas: gráfico de colunas com a frequência de cada resultado."
-      python: "aula17.ipynb"
-      scratch: "aula17.sb3"
+      planilhas:
+        - "`=ALEATÓRIOENTRE(1; 6)` simula um dado; edite qualquer célula para sortear de novo."
+        - "1000 lançamentos de moeda em `A1:A1000` com `=ALEATÓRIOENTRE(0; 1)` e o percentual de caras com `=MÉDIA(A1:A1000)`."
+        - "600 lançamentos de dado em `A1:A600`, as faces 1 a 6 em `C1:C6`, a frequência `=CONT.SE($A$1:$A$600; C1)` em `D1` e um gráfico de colunas."
+      python: [aula17_nivel1.ipynb, aula17_nivel2.ipynb, aula17_nivel3.ipynb]
+      scratch: [aula17_nivel1.sb3, aula17_nivel2.sb3, aula17_nivel3.sb3]
       atividade:
         tempo: "40 min"
         descricao: "**Frequência do dado.** Simule 600 lançamentos de um dado e conte quantas vezes saiu cada face (6 contadores). Na planilha, gere 600 valores com `ALEATÓRIOENTRE`, conte com `CONT.SE` e faça um gráfico de colunas."
       exercicios:
-        - "Sorteie 6 números entre 1 e 60 e mostre-os."
-        - "Simule 1000 lançamentos de uma moeda e mostre o percentual de caras."
-        - "Faça a mesma simulação na planilha e compare."
+        basico:
+          - "Sorteie e mostre o valor de um dado."
+          - "Sorteie 6 números entre 1 e 60."
+        intermediario:
+          - "Simule 1000 lançamentos de uma moeda e mostre o percentual de caras."
+        avancado:
+          - "Lance dois dados 10000 vezes e mostre o percentual de vezes em que a soma deu 7 (a teoria diz 16,7%)."
 
     - n: 18
       tema: "Projeto: jogo de adivinhação"
@@ -320,17 +426,22 @@
         - "Python: o computador sorteia um número de 1 a 100 e o jogador tenta adivinhar com dicas *maior*/*menor* (exemplo comentado no Colab)."
         - "Versão Scratch com um ator que dá as dicas."
         - "Google Documentos: regras do jogo e estratégia para acertar em poucas tentativas."
-        - "Planilhas: registro das partidas (tentativas por jogo) e gráfico de evolução."
-      python: "aula18.ipynb"
-      scratch: "aula18.sb3"
+      planilhas:
+        - "Tabela com as colunas *Partida* e *Tentativas*, preenchida a cada jogo."
+        - "`=MÉDIA(B2:B11)`, `=MÍNIMO(B2:B11)` e `=MÁXIMO(B2:B11)` das tentativas."
+        - "Gráfico de linhas das tentativas por partida, com linha de tendência (*Personalizar → Série → Linha de tendência*)."
+      python: [aula18_nivel1.ipynb, aula18_nivel2.ipynb, aula18_nivel3.ipynb]
+      scratch: [aula18_nivel1.sb3, aula18_nivel2.sb3, aula18_nivel3.sb3]
       atividade:
         tempo: "50 min"
         descricao: "**Jogo completo.** Implemente o jogo de adivinhação com limite de 7 tentativas e a pergunta *jogar de novo?*. Jogue 10 partidas, registre as tentativas na planilha e faça um gráfico."
       exercicios:
-        - "Implemente o jogo de adivinhação e mostre o número de tentativas no final."
-        - "Limite o jogo a 7 tentativas e pergunte se o jogador quer jogar de novo."
-        - "Explique no Google Documentos por que 7 tentativas sempre bastam para números de 1 a 100."
-        - "Registre 10 partidas na planilha e faça um gráfico do número de tentativas."
+        basico:
+          - "O computador sorteia um número de 1 a 10 e o jogador tem um palpite."
+        intermediario:
+          - "Jogo de adivinhação de 1 a 100 com dicas *maior*/*menor* e contagem de tentativas."
+        avancado:
+          - "Limite o jogo a 7 tentativas, pergunte se o jogador quer jogar de novo e explique no Google Documentos por que 7 tentativas sempre bastam."
 
     - n: 19
       tema: "Laços com decisões: múltiplos, divisores e sequências"
@@ -339,15 +450,21 @@
       material:
         - "Python: múltiplos com `%` e a sequência de Fibonacci com duas variáveis; `break` para encerrar o laço mais cedo (exemplo comentado no Colab)."
         - "Sequência de Fibonacci com duas variáveis."
-        - "Planilhas: `=MOD()` e formatação condicional para destacar valores."
-      python: "aula19.ipynb"
+      planilhas:
+        - "Números de 1 a 100 em `A2:A101` e `=SE(OU(MOD(A2; 3)=0; MOD(A2; 7)=0); A2; \"\")`."
+        - "Fibonacci: 0 em `A1`, 1 em `A2` e `=A1+A2` em `A3`, arrastado até `A20`."
+        - "Razão entre vizinhos `=A3/A2` em `B3`, com gráfico mostrando a aproximação de 1,618; e `=MDC(48; 36)` para conferir o MDC."
+      python: [aula19_nivel1.ipynb, aula19_nivel2.ipynb, aula19_nivel3.ipynb]
       atividade:
         tempo: "35 min"
         descricao: "**Fibonacci em dobro.** Mostre os 20 primeiros termos em Python. Na planilha, gere os mesmos termos com `=A1+A2`, calcule a razão entre termos vizinhos e faça um gráfico mostrando que ela se aproxima de 1,618."
       exercicios:
-        - "Mostre os números de 1 a 100 que são múltiplos de 3 ou de 7."
-        - "Mostre os 20 primeiros termos da sequência de Fibonacci, em Python e na planilha."
-        - "Leia dois números e mostre o MDC entre eles."
+        basico:
+          - "Mostre os números de 1 a 100 que são múltiplos de 3 ou de 7."
+        intermediario:
+          - "Mostre os 20 primeiros termos da sequência de Fibonacci, parando antes se passar de 1000."
+        avancado:
+          - "Calcule o MDC de dois números pelo algoritmo de Euclides e confira com `=MDC()` na planilha."
 
     - n: 20
       tema: "Menus e programas que se repetem"
@@ -357,15 +474,21 @@
         - "Python: conversor de unidades com menu que continua até o usuário escolher *Sair* (exemplo comentado no Colab)."
         - "Tratamento de opção inválida."
         - "Fluxograma do laço principal de um menu."
-        - "Planilhas: tabela de conversão para conferir as respostas do programa."
-      python: "aula20.ipynb"
+      planilhas:
+        - "Tabela de conversão: metros em `A2:A11` e centímetros com `=A2*100`."
+        - "°C → °F: `=SEQUÊNCIA(11; 1; 0; 10)` em `A2` e `=A2*9/5+32` em `B2`."
+        - "Extrato do caixa eletrônico: colunas Operação, Valor e Saldo, com `=C2+SE(A3=\"Depósito\"; B3; -B3)` em `C3`."
+      python: [aula20_nivel1.ipynb, aula20_nivel2.ipynb, aula20_nivel3.ipynb]
       atividade:
         tempo: "45 min"
         descricao: "**Caixa eletrônico.** Menu com saldo, depósito, saque (sem deixar o saldo negativo) e sair, mostrando ao final quantas operações foram feitas. Confira os saldos numa planilha com uma linha por operação."
       exercicios:
-        - "Conversor de unidades com menu (m↔cm, kg↔g, °C↔°F) que só termina quando o usuário pedir."
-        - "Caixa eletrônico simples: saldo, depósito, saque (sem saldo negativo) e sair."
-        - "Adicione um contador de operações realizadas, mostrado ao sair."
+        basico:
+          - "Mostre um menu com duas opções e responda à opção escolhida (sem repetir)."
+        intermediario:
+          - "Conversor de unidades com menu (m↔cm, °C↔°F) que só termina quando o usuário pedir."
+        avancado:
+          - "Caixa eletrônico: saldo, depósito, saque (sem saldo negativo), sair e o total de operações realizadas."
 
     - n: 21
       tema: "Gráficos: Planilhas e Python (matplotlib)"
@@ -374,15 +497,21 @@
       material:
         - "Python: `matplotlib` já vem instalado no Colab; os pontos do gráfico são guardados com `append` (exemplo comentado no Colab)."
         - "Rótulos dos eixos e título com `plt.xlabel`, `plt.ylabel` e `plt.title`."
-        - "Planilhas: tabela x/y e inserção de gráfico de linha ou dispersão."
-      python: "aula21.ipynb"
+      planilhas:
+        - "x de -10 a 10 em `A2:A22` e `=2*A2+1` em `B2`; *Inserir → Gráfico* de linhas."
+        - "Queda livre: tempo de 0 a 3 s (passo 0,1) em `A2:A32` e `=9,81*A2^2/2`, gráfico de dispersão com título e rótulos dos eixos."
+        - "Duas séries no mesmo gráfico: Terra (`=9,81*A2^2/2`) e Lua (`=1,62*A2^2/2`), com legenda."
+      python: [aula21_nivel1.ipynb, aula21_nivel2.ipynb, aula21_nivel3.ipynb]
       atividade:
         tempo: "40 min"
         descricao: "**Queda livre em dois gráficos.** Gere o gráfico de queda livre no Colab e o mesmo gráfico na planilha (dispersão). Acrescente a curva de um objeto lançado na Lua (g = 1,62 m/s²) e compare."
       exercicios:
-        - "Plote a reta `y = 2x + 1` para x de -10 a 10."
-        - "Plote a posição de um objeto em queda livre a cada 0,1 s durante 3 s."
-        - "Faça o mesmo gráfico no Sheets e compare."
+        basico:
+          - "Plote a reta `y = 2x + 1` para x de -10 a 10."
+        intermediario:
+          - "Plote a distância de um objeto em queda livre a cada 0,1 s durante 3 s, com título e rótulos dos eixos."
+        avancado:
+          - "Plote no mesmo gráfico a queda livre na Terra e na Lua, com legenda, e compare com o gráfico da planilha."
 
     - n: 22
       tema: "Simulações passo a passo com laços"
@@ -390,16 +519,22 @@
       objetivo: "Simular fenômenos que mudam com o tempo, atualizando valores a cada passo de um laço, e comparar com a planilha linha a linha."
       material:
         - "Python: o valor do próximo passo é calculado a partir do atual (exemplo comentado no Colab)."
-        - "Planilhas: uma linha por passo, com a fórmula da linha 3 apontando para a linha 2 e arrastada para baixo."
         - "Relação com o curso: resfriamento de uma peça usinada, decaimento da concentração de um reagente, ganho de resistência do concreto na cura."
-      python: "aula22.ipynb"
+      planilhas:
+        - "Bactérias: 100 em `B2` e `=B2*2` em `B3`, arrastado por 10 horas."
+        - "Resfriamento: 200 em `B2` e `=B2-0,1*(B2-25)` em `B3`, arrastado; `=CONT.SE(B2:B60; \">=40\")` conta os minutos acima de 40 °C."
+        - "Na coluna C, a concentração `=C2*(1-8%)` hora a hora, e um gráfico com as duas simulações."
+      python: [aula22_nivel1.ipynb, aula22_nivel2.ipynb, aula22_nivel3.ipynb]
       atividade:
         tempo: "45 min"
         descricao: "**Resfriamento e diluição.** Simule o resfriamento da peça e a perda de 8% de concentração por hora de uma solução. Monte as duas simulações na planilha, uma linha por passo, com um gráfico para cada."
       exercicios:
-        - "Simule o resfriamento de uma peça de 200 °C num ambiente a 25 °C e informe em quantos minutos ela fica abaixo de 40 °C."
-        - "Uma solução perde 8% da concentração por hora. Mostre a concentração hora a hora até ficar abaixo de 10% da inicial."
-        - "Faça a mesma simulação na planilha e gere o gráfico."
+        basico:
+          - "Uma colônia de 100 bactérias dobra a cada hora. Mostre a quantidade hora a hora por 10 horas."
+        intermediario:
+          - "Simule o resfriamento de uma peça de 200 °C num ambiente a 25 °C até ficar abaixo de 40 °C."
+        avancado:
+          - "Uma solução perde 8% da concentração por hora. Simule até ficar abaixo de 10% da inicial e faça o gráfico."
 
     - n: 23
       tema: "Avaliação da Unidade 2"
@@ -408,12 +543,20 @@
       material:
         - "Prova prática no Colab com 3 questões, uma delas resolvida também em Planilhas."
         - "Entrega no Classroom dos links do caderno Colab e dos arquivos produzidos."
+      planilhas:
+        - "Revisão: `=SOMA()` e `=MÉDIA()` de uma coluna de valores."
+        - "Revisão: `=CONT.SE()` com condição (`\">30\"`) e `=MÁXIMO()`."
+        - "Revisão: simulação linha a linha com fórmula arrastada e gráfico."
       atividade:
         tempo: "50 min"
         descricao: "**Questão principal da prova.** Programa com laço e acumulador ou contador, com os resultados conferidos e representados em gráfico na planilha."
       exercicios:
-        - "Questões da avaliação (aplicadas em sala)."
-        - "Autoavaliação no Diário de Bordo: o que eu já sei, o que ainda preciso praticar."
+        basico:
+          - "Refaça, sem consultar, dois exemplos de nível 1 das aulas 13 a 22."
+        intermediario:
+          - "Simulado: resolva um exercício de nível 2 de cada aula da unidade."
+        avancado:
+          - "Simulado: simulação com `while`, acumulador e gráfico na planilha."
 
     - n: 24
       tema: "Reavaliação da Unidade 2"
@@ -423,12 +566,20 @@
         - "Correção comentada da avaliação e revisão dos pontos com mais erros (primeira parte da aula)."
         - "Nova prova prática no Colab, no mesmo formato da avaliação, para quem não atingiu a média."
         - "Quem já atingiu a média resolve uma lista de desafios da unidade."
+      planilhas:
+        - "Revisão: série com `=SEQUÊNCIA()` e acumulado com `=SOMA($B$2:B2)`."
+        - "Revisão: `=ALEATÓRIOENTRE()` e frequência com `=CONT.SE()`."
+        - "Revisão: duas séries no mesmo gráfico, com título, eixos e legenda."
       atividade:
         tempo: "40 min"
         descricao: "**Desafio para quem já foi aprovado:** simular 1000 partidas de um jogo de dados e mostrar a frequência das somas de 2 a 12 em gráfico na planilha. Os demais fazem a nova prova."
       exercicios:
-        - "Questões da reavaliação (aplicadas em sala)."
-        - "Lista de desafios para quem já foi aprovado na unidade."
+        basico:
+          - "Refaça as questões que você errou na avaliação, com a correção comentada ao lado."
+        intermediario:
+          - "Resolva a nova prova (quem não atingiu a média)."
+        avancado:
+          - "Desafio: simule 1000 partidas de dois dados e mostre a frequência das somas de 2 a 12 em gráfico na planilha."
 
 - unidade: 3
   titulo: "Textos, listas e funções"
@@ -441,15 +592,21 @@
       material:
         - "Python: `len`, `upper`, `lower`, fatias `texto[0:3]` e `for letra in texto` (exemplo comentado no Colab)."
         - "Percorrer as letras de um texto com `for letra in texto`."
-        - "Planilhas: `=CONCATENAR()`, `=MAIÚSCULA()`, `=NÚM.CARACT()`, `=ESQUERDA()`."
-      python: "aula25.ipynb"
+      planilhas:
+        - "`=MAIÚSCULA(A2)`, `=MINÚSCULA(A2)` e `=NÚM.CARACT(A2)`."
+        - "`=ESQUERDA(A2; 3)` (três primeiras letras) e `=CONCATENAR(A2; \" \"; B2)` (nome completo)."
+        - "E-mail institucional: `=MINÚSCULA(A2&\".\"&B2&\"@escola.br\")`."
+      python: [aula25_nivel1.ipynb, aula25_nivel2.ipynb, aula25_nivel3.ipynb]
       atividade:
         tempo: "35 min"
         descricao: "**Gerador de e-mail e palíndromos.** Leia nome e sobrenome e gere `nome.sobrenome@escola.br` em minúsculas. Depois leia uma palavra e informe se ela é um palíndromo. Faça o gerador também na planilha com `MINÚSCULA` e `CONCATENAR`."
       exercicios:
-        - "Leia uma frase e conte quantas vogais ela tem."
-        - "Leia uma palavra e informe se ela é um palíndromo."
-        - "Leia nome e sobrenome e gere um e-mail institucional no formato `nome.sobrenome@escola.br`, em minúsculas."
+        basico:
+          - "Leia uma palavra e mostre o tamanho, a versão em maiúsculas e a primeira letra."
+        intermediario:
+          - "Leia uma frase e conte quantas vogais ela tem."
+        avancado:
+          - "Gere o e-mail institucional `nome.sobrenome@escola.br` em minúsculas e informe se uma palavra lida é um palíndromo."
 
     - n: 26
       tema: "Listas: criação, índices e leitura"
@@ -457,17 +614,24 @@
       objetivo: "Guardar vários valores numa lista, acessar por índice e preenchê-la com um laço."
       material:
         - "Python: `append`, índices `[0]` e `[-1]` e `len` (exemplo comentado no Colab)."
-        - "Scratch: *Criar uma lista*; Planilhas: um intervalo (`A2:A11`) como lista."
+        - "Scratch: *Criar uma lista*."
         - "Python Tutor para visualizar a lista crescendo."
-      python: "aula26.ipynb"
-      scratch: "aula26.sb3"
+      planilhas:
+        - "Nomes em `A2:A6` formam uma lista: `=A2` é o primeiro e `=CONT.VALORES(A2:A6)` conta os elementos."
+        - "`=ÍNDICE(A2:A6; 3)` pega o 3º elemento (na planilha a contagem começa em 1)."
+        - "Meses em `A2:A13` e, a partir de um número em `C1`, `=ÍNDICE(A2:A13; C1)` mostra o nome do mês."
+      python: [aula26_nivel1.ipynb, aula26_nivel2.ipynb, aula26_nivel3.ipynb]
+      scratch: [aula26_nivel1.sb3, aula26_nivel2.sb3, aula26_nivel3.sb3]
       atividade:
         tempo: "35 min"
         descricao: "**Temperaturas da semana.** Leia 6 temperaturas numa lista e mostre a primeira, a última, a do meio e a lista em ordem inversa. Faça a mesma lista no Scratch com o bloco de listas."
       exercicios:
-        - "Leia os nomes de 5 colegas, guarde numa lista e mostre-os em ordem inversa."
-        - "Leia 6 temperaturas e mostre a primeira, a última e a do meio."
-        - "Crie a lista dos meses do ano e mostre o nome do mês correspondente a um número lido."
+        basico:
+          - "Crie uma lista com 3 cores, mostre a primeira, a última e o tamanho, e adicione mais uma."
+        intermediario:
+          - "Leia os nomes de 5 colegas, guarde numa lista e mostre-os em ordem inversa."
+        avancado:
+          - "Leia um número de 1 a 12 e mostre o nome do mês correspondente, avisando quando o número for inválido."
 
     - n: 27
       tema: "Percorrendo listas: soma, média, maior e menor"
@@ -476,15 +640,21 @@
       material:
         - "Python: maior valor com laço e conferência com `sum` e `max` (exemplo comentado no Colab)."
         - "Exemplo: precipitação (mm) de cada mês do ano."
-        - "Planilhas: `=SOMA()`, `=MÉDIA()`, `=MAIOR(A2:A13; 2)`, `=ORDENAR()`."
-      python: "aula27.ipynb"
+      planilhas:
+        - "Chuva mensal em `B2:B13`: `=SOMA(B2:B13)`, `=MÉDIA(B2:B13)` e `=MÁXIMO(B2:B13)`."
+        - "Mês mais chuvoso: `=ÍNDICE(A2:A13; CORRESP(MÁXIMO(B2:B13); B2:B13; 0))`."
+        - "Meses acima da média `=CONT.SE(B2:B13; \">\"&MÉDIA(B2:B13))` e os três maiores com `=MAIOR(B2:B13; 1)`, `2` e `3`."
+      python: [aula27_nivel1.ipynb, aula27_nivel2.ipynb, aula27_nivel3.ipynb]
       atividade:
         tempo: "40 min"
         descricao: "**Chuva no ano.** Com a lista de chuvas mensais, mostre o total, a média, o mês mais chuvoso e os meses acima da média. Na planilha, use `SOMA`, `MÉDIA`, `MAIOR` e um gráfico de colunas."
       exercicios:
-        - "Dada a chuva de cada mês, mostre o total anual, a média e o mês mais chuvoso."
-        - "Mostre quantos meses ficaram acima da média."
-        - "Mostre os três maiores valores da lista."
+        basico:
+          - "Dada uma lista de notas, mostre soma, média, maior, menor e a lista ordenada usando `sum`, `max`, `min` e `sorted`."
+        intermediario:
+          - "Dada a chuva de cada mês, mostre o total anual, a média e o mês mais chuvoso (com laço)."
+        avancado:
+          - "Mostre quantos meses ficaram acima da média e os três maiores valores da lista."
 
     - n: 28
       tema: "Busca em listas"
@@ -493,15 +663,21 @@
       material:
         - "Python: busca sequencial com `while` e a versão curta com `in` (exemplo comentado no Colab)."
         - "Python Tutor para visualizar a busca passo a passo."
-        - "Planilhas: `=PROCV()` e `=CORRESP()`."
-      python: "aula28.ipynb"
+      planilhas:
+        - "`=CONT.SE(A2:A20; \"Iracema\")>0` diz se o livro está na lista."
+        - "`=CORRESP(\"Iracema\"; A2:A20; 0)` mostra a posição do livro."
+        - "Siglas em `A2:A28` e nomes em `B2:B28`; `=PROCV(D1; A2:B28; 2; FALSO)` busca o nome do estado a partir da sigla em `D1`."
+      python: [aula28_nivel1.ipynb, aula28_nivel2.ipynb, aula28_nivel3.ipynb]
       atividade:
         tempo: "40 min"
         descricao: "**Biblioteca.** Faça a busca de um título na lista de livros, mostrando a posição ou *Não encontrado*, e conte quantos livros começam com uma letra digitada. Na planilha, faça a busca de estado pela sigla com `PROCV`."
       exercicios:
-        - "Dada uma lista de livros da biblioteca, informe se um título buscado está disponível e em que posição."
-        - "Conte quantas vezes uma palavra aparece numa lista de palavras."
-        - "Dadas as listas de siglas e nomes dos estados, mostre o nome a partir da sigla, em Python e com `PROCV`."
+        basico:
+          - "Leia o nome de uma fruta e informe se ela está numa lista de frutas."
+        intermediario:
+          - "Busque um título numa lista de livros com `while` e mostre a posição ou *Não encontrado*."
+        avancado:
+          - "Mostre o nome do estado a partir da sigla (listas paralelas) e conte quantas vezes uma palavra aparece numa lista."
 
     - n: 29
       tema: "Filtrando e transformando listas"
@@ -510,15 +686,21 @@
       material:
         - "Python: filtro com laço + `if` e com compreensão de listas (exemplo comentado no Colab)."
         - "Exemplo: separar medições fora de uma faixa de tolerância."
-        - "Planilhas: `=FILTRO()` e fórmulas aplicadas a uma coluna inteira."
-      python: "aula29.ipynb"
+      planilhas:
+        - "`=FILTRO(A2:A20; MOD(A2:A20; 2)=0)` mostra só os números pares."
+        - "`=FILTRO(A2:A16; ABS(A2:A16-50)>0,2)` separa as peças fora da tolerância."
+        - "`=ARRED(A2/25,4; 3)` arrastada converte as medidas para polegadas e `=(CONT.SE(A2:A16; \">50,2\")+CONT.SE(A2:A16; \"<49,8\"))/CONT(A2:A16)` dá o percentual reprovado."
+      python: [aula29_nivel1.ipynb, aula29_nivel2.ipynb, aula29_nivel3.ipynb]
       atividade:
         tempo: "35 min"
         descricao: "**Inspeção de lote.** Com uma lista de 15 medidas, separe as peças fora da tolerância, mostre o percentual reprovado e converta as medidas aprovadas para polegadas (÷ 25,4). Confira na planilha com `FILTRO`."
       exercicios:
-        - "De uma lista de medidas de 50 mm, separe as que estão fora da tolerância de ± 0,2 mm."
-        - "Converta uma lista de temperaturas de °C para °F."
-        - "Dada uma lista de palavras, crie outra só com as que têm mais de 5 letras."
+        basico:
+          - "Dada uma lista de números, crie outra só com os pares."
+        intermediario:
+          - "De uma lista de medidas de 50 mm, separe as que estão fora da tolerância de ± 0,2 mm."
+        avancado:
+          - "Com compreensão de listas, separe as palavras com mais de 5 letras e converta uma lista de medidas de mm para polegadas."
 
     - n: 30
       tema: "Funções: def, parâmetros e retorno"
@@ -527,16 +709,23 @@
       material:
         - "Python: `def`, parâmetros e `return`; uma função que usa outras (exemplo comentado no Colab)."
         - "Scratch: *Criar um bloco* com parâmetros."
-        - "Planilhas: as fórmulas como funções prontas, e *Dados → Funções nomeadas* para criar uma função própria."
-      python: "aula30.ipynb"
-      scratch: "aula30.sb3"
+      planilhas:
+        - "Funções prontas recebem argumentos: `=ARRED(A2; 2)` e `=POTÊNCIA(A2; 2)`."
+        - "*Dados → Funções nomeadas*: crie `AREA_RET(largura; comprimento)` com a definição `=largura*comprimento`."
+        - "Crie também `AREA_CIRC(raio)` e use as duas juntas: `=AREA_RET(5; 4)-AREA_CIRC(0,3)`."
+      python: [aula30_nivel1.ipynb, aula30_nivel2.ipynb, aula30_nivel3.ipynb]
+      scratch: [aula30_nivel1.sb3, aula30_nivel2.sb3, aula30_nivel3.sb3]
       atividade:
         tempo: "45 min"
         descricao: "**Calculadora de pintura com funções.** Crie `area_parede(largura, altura)`, `area_aberturas(portas, janelas)` e `latas_de_tinta(area)` e use-as para orçar a pintura de um cômodo de 4 paredes."
       exercicios:
-        - "Crie `area_retangulo` e `area_circulo` e use-as para calcular a área de uma sala com uma coluna circular."
-        - "Crie `celsius_para_fahrenheit(c)` e use-a para mostrar uma tabela de 0 °C a 100 °C."
-        - "Crie `media(lista)` e `acima_da_media(lista)`, esta última usando a primeira."
+        basico:
+          - "Crie a função `saudacao(nome)` e chame-a para três nomes."
+        intermediario:
+          - "Crie `celsius_para_fahrenheit(c)` e use-a para mostrar uma tabela de 0 °C a 100 °C."
+        avancado:
+          - "Crie `area_retangulo`, `area_circulo` e `area_util` (sala menos uma coluna circular)."
+          - "Crie `media(lista)` e `acima_da_media(lista)`, esta última usando a primeira."
 
     - n: 31
       tema: "Funções II: reorganizando programas"
@@ -546,14 +735,17 @@
         - "Python: uma função de leitura reutilizável, com valores padrão nos parâmetros (exemplo comentado no Colab)."
         - "Variáveis locais × globais e valores padrão de parâmetros."
         - "Google Documentos: comparação antes e depois de uma refatoração."
-      python: "aula31.ipynb"
+      python: [aula31_nivel1.ipynb, aula31_nivel2.ipynb, aula31_nivel3.ipynb]
       atividade:
         tempo: "40 min"
         descricao: "**Refatoração do jogo.** Reescreva o jogo de adivinhação com as funções `ler_numero`, `dar_dica` e `jogar_partida`. Registre no Google Documentos o código antes e depois, explicando o ganho."
       exercicios:
-        - "Reescreva o seu jogo de adivinhação usando ao menos três funções."
-        - "Crie `ler_numero(mensagem, minimo, maximo)` que repete a pergunta até receber um valor válido."
-        - "Registre no Google Documentos o antes e depois do código refatorado, explicando o ganho."
+        basico:
+          - "Crie a função `dobro(numero)` e explique por que a variável de dentro da função não existe fora dela."
+        intermediario:
+          - "Crie `ler_numero(mensagem, minimo, maximo)` que repete a pergunta até receber um valor válido."
+        avancado:
+          - "Reescreva o jogo de adivinhação com as funções `ler_palpite`, `dar_dica` e `jogar_partida` e registre o antes e depois no Google Documentos."
 
     - n: 32
       tema: "Dicionários: dados com nome"
@@ -562,15 +754,22 @@
       material:
         - "Python: acesso por chave, `.items()` e contagem com `.get()` (exemplo comentado no Colab)."
         - "Contagem de ocorrências com dicionário."
-        - "Planilhas: `=CONT.SE()`, `=SOMASE()` e `=MÉDIASE()` para agrupar por categoria."
-      python: "aula32.ipynb"
+      planilhas:
+        - "`=PROCV(\"cimento\"; A2:B6; 2; FALSO)` busca o preço pela chave, como `precos[\"cimento\"]`."
+        - "`=SOMASE(A2:A20; \"cimento\"; B2:B20)` soma as vendas de um produto."
+        - "*Inserir → Tabela dinâmica* agrupando o total vendido por produto, conferido com o dicionário do Python."
+      python: [aula32_nivel1.ipynb, aula32_nivel2.ipynb, aula32_nivel3.ipynb]
       atividade:
         tempo: "40 min"
         descricao: "**Orçamento de materiais.** Com um dicionário de preços de 5 materiais, leia a quantidade de cada um e mostre o custo por item e o total. Na planilha, monte a lista de compras e confira o total por material com `SOMASE`."
       exercicios:
-        - "Crie um dicionário com o preço de 5 materiais e calcule o custo de um pedido."
-        - "Conte quantas vezes cada letra aparece numa frase."
-        - "Dada uma lista de vendas (produto, valor), mostre o total vendido por produto em Python e na planilha."
+        basico:
+          - "Crie um dicionário sigla → capital com 4 estados e mostre cada par."
+        intermediario:
+          - "Com um dicionário de preços de 5 materiais, calcule o custo de um pedido."
+        avancado:
+          - "Dada uma lista de vendas (produto, valor), mostre o total vendido por produto."
+          - "Conte quantas vezes cada letra aparece numa frase."
 
     - n: 33
       tema: "Sistema com menu: cadastrar, buscar, listar e remover"
@@ -580,45 +779,59 @@
         - "Python: agenda de contatos (nome e telefone) num dicionário, com menu (exemplo comentado no Colab)."
         - "Uma função para cada operação: `cadastrar`, `buscar`, `listar`, `remover`."
         - "Remoção com `del` ou `.pop()`."
-      python: "aula33.ipynb"
+      python: [aula33_nivel1.ipynb, aula33_nivel2.ipynb, aula33_nivel3.ipynb]
       atividade:
         tempo: "50 min"
         descricao: "**Agenda completa.** Implemente a agenda com cadastrar, buscar, listar, remover e editar telefone, sem permitir nomes repetidos. Desenhe no diagrams.net o fluxograma do laço principal."
       exercicios:
-        - "Implemente a agenda de contatos com as 4 operações."
-        - "Adicione a opção *Editar telefone*."
-        - "Impeça o cadastro de um contato com nome repetido."
+        basico:
+          - "Lista de tarefas: leia tarefas até o usuário deixar em branco e mostre a lista numerada."
+        intermediario:
+          - "Agenda de contatos com cadastrar, buscar, listar e remover."
+        avancado:
+          - "Acrescente *Editar telefone*, impeça nomes repetidos e mostre o total de contatos ao sair."
 
     - n: 34
       tema: "Integração: Python lendo dados da planilha (CSV)"
       ferramentas: [Planilhas, Python, Colab]
       objetivo: "Exportar dados do Google Sheets em CSV e processá-los em Python."
       material:
-        - "Planilhas: *Arquivo → Fazer download → CSV*; envio do arquivo para o Colab."
+        - "Envio do arquivo CSV para o Colab com `files.upload()`."
         - "Python: `import csv` e envio do arquivo com `files.upload()` do Colab (exemplo comentado no Colab)."
         - "Gravação de um CSV de resultados para abrir de volta no Sheets."
-      python: "aula34.ipynb"
+      planilhas:
+        - "*Arquivo → Fazer download → Valores separados por vírgula (.csv)* baixa a página atual da planilha."
+        - "*Arquivo → Importar* abre no Planilhas um CSV gerado pelo Python."
+        - "Confira na planilha, com `=MÉDIA()`, o resultado calculado pelo Python e monte o gráfico dos trimestres a partir do CSV importado."
+      python: [aula34_nivel1.ipynb, aula34_nivel2.ipynb, aula34_nivel3.ipynb]
       atividade:
         tempo: "45 min"
         descricao: "**Da planilha para o Python.** Crie no Google Planilhas uma tabela de notas da turma, baixe como CSV, envie para o Colab e mostre média, maior e menor nota. Faça um gráfico em Python com as notas."
       exercicios:
-        - "Leia um CSV de notas da turma e mostre média, maior e menor nota."
-        - "Leia um CSV de consumo de água mensal e gere um novo CSV com o consumo médio de cada trimestre."
-        - "Faça um gráfico em Python com os dados lidos do CSV."
+        basico:
+          - "Crie um CSV pequeno pelo próprio Python e leia linha a linha."
+        intermediario:
+          - "Leia o CSV de notas baixado do Planilhas e mostre média, maior e menor nota."
+        avancado:
+          - "Leia o consumo de água mensal, grave um CSV com a média de cada trimestre, baixe-o e faça um gráfico."
 
     - n: 35
       tema: "Avaliação da Unidade 3"
       ferramentas: [Python]
       objetivo: "Avaliar textos, listas, dicionários e funções."
       material:
-        - "Prova prática no Colab com 3 questões, uma delas resolvida também em Planilhas."
+        - "Prova prática no Colab com 3 questões."
         - "Entrega no Classroom dos links do caderno Colab e dos arquivos produzidos."
       atividade:
         tempo: "50 min"
         descricao: "**Questão principal da prova.** Programa com menu, listas ou dicionários e ao menos duas funções."
       exercicios:
-        - "Questões da avaliação (aplicadas em sala)."
-        - "Autoavaliação no Diário de Bordo: o que eu já sei, o que ainda preciso praticar."
+        basico:
+          - "Refaça, sem consultar, dois exemplos de nível 1 das aulas 25 a 34."
+        intermediario:
+          - "Simulado: resolva um exercício de nível 2 de cada aula da unidade."
+        avancado:
+          - "Simulado: sistema com menu, dicionário e ao menos duas funções."
 
     - n: 36
       tema: "Reavaliação da Unidade 3"
@@ -632,5 +845,9 @@
         tempo: "40 min"
         descricao: "**Desafio para quem já foi aprovado:** controle de empréstimo de ferramentas (dicionário ferramenta → responsável) com menu e funções. Os demais fazem a nova prova."
       exercicios:
-        - "Questões da reavaliação (aplicadas em sala)."
-        - "Lista de desafios para quem já foi aprovado na unidade."
+        basico:
+          - "Refaça as questões que você errou na avaliação, com a correção comentada ao lado."
+        intermediario:
+          - "Resolva a nova prova (quem não atingiu a média)."
+        avancado:
+          - "Desafio: controle de empréstimo de ferramentas (dicionário ferramenta → responsável) com menu e funções."

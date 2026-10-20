@@ -23,8 +23,9 @@ Todas funcionam no navegador, sem instalar nada: basta uma conta Google e uma co
   <li><span class="tool">Blockly Games</span> desafios de lógica em blocos (<a href="https://blockly.games/?lang=pt-br">blockly.games</a>)</li>
 </ul>
 
-<p class="files-hint"><strong>Arquivos das aulas:</strong> os exemplos em Python abrem direto no Colab. Os projetos do Scratch são baixados e abertos no editor on-line em <em>Arquivo → Carregar do seu computador</em>.</p>
+<p class="files-hint"><strong>Arquivos das aulas</strong> (três níveis cada: 1 Básico, 2 Intermediário, 3 Avançado). <strong>Python</strong>: abre direto no Colab. <strong>Scratch</strong>: baixe o <code>.sb3</code> e abra no editor on-line em <em>Arquivo → Carregar do seu computador</em>. <strong>Planilhas</strong>: baixe o <code>.xlsx</code>, envie para o Google Drive e abra com o Google Planilhas.</p>
 
+{% assign niveis = "basico:Básico,intermediario:Intermediário,avancado:Avançado" | split: "," %}
 {% assign colab = "https://colab.research.google.com/github/josedihego/josedihego.github.io/blob/master/assets/infobasica/python/" %}
 {% for u in site.data.infobasica %}
 <h2 class="unit-title" id="unidade-{{ u.unidade }}"><span class="unit-num">Unidade {{ u.unidade }}</span> {{ u.titulo }}</h2>
@@ -47,21 +48,32 @@ Todas funcionam no navegador, sem instalar nada: basta uma conta Google e uma co
         {% for m in a.material %}<li>{{ m | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
         {% endfor %}
       </ul>
-      {% if a.python or a.scratch %}
-      <div class="lesson-files">
-        {% if a.python %}<a class="file-btn" href="{{ colab }}{{ a.python }}" target="_blank" rel="noopener"><i class="fab fa-python" aria-hidden="true"></i> Exemplo em Python (abrir no Colab)</a>{% endif %}
-        {% if a.scratch %}<a class="file-btn" href="/assets/infobasica/scratch/{{ a.scratch }}" download><i class="fas fa-puzzle-piece" aria-hidden="true"></i> Projeto Scratch (.sb3)</a>{% endif %}
-      </div>
+      {% assign nn = a.n | prepend: "0" | slice: -2, 2 %}
+      {% if a.planilhas %}
+      <h4>Planilhas</h4>
+      <ol class="level-list">
+        {% for ex in a.planilhas %}<li><span class="level-tag">Nível {{ forloop.index }}</span> {{ ex | markdownify | remove: '<p>' | remove: '</p>' | strip }} <a class="file-link" href="/assets/infobasica/planilhas/aula{{ nn }}_nivel{{ forloop.index }}.xlsx" download><i class="fas fa-file-excel" aria-hidden="true"></i> .xlsx</a></li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+      {% if a.python %}
+      <div class="lesson-files"><span class="files-label"><i class="fab fa-python" aria-hidden="true"></i> Python (Colab)</span>{% for f in a.python %}<a class="file-btn" href="{{ colab }}{{ f }}" target="_blank" rel="noopener">Nível {{ forloop.index }}</a>{% endfor %}</div>
+      {% endif %}
+      {% if a.scratch %}
+      <div class="lesson-files"><span class="files-label"><i class="fas fa-puzzle-piece" aria-hidden="true"></i> Scratch (.sb3)</span>{% for f in a.scratch %}<a class="file-btn" href="/assets/infobasica/scratch/{{ f }}" download>Nível {{ forloop.index }}</a>{% endfor %}</div>
       {% endif %}
       <div class="lesson-activity">
         <h4>Atividade em sala · {{ a.atividade.tempo }}</h4>
         <p>{{ a.atividade.descricao | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
       </div>
       <h4>Exercícios propostos</h4>
+      {% for nivel in niveis %}{% assign partes = nivel | split: ":" %}{% assign chave = partes[0] %}
+      <p class="level-head"><span class="level-tag">Nível {{ forloop.index }}</span> {{ partes[1] }}</p>
       <ol>
-        {% for e in a.exercicios %}<li>{{ e | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {% for e in a.exercicios[chave] %}<li>{{ e | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
         {% endfor %}
       </ol>
+      {% endfor %}
     </div>
   </details>
   {% endfor %}
