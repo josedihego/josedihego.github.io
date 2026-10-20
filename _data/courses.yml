@@ -18,8 +18,8 @@
   courses:
     - { title: "Lógica de Programação – Eletrônica", code: "9822-G1", url: "/generalC/" }
     - { title: "Lógica de Programação – Automação", code: "5821", url: "/generalC/" }
-    - { title: "Informática Básica – Edificações", code: "1811", url: "/generalC/" }
-    - { title: "Informática Básica – Edificações", code: "1813", url: "/generalC/" }
+    - { title: "Informática Básica – Edificações", code: "1811", url: "/infobasica/" }
+    - { title: "Informática Básica – Edificações", code: "1813", url: "/infobasica/" }
     - { title: "Informática I – Química", code: "INF081", url: "/quimica/" }
     - { title: "Lógica de Programação II – Eletrônica", code: "LPR082", url: "/eletronica/" }
     - { title: "Lógica de Programação II – Automação", code: "LPR082", url: "/automacao/" }

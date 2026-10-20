@@ -7,6 +7,10 @@ classes: course-page
 ---
 [← Cursos](/courses/){: .back-link}
 
+## Plano de aulas
+
+<a class="repo-card" href="/infobasica/"><i class="fas fa-list-ol" aria-hidden="true"></i><span><strong>36 aulas em 3 unidades</strong><small>Python, Scratch, Google Planilhas e Google Docs</small></span></a>
+
 ## Código
 
 <a class="repo-card" href="https://github.com/josedihego/programacaoC"><i class="fab fa-github" aria-hidden="true"></i><span><strong>Código da disciplina</strong><small>github.com/josedihego/programacaoC</small></span></a>
