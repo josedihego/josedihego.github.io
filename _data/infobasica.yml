@@ -1,26 +1,26 @@
-# Plano de aulas de Informática Básica / Lógica (Edificações, Química, Mecânica), rendered by /infobasica/
-# 36 encontros de 2 h, em 3 unidades de 12. Cada problema é feito em Python e repetido em Scratch, Planilhas e/ou Docs.
+# Plano de aulas de Informática (Edificações, Química, Mecânica), rendered by /infobasica/
+# 36 encontros de 2 h, em 3 unidades de 12; cada unidade termina com avaliação e reavaliação.
 - unidade: 1
-  titulo: "Algoritmos, variáveis e decisões"
-  resumo: "Do algoritmo no papel ao primeiro programa em Python: sequência, variáveis, entrada de dados, cálculos e comandos de decisão."
+  titulo: "Algoritmos, variáveis e decisões. Interação com Documentos"
+  resumo: "Do algoritmo no papel ao primeiro programa em Python: sequência, variáveis, entrada de dados, cálculos e decisões, com cada etapa registrada no Google Documentos."
   aulas:
     - n: 1
       tema: "Apresentação da disciplina e o que é um algoritmo"
-      ferramentas: [Docs, Blockly Games]
+      ferramentas: [Documentos, Blockly Games]
       objetivo: "Entender o que é um algoritmo, reconhecer algoritmos no cotidiano e no curso técnico, e conhecer as ferramentas e a forma de avaliação."
       material:
         - "Apresentação da disciplina, das ferramentas e dos critérios de avaliação."
         - "Algoritmos do cotidiano: receita, troca de pneu, traço de concreto, preparo de uma solução, montagem de uma peça."
-        - "Google Docs: criação do **Diário de Bordo** da turma (um documento por estudante, compartilhado com o professor)."
+        - "Google Documentos: criação do **Diário de Bordo** da turma (um documento por estudante, compartilhado com o professor)."
         - "[Blockly Games – Labirinto](https://blockly.games/maze?lang=pt-br): primeiros comandos em sequência."
       exercicios:
         - "Escreva, no Diário de Bordo, um algoritmo de até 10 passos para preparar um café."
         - "Escreva o algoritmo de uma tarefa do seu curso (ex.: medir a área de um cômodo, diluir uma solução, trocar uma ferramenta no torno)."
-        - "Conclua os níveis 1 a 5 do Labirinto do Blockly Games e registre no Docs o que cada bloco faz."
+        - "Conclua os níveis 1 a 5 do Labirinto do Blockly Games e registre no Google Documentos o que cada bloco faz."
 
     - n: 2
       tema: "Fluxogramas e pensamento computacional"
-      ferramentas: [Fluxogramas, Blockly Games, Docs]
+      ferramentas: [Documentos, Fluxogramas, Blockly Games]
       objetivo: "Representar algoritmos com fluxogramas (início/fim, processo, entrada/saída, decisão) e decompor problemas em passos."
       material:
         - "Símbolos de fluxograma e as quatro ideias do pensamento computacional: decomposição, padrões, abstração e algoritmo."
@@ -33,7 +33,7 @@
 
     - n: 3
       tema: "Primeiros programas no Scratch: eventos e sequência"
-      ferramentas: [Scratch, Docs]
+      ferramentas: [Documentos, Scratch]
       objetivo: "Criar o primeiro programa no Scratch usando eventos, sequência, falas e perguntas."
       material:
         - "[Scratch](https://scratch.mit.edu/): conta da turma, palco, atores, blocos de *Eventos*, *Aparência* e *Sensores*."
@@ -42,16 +42,17 @@
       exercicios:
         - "Faça um ator perguntar seu nome e sua idade e responder com uma frase usando os dois dados."
         - "Crie uma pequena animação de 5 passos (mover, girar, mudar fantasia) acionada pela tecla espaço."
-        - "Escreva, no Docs, o fluxograma equivalente ao programa da questão 1."
+        - "Escreva, no Google Documentos, o fluxograma equivalente ao programa da questão 1."
 
     - n: 4
       tema: "Primeiro programa em Python no Google Colab"
-      ferramentas: [Python, Colab, Scratch]
+      ferramentas: [Documentos, Python, Colab, Scratch]
       objetivo: "Usar o Google Colab, escrever e executar o primeiro programa em Python com `print`, e comparar com o mesmo programa no Scratch."
       material:
         - "[Google Colab](https://colab.research.google.com/): criar caderno, células de código e de texto, executar e salvar no Drive."
-        - 'Python: `print("Olá, mundo!")`, comentários com `#`, mensagens de erro mais comuns.'
+        - "Python: `print(\"Olá, mundo!\")`, comentários com `#`, mensagens de erro mais comuns."
         - "Comparação lado a lado: bloco `diga` (Scratch) × `print` (Python)."
+        - "Google Documentos: colar o código com fonte monoespaçada e uma captura de tela da execução no Diário de Bordo."
       exercicios:
         - "Escreva um programa que imprime seu nome, turma e curso, um em cada linha."
         - "Imprima um cartão de identificação com bordas feitas de `*`."
@@ -59,26 +60,28 @@
 
     - n: 5
       tema: "Variáveis, tipos e atribuição"
-      ferramentas: [Python, Planilhas, Python Tutor]
+      ferramentas: [Planilhas, Documentos, Python, Python Tutor]
       objetivo: "Compreender variáveis, os tipos `int`, `float` e `str`, a atribuição e a ordem das operações."
       material:
         - "Python: `largura = 4.5`, `comprimento = 3.2`, `area = largura * comprimento`, `print(area)`."
         - "[Python Tutor](https://pythontutor.com/python-compiler.html#mode=edit) para ver as variáveis mudando a cada linha."
         - "Planilhas: a célula como variável. Largura em `A2`, comprimento em `B2` e, em `C2`, `=A2*B2`."
         - "Função `type()` e conversão entre tipos."
+        - "Google Documentos: tabela de variáveis (nome, tipo, valor) no Diário de Bordo."
       exercicios:
         - "Calcule a área e o perímetro de um retângulo de 4,5 m × 3,2 m em Python e na planilha."
         - "Calcule a média de três notas guardadas em variáveis e imprima o resultado."
-        - "Execute no Python Tutor um programa que troca o valor de duas variáveis e explique, no Docs, o que aconteceu."
+        - "Execute no Python Tutor um programa que troca o valor de duas variáveis e explique, no Google Documentos, o que aconteceu."
 
     - n: 6
       tema: "Entrada e saída de dados"
-      ferramentas: [Python, Scratch, Planilhas]
+      ferramentas: [Planilhas, Documentos, Python, Scratch]
       objetivo: "Ler dados do usuário com `input()`, convertê-los com `float()`/`int()` e formatar a saída com f-strings."
       material:
-        - 'Python: `preco = float(input("Preço: "))` e `print(f"Total: R$ {total:.2f}")`.'
+        - "Python: `preco = float(input(\"Preço: \"))` e `print(f\"Total: R$ {total:.2f}\")`."
         - "Scratch: `pergunte e espere`, `resposta` e variáveis."
         - "Planilhas: células de entrada destacadas por cor e célula de resultado protegida."
+        - "Google Documentos: registrar exemplos de execução (entrada → saída esperada → saída obtida)."
       exercicios:
         - "Leia a temperatura em °C e mostre em °F e em K."
         - "Leia o preço de um produto e o percentual de desconto e mostre o preço final."
@@ -86,12 +89,13 @@
 
     - n: 7
       tema: "Operadores aritméticos e a biblioteca math"
-      ferramentas: [Python, Planilhas]
+      ferramentas: [Planilhas, Documentos, Python]
       objetivo: "Usar operadores (`+ - * / // % **`) e funções matemáticas (`math.sqrt`, `math.pi`, `round`) em problemas técnicos."
       material:
         - "Python: `import math`, área do círculo `math.pi * r ** 2`, divisão inteira e resto (`//` e `%`)."
         - "Conversão de unidades: minutos em horas e minutos; litros em m³."
         - "Planilhas: `=RAIZ()`, `=POTÊNCIA()`, `=PI()`, `=ARRED()`, `=QUOCIENTE()`, `=MOD()`."
+        - "Google Documentos: escrever as fórmulas com o editor de equações (*Inserir → Equação*)."
       exercicios:
         - "Leia o raio e mostre a área e o comprimento de uma circunferência."
         - "Leia uma duração em segundos e mostre em horas, minutos e segundos."
@@ -100,25 +104,27 @@
 
     - n: 8
       tema: "Expressões lógicas: relacionais, E, OU, NÃO"
-      ferramentas: [Python, Planilhas, Scratch]
+      ferramentas: [Planilhas, Documentos, Python, Scratch]
       objetivo: "Construir expressões booleanas com `== != < > <= >=` e `and`, `or`, `not`, e montar tabelas-verdade."
       material:
         - "Python: `True`/`False`, `idade >= 16 and idade < 18`, a precedência dos operadores."
         - "Planilhas: `=E(A2>=16; A2<18)`, `=OU()`, `=NÃO()`."
         - "Scratch: blocos hexagonais de *Operadores* (`e`, `ou`, `não`)."
+        - "Google Documentos: tabelas-verdade montadas como tabela no documento."
       exercicios:
-        - "Monte no Sheets a tabela-verdade de `E` e de `OU` para duas variáveis."
+        - "Monte no Google Documentos a tabela-verdade de `E` e de `OU` para duas variáveis."
         - "Leia o comprimento de três segmentos e informe se eles podem formar um triângulo."
         - "Leia um ano e informe `True` se ele for bissexto."
 
     - n: 9
       tema: "Decisão simples e composta: if / else"
-      ferramentas: [Python, Scratch, Planilhas]
+      ferramentas: [Planilhas, Documentos, Python, Scratch]
       objetivo: "Usar `if`/`else` para tomar decisões e reproduzir a mesma lógica no Scratch e na planilha com `SE`."
       material:
         - "Python: aprovado ou reprovado a partir da média; a indentação define o bloco."
         - "Scratch: bloco `se ... então ... senão`."
-        - 'Planilhas: `=SE(D2>=7; "Aprovado"; "Reprovado")`.'
+        - "Planilhas: `=SE(D2>=7; \"Aprovado\"; \"Reprovado\")`."
+        - "Google Documentos: fluxograma do `if/else` com *Inserir → Desenho*."
       exercicios:
         - "Leia um número inteiro e informe se ele é par ou ímpar (use `%`)."
         - "Leia a idade e informe se a pessoa já pode votar."
@@ -126,49 +132,49 @@
 
     - n: 10
       tema: "Decisões encadeadas: if / elif / else"
-      ferramentas: [Python, Scratch, Planilhas]
+      ferramentas: [Planilhas, Documentos, Python, Scratch]
       objetivo: "Tratar várias faixas de valores com `elif` e com `SE` aninhado ou `SES` na planilha."
       material:
         - "Python: conceito A, B, C ou D a partir da nota."
         - "Scratch: blocos `se ... senão` dentro de outros."
         - "Planilhas: `=SES(B2>=9; \"A\"; B2>=7; \"B\"; B2>=5; \"C\"; VERDADEIRO; \"D\")`."
+        - "Google Documentos: relatório curto com título, enunciado, código e testes, usando estilos de título e sumário automático."
       exercicios:
         - "Leia uma nota de 0 a 10 e mostre o conceito em Python, no Scratch e na planilha."
         - "Leia o pH e classifique em ácido, neutro ou básico."
         - "Leia a velocidade de um veículo numa via de 60 km/h e informe: sem multa, multa leve (até 20% acima) ou multa grave."
+        - "Escreva no Google Documentos o relatório de um dos exercícios, com sumário automático."
 
     - n: 11
-      tema: "Revisão integradora: programas completos com decisão"
-      ferramentas: [Python, Planilhas, Scratch]
-      objetivo: "Integrar entrada, cálculo e decisão em programas completos e conferir os resultados na planilha."
-      material:
-        - "Roteiro para resolver um problema: entender o enunciado, listar entradas e saídas, escrever o fluxograma, programar, testar."
-        - "Exemplo resolvido: tarifa de estacionamento (1ª hora R$ 5, demais R$ 3, limite diário R$ 20)."
-        - "Planilha de casos de teste para conferir as respostas do programa."
-      exercicios:
-        - "Calcule a tarifa de estacionamento a partir das horas de permanência."
-        - "Leia três números e mostre-os em ordem crescente."
-        - "Leia os lados de um triângulo e classifique em equilátero, isósceles ou escaleno."
-
-    - n: 12
       tema: "Avaliação da Unidade 1"
-      ferramentas: [Python, Planilhas, Docs]
-      objetivo: "Avaliar variáveis, entrada e saída, operadores e decisões, em Python e em planilha."
+      ferramentas: [Documentos, Python]
+      objetivo: "Avaliar variáveis, entrada e saída, operadores e decisões, com registro no Google Documentos."
       material:
-        - "Prova prática no Colab: 3 questões curtas (cálculo, decisão simples, decisão encadeada)."
-        - "Uma das questões deve ser resolvida também em planilha."
-        - "Entrega no Classroom: link do caderno Colab, link da planilha e do Diário de Bordo."
+        - "Prova prática no Colab com 3 questões, uma delas resolvida também em Google Documentos."
+        - "Entrega no Classroom dos links do caderno Colab e dos arquivos produzidos."
       exercicios:
         - "Questões da avaliação (aplicadas em sala)."
         - "Autoavaliação no Diário de Bordo: o que eu já sei, o que ainda preciso praticar."
 
+    - n: 12
+      tema: "Reavaliação da Unidade 1"
+      ferramentas: [Documentos, Python]
+      objetivo: "Dar uma nova oportunidade a quem não atingiu a média, reavaliando variáveis, entrada e saída, operadores e decisões, com registro no Google Documentos."
+      material:
+        - "Correção comentada da avaliação e revisão dos pontos com mais erros (primeira parte da aula)."
+        - "Nova prova prática no Colab, no mesmo formato da avaliação, para quem não atingiu a média."
+        - "Quem já atingiu a média resolve uma lista de desafios da unidade."
+      exercicios:
+        - "Questões da reavaliação (aplicadas em sala)."
+        - "Lista de desafios para quem já foi aprovado na unidade."
+
 - unidade: 2
-  titulo: "Repetição, aleatoriedade e simulação"
-  resumo: "Laços `for` e `while`, acumuladores e contadores, números aleatórios e jogos, gráficos e simulações passo a passo."
+  titulo: "Lógica de repetição. Interação com planilhas e gráficos"
+  resumo: "Laços `for` e `while`, acumuladores, contadores e números aleatórios, sempre conferidos e visualizados em planilhas e gráficos."
   aulas:
     - n: 13
       tema: "Introdução à repetição: for e range"
-      ferramentas: [Python, Scratch, Planilhas]
+      ferramentas: [Planilhas, Python, Scratch]
       objetivo: "Repetir instruções com `for` e `range(início, fim, passo)` e relacionar com `repita` no Scratch e com séries na planilha."
       material:
         - "Python: `for i in range(1, 11): print(i)` e variações com passo e passo negativo."
@@ -181,7 +187,7 @@
 
     - n: 14
       tema: "Acumuladores: somas e médias"
-      ferramentas: [Python, Planilhas, Python Tutor]
+      ferramentas: [Planilhas, Python, Python Tutor]
       objetivo: "Usar uma variável acumuladora dentro do laço para calcular somas e médias."
       material:
         - "Python: `total = 0` antes do laço e `total = total + valor` dentro dele."
@@ -194,7 +200,7 @@
 
     - n: 15
       tema: "Contadores, maior e menor"
-      ferramentas: [Python, Planilhas]
+      ferramentas: [Planilhas, Python]
       objetivo: "Combinar laços e decisões para contar ocorrências e encontrar o maior e o menor valor."
       material:
         - "Python: contador (`qtd = qtd + 1`) dentro de um `if`; variáveis `maior` e `menor` iniciadas com o primeiro valor lido."
@@ -207,12 +213,13 @@
 
     - n: 16
       tema: "Repetição com condição: while"
-      ferramentas: [Python, Scratch, Fluxogramas]
+      ferramentas: [Planilhas, Python, Scratch, Fluxogramas]
       objetivo: "Usar `while` quando o número de repetições não é conhecido e evitar laços infinitos."
       material:
         - "Python: poupança que rende 1% ao mês. Em quantos meses o valor dobra?"
         - "Validação de entrada: repetir a pergunta até o valor ser válido."
         - "Scratch: `repita até que`. Fluxograma do `while` × fluxograma do `for`."
+        - "Planilhas: a mesma poupança mês a mês, uma linha por mês, e gráfico do saldo."
       exercicios:
         - "Calcule em quantos meses uma aplicação dobra de valor, dada a taxa mensal."
         - "Leia notas até que o usuário digite um valor negativo e mostre a média das notas válidas."
@@ -220,12 +227,13 @@
 
     - n: 17
       tema: "Números aleatórios"
-      ferramentas: [Python, Scratch, Planilhas]
+      ferramentas: [Planilhas, Python, Scratch]
       objetivo: "Gerar números aleatórios com o módulo `random` e usá-los em sorteios e simulações."
       material:
         - "Python: `import random`, `random.randint(a, b)`, `random.choice(lista)`."
         - "Scratch: `número aleatório entre 1 e 10`; Planilhas: `=ALEATÓRIOENTRE(1; 10)`."
         - "Frequência de resultados em muitas repetições."
+        - "Planilhas: gráfico de colunas com a frequência de cada resultado."
       exercicios:
         - "Sorteie 6 números entre 1 e 60 e mostre-os."
         - "Simule 1000 lançamentos de uma moeda e mostre o percentual de caras."
@@ -233,20 +241,22 @@
 
     - n: 18
       tema: "Projeto: jogo de adivinhação"
-      ferramentas: [Python, Scratch, Docs]
+      ferramentas: [Planilhas, Documentos, Python, Scratch]
       objetivo: "Construir um jogo completo combinando sorteio, decisões e repetição."
       material:
         - "Python: o computador sorteia um número de 1 a 100 e o jogador tenta adivinhar com dicas *maior*/*menor*."
         - "Versão Scratch com um ator que dá as dicas."
-        - "Docs: regras do jogo e estratégia para acertar em poucas tentativas."
+        - "Google Documentos: regras do jogo e estratégia para acertar em poucas tentativas."
+        - "Planilhas: registro das partidas (tentativas por jogo) e gráfico de evolução."
       exercicios:
         - "Implemente o jogo de adivinhação e mostre o número de tentativas no final."
         - "Limite o jogo a 7 tentativas e pergunte se o jogador quer jogar de novo."
-        - "Explique no Docs por que 7 tentativas sempre bastam para números de 1 a 100."
+        - "Explique no Google Documentos por que 7 tentativas sempre bastam para números de 1 a 100."
+        - "Registre 10 partidas na planilha e faça um gráfico do número de tentativas."
 
     - n: 19
       tema: "Laços com decisões: múltiplos, divisores e sequências"
-      ferramentas: [Python, Planilhas, Python Tutor]
+      ferramentas: [Planilhas, Python, Python Tutor]
       objetivo: "Resolver problemas que combinam `for`, `%` e contadores, e usar `break`."
       material:
         - "Python: múltiplos e divisores com `%`; `break` para encerrar o laço mais cedo."
@@ -259,20 +269,21 @@
 
     - n: 20
       tema: "Menus e programas que se repetem"
-      ferramentas: [Python, Fluxogramas]
+      ferramentas: [Planilhas, Python, Fluxogramas]
       objetivo: "Construir programas com menu e laço principal (`while True` + `break`) e escolher opções com `if/elif` ou `match`."
       material:
         - "Python: conversor de unidades com menu que continua até o usuário escolher *Sair*."
         - "Tratamento de opção inválida."
         - "Fluxograma do laço principal de um menu."
+        - "Planilhas: tabela de conversão para conferir as respostas do programa."
       exercicios:
         - "Conversor de unidades com menu (m↔cm, kg↔g, °C↔°F) que só termina quando o usuário pedir."
         - "Caixa eletrônico simples: saldo, depósito, saque (sem saldo negativo) e sair."
         - "Adicione um contador de operações realizadas, mostrado ao sair."
 
     - n: 21
-      tema: "Gráficos: Python (matplotlib) e Planilhas"
-      ferramentas: [Python, Colab, Planilhas]
+      tema: "Gráficos: Planilhas e Python (matplotlib)"
+      ferramentas: [Planilhas, Python, Colab]
       objetivo: "Gerar dados com laços e visualizá-los em gráficos no Python e na planilha."
       material:
         - "Python: `import matplotlib.pyplot as plt`, listas de x e y, `plt.plot(x, y)`, `plt.grid()`, `plt.show()`."
@@ -285,7 +296,7 @@
 
     - n: 22
       tema: "Simulações passo a passo com laços"
-      ferramentas: [Python, Planilhas]
+      ferramentas: [Planilhas, Python]
       objetivo: "Simular fenômenos que mudam com o tempo, atualizando valores a cada passo de um laço, e comparar com a planilha linha a linha."
       material:
         - "Python: o valor do próximo passo calculado a partir do atual, por exemplo `temperatura = temperatura - 0.1 * (temperatura - ambiente)`."
@@ -297,36 +308,35 @@
         - "Faça a mesma simulação na planilha e gere o gráfico."
 
     - n: 23
-      tema: "Planejamento do projeto da unidade"
-      ferramentas: [Docs, Fluxogramas, Python]
-      objetivo: "Especificar e planejar um pequeno programa do curso técnico: requisitos, entradas, saídas e fluxograma."
-      material:
-        - "Modelo de documento no Google Docs: problema, entradas, saídas, fluxograma, casos de teste."
-        - "Sugestões de tema: orçamento de materiais de obra, diluição de soluções, controle de produção de peças."
-        - "Desenvolvimento em duplas no Colab."
-      exercicios:
-        - "Preencha o documento de planejamento do projeto."
-        - "Desenhe o fluxograma da parte principal do programa."
-        - "Escreva pelo menos 3 casos de teste (entrada → saída esperada)."
-
-    - n: 24
       tema: "Avaliação da Unidade 2"
-      ferramentas: [Python, Planilhas, Docs]
-      objetivo: "Avaliar repetição, acumuladores, contadores, aleatoriedade e menus."
+      ferramentas: [Planilhas, Python]
+      objetivo: "Avaliar repetição, acumuladores, contadores, aleatoriedade e gráficos, em Python e em planilha."
       material:
-        - "Prova prática no Colab: uma questão com `for`, uma com `while` e uma com acumuladores ou contadores."
-        - "Entrega do projeto da unidade (código + documento no Docs)."
+        - "Prova prática no Colab com 3 questões, uma delas resolvida também em Planilhas."
+        - "Entrega no Classroom dos links do caderno Colab e dos arquivos produzidos."
       exercicios:
         - "Questões da avaliação (aplicadas em sala)."
-        - "Apresentação de 3 minutos do projeto da unidade."
+        - "Autoavaliação no Diário de Bordo: o que eu já sei, o que ainda preciso praticar."
+
+    - n: 24
+      tema: "Reavaliação da Unidade 2"
+      ferramentas: [Planilhas, Python]
+      objetivo: "Dar uma nova oportunidade a quem não atingiu a média, reavaliando repetição, acumuladores, contadores, aleatoriedade e gráficos, em Python e em planilha."
+      material:
+        - "Correção comentada da avaliação e revisão dos pontos com mais erros (primeira parte da aula)."
+        - "Nova prova prática no Colab, no mesmo formato da avaliação, para quem não atingiu a média."
+        - "Quem já atingiu a média resolve uma lista de desafios da unidade."
+      exercicios:
+        - "Questões da reavaliação (aplicadas em sala)."
+        - "Lista de desafios para quem já foi aprovado na unidade."
 
 - unidade: 3
-  titulo: "Textos, listas, funções e projeto final"
-  resumo: "Strings, listas, busca e filtro, funções, dicionários, cadastro com menu e integração com planilhas via CSV, terminando no projeto final."
+  titulo: "Textos, listas e funções"
+  resumo: "Strings, listas, busca e filtro, funções, dicionários, programas com menu e leitura de dados de planilhas em CSV."
   aulas:
     - n: 25
       tema: "Textos (strings)"
-      ferramentas: [Python, Planilhas]
+      ferramentas: [Planilhas, Python]
       objetivo: "Manipular textos: leitura, tamanho, maiúsculas/minúsculas, fatias e formatação."
       material:
         - "Python: `len(texto)`, `texto.upper()`, `texto.strip()`, `texto[0:3]`, `texto.replace()`."
@@ -339,7 +349,7 @@
 
     - n: 26
       tema: "Listas: criação, índices e leitura"
-      ferramentas: [Python, Scratch, Planilhas, Python Tutor]
+      ferramentas: [Planilhas, Python, Scratch, Python Tutor]
       objetivo: "Guardar vários valores numa lista, acessar por índice e preenchê-la com um laço."
       material:
         - "Python: `notas = []`, `notas.append(valor)`, `notas[0]`, `notas[-1]`, `len(notas)`."
@@ -352,7 +362,7 @@
 
     - n: 27
       tema: "Percorrendo listas: soma, média, maior e menor"
-      ferramentas: [Python, Planilhas]
+      ferramentas: [Planilhas, Python]
       objetivo: "Percorrer listas com `for` para calcular estatísticas e comparar com `sum`, `max`, `min` e `sorted`."
       material:
         - "Python: maior valor com laço e com `max(lista)`; ordenação com `sorted()`."
@@ -365,7 +375,7 @@
 
     - n: 28
       tema: "Busca em listas"
-      ferramentas: [Python, Planilhas, Python Tutor]
+      ferramentas: [Planilhas, Python, Python Tutor]
       objetivo: "Implementar a busca sequencial e usar o operador `in`, `index()` e `PROCV`/`CORRESP` na planilha."
       material:
         - "Python: busca com `while` e variável `encontrado`; versão curta com `if valor in lista`."
@@ -378,7 +388,7 @@
 
     - n: 29
       tema: "Filtrando e transformando listas"
-      ferramentas: [Python, Planilhas]
+      ferramentas: [Planilhas, Python]
       objetivo: "Criar novas listas a partir de critérios e transformações, com laço + `if` e com compreensão de listas."
       material:
         - "Python: `aprovados = [n for n in notas if n >= 7]` e `em_metros = [c / 100 for c in em_cm]`."
@@ -391,7 +401,7 @@
 
     - n: 30
       tema: "Funções: def, parâmetros e retorno"
-      ferramentas: [Python, Scratch, Planilhas]
+      ferramentas: [Planilhas, Python, Scratch]
       objetivo: "Organizar o código em funções com parâmetros e `return`, e reutilizar funções dentro de outras."
       material:
         - "Python: `def area_retangulo(largura, comprimento):` e `return`; uma função que usa outra."
@@ -404,23 +414,23 @@
 
     - n: 31
       tema: "Funções II: reorganizando programas"
-      ferramentas: [Python, Docs]
+      ferramentas: [Documentos, Python]
       objetivo: "Refatorar programas anteriores usando funções e entender o escopo das variáveis."
       material:
         - "Python: dividir um programa longo em funções pequenas com nomes claros."
         - "Variáveis locais × globais e valores padrão de parâmetros."
-        - "Docs: comparação antes e depois de uma refatoração."
+        - "Google Documentos: comparação antes e depois de uma refatoração."
       exercicios:
         - "Reescreva o seu jogo de adivinhação usando ao menos três funções."
         - "Crie `ler_numero(mensagem, minimo, maximo)` que repete a pergunta até receber um valor válido."
-        - "Registre no Docs o antes e depois do código refatorado, explicando o ganho."
+        - "Registre no Google Documentos o antes e depois do código refatorado, explicando o ganho."
 
     - n: 32
       tema: "Dicionários: dados com nome"
-      ferramentas: [Python, Planilhas]
+      ferramentas: [Planilhas, Python]
       objetivo: "Guardar pares chave-valor em dicionários e agrupar dados por categoria."
       material:
-        - 'Python: `estoque = {"cimento": 40, "areia": 12}`, acesso por chave, `.items()`, `in`.'
+        - "Python: `estoque = {\"cimento\": 40, \"areia\": 12}`, acesso por chave, `.items()`, `in`."
         - "Contagem de ocorrências com dicionário."
         - "Planilhas: `=CONT.SE()`, `=SOMASE()` e `=MÉDIASE()` para agrupar por categoria."
       exercicios:
@@ -443,7 +453,7 @@
 
     - n: 34
       tema: "Integração: Python lendo dados da planilha (CSV)"
-      ferramentas: [Python, Colab, Planilhas]
+      ferramentas: [Planilhas, Python, Colab]
       objetivo: "Exportar dados do Google Sheets em CSV e processá-los em Python."
       material:
         - "Sheets: *Arquivo → Fazer download → CSV*; envio do arquivo para o Colab."
@@ -455,26 +465,24 @@
         - "Faça um gráfico em Python com os dados lidos do CSV."
 
     - n: 35
-      tema: "Projeto final: desenvolvimento e documentação"
-      ferramentas: [Python, Planilhas, Docs, Scratch]
-      objetivo: "Desenvolver em equipe um projeto que resolva um problema da área técnica e documentá-lo."
+      tema: "Avaliação da Unidade 3"
+      ferramentas: [Python]
+      objetivo: "Avaliar textos, listas, dicionários e funções."
       material:
-        - "Requisitos mínimos: menu, listas ou dicionários, ao menos 3 funções, validação de entradas."
-        - "Documentação no Docs: problema, como usar, fluxograma, casos de teste, divisão de tarefas."
-        - "Opcional: versão simplificada no Scratch ou painel de resultados no Sheets."
+        - "Prova prática no Colab com 3 questões, uma delas resolvida também em Planilhas."
+        - "Entrega no Classroom dos links do caderno Colab e dos arquivos produzidos."
       exercicios:
-        - "Desenvolva o projeto final e preencha o documento de projeto."
-        - "Execute os casos de teste e registre os resultados."
-        - "Prepare uma apresentação de 5 minutos."
+        - "Questões da avaliação (aplicadas em sala)."
+        - "Autoavaliação no Diário de Bordo: o que eu já sei, o que ainda preciso praticar."
 
     - n: 36
-      tema: "Apresentação dos projetos e avaliação final"
-      ferramentas: [Python, Docs]
-      objetivo: "Apresentar o projeto, avaliar o aprendizado da unidade e fazer o fechamento da disciplina."
+      tema: "Reavaliação da Unidade 3"
+      ferramentas: [Python]
+      objetivo: "Dar uma nova oportunidade a quem não atingiu a média, reavaliando textos, listas, dicionários e funções."
       material:
-        - "Apresentações das equipes com demonstração ao vivo no Colab."
-        - "Rubrica: funcionamento, organização do código, documentação e apresentação."
-        - "Fechamento: o que vem depois (Python em outras disciplinas, automação de planilhas)."
+        - "Correção comentada da avaliação e revisão dos pontos com mais erros (primeira parte da aula)."
+        - "Nova prova prática no Colab, no mesmo formato da avaliação, para quem não atingiu a média."
+        - "Quem já atingiu a média resolve uma lista de desafios da unidade."
       exercicios:
-        - "Apresentação do projeto final."
-        - "Autoavaliação final no Diário de Bordo."
+        - "Questões da reavaliação (aplicadas em sala)."
+        - "Lista de desafios para quem já foi aprovado na unidade."

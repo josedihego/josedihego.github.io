@@ -7,15 +7,15 @@ classes: course-page
 ---
 [← Cursos](/courses/){: .back-link}
 
-Plano de aulas das turmas de **Edificações**, **Química** e **Mecânica**: 36 encontros de 2 horas, em três unidades de 12 aulas. Cada problema é resolvido em **Python** e refeito no **Scratch**, como fórmula no **Google Planilhas**, e registrado no **Google Docs**.
+Plano de Aula da disciplina de Informática.
 
 ## Ferramentas
 
 <ul class="tool-legend">
+  <li><span class="tool tool--planilhas">Planilhas</span> a mesma lógica como fórmula do Google Planilhas (nomes em PT-BR: <code>SE</code>, <code>RAIZ</code>, <code>SOMA</code>…)</li>
+  <li><span class="tool tool--documentos">Documentos</span> Google Documentos: Diário de Bordo e registro das atividades</li>
   <li><span class="tool tool--python">Python</span> linguagem principal, executada no <a href="https://colab.research.google.com/">Google Colab</a></li>
   <li><span class="tool tool--scratch">Scratch</span> a mesma lógica em blocos (<a href="https://scratch.mit.edu/">scratch.mit.edu</a>)</li>
-  <li><span class="tool tool--planilhas">Planilhas</span> a mesma lógica como fórmula do Google Planilhas (nomes em PT-BR: <code>SE</code>, <code>RAIZ</code>, <code>SOMA</code>…)</li>
-  <li><span class="tool tool--docs">Docs</span> Diário de Bordo e documentação dos projetos</li>
   <li><span class="tool">Python Tutor</span> visualiza a execução linha a linha (<a href="https://pythontutor.com/">pythontutor.com</a>)</li>
   <li><span class="tool">Fluxogramas</span> <a href="http://www.flowgorithm.org/">Flowgorithm</a> ou <a href="https://app.diagrams.net/">diagrams.net</a></li>
   <li><span class="tool">Blockly Games</span> desafios de lógica em blocos (<a href="https://blockly.games/?lang=pt-br">blockly.games</a>)</li>
