@@ -30,3 +30,13 @@ D=$(mktemp -d) && soffice --headless --calc --convert-to xlsx --outdir $D assets
 ```
 
 O LibreOffice 24.2 não tem `SEQUÊNCIA` nem `FILTRO` (o Google Planilhas tem): essas células aparecem como erro só no LibreOffice.
+
+## Google Planilhas
+
+A página não baixa o `.xlsx` por padrão: cada exemplo abre `https://docs.google.com/spreadsheets/d/<ID>/copy`, que cria uma
+cópia para o estudante. As planilhas convertidas ficam na pasta do Drive
+[Informática – Planilhas](https://drive.google.com/drive/folders/15Sc6qTTQ9_vr8BhuseWJ2YUuOZTZk0Xi)
+(compartilhada como "qualquer pessoa com o link pode ver"), e os IDs ficam em `_data/infobasica_planilhas.yml`.
+
+Depois de regerar os `.xlsx`: com "Converter uploads" ligado nas configurações do Drive, apague os arquivos da pasta, envie
+os novos e atualize os IDs em `_data/infobasica_planilhas.yml` (o nome de cada planilha no Drive é a chave).

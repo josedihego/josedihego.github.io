@@ -755,3 +755,8 @@
   margin: 0.6em 0 0.2em;
   font-weight: 600;
 }
+
+.page__content a.file-link--alt {
+  color: var(--c-muted);
+  font-weight: 400;
+}

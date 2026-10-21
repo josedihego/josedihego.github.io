@@ -23,7 +23,7 @@ Todas funcionam no navegador, sem instalar nada: basta uma conta Google e uma co
   <li><span class="tool">Blockly Games</span> desafios de lógica em blocos (<a href="https://blockly.games/?lang=pt-br">blockly.games</a>)</li>
 </ul>
 
-<p class="files-hint"><strong>Arquivos das aulas</strong> (três níveis cada: 1 Básico, 2 Intermediário, 3 Avançado). <strong>Python</strong>: abre direto no Colab. <strong>Scratch</strong>: baixe o <code>.sb3</code> e abra no editor on-line em <em>Arquivo → Carregar do seu computador</em>. <strong>Planilhas</strong>: baixe o <code>.xlsx</code>, envie para o Google Drive e abra com o Google Planilhas.</p>
+<p class="files-hint"><strong>Arquivos das aulas</strong> (três níveis cada: 1 Básico, 2 Intermediário, 3 Avançado). <strong>Python</strong>: abre direto no Colab. <strong>Scratch</strong>: baixe o <code>.sb3</code> e abra no editor on-line em <em>Arquivo → Carregar do seu computador</em>. <strong>Planilhas</strong>: "Abrir cópia no Google Planilhas" cria uma cópia sua, pronta para editar (é preciso entrar com uma conta Google); o <code>.xlsx</code> fica como alternativa para baixar.</p>
 
 {% assign niveis = "basico:Básico,intermediario:Intermediário,avancado:Avançado" | split: "," %}
 {% assign colab = "https://colab.research.google.com/github/josedihego/josedihego.github.io/blob/master/assets/infobasica/python/" %}
@@ -52,7 +52,7 @@ Todas funcionam no navegador, sem instalar nada: basta uma conta Google e uma co
       {% if a.planilhas %}
       <h4>Planilhas</h4>
       <ol class="level-list">
-        {% for ex in a.planilhas %}<li><span class="level-tag">Nível {{ forloop.index }}</span> {{ ex | markdownify | remove: '<p>' | remove: '</p>' | strip }} <a class="file-link" href="/assets/infobasica/planilhas/aula{{ nn }}_nivel{{ forloop.index }}.xlsx" download><i class="fas fa-file-excel" aria-hidden="true"></i> .xlsx</a></li>
+        {% for ex in a.planilhas %}{% capture chave %}aula{{ nn }}_nivel{{ forloop.index }}{% endcapture %}<li><span class="level-tag">Nível {{ forloop.index }}</span> {{ ex | markdownify | remove: '<p>' | remove: '</p>' | strip }} <a class="file-link" href="https://docs.google.com/spreadsheets/d/{{ site.data.infobasica_planilhas[chave] }}/copy" target="_blank" rel="noopener"><i class="fas fa-table" aria-hidden="true"></i> Abrir cópia no Google Planilhas</a> <a class="file-link file-link--alt" href="/assets/infobasica/planilhas/{{ chave }}.xlsx" download>.xlsx</a></li>
         {% endfor %}
       </ol>
       {% endif %}
