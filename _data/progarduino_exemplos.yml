@@ -1,0 +1,469 @@
+# Gerado por _tools/progarduino/gerar_exemplos.py: títulos dos níveis e peças de cada sketch
+aula01:
+  c:
+    - "Olá, mundo"
+    - "Várias linhas, \\n e \\t"
+    - "Cartão com moldura"
+  arduino:
+    - "Pisca o LED da placa"
+    - "LED externo com tempos diferentes"
+    - "SOS em código Morse"
+  pecas:
+    - "só a placa"
+    - "LED"
+    - "LED"
+aula02:
+  c:
+    - "Três tipos de variável"
+    - "Área e perímetro de uma placa"
+    - "Tamanho e limites dos tipos"
+  arduino:
+    - "Variáveis no Monitor Serial"
+    - "Contador de segundos"
+    - "Tipos no Arduino e estouro do int"
+  pecas:
+    - "só a placa"
+    - "só a placa"
+    - "só a placa"
+aula03:
+  c:
+    - "Ler um número"
+    - "Resistores em série e em paralelo"
+    - "Lei de Ohm e potência"
+  arduino:
+    - "Eco de números"
+    - "Piscar N vezes"
+    - "Lei de Ohm pelo Monitor Serial"
+  pecas:
+    - "só a placa"
+    - "LED"
+    - "só a placa"
+aula04:
+  c:
+    - "Os operadores"
+    - "Hipotenusa com math.h"
+    - "int × float, teto e piso"
+  arduino:
+    - "Ler o potenciômetro"
+    - "Leitura em volts"
+    - "Porcentagem com map e o perigo do int"
+  pecas:
+    - "potenciômetro"
+    - "potenciômetro"
+    - "potenciômetro"
+aula05:
+  c:
+    - "Comparações valem 0 ou 1"
+    - "Tabela-verdade de E e OU"
+    - "Implicação e OU exclusivo"
+  arduino:
+    - "Ler um botão"
+    - "Porta E com dois botões"
+    - "Portas OU e OU exclusivo"
+  pecas:
+    - "botão"
+    - "2× botão, LED"
+    - "2× botão, 2 LEDs"
+aula06:
+  c:
+    - "Par ou ímpar"
+    - "Série ou paralelo à escolha"
+    - "Bhaskara com teste do delta"
+  arduino:
+    - "Botão acende o LED"
+    - "Luz automática com LDR"
+    - "Luz automática com histerese"
+  pecas:
+    - "botão, LED"
+    - "LDR, LED"
+    - "LDR, LED"
+aula07:
+  c:
+    - "Faixas de temperatura"
+    - "Calculadora com switch"
+    - "Valor do resistor pelas faixas"
+  arduino:
+    - "Três faixas, três LEDs"
+    - "Barra de 5 LEDs"
+    - "Comandos por letra com switch"
+  pecas:
+    - "potenciômetro, 3 LEDs"
+    - "potenciômetro, 5 LEDs"
+    - "LED"
+aula08:
+  c:
+    - "Decimal para 4 bits"
+    - "Binário de 5 bits para decimal"
+    - "Operadores bit a bit"
+  arduino:
+    - "Um número em 4 LEDs"
+    - "Contador binário"
+    - "Do Monitor Serial para os LEDs"
+  pecas:
+    - "4 LEDs"
+    - "4 LEDs"
+    - "4 LEDs"
+aula09:
+  c:
+    - "Constantes com #define"
+    - "Conversões com const"
+    - "Estouro de capacidade"
+  arduino:
+    - "Brilho fixo com PWM"
+    - "Dimmer com potenciômetro"
+    - "Cores com LED RGB"
+  pecas:
+    - "LED"
+    - "potenciômetro, LED"
+    - "LED RGB"
+aula10:
+  c:
+    - "Lei de Ohm com validação"
+    - "Divisor de tensão"
+    - "LED: qual resistor usar?"
+  arduino:
+    - "Um bip com o buzzer"
+    - "Alarme com botão"
+    - "Termômetro simulado com alarme"
+  pecas:
+    - "buzzer"
+    - "botão, buzzer, LED"
+    - "potenciômetro, 3 LEDs, buzzer"
+aula11:
+  c:
+    - "Simulado: conversão de unidades"
+    - "Simulado: classificar a corrente"
+    - "Simulado: potência no resistor"
+  arduino:
+    - "Simulado: pisca com dois tempos"
+    - "Simulado: botão e potenciômetro"
+    - "Simulado: semáforo de nível"
+  pecas:
+    - "LED"
+    - "botão, potenciômetro, LED"
+    - "potenciômetro, 3 LEDs"
+aula12:
+  c:
+    - "Revisão: média de duas leituras"
+    - "Revisão: faixa segura"
+    - "Revisão: byte em binário"
+  arduino:
+    - "Revisão: tensão no Serial"
+    - "Revisão: liga e desliga com um toque"
+    - "Revisão: binário com PWM"
+  pecas:
+    - "potenciômetro"
+    - "botão, LED"
+    - "4 LEDs, potenciômetro"
+aula13:
+  c:
+    - "Contar de 0 a 9"
+    - "Soma dos ímpares"
+    - "Tabela de resistores em série"
+  arduino:
+    - "Piscar 5 vezes no início"
+    - "Sequência de LEDs"
+    - "Vai e volta (efeito scanner)"
+  pecas:
+    - "LED"
+    - "5 LEDs"
+    - "5 LEDs, potenciômetro"
+aula14:
+  c:
+    - "Soma de 1 a 100"
+    - "Juros compostos"
+    - "Média de N medições"
+  arduino:
+    - "Média de 10 leituras"
+    - "Média móvel (LDR suavizado)"
+    - "Mínimo, máximo e média de 50 leituras"
+  pecas:
+    - "potenciômetro"
+    - "LDR"
+    - "potenciômetro"
+aula15:
+  c:
+    - "Somar até chegar a 42"
+    - "Treino para a maratona"
+    - "Menu com do-while e validação"
+  arduino:
+    - "Enquanto o botão estiver apertado"
+    - "Esperar escurecer"
+    - "Quanto tempo o botão ficou apertado?"
+  pecas:
+    - "botão, LED"
+    - "LDR, LED"
+    - "botão"
+aula16:
+  c:
+    - "Contar pares de 1 a 50"
+    - "Monitoramento de tensão"
+    - "Maior, menor e média"
+  arduino:
+    - "Contar toques"
+    - "Contar toques sem repique"
+    - "Contador em binário com reset"
+  pecas:
+    - "botão"
+    - "botão"
+    - "botão, 4 LEDs"
+aula17:
+  c:
+    - "Jogar um dado"
+    - "Jogo de contas até errar"
+    - "Pedra, papel e tesoura"
+  arduino:
+    - "Dado no Monitor Serial"
+    - "Dado com 6 LEDs"
+    - "Teste de reflexo"
+  pecas:
+    - "botão"
+    - "botão, 6 LEDs"
+    - "botão, LED"
+aula18:
+  c:
+    - "Tabuada completa (laço aninhado)"
+    - "Primos até N"
+    - "MDC e MMC"
+  arduino:
+    - "Padrão com laços aninhados"
+    - "Primos no Monitor Serial"
+    - "Contagem regressiva na barra de LEDs"
+  pecas:
+    - "LED"
+    - "só a placa"
+    - "5 LEDs"
+aula19:
+  c:
+    - "Que horas são?"
+    - "Contagem regressiva com sleep"
+    - "Cronômetro de processamento"
+  arduino:
+    - "Piscar sem delay"
+    - "Dois LEDs, dois ritmos"
+    - "Semáforo com botão de pedestre"
+  pecas:
+    - "LED"
+    - "2 LEDs"
+    - "botão, 3 LEDs"
+aula20:
+  c:
+    - "Do tempo de eco à distância"
+    - "Classificar uma série de leituras"
+    - "Velocidade do som e temperatura"
+  arduino:
+    - "Distância com o HC-SR04"
+    - "Alarme de aproximação"
+    - "Sensor de estacionamento"
+  pecas:
+    - "HC-SR04"
+    - "HC-SR04, LED"
+    - "HC-SR04, buzzer"
+aula21:
+  c:
+    - "A conta do map"
+    - "Calibração por mínimo e máximo"
+    - "Sensor LM35: tensão em temperatura"
+  arduino:
+    - "Luz em porcentagem"
+    - "Calibração automática"
+    - "Servo segue o potenciômetro"
+  pecas:
+    - "LDR"
+    - "LDR, LED"
+    - "potenciômetro, servo"
+aula22:
+  c:
+    - "Tanque enchendo"
+    - "Tanque com consumo"
+    - "Bomba com histerese"
+  arduino:
+    - "Nível do tanque em %"
+    - "Nível do tanque na barra de LEDs"
+    - "Bomba automática com histerese"
+  pecas:
+    - "HC-SR04"
+    - "HC-SR04, 5 LEDs"
+    - "HC-SR04, LED, buzzer"
+aula23:
+  c:
+    - "Simulado: tabuada de N"
+    - "Simulado: média até digitar negativo"
+    - "Simulado: quantos primos?"
+  arduino:
+    - "Simulado: N piscadas pelo potenciômetro"
+    - "Simulado: média de 20 leituras do LDR"
+    - "Simulado: distância em 3 faixas"
+  pecas:
+    - "potenciômetro, botão, LED"
+    - "LDR"
+    - "HC-SR04, 3 LEDs"
+aula24:
+  c:
+    - "Revisão: contagem de 10 em 10"
+    - "Revisão: dados até sair 6"
+    - "Revisão: tabela de eco"
+  arduino:
+    - "Revisão: pisca com millis e potenciômetro"
+    - "Revisão: contador de toques com limite"
+    - "Revisão: servo pelo ultrassom"
+  pecas:
+    - "potenciômetro, LED"
+    - "botão, LED"
+    - "HC-SR04, servo"
+aula25:
+  c:
+    - "Ler e mostrar um vetor"
+    - "Ordem inversa e soma"
+    - "Decimal para binário com vetor"
+  arduino:
+    - "Vetor de pinos"
+    - "Melodia com vetores"
+    - "Guardar 10 leituras"
+  pecas:
+    - "4 LEDs"
+    - "buzzer"
+    - "potenciômetro, botão"
+aula26:
+  c:
+    - "Maior e menor do vetor"
+    - "Busca sequencial"
+    - "Ordenação (bubble sort)"
+  arduino:
+    - "Maior de 10 leituras"
+    - "Filtro de mediana"
+    - "Mediana × média"
+  pecas:
+    - "potenciômetro"
+    - "LDR"
+    - "LDR"
+aula27:
+  c:
+    - "Ler uma frase e contar letras"
+    - "Palíndromo"
+    - "Quantas vezes a palavra aparece?"
+  arduino:
+    - "Ler uma linha do Monitor Serial"
+    - "Comandos LIGA e DESLIGA"
+    - "Comando com parâmetro"
+  pecas:
+    - "só a placa"
+    - "LED"
+    - "LED, buzzer"
+aula28:
+  c:
+    - "Minha primeira função"
+    - "Funções para resistores"
+    - "Função e_primo"
+  arduino:
+    - "Função piscar(pino, vezes)"
+    - "Função que mede a distância"
+    - "Funções para tocar música"
+  pecas:
+    - "2 LEDs"
+    - "HC-SR04"
+    - "buzzer, LED"
+aula29:
+  c:
+    - "Soma de um vetor numa função"
+    - "Média e maior em funções"
+    - "Ordenar e imprimir com funções"
+  arduino:
+    - "Função media(vetor, n)"
+    - "Função que acende a barra"
+    - "Função mediana"
+  pecas:
+    - "potenciômetro"
+    - "potenciômetro, 5 LEDs"
+    - "LDR"
+aula30:
+  c:
+    - "Endereço e conteúdo"
+    - "Trocar dois valores"
+    - "Função com duas respostas"
+  arduino:
+    - "Endereços na memória do Arduino"
+    - "Uma leitura, duas respostas"
+    - "Trocar o estado de dois LEDs"
+  pecas:
+    - "só a placa"
+    - "LDR"
+    - "botão, 2 LEDs"
+aula31:
+  c:
+    - "Ponteiro andando pelo vetor"
+    - "Vetor do tamanho que o usuário quiser"
+    - "Contar vogais com ponteiro"
+  arduino:
+    - "Quanto ocupa cada tipo"
+    - "Percorrer um vetor com ponteiro"
+    - "Memória livre"
+  pecas:
+    - "só a placa"
+    - "só a placa"
+    - "só a placa"
+aula32:
+  c:
+    - "Matriz 3 × 3"
+    - "Leituras de 3 sensores por 4 horas"
+    - "Jogo da velha"
+  arduino:
+    - "Melodia numa matriz"
+    - "Padrões de LEDs numa matriz"
+    - "Animações escolhidas pelo botão"
+  pecas:
+    - "buzzer"
+    - "4 LEDs"
+    - "botão, 4 LEDs"
+aula33:
+  c:
+    - "Um struct para um ponto"
+    - "Vetor de leituras de sensores"
+    - "Cadastro de componentes"
+  arduino:
+    - "Um struct para um LED"
+    - "Vetor de structs: vários LEDs"
+    - "Struct de estatísticas"
+  pecas:
+    - "LED"
+    - "3 LEDs"
+    - "potenciômetro"
+aula34:
+  c:
+    - "Registro de medições em vetor de struct"
+    - "Estatísticas do registro"
+    - "Salvar o registro em CSV"
+  arduino:
+    - "Estação: leituras em CSV"
+    - "Estação com alarmes"
+    - "Estação com comandos e struct"
+  pecas:
+    - "LDR, potenciômetro"
+    - "LDR, potenciômetro, 2 LEDs, buzzer"
+    - "LDR, potenciômetro, LED, buzzer"
+aula35:
+  c:
+    - "Simulado: vetor e média"
+    - "Simulado: função que conta"
+    - "Simulado: struct e ponteiro"
+  arduino:
+    - "Simulado: vetor de pinos"
+    - "Simulado: função de média com mediana"
+    - "Simulado: comando e struct"
+  pecas:
+    - "3 LEDs"
+    - "LDR"
+    - "LED"
+aula36:
+  c:
+    - "Revisão: inverter uma string"
+    - "Revisão: matriz identidade"
+    - "Revisão: malloc e ordenação"
+  arduino:
+    - "Revisão: maior leitura com função"
+    - "Revisão: semáforo com vetor de structs"
+    - "Revisão: registro CSV com média móvel"
+  pecas:
+    - "potenciômetro"
+    - "3 LEDs"
+    - "LDR"

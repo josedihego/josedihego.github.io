@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "author": "José Dihego – josedihego.net/progarduino",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrassom1",
+      "top": -230,
+      "left": -40,
+      "attrs": {
+        "distance": "40"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": -230,
+      "left": 130,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "ultrassom1:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "uno:9",
+      "ultrassom1:TRIG",
+      "green",
+      []
+    ],
+    [
+      "uno:10",
+      "ultrassom1:ECHO",
+      "blue",
+      []
+    ],
+    [
+      "ultrassom1:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo2:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo2:V+",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "uno:6",
+      "servo2:PWM",
+      "orange",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# arduino-rodar <pasta do sketch>: usado pelo botão ▶ em arquivos .ino
+# compila; se houver placa conectada, envia e abre o monitor serial
+PASTA=${1%/}
+arduino-compilar "$PASTA" || exit 1
+if arduino-porta >/dev/null; then
+  arduino-enviar "$PASTA" && arduino-monitor
+else
+  echo
+  echo "Compilou sem erros. Nenhuma placa conectada: conecte o Arduino para enviar, ou teste no Wokwi (wokwi.com)."
+fi

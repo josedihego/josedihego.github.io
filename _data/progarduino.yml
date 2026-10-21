@@ -1,0 +1,550 @@
+# Plano de aulas de "Programação aplicada com C e Arduino" (Automação e Eletrônica), rendered by /progarduino/
+# 36 encontros de 2 h, em 3 unidades de 12; cada unidade termina com avaliação e reavaliação.
+# Cada aula tem C em 3 níveis e Arduino em 3 níveis: fontes em _tools/progarduino/{c,arduino}, publicados por
+# _tools/progarduino/gerar_exemplos.py em assets/progarduino (títulos dos níveis em _data/progarduino_exemplos.yml).
+- unidade: 1
+  titulo: "Fundamentos de C e primeiros passos com Arduino"
+  resumo: "Kit portátil, variáveis, entrada e saída, operadores, lógica e decisões, sistemas numéricos e PWM: em C no computador e no Arduino Uno."
+  aulas:
+    - n: 1
+      tema: "Apresentação, kit portátil e primeiro programa"
+      objetivo: "Instalar e abrir o kit portátil, compilar e executar o primeiro programa em C e enviar o primeiro sketch para o Arduino."
+      material:
+        - "Kit C e Arduino: extrair na pasta pessoal, abrir com `abrir-vscode.sh`, rodar com ▶ ou F5."
+        - "Estrutura de um programa em C: `#include`, `main`, `printf`, `return 0`."
+        - "Arduino Uno: `setup()` roda uma vez, `loop()` repete para sempre; `pinMode`, `digitalWrite`, `delay`."
+        - "[Wokwi](https://wokwi.com/projects/new/arduino-uno): simulador on-line para quem estiver sem placa."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Primeiro contato.** Extraia o kit, rode o *Olá, mundo* em C e altere a mensagem. Depois faça o LED piscar na placa (ou no Wokwi) com tempos diferentes para aceso e apagado."
+      exercicios:
+        basico: ["Imprima seu nome, curso e turma, um em cada linha.", "Faça o LED da placa piscar 1 vez por segundo."]
+        intermediario: ["Imprima uma tabela de 3 linhas alinhada com `\\t`.", "Pisque um LED externo no pino 8 com 1 s aceso e 0,2 s apagado."]
+        avancado: ["Imprima um cartão com moldura e o símbolo `%` (use `%%`).", "Pisque seu nome em código Morse (pesquise o alfabeto)."]
+
+    - n: 2
+      tema: "Variáveis, tipos e o Monitor Serial"
+      objetivo: "Declarar variáveis `int`, `float` e `char`, mostrar valores com `printf` e com `Serial.print`, e conhecer o tamanho dos tipos."
+      material:
+        - "Tipos e formatos do `printf`: `%d`, `%f`, `%.2f`, `%c`, `%zu`."
+        - "`sizeof` e os limites (`limits.h`): no computador o `int` tem 4 bytes, no Arduino Uno só 2."
+        - "Monitor Serial: `Serial.begin(9600)`, `Serial.print`, `Serial.println`."
+      atividade:
+        tempo: "35 min"
+        descricao: "**Placa de circuito.** Calcule em C a área e o perímetro de uma placa de 10,5 × 7,2 cm. No Arduino, mostre no Monitor Serial um contador de segundos e observe o que acontece quando um `int` passa de 32767."
+      exercicios:
+        basico: ["Declare três variáveis (inteira, decimal e caractere) e imprima as três."]
+        intermediario: ["Calcule a área de um círculo de raio 2,5 cm com 3 casas decimais.", "Mostre no Monitor Serial a temperatura, a umidade e o nome de um sensor guardados em variáveis."]
+        avancado: ["Mostre o tamanho de todos os tipos com `sizeof` em C e no Arduino e explique as diferenças.", "Faça um contador `int` no Arduino estourar e explique o número negativo."]
+
+    - n: 3
+      tema: "Entrada de dados: scanf e Monitor Serial"
+      objetivo: "Ler valores do teclado com `scanf` e do Monitor Serial com `Serial.parseInt`/`parseFloat`, aplicando-os em cálculos de circuitos."
+      material:
+        - "`scanf(\"%f\", &variavel)`: o `&` indica onde guardar."
+        - "Resistores em série e em paralelo; lei de Ohm (`I = V / R`) e potência (`P = V × I`)."
+        - "`Serial.available()`, `Serial.parseInt()`, `Serial.parseFloat()` e a limpeza do Enter."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Calculadora de Ohm.** Em C, leia tensão e resistência e mostre corrente (A e mA) e potência. No Arduino, faça o mesmo pelo Monitor Serial e use o resultado para piscar um LED tantas vezes quanto a corrente em mA (limite a 10)."
+      exercicios:
+        basico: ["Leia a idade e mostre quantos anos a pessoa terá daqui a 10 anos."]
+        intermediario: ["Leia R1 e R2 e mostre a resistência em série e em paralelo.", "No Arduino, leia um número pelo Monitor Serial e pisque o LED essa quantidade de vezes."]
+        avancado: ["Leia V e R e mostre I e P; depois diga qual resistor de 1/4 W aguenta.", "No Arduino, receba `tensão resistência` numa só linha e responda corrente e potência."]
+
+    - n: 4
+      tema: "Operadores, math.h e conversão analógica"
+      objetivo: "Usar operadores aritméticos, `math.h` e conversões entre `int` e `float`; ler sinais analógicos no Arduino e convertê-los em tensão e porcentagem."
+      material:
+        - "Divisão inteira × decimal (`17 / 5` × `17 / 5.0`), resto `%`, `sqrt`, `pow`, `ceil`, `floor` (compile com `-lm`)."
+        - "Conversor analógico-digital do Uno: `analogRead` devolve 0 a 1023 para 0 a 5 V."
+        - "`map()` para trocar de escala."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Voltímetro.** Monte o potenciômetro no A0 e mostre leitura bruta, tensão com 2 casas e porcentagem. Em C, reproduza a conversão para as leituras 0, 256, 512, 768 e 1023 e compare com a placa."
+      exercicios:
+        basico: ["Mostre o resultado de `+ - * / %` para dois inteiros lidos.", "Mostre a leitura do potenciômetro no Plotter Serial."]
+        intermediario: ["Calcule a hipotenusa de um triângulo com `sqrt` e `pow`.", "Converta a leitura analógica em volts."]
+        avancado: ["Mostre por que `dias * (1 + 12 / 100)` dá errado e conserte.", "Compare no Arduino a porcentagem calculada com `int`, com `float` e com `map`."]
+
+    - n: 5
+      tema: "Expressões lógicas, tabela-verdade e portas lógicas"
+      objetivo: "Avaliar comparações e expressões com `&&`, `||` e `!`, montar tabelas-verdade e implementar portas lógicas com botões e LEDs."
+      material:
+        - "Em C, uma comparação vale 1 (verdadeiro) ou 0 (falso)."
+        - "Tabelas-verdade de E, OU, NÃO, implicação e OU exclusivo."
+        - "Botões com `INPUT_PULLUP`: solto = HIGH, apertado = LOW."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Portas lógicas na prática.** Monte dois botões e dois LEDs: um LED faz a porta E e o outro a porta OU exclusivo. Preencha a tabela-verdade testando as 4 combinações e confira com o programa em C."
+      exercicios:
+        basico: ["Imprima o resultado de 4 comparações com o mesmo valor.", "Mostre no Monitor Serial o estado de um botão."]
+        intermediario: ["Imprima a tabela-verdade completa de E, OU e NÃO.", "Faça um LED acender só com os dois botões apertados."]
+        avancado: ["Leia p e q e mostre p → q e p XOR q.", "Implemente com dois botões as portas OU, E e XOR ao mesmo tempo em 3 LEDs."]
+
+    - n: 6
+      tema: "Decisão simples e composta: if / else"
+      objetivo: "Tomar decisões com `if`/`else` em C e no Arduino, incluindo a leitura de sensores com limiar e histerese."
+      material:
+        - "Blocos `if (condição) { ... } else { ... }` e chaves obrigatórias para mais de uma instrução."
+        - "Bhaskara: decidir pelo sinal do delta."
+        - "Sensor de luz (LDR) no A0; limiar e histerese para evitar o LED piscando no limite."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Luz automática.** Monte o LDR e um LED: o LED acende quando escurece. Ajuste o limiar olhando o Monitor Serial e depois troque por dois limiares (histerese). Em C, implemente Bhaskara tratando delta negativo."
+      exercicios:
+        basico: ["Leia um número e diga se é par ou ímpar.", "Acenda o LED enquanto o botão estiver apertado."]
+        intermediario: ["Escolha série ou paralelo para dois resistores fixos.", "Acenda o LED quando o LDR indicar escuro."]
+        avancado: ["Resolva a equação do 2º grau com todos os casos.", "Implemente a luz automática com histerese e mostre o estado no Monitor Serial."]
+
+    - n: 7
+      tema: "Decisões encadeadas e switch"
+      objetivo: "Tratar várias faixas com `else if` e escolher entre casos com `switch`, em programas de computador e em indicadores com LEDs."
+      material:
+        - "`if / else if / else`: só o primeiro caso verdadeiro executa."
+        - "`switch (variavel) { case ...: break; default: }` para valores exatos (números e caracteres)."
+        - "Código de cores de resistores."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Semáforo de nível.** Com o potenciômetro e 3 LEDs, acenda verde, amarelo ou vermelho conforme a faixa. Depois troque por uma barra de 5 LEDs. Em C, calcule o valor de um resistor a partir das três faixas de cores."
+      exercicios:
+        basico: ["Classifique uma temperatura em frio, agradável ou quente.", "Acenda 1 de 3 LEDs conforme a faixa do potenciômetro."]
+        intermediario: ["Faça uma calculadora com `switch` (`+ - * /`) que evita divisão por zero.", "Monte uma barra de 5 LEDs proporcional ao potenciômetro."]
+        avancado: ["Converta as faixas de cor de um resistor no valor em ohms, kohms ou Mohms.", "Controle o LED com as letras L, D e P enviadas pelo Monitor Serial."]
+
+    - n: 8
+      tema: "Sistemas numéricos: binário, decimal e bits"
+      objetivo: "Converter entre decimal e binário com `/` e `%`, usar operadores bit a bit e mostrar números em binário com LEDs."
+      material:
+        - "Pesos dos bits: 1, 2, 4, 8, 16..."
+        - "Operadores `&`, `|`, `^`, `<<`, `>>` e a máscara `& 1`."
+        - "No Arduino: `bitRead(numero, bit)` e `Serial.println(n, BIN)`."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Contador binário.** Monte 4 LEDs (pinos 2 a 5) e faça a contagem de 0 a 15. Depois receba um número pelo Monitor Serial e mostre-o nos LEDs. Em C, converta 5 bits para decimal e confira com os LEDs."
+      exercicios:
+        basico: ["Mostre um número de 0 a 15 em 4 bits usando `/` e `%`.", "Mostre um número fixo em binário em 4 LEDs."]
+        intermediario: ["Leia 5 bits e mostre o valor decimal.", "Faça o contador binário de 0 a 15."]
+        avancado: ["Mostre o resultado de `& | ^ << >>` entre dois bytes e explique bit a bit.", "Mostre nos LEDs o número digitado no Monitor Serial usando `>>` e `&`."]
+
+    - n: 9
+      tema: "Constantes, estouro de capacidade e PWM"
+      objetivo: "Usar `#define` e `const`, entender o estouro dos tipos e controlar o brilho de LEDs com PWM (`analogWrite`)."
+      material:
+        - "`#define` (pré-processador) × `const` (variável que não muda)."
+        - "Estouro: `unsigned char` vai até 255; `short`/`int` do Uno até 32767."
+        - "PWM nos pinos com `~` (3, 5, 6, 9, 10, 11): `analogWrite(pino, 0..255)`; LED RGB."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Dimmer.** Controle o brilho de um LED com o potenciômetro. Depois misture cores num LED RGB e crie 5 cores com `#define` para cada uma."
+      exercicios:
+        basico: ["Calcule a área da seção de um fio usando `#define PI`.", "Deixe um LED com brilho fixo de 25%."]
+        intermediario: ["Calcule a resolução em mV de um conversor de 10 bits.", "Faça um dimmer com potenciômetro."]
+        avancado: ["Mostre 3 estouros diferentes (char, short e int) e explique.", "Faça o LED RGB passar suavemente por todas as cores (fade)."]
+
+    - n: 10
+      tema: "Revisão integradora: circuitos e alarmes"
+      objetivo: "Combinar entrada, cálculo, decisão e saída em programas completos: divisor de tensão, resistor de LED e alarmes com buzzer."
+      material:
+        - "Divisor de tensão `Vout = Vin × R2 / (R1 + R2)` e o limite de 5 V das entradas do Arduino."
+        - "Resistor para LED: `R = (Vfonte − Vled) / I`."
+        - "`tone(pino, frequência, duração)` e `noTone`."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Termômetro com alarme.** O potenciômetro simula um sensor de 0 a 100 °C: 3 LEDs indicam a faixa e o buzzer apita acima de 70 °C. Em C, calcule o resistor comercial para o LED usado."
+      exercicios:
+        basico: ["Calcule a corrente pela lei de Ohm validando a resistência.", "Toque uma nota de 440 Hz por meio segundo."]
+        intermediario: ["Calcule a saída de um divisor de tensão e avise se passar de 5 V.", "Faça um alarme: botão apertado liga LED e sirene."]
+        avancado: ["Calcule o resistor de um LED e escolha o valor comercial.", "Monte o termômetro simulado com 3 faixas e alarme sonoro."]
+
+    - n: 11
+      tema: "Avaliação da Unidade 1"
+      objetivo: "Avaliar variáveis, entrada e saída, operadores, decisões e as primeiras montagens com Arduino."
+      material:
+        - "Prova prática no kit: questões em C e uma montagem no Arduino (placa ou Wokwi)."
+        - "Os exemplos desta aula são simulados no formato da prova."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Questão principal da prova.** Programa em C com entrada, cálculo e decisão encadeada, e sketch que lê um sensor analógico e decide a saída."
+      exercicios:
+        basico: ["Refaça, sem consultar, dois exemplos de nível 1 das aulas 2 a 10."]
+        intermediario: ["Simulado: resolva um exercício de nível 2 de cada aula da unidade."]
+        avancado: ["Simulado: termômetro com faixas e alarme, em C e no Arduino."]
+
+    - n: 12
+      tema: "Reavaliação da Unidade 1"
+      objetivo: "Dar uma nova oportunidade a quem não atingiu a média, revisando os pontos com mais erros."
+      material:
+        - "Correção comentada da avaliação (primeira parte da aula)."
+        - "Nova prova para quem não atingiu a média; desafios para os demais."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Desafio para quem já foi aprovado:** contador de toques que mostra o total em binário nos LEDs e zera com um toque longo."
+      exercicios:
+        basico: ["Refaça as questões que você errou na avaliação."]
+        intermediario: ["Resolva a nova prova (quem não atingiu a média)."]
+        avancado: ["Desafio: byte em binário com operadores bit a bit, em C e nos LEDs."]
+
+- unidade: 2
+  titulo: "Repetição, temporização e sensores"
+  resumo: "Laços `for`, `while` e `do-while`, acumuladores e contadores, números aleatórios, `millis()`, sensor ultrassônico, calibração, servo e o projeto de nível de tanque."
+  aulas:
+    - n: 13
+      tema: "Repetição com for"
+      objetivo: "Repetir instruções com `for` em C e no Arduino, inclusive para configurar e acender sequências de pinos."
+      material:
+        - "`for (início; condição; passo)` e o passo negativo."
+        - "Laços para configurar vários pinos com `pinMode`."
+        - "Tabelas alinhadas com `%3d`, `%12.1f`."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Scanner de LEDs.** Monte 5 LEDs e faça a luz ir e voltar com velocidade controlada pelo potenciômetro. Em C, gere a tabela de resistência equivalente para 1 a 6 resistores iguais."
+      exercicios:
+        basico: ["Mostre os números de 0 a 9.", "Pisque o LED 5 vezes no `setup`."]
+        intermediario: ["Some os ímpares de 1 a 199.", "Acenda os LEDs dos pinos 2 a 6 em sequência."]
+        avancado: ["Gere a tabela série/paralelo para N resistores iguais.", "Faça o efeito de ida e volta sem repetir as pontas."]
+
+    - n: 14
+      tema: "Acumuladores e médias"
+      objetivo: "Usar acumuladores para somas, juros e médias, e reduzir ruído de sensores com média e média móvel."
+      material:
+        - "Acumulador começa em 0 (soma) ou 1 (produto)."
+        - "Juros compostos mês a mês."
+        - "Média simples e média móvel com vetor circular; Plotter Serial para comparar."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Leitura estável.** Compare no Plotter Serial a leitura bruta do LDR com a média móvel de 8 leituras. Em C, calcule a média de N medições digitadas."
+      exercicios:
+        basico: ["Some os números de 1 a 100.", "Mostre a média de 10 leituras do potenciômetro."]
+        intermediario: ["Simule juros compostos mês a mês.", "Implemente a média móvel do LDR."]
+        avancado: ["Leia N medições e mostre a média.", "Mostre mínimo, máximo e média de cada bloco de 50 leituras."]
+
+    - n: 15
+      tema: "Repetição com while e do-while"
+      objetivo: "Repetir enquanto uma condição for verdadeira, quando não se sabe quantas voltas serão necessárias, e medir tempos com `millis()`."
+      material:
+        - "`while (condição)` testa antes; `do { } while (condição);` executa pelo menos uma vez."
+        - "Menus com validação de entrada."
+        - "No Arduino, `while` prende o programa: use com cuidado."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Cronômetro de botão.** Meça por quanto tempo o botão ficou apertado e mostre em ms. Em C, simule o treino para a maratona com treinos 10% maiores a cada 3 dias."
+      exercicios:
+        basico: ["Some valores lidos até a soma chegar a 42.", "Mantenha o LED aceso enquanto o botão estiver apertado."]
+        intermediario: ["Simule a maratona e mostre em que dia ela acontece.", "Espere escurecer para piscar o LED 3 vezes."]
+        avancado: ["Faça um menu com `do-while` e opção inválida.", "Meça a duração do toque com `millis()`."]
+
+    - n: 16
+      tema: "Contadores, maior e menor, detecção de borda"
+      objetivo: "Contar ocorrências, encontrar extremos e contar toques de botão corretamente (borda e debounce)."
+      material:
+        - "Contador com `++` dentro de um `if`."
+        - "Maior e menor iniciados com a primeira leitura."
+        - "Borda de descida (solto → apertado) e debounce de 50 ms."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Contador de peças.** Cada toque no botão é uma peça: mostre o total em binário nos LEDs e zere com um toque longo. Em C, calcule o percentual de leituras de tensão dentro da faixa."
+      exercicios:
+        basico: ["Conte os pares de 1 a 50.", "Conte os toques no botão."]
+        intermediario: ["Calcule o percentual de leituras de tensão entre 200 e 240 V.", "Conte toques com debounce."]
+        avancado: ["Mostre maior, menor e média de N temperaturas.", "Contador binário com reset por toque longo."]
+
+    - n: 17
+      tema: "Números aleatórios e jogos"
+      objetivo: "Gerar números aleatórios com `rand`/`srand` e `random`/`randomSeed` e usá-los em jogos."
+      material:
+        - "`srand(time(NULL))` e `rand() % 6 + 1`."
+        - "`randomSeed(analogRead(A5))` e `random(1, 7)` no Arduino."
+        - "Medição de tempo de reação com `millis()`."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Teste de reflexo.** O LED acende depois de um tempo aleatório e o jogador aperta o botão: mostre o tempo de reação e detecte a largada queimada. Em C, faça o pedra, papel e tesoura."
+      exercicios:
+        basico: ["Jogue um dado no computador.", "Jogue um dado com o botão e mostre no Monitor Serial."]
+        intermediario: ["Jogo de contas de soma até errar.", "Dado com 6 LEDs."]
+        avancado: ["Pedra, papel e tesoura contra o computador.", "Teste de reflexo com largada queimada."]
+
+    - n: 18
+      tema: "Laços aninhados: tabelas, primos e MDC"
+      objetivo: "Combinar laços dentro de laços e com decisões para gerar tabelas, primos, MDC e padrões de LEDs."
+      material:
+        - "Laço de fora (linhas) e laço de dentro (colunas)."
+        - "Teste de primo até a raiz; algoritmo de Euclides."
+        - "`break` para sair cedo."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Primos e padrões.** Mostre no Monitor Serial os primos até 200 e faça a contagem regressiva numa barra de 5 LEDs. Em C, calcule o MDC e o MMC de dois números."
+      exercicios:
+        basico: ["Mostre a tabuada completa de 1 a 10.", "Pisque 3 séries de 2 piscadas."]
+        intermediario: ["Mostre os primos até N.", "Mostre os primos até 200 no Arduino."]
+        avancado: ["Calcule MDC e MMC.", "Faça a contagem regressiva na barra e um efeito final."]
+
+    - n: 19
+      tema: "Temporização: time.h e millis()"
+      objetivo: "Medir e controlar o tempo em C (`time`, `sleep`, `clock`) e no Arduino sem travar o programa (`millis`)."
+      material:
+        - "`time`, `localtime`, `strftime`, `sleep`, `clock` e `CLOCKS_PER_SEC`."
+        - "`delay` trava o Arduino; `millis()` permite fazer várias coisas ao mesmo tempo."
+        - "Máquina de estados."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Semáforo inteligente.** Implemente o semáforo com `millis()` e máquina de estados, com botão de pedestre que encurta o verde. Em C, meça quanto tempo um laço pesado leva."
+      exercicios:
+        basico: ["Mostre a data e a hora atuais.", "Pisque o LED sem `delay`."]
+        intermediario: ["Faça uma contagem regressiva com `sleep`.", "Pisque dois LEDs em ritmos diferentes."]
+        avancado: ["Cronometre um cálculo com `clock`.", "Semáforo com botão de pedestre."]
+
+    - n: 20
+      tema: "Sensor ultrassônico HC-SR04"
+      objetivo: "Converter o tempo de eco em distância, classificar distâncias e construir alarmes de aproximação."
+      material:
+        - "Velocidade do som: 0,0343 cm/µs; ida e volta: divide por 2."
+        - "`pulseIn(ECHO, HIGH, limite)` e o pulso de 10 µs no TRIG."
+        - "Variação da velocidade do som com a temperatura."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Sensor de estacionamento.** Bipes mais rápidos quanto mais perto, e som contínuo abaixo de 10 cm. No Wokwi, mude a distância do sensor clicando nele. Em C, monte a tabela eco × distância."
+      exercicios:
+        basico: ["Converta um tempo de eco em centímetros.", "Mostre a distância medida no Monitor Serial."]
+        intermediario: ["Classifique N leituras em livre, perto e PARE.", "Acenda o LED abaixo de 20 cm."]
+        avancado: ["Mostre a distância corrigida para 0 a 40 °C.", "Sensor de estacionamento com buzzer."]
+
+    - n: 21
+      tema: "Sensores analógicos, map e calibração"
+      objetivo: "Converter leituras com `map`/`constrain`, calibrar sensores pelo mínimo e máximo e acionar um servo."
+      material:
+        - "A fórmula do `map` e o cuidado com a divisão inteira."
+        - "Calibração automática nos primeiros segundos."
+        - "Servo: biblioteca `Servo.h`, `attach` e `write(ângulo)`."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Servo controlado.** Faça o servo seguir o potenciômetro e depois a luz do LDR calibrado. Em C, converta leituras do sensor LM35 em temperatura."
+      exercicios:
+        basico: ["Implemente a conta do `map`.", "Mostre a escuridão em porcentagem."]
+        intermediario: ["Calibre leituras pelo mínimo e máximo.", "Calibre o LDR automaticamente nos primeiros 5 s."]
+        avancado: ["Converta leituras do LM35 em °C.", "Servo seguindo o potenciômetro."]
+
+    - n: 22
+      tema: "Projeto da unidade: nível de tanque"
+      objetivo: "Integrar sensor, laços, decisões e atuadores num sistema de controle de nível com histerese."
+      material:
+        - "Simulação do tanque em C: entrada, consumo e limites."
+        - "Ultrassônico como sensor de nível; barra de LEDs; bomba representada por LED (ou relé)."
+        - "Histerese: liga abaixo de 30%, desliga acima de 90%."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Controle de nível.** Monte o sistema completo no Arduino (nível em %, barra de LEDs, bomba com histerese e alarme de tanque quase vazio) e valide a lógica antes com a simulação em C."
+      exercicios:
+        basico: ["Simule um tanque enchendo até 500 L.", "Mostre o nível em %."]
+        intermediario: ["Simule entrada e consumo variável.", "Mostre o nível numa barra de 5 LEDs."]
+        avancado: ["Simule a bomba com histerese.", "Bomba automática com alarme."]
+
+    - n: 23
+      tema: "Avaliação da Unidade 2"
+      objetivo: "Avaliar repetição, acumuladores, contadores, aleatoriedade, temporização e sensores."
+      material:
+        - "Prova prática no kit: questões em C com laços e um sketch com sensor e atuador."
+        - "Os exemplos desta aula são simulados no formato da prova."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Questão principal da prova.** Laço com acumulador ou contador em C, e sketch que classifica a distância do ultrassônico em 3 faixas."
+      exercicios:
+        basico: ["Refaça, sem consultar, dois exemplos de nível 1 das aulas 13 a 22."]
+        intermediario: ["Simulado: resolva um exercício de nível 2 de cada aula da unidade."]
+        avancado: ["Simulado: distância em 3 faixas com LEDs e média de leituras."]
+
+    - n: 24
+      tema: "Reavaliação da Unidade 2"
+      objetivo: "Dar uma nova oportunidade a quem não atingiu a média, revisando os pontos com mais erros."
+      material:
+        - "Correção comentada da avaliação (primeira parte da aula)."
+        - "Nova prova para quem não atingiu a média; desafios para os demais."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Desafio para quem já foi aprovado:** servo que aponta para a distância medida pelo ultrassônico (5 a 50 cm → 0 a 180°)."
+      exercicios:
+        basico: ["Refaça as questões que você errou na avaliação."]
+        intermediario: ["Resolva a nova prova (quem não atingiu a média)."]
+        avancado: ["Desafio: jogue dados até sair 6 e conte as jogadas, em C e no Arduino."]
+
+- unidade: 3
+  titulo: "Vetores, funções, ponteiros e projeto"
+  resumo: "Vetores, busca e ordenação, strings, funções, ponteiros, memória, matrizes, `struct` e o projeto final: uma estação de monitoramento."
+  aulas:
+    - n: 25
+      tema: "Vetores"
+      objetivo: "Guardar vários valores num vetor, percorrê-lo com `for` e usar vetores de pinos e de notas musicais."
+      material:
+        - "Declaração `int v[10]`, índices de 0 a 9, `sizeof(v) / sizeof(v[0])`."
+        - "Decimal para binário guardando os restos num vetor."
+        - "Vetores de pinos e de notas no Arduino."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Melodia.** Toque uma melodia com dois vetores (notas e durações) e acenda um LED diferente para cada nota. Em C, converta decimal para binário usando um vetor."
+      exercicios:
+        basico: ["Leia 5 valores e mostre o vetor.", "Pisque LEDs guardados num vetor de pinos."]
+        intermediario: ["Mostre um vetor ao contrário e a soma.", "Toque uma melodia com vetores."]
+        avancado: ["Converta decimal para binário com vetor.", "Guarde 10 leituras com o botão e mostre todas."]
+
+    - n: 26
+      tema: "Busca, maior/menor e ordenação"
+      objetivo: "Buscar valores, encontrar posições de extremos e ordenar vetores; aplicar a ordenação no filtro de mediana."
+      material:
+        - "Busca sequencial com parada antecipada."
+        - "Bubble sort: trocas entre vizinhos."
+        - "Mediana: ordena e pega o elemento do meio; elimina picos de ruído."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Filtro de mediana.** Compare no Plotter Serial a média e a mediana de leituras do LDR com picos simulados. Em C, ordene um vetor com bubble sort e mostre cada passada."
+      exercicios:
+        basico: ["Encontre o maior e o menor de um vetor e suas posições.", "Mostre a maior de 10 leituras."]
+        intermediario: ["Procure um resistor no estoque.", "Implemente a mediana de 5 leituras."]
+        avancado: ["Ordene com bubble sort.", "Compare média e mediana com ruído."]
+
+    - n: 27
+      tema: "Strings e comandos por texto"
+      objetivo: "Ler e manipular textos com `fgets` e `string.h` e controlar o Arduino com comandos de texto pelo Monitor Serial."
+      material:
+        - "`char texto[100]`, o terminador `'\\0'`, `fgets`, `strlen`, `strncmp`, `strcspn`."
+        - "`Serial.readStringUntil('\\n')`, `trim`, `toUpperCase`, `indexOf`, `substring`, `toInt`."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Controle por comandos.** Implemente `PISCA n` e `BIP frequência` no Arduino. Em C, conte quantas vezes uma palavra aparece num texto."
+      exercicios:
+        basico: ["Conte os caracteres de uma frase.", "Responda ao nome digitado no Monitor Serial."]
+        intermediario: ["Diga se uma palavra é palíndromo.", "Comandos LIGA, DESLIGA e ESTADO."]
+        avancado: ["Conte as ocorrências de uma palavra.", "Comandos com parâmetro numérico."]
+
+    - n: 28
+      tema: "Funções"
+      objetivo: "Organizar programas em funções com parâmetros e retorno, em C e no Arduino."
+      material:
+        - "Tipo de retorno, parâmetros, `return` e `void`."
+        - "Funções que chamam funções (paralelo de 3 resistores)."
+        - "No Arduino: funções para piscar, medir distância e tocar notas."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Biblioteca de funções.** Crie `piscar(pino, vezes)`, `distancia_cm()` e `tocar(nota, tempos)` e use as três num mesmo sketch. Em C, crie `serie` e `paralelo` e calcule associações mistas."
+      exercicios:
+        basico: ["Crie a função `perimetro(raio)`.", "Crie `piscar(pino, vezes)`."]
+        intermediario: ["Crie `serie` e `paralelo` para resistores.", "Crie `distancia_cm()`."]
+        avancado: ["Crie `e_primo(n)` e liste os primos até N.", "Toque uma música com funções."]
+
+    - n: 29
+      tema: "Funções com vetores"
+      objetivo: "Passar vetores para funções e devolver estatísticas, ordenar e acender barras de LEDs."
+      material:
+        - "Vetor como parâmetro (`int v[], int n`): a função altera o original."
+        - "Funções de soma, média, maior, ordenação e impressão."
+        - "Mediana sobre uma cópia do vetor."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Painel de leituras.** Escreva `media`, `mediana` e `acender_barra` e combine-as: a barra de LEDs mostra a mediana do LDR. Em C, ordene e imprima com funções."
+      exercicios:
+        basico: ["Some um vetor numa função.", "Calcule a média de 8 leituras numa função."]
+        intermediario: ["Crie `media` e `maior`.", "Crie `acender_barra(nivel)`."]
+        avancado: ["Crie `ordenar` e `imprimir`.", "Crie `mediana` sem alterar o vetor original."]
+
+    - n: 30
+      tema: "Ponteiros"
+      objetivo: "Entender endereços e ponteiros, alterar variáveis dentro de funções e devolver mais de um resultado."
+      material:
+        - "`&` (endereço de) e `*` (valor apontado); `%p`."
+        - "Passagem por referência: `trocar(&a, &b)`."
+        - "Funções com várias saídas: `min_max(v, n, &menor, &maior)`."
+      atividade:
+        tempo: "45 min"
+        descricao: "**Duas respostas.** Escreva `ler_luz(&leitura, &volts)` no Arduino e `min_max` em C, e explique no caderno por que os parâmetros precisam ser ponteiros."
+      exercicios:
+        basico: ["Mostre o endereço e o valor de uma variável.", "Mostre o endereço de uma variável no Arduino."]
+        intermediario: ["Troque dois valores com uma função.", "Devolva leitura e tensão por ponteiros."]
+        avancado: ["Devolva o menor e o maior por ponteiros.", "Troque o estado de dois LEDs com ponteiros."]
+
+    - n: 31
+      tema: "Ponteiros, vetores e memória"
+      objetivo: "Percorrer vetores com aritmética de ponteiros, alocar memória com `malloc` e conhecer os limites de memória do Uno."
+      material:
+        - "`v` é o endereço de `v[0]`; `p + i` avança i elementos."
+        - "`malloc`, `free` e o teste de `NULL`."
+        - "Uno: 2 KB de RAM; `F()` guarda textos na flash; memória livre."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Quanto cabe no Uno?** Meça a memória livre antes, durante e depois de uma função com um vetor grande. Em C, leia N valores num vetor alocado com `malloc`."
+      exercicios:
+        basico: ["Percorra um vetor com ponteiro mostrando os endereços.", "Mostre o tamanho dos tipos no Arduino."]
+        intermediario: ["Aloque um vetor do tamanho pedido.", "Percorra um vetor com ponteiro no Arduino."]
+        avancado: ["Conte vogais andando com um ponteiro pela string.", "Mostre a memória livre."]
+
+    - n: 32
+      tema: "Matrizes"
+      objetivo: "Usar matrizes (vetores de duas ou mais dimensões) para tabelas, jogos e animações."
+      material:
+        - "`int m[3][3]`, laços aninhados por linha e coluna."
+        - "Médias por linha e por coluna."
+        - "Matriz de notas e de quadros de animação."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Animações.** Crie 3 animações de 4 LEDs numa matriz e troque de animação com o botão. Em C, jogue uma partida do jogo da velha."
+      exercicios:
+        basico: ["Mostre uma matriz 3 × 3 e a diagonal.", "Toque uma melodia guardada numa matriz."]
+        intermediario: ["Calcule médias por sensor e por hora.", "Mostre quadros de animação em LEDs."]
+        avancado: ["Jogo da velha completo.", "Animações escolhidas pelo botão."]
+
+    - n: 33
+      tema: "Estruturas (struct)"
+      objetivo: "Agrupar dados com `struct`, usar vetores de structs e passá-los para funções."
+      material:
+        - "`struct`, `typedef`, acesso com `.` e com `->` (ponteiro)."
+        - "Vetor de structs."
+        - "No Arduino: um struct por LED com seu próprio ritmo."
+      atividade:
+        tempo: "45 min"
+        descricao: "**LEDs independentes.** Descreva cada LED por um struct (pino, período, último instante, estado) e faça 3 LEDs piscarem em ritmos diferentes com uma única função. Em C, cadastre componentes num vetor de structs."
+      exercicios:
+        basico: ["Calcule a distância entre dois pontos com struct.", "Pisque um LED descrito por um struct."]
+        intermediario: ["Mostre um vetor de leituras de sensores.", "Pisque 3 LEDs com um vetor de structs."]
+        avancado: ["Cadastre componentes e some as quantidades.", "Acumule estatísticas num struct."]
+
+    - n: 34
+      tema: "Projeto final: estação de monitoramento"
+      objetivo: "Desenvolver uma estação que mede, registra em CSV, gera alarmes e aceita comandos, integrando tudo o que foi visto."
+      material:
+        - "Saída CSV pelo Monitor Serial (cole no Google Planilhas e faça gráficos)."
+        - "Em C: vetor de structs, estatísticas e gravação em arquivo (`fopen`, `fprintf`, `fclose`)."
+        - "Comandos de configuração e leitura sem travar (`millis`)."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Estação completa.** Monte a estação (luz e temperatura simulada), configure o limite de alarme por comando e registre 2 minutos de dados em CSV. Em C, leia o registro e salve as estatísticas em arquivo."
+      exercicios:
+        basico: ["Registre medições num vetor de structs.", "Envie as leituras em CSV."]
+        intermediario: ["Mostre estatísticas e alertas do registro.", "Adicione alarmes de escuro e temperatura."]
+        avancado: ["Salve o registro em `medicoes.csv`.", "Configure limite e intervalo por comandos."]
+
+    - n: 35
+      tema: "Avaliação da Unidade 3"
+      objetivo: "Avaliar vetores, strings, funções, ponteiros, matrizes e structs, em C e no Arduino."
+      material:
+        - "Prova prática no kit: programa em C com funções e vetores e sketch com vetor e comandos."
+        - "Os exemplos desta aula são simulados no formato da prova."
+      atividade:
+        tempo: "50 min"
+        descricao: "**Questão principal da prova.** Função sobre vetor em C e sketch com struct controlado por comando."
+      exercicios:
+        basico: ["Refaça, sem consultar, dois exemplos de nível 1 das aulas 25 a 34."]
+        intermediario: ["Simulado: resolva um exercício de nível 2 de cada aula da unidade."]
+        avancado: ["Simulado: struct e ponteiro em C; comando e struct no Arduino."]
+
+    - n: 36
+      tema: "Reavaliação da Unidade 3"
+      objetivo: "Dar uma nova oportunidade a quem não atingiu a média e fechar a disciplina."
+      material:
+        - "Correção comentada da avaliação (primeira parte da aula)."
+        - "Nova prova para quem não atingiu a média; desafios para os demais."
+        - "Fechamento: próximos passos (ESP32, IoT, sensores digitais)."
+      atividade:
+        tempo: "40 min"
+        descricao: "**Desafio para quem já foi aprovado:** registro CSV com média móvel e semáforo descrito por vetor de structs."
+      exercicios:
+        basico: ["Refaça as questões que você errou na avaliação."]
+        intermediario: ["Resolva a nova prova (quem não atingiu a média)."]
+        avancado: ["Desafio: ordenação com `malloc` e `qsort`, e registro CSV com média móvel no Arduino."]

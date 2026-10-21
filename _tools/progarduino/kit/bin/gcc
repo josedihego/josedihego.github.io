@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# gcc do kit: compila de forma estática, então o programa roda em qualquer Linux sem instalar nada
+KIT_DIR=${KIT_DIR:-$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)}
+exec "$KIT_DIR/gcc/bin/gcc" -static "$@"

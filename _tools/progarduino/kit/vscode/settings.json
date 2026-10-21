@@ -1,0 +1,33 @@
+{
+	"workbench.startupEditor": "none",
+	"workbench.welcomePage.experimentalOnboarding": false,
+	"workbench.welcomePage.walkthroughs.openOnInstall": false,
+	"chat.disableAIFeatures": true,
+	"chat.welcomePage.signIn.enabled": false,
+	"workbench.secondarySideBar.defaultVisibility": "hidden",
+	"security.workspace.trust.enabled": false,
+	"update.mode": "none",
+	"extensions.autoUpdate": false,
+	"extensions.autoCheckUpdates": false,
+	"telemetry.telemetryLevel": "off",
+	"files.autoSave": "afterDelay",
+	"files.associations": { "*.ino": "cpp" },
+	"editor.fontSize": 16,
+	"terminal.integrated.fontSize": 15,
+	"code-runner.runInTerminal": true,
+	"code-runner.saveFileBeforeRun": true,
+	"code-runner.clearPreviousOutput": true,
+	"code-runner.executorMap": {
+		"c": "cd $dir && gcc -Wall $fileName -o $fileNameWithoutExt -lm && $dir$fileNameWithoutExt"
+	},
+	"code-runner.executorMapByFileExtension": {
+		".ino": "arduino-rodar $dir"
+	},
+	"C_Cpp.default.compilerPath": "${env:KIT_DIR}/bin/gcc",
+	"C_Cpp.default.cStandard": "c17",
+	"C_Cpp.default.includePath": [
+		"${workspaceFolder}/**",
+		"${env:KIT_DIR}/arduino/data/packages/arduino/hardware/avr/**"
+	],
+	"C_Cpp.default.defines": ["ARDUINO=10819", "ARDUINO_AVR_UNO", "ARDUINO_ARCH_AVR", "__AVR_ATmega328P__", "F_CPU=16000000L"]
+}

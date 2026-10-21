@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "José Dihego – josedihego.net/progarduino",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -190,
+      "left": -40,
+      "attrs": {
+        "common": "cathode"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "uno:9",
+      "rgb1:R",
+      "green",
+      []
+    ],
+    [
+      "uno:10",
+      "rgb1:G",
+      "green",
+      []
+    ],
+    [
+      "uno:11",
+      "rgb1:B",
+      "green",
+      []
+    ],
+    [
+      "rgb1:COM",
+      "uno:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

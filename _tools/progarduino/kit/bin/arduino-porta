@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Mostra a porta da primeira placa conectada (/dev/ttyACM* ou /dev/ttyUSB*); sai com erro se não houver
+for p in /dev/ttyACM* /dev/ttyUSB*; do
+  [ -e "$p" ] && { echo "$p"; exit 0; }
+done
+exit 1

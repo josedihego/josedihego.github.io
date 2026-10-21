@@ -1,0 +1,21 @@
+KIT C E ARDUINO (Linux 64 bits) – Programação aplicada com C e Arduino
+https://josedihego.net/progarduino/
+
+Não precisa instalar nada nem ser administrador. Testado em Ubuntu 24.04, Debian 12 e Fedora 40
+(qualquer Linux 64 bits com interface gráfica; não funciona em Alpine).
+
+1. Extraia o arquivo kit-c-arduino-linux-x64.tar.xz na sua pasta pessoal
+   (clique com o botão direito → Extrair aqui, ou no terminal: tar -xJf kit-c-arduino-linux-x64.tar.xz).
+   Não rode o kit direto do pendrive: pendrives em FAT32 não guardam a permissão de execução.
+2. Abra a pasta kit-c-arduino e dê dois cliques em abrir-vscode.sh
+   (se abrir como texto, use o terminal: ./abrir-vscode.sh).
+3. Opcional: rode ./criar-atalho.sh uma vez para ter o atalho "Kit C e Arduino" no menu.
+
+No VS Code:
+- Programas em C (.c): clique no ▶ no canto superior direito (ou F5). O programa compila e roda no terminal.
+- Sketches Arduino (.ino): o ▶ compila; com a placa conectada, também envia e abre o monitor serial.
+  Também em Terminal → Executar Tarefa: "Arduino: compilar", "Arduino: enviar para a placa", "Arduino: monitor serial".
+- A pasta exemplos/ tem todos os códigos das aulas.
+
+Enviar para a placa exige permissão na porta serial. Se aparecer "Sem permissão", o técnico do laboratório
+precisa rodar uma vez: sudo usermod -aG dialout NOME_DO_USUARIO

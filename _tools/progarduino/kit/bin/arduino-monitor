@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# arduino-monitor [velocidade]: abre o monitor serial da placa conectada (padrão 9600); Ctrl+C para sair
+PORTA=$(arduino-porta) || { echo "Nenhuma placa encontrada."; exit 1; }
+exec arduino-cli monitor -p "$PORTA" --config "baudrate=${1:-9600}"

@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "author": "José Dihego – josedihego.net/progarduino",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -190,
+      "left": -40,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "botao2",
+      "top": -170,
+      "left": 70,
+      "attrs": {
+        "color": "green"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "pot1:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:A0",
+      "pot1:SIG",
+      "green",
+      []
+    ],
+    [
+      "pot1:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "uno:2",
+      "botao2:1.l",
+      "green",
+      []
+    ],
+    [
+      "botao2:2.l",
+      "uno:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

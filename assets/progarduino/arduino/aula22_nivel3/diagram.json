@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "author": "José Dihego – josedihego.net/progarduino",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrassom1",
+      "top": -230,
+      "left": -40,
+      "attrs": {
+        "distance": "40"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -190,
+      "left": 130,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rled2",
+      "top": -95,
+      "left": 100,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer3",
+      "top": -190,
+      "left": 190,
+      "attrs": {
+        "volume": "0.1"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "ultrassom1:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "uno:9",
+      "ultrassom1:TRIG",
+      "green",
+      []
+    ],
+    [
+      "uno:10",
+      "ultrassom1:ECHO",
+      "blue",
+      []
+    ],
+    [
+      "ultrassom1:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:7",
+      "rled2:2",
+      "green",
+      []
+    ],
+    [
+      "rled2:1",
+      "led2:A",
+      "green",
+      []
+    ],
+    [
+      "led2:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "buzzer3:1",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:8",
+      "buzzer3:2",
+      "green",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

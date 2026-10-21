@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# arduino-compilar <pasta do sketch>: compila para a placa (padrão: Arduino Uno)
+PASTA=${1%/}
+exec arduino-cli compile --fqbn "${PLACA:-arduino:avr:uno}" "${PASTA:-.}"
