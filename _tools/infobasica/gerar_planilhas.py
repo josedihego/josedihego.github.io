@@ -384,8 +384,9 @@ CONSTRUTORES = {5: a5, 6: a6, 7: a7, 8: a8, 9: a9, 10: a10, 13: a13, 14: a14, 15
                 19: a19, 20: a20, 21: a21, 22: a22, 23: a23, 24: a24, 25: a25, 26: a26, 27: a27, 28: a28,
                 29: a29, 30: a30, 32: a32, 34: a34}
 
-# Funções novas precisam do prefixo do Excel no .xlsx (o Google Planilhas também lê assim)
-PREFIXOS = {'IFS(': '_xlfn.IFS(', 'SEQUENCE(': '_xlfn.SEQUENCE(', 'FILTER(': '_xlfn._xlws.FILTER('}
+# Funções novas precisam do prefixo do Excel no .xlsx; o Google Planilhas aceita _xlfn.IFS/_xlfn.SEQUENCE,
+# mas não _xlfn._xlws.FILTER, por isso FILTER fica sem prefixo
+PREFIXOS = {'IFS(': '_xlfn.IFS(', 'SEQUENCE(': '_xlfn.SEQUENCE(', 'FILTER(': 'FILTER('}
 
 def prefixar(ws):
     for linha in ws.iter_rows():
@@ -395,7 +396,9 @@ def prefixar(ws):
                     c.value = re.sub(r'(?<![\w.])' + re.escape(nome), novo, c.value)
 
 def texto_simples(md):
-    return re.sub(r'[`*]', '', md)
+    # tira a marcação do Markdown, mas mantém o * das fórmulas (que ficam entre crases)
+    partes = md.split('`')
+    return ''.join(p if i % 2 else p.replace('*', '') for i, p in enumerate(partes))
 
 if __name__ == '__main__':
     raiz = sys.argv[1]
@@ -421,8 +424,9 @@ if __name__ == '__main__':
             leia['A2'] = f'Nível {k} ({NIVEIS[k]})'
             leia['A2'].font = Font(bold=True)
             leia['A4'] = texto_simples(aulas[n]['planilhas'][k - 1])
+            leia['A4'].data_type = 's'   # texto, mesmo quando começa com =
             leia['A6'] = 'Células em amarelo são entradas: mude os valores e veja as fórmulas recalcularem.'
-            leia['A7'] = 'Para abrir no Google Planilhas: Google Drive → Novo → Upload de arquivo; depois clique no arquivo → Abrir com → Planilhas Google.'
+            leia['A7'] = 'Esta é a sua cópia: altere à vontade.'
             leia.column_dimensions['A'].width = 120
             wb.save(os.path.join(destino, f'aula{n:02d}_nivel{k}.xlsx'))
             total += 1
