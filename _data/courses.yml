@@ -2,7 +2,7 @@
 - group: "Conteúdo Digital Completo"
   icon: "fa-laptop-code"
   courses:
-    - { title: "Informática – Plano de Aula com Python, Scratch, Planilhas e Documentos", code: "36 aulas", url: "/infobasica/" }
+    - { title: "Informática – Planilhas, Documentos, Python e Scratch", code: "36 aulas", url: "/infobasica/" }
     - { title: "Programação aplicada com C e Arduino", code: "36 aulas", url: "/progarduino/" }
 - group: "Superior"
   icon: "fa-building-columns"
