@@ -1,22 +1,29 @@
 KIT C E ARDUINO (Linux 64 bits) – Programação aplicada com C e Arduino
 https://josedihego.net/progarduino/
 
-Não precisa instalar nada nem ser administrador. Testado em Ubuntu 24.04, Debian 12 e Fedora 40
-(qualquer Linux 64 bits com interface gráfica; não funciona em Alpine).
+Não precisa instalar nada no sistema nem ser administrador. Testado em Ubuntu 24.04, Debian 12 e Fedora 40.
 
-1. Extraia o arquivo kit-c-arduino-linux-x64.tar.xz na sua pasta pessoal
-   (clique com o botão direito → Extrair aqui, ou no terminal: tar -xJf kit-c-arduino-linux-x64.tar.xz).
-   Não rode o kit direto do pendrive: pendrives em FAT32 não guardam a permissão de execução.
-2. Abra a pasta kit-c-arduino e dê dois cliques em abrir-vscode.sh
-   (se abrir como texto, use o terminal: ./abrir-vscode.sh).
-3. Opcional: rode ./criar-atalho.sh uma vez para ter o atalho "Kit C e Arduino" no menu.
+INSTALAR (uma vez por computador, a partir do pendrive)
+1. Copie para o pendrive os arquivos kit-c-arduino-linux-x64.tar.xz, instalar.sh e este LEIA-ME.txt.
+2. No computador do laboratório, abra o Terminal na pasta do pendrive (botão direito → Abrir no terminal) e rode:
+       bash instalar.sh
+   O kit vai para ~/kit-c-arduino e aparece "Kit C e Arduino" no menu de aplicativos.
+   No fim, o instalador verifica se o computador permite enviar programas para o Arduino.
 
-No VS Code:
-- Programas em C (.c): clique no ▶ no canto superior direito (ou F5). O programa compila e roda no terminal.
+USAR
+- Abra "Kit C e Arduino" no menu. O VS Code abre a pasta ~/C-e-Arduino com:
+    exemplos/   todos os códigos das aulas (aulaNN/c e aulaNN/arduino)
+    trabalhos/  crie aqui uma pasta com o SEU NOME e salve nela os seus programas
+- A conta do laboratório é compartilhada: no fim da aula, copie a sua pasta de trabalhos para o seu pendrive.
+- Programas em C (.c): clique no ▶ (ou F5). O programa compila e roda no terminal.
 - Sketches Arduino (.ino): o ▶ compila; com a placa conectada, também envia e abre o monitor serial.
-  Também em Terminal → Executar Tarefa: "Arduino: compilar", "Arduino: enviar para a placa", "Arduino: monitor serial".
-- A pasta exemplos/ tem todos os códigos das aulas (aulaNN/c e aulaNN/arduino).
+  Também em Terminal → Executar Tarefa: "Arduino: compilar", "Arduino: enviar para a placa",
+  "Arduino: monitor serial" e "Arduino: verificar placa e permissão".
 - Comece seus sketches com #include <Arduino.h>: assim o editor reconhece as funções do Arduino.
+- Alguém alterou os exemplos? Rode ~/kit-c-arduino/restaurar-exemplos.sh (a pasta trabalhos não é mexida).
 
-Enviar para a placa exige permissão na porta serial. Se aparecer "Sem permissão", o técnico do laboratório
-precisa rodar uma vez: sudo usermod -aG dialout NOME_DO_USUARIO
+ENVIAR PARA A PLACA
+Enviar um sketch exige que o usuário esteja no grupo "dialout" (vale para qualquer programa, inclusive a Arduino IDE).
+Rode ~/kit-c-arduino/verificar-placa.sh para saber se está liberado. Se não estiver, alguém com acesso de
+administrador precisa rodar UMA VEZ em cada computador:  sudo usermod -aG dialout NOME_DO_USUARIO
+Enquanto isso, os sketches podem ser testados no simulador Wokwi (wokwi.com), com o diagram.json de cada exemplo.

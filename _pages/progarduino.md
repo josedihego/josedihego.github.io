@@ -12,14 +12,13 @@ Plano de Aula da disciplina Programação aplicada com C e Arduino (Automação 
 ## Kit portátil: VS Code + C + Arduino
 
 <div class="kit-card">
-  <p><strong>Para Linux 64 bits, sem instalar nada e sem ser administrador.</strong> O kit traz o VS Code em português, o seu próprio compilador C (gcc) e o arduino-cli com a placa Arduino Uno, além de todos os exemplos das aulas.</p>
-  {% if site.data.progarduino_kit.url != "" %}<a class="download-btn" href="{{ site.data.progarduino_kit.url }}"><i class="fas fa-download" aria-hidden="true"></i> Baixar o kit ({{ site.data.progarduino_kit.tamanho }})</a>{% else %}<p class="files-hint"><em>Download do kit: em breve.</em></p>{% endif %}
+  <p><strong>Instalado nos computadores do laboratório (Linux), sem precisar de administrador.</strong> O kit traz o VS Code em português, o seu próprio compilador C (gcc) e o arduino-cli com a placa Arduino Uno, além de todos os exemplos das aulas. O professor instala a partir de um pendrive com <code>bash instalar.sh</code>.</p>
   <ol>
-    <li>Extraia <code>{{ site.data.progarduino_kit.arquivo }}</code> na sua <strong>pasta pessoal</strong> (botão direito → <em>Extrair aqui</em>). Não rode direto do pendrive.</li>
-    <li>Abra a pasta <code>kit-c-arduino</code> e execute <code>abrir-vscode.sh</code> (ou, no terminal, <code>./abrir-vscode.sh</code>). Opcional: <code>./criar-atalho.sh</code> cria um atalho no menu.</li>
-    <li>Arquivos <code>.c</code>: clique em ▶ ou F5 para compilar e rodar. Arquivos <code>.ino</code>: ▶ compila e, com a placa conectada pelo USB, envia e abre o Monitor Serial. Comece seus sketches com <code>#include &lt;Arduino.h&gt;</code> para o editor reconhecer as funções do Arduino.</li>
+    <li>Abra <strong>Kit C e Arduino</strong> no menu de aplicativos. O VS Code abre a pasta <code>C-e-Arduino</code>, com <code>exemplos</code> (todas as aulas) e <code>trabalhos</code>.</li>
+    <li>Em <code>trabalhos</code>, crie uma pasta com <strong>o seu nome</strong> e salve nela os seus programas. A conta do laboratório é compartilhada: no fim da aula, copie a sua pasta para o seu pendrive.</li>
+    <li>Arquivos <code>.c</code> (C no computador): clique em ▶ ou F5 para compilar e rodar. Arquivos <code>.ino</code> (Arduino): ▶ compila e, com a placa conectada pelo USB, envia e abre o Monitor Serial. Comece seus sketches com <code>#include &lt;Arduino.h&gt;</code> para o editor reconhecer as funções do Arduino.</li>
   </ol>
-  <p class="files-hint">Enviar para a placa exige permissão na porta serial; se aparecer "Sem permissão", o técnico do laboratório roda uma vez <code>sudo usermod -aG dialout NOME_DO_USUARIO</code>. Testado em Ubuntu 24.04, Debian 12 e Fedora 40.</p>
+  <p class="files-hint">Enviar para a placa exige que o usuário do laboratório esteja no grupo <code>dialout</code> (vale também para a Arduino IDE): a tarefa <em>Arduino: verificar placa e permissão</em> mostra se está liberado. Enquanto não estiver, teste os sketches no Wokwi.</p>
 </div>
 
 ## Ferramentas

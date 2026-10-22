@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # arduino-enviar <pasta do sketch>: compila e envia para a placa conectada
 PASTA=${1%/}
+USUARIO=${USER:-$(id -un)}
 PORTA=$(arduino-porta) || { echo "Nenhuma placa encontrada. Conecte o Arduino pelo cabo USB e tente de novo."; exit 1; }
 if [ ! -w "$PORTA" ]; then
   echo "Sem permissão para usar $PORTA."
-  echo "Peça ao técnico do laboratório para rodar uma vez: sudo usermod -aG dialout $USER  (e depois entre de novo na sessão)."
+  echo "Peça ao técnico do laboratório para rodar uma vez: sudo usermod -aG dialout $USUARIO  (e depois entre de novo na sessão)."
   exit 1
 fi
 arduino-compilar "$PASTA" && arduino-cli upload -p "$PORTA" --fqbn "${PLACA:-arduino:avr:uno}" "${PASTA:-.}"

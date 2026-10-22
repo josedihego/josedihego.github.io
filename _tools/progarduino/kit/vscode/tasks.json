@@ -1,8 +1,30 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{ "label": "Arduino: compilar", "type": "shell", "command": "arduino-compilar \"${fileDirname}\"", "problemMatcher": [], "group": "build" },
-		{ "label": "Arduino: enviar para a placa", "type": "shell", "command": "arduino-enviar \"${fileDirname}\"", "problemMatcher": [] },
-		{ "label": "Arduino: monitor serial", "type": "shell", "command": "arduino-monitor", "problemMatcher": [] }
+		{
+			"label": "Arduino: compilar",
+			"type": "shell",
+			"command": "arduino-compilar \"${fileDirname}\"",
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Arduino: enviar para a placa",
+			"type": "shell",
+			"command": "arduino-enviar \"${fileDirname}\"",
+			"problemMatcher": []
+		},
+		{
+			"label": "Arduino: monitor serial",
+			"type": "shell",
+			"command": "arduino-monitor",
+			"problemMatcher": []
+		},
+		{
+			"label": "Arduino: verificar placa e permissão",
+			"type": "shell",
+			"command": "\"${env:KIT_DIR}/verificar-placa.sh\"",
+			"problemMatcher": []
+		}
 	]
 }

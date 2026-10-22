@@ -54,9 +54,10 @@ ln -sfn "$AVR_INCLUDE/util" "$KIT/arduino/intellisense/util"
 
 echo "== Scripts e exemplos"
 cp "$AQUI"/bin/* "$KIT/bin/"
-cp "$AQUI"/abrir-vscode.sh "$AQUI"/criar-atalho.sh "$AQUI"/LEIA-ME.txt "$KIT/"
+cp "$AQUI"/abrir-vscode.sh "$AQUI"/criar-atalho.sh "$AQUI"/restaurar-exemplos.sh "$AQUI"/verificar-placa.sh "$AQUI"/LEIA-ME.txt "$KIT/"
 chmod +x "$KIT"/bin/* "$KIT"/*.sh
 if [ -n "$EXEMPLOS" ]; then cp -r "$EXEMPLOS" "$KIT/exemplos"; else mkdir -p "$KIT/exemplos"; fi
+cp -r "$KIT/exemplos" "$KIT/.exemplos-originais"                 # cópia intacta para restaurar-exemplos.sh
 
 echo "== Limpeza"
 rm -rf "$KIT/vscode/data/user-data/CachedExtensionVSIXs" "$KIT/vscode/data/user-data/logs" "$KIT/vscode/data/user-data/machineid"   # caches da instalação (languagepacks.json fica: é ele que liga o português)
@@ -64,4 +65,5 @@ rm -rf "$KIT/gcc/share/man" "$KIT/gcc/share/info" "$KIT/gcc/share/doc"          
 
 echo "== Pacote"
 tar -C "$SAIDA" -I 'xz -T0 -6' -cf "$SAIDA/kit-c-arduino-linux-x64.tar.xz" kit-c-arduino   # xz em todos os núcleos
+cp "$AQUI/instalar.sh" "$AQUI/LEIA-ME.txt" "$SAIDA/"              # vão para o pendrive junto do pacote
 du -sh "$KIT" "$SAIDA/kit-c-arduino-linux-x64.tar.xz"

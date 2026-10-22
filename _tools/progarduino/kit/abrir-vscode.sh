@@ -13,5 +13,10 @@ IDIOMA="$KIT_DIR/vscode/data/user-data/languagepacks.json"
 CONFIG="$KIT_DIR/vscode/data/user-data/User/settings.json"
 [ -f "$CONFIG" ] && sed -i -E "s#\"[^\"]*/bin/gcc\"#\"$KIT_DIR/bin/gcc\"#; s#\"[^\"]*/arduino/(data/packages|intellisense)#\"$KIT_DIR/arduino/\1#g" "$CONFIG"
 # --no-sandbox: sem ele o VS Code não abre em distribuições que bloqueiam o sandbox para programas fora do sistema (ex.: Ubuntu 24.04)
-if [ $# -eq 0 ]; then set -- "$KIT_DIR/exemplos"; fi
+# Pasta de trabalho fora do kit: reinstalar o kit não apaga os trabalhos dos estudantes (a conta é compartilhada)
+AREA="$HOME/C-e-Arduino"
+mkdir -p "$AREA/trabalhos"
+[ -e "$AREA/exemplos" ] || ln -s "$KIT_DIR/exemplos" "$AREA/exemplos"
+[ -e "$AREA/trabalhos/LEIA-ME.txt" ] || printf 'Crie aqui uma pasta com o seu nome e salve nela os seus programas.\nA conta é compartilhada: copie os seus arquivos para o seu pendrive no fim da aula.\n' > "$AREA/trabalhos/LEIA-ME.txt"
+if [ $# -eq 0 ]; then set -- "$AREA"; fi
 exec "$KIT_DIR/vscode/code" --no-sandbox "$@"

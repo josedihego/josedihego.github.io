@@ -8,7 +8,7 @@ Pasta ignorada pelo Jekyll (começa com `_`), não é publicada. Tudo tem três 
 | C (108 programas) | `c/aulaNN_nivelK.c` (linha 2: `// teste:` com as entradas do testador) | `assets/progarduino/c/` |
 | Arduino (108 sketches) | `arduino/aulaNN_nivelK/aulaNN_nivelK.ino` (linha 2: `// pecas:` com o circuito) | `assets/progarduino/arduino/` (+ `diagram.json` do Wokwi) |
 | Títulos dos níveis | gerado | `_data/progarduino_exemplos.yml` |
-| Link do kit | `_data/progarduino_kit.yml` | botão de download da página |
+
 
 Peças aceitas em `// pecas:` (separadas por `;`): `led PINO COR`, `botao PINO`, `pot A0`, `ldr A0`, `buzzer PINO`,
 `ultrassom TRIG ECHO`, `servo PINO`, `rgb R G B`.
@@ -28,6 +28,14 @@ _tools/progarduino/kit/construir_kit.sh /tmp/kit /tmp/exemplos
 # compila os 108 sketches para o Arduino Uno com o arduino-cli do kit
 _tools/progarduino/testar_arduino.sh /tmp/kit/kit-c-arduino
 ```
+
+## Kit portátil no laboratório (conta compartilhada, sem administrador, pendrive)
+
+- Copie para o pendrive os três arquivos que `construir_kit.sh` gera: `kit-c-arduino-linux-x64.tar.xz`, `instalar.sh` e `LEIA-ME.txt`.
+- Em cada computador: abra o terminal na pasta do pendrive e rode `bash instalar.sh` (FAT32 não guarda permissão de execução).
+- O VS Code abre `~/C-e-Arduino`: `exemplos` (link para o kit) e `trabalhos` (fora do kit: reinstalar não apaga).
+- `restaurar-exemplos.sh` desfaz alterações nos exemplos; `verificar-placa.sh` diz se o envio para a placa está liberado
+  (o usuário precisa estar no grupo `dialout`, o que só um administrador faz).
 
 ## Kit portátil
 
