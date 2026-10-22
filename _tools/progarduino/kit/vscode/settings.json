@@ -29,7 +29,8 @@
 	"C_Cpp.default.includePath": [
 		"${workspaceFolder}/**",
 		"__KIT_DIR__/arduino/data/packages/arduino/hardware/avr/**",
-		"__KIT_DIR__/arduino/intellisense"
+		"__KIT_DIR__/arduino/intellisense",
+		"__KIT_DIR__/arduino/user/libraries/**"
 	],
 	"C_Cpp.default.defines": ["ARDUINO=10819", "ARDUINO_AVR_UNO", "ARDUINO_ARCH_AVR", "__AVR_ATmega328P__", "F_CPU=16000000L"]
 }

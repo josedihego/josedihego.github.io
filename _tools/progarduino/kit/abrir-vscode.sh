@@ -11,7 +11,7 @@ IDIOMA="$KIT_DIR/vscode/data/user-data/languagepacks.json"
 [ -f "$IDIOMA" ] && sed -i -E "s#\"[^\"]*/vscode/data/extensions/#\"$KIT_DIR/vscode/data/extensions/#g" "$IDIOMA"
 # A extensão C/C++ não expande variáveis nas configurações do usuário: grava o caminho atual do gcc e do Arduino
 CONFIG="$KIT_DIR/vscode/data/user-data/User/settings.json"
-[ -f "$CONFIG" ] && sed -i -E "s#\"[^\"]*/bin/gcc\"#\"$KIT_DIR/bin/gcc\"#; s#\"[^\"]*/arduino/(data/packages|intellisense)#\"$KIT_DIR/arduino/\1#g" "$CONFIG"
+[ -f "$CONFIG" ] && sed -i -E "s#\"[^\"]*/bin/gcc\"#\"$KIT_DIR/bin/gcc\"#; s#\"[^\"]*/arduino/(data/packages|intellisense|user/libraries)#\"$KIT_DIR/arduino/\1#g" "$CONFIG"
 # --no-sandbox: sem ele o VS Code não abre em distribuições que bloqueiam o sandbox para programas fora do sistema (ex.: Ubuntu 24.04)
 # Pasta de trabalho fora do kit: reinstalar o kit não apaga os trabalhos dos estudantes (a conta é compartilhada)
 AREA="$HOME/C-e-Arduino"

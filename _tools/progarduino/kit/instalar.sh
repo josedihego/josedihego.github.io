@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Instala o Kit C e Arduino a partir do pendrive (vai junto do kit-c-arduino-linux-x64.tar.xz).
-# No pendrive (FAT32) os arquivos não podem ser executados direto, por isso rode com:  bash instalar.sh
+# Instala o Kit C e Arduino em ~/kit-c-arduino. Copie para a Área de Trabalho os arquivos do pendrive
+# (kit-c-arduino-linux-x64.tar.xz, instalar.sh e LEIA-ME.txt), abra o terminal ali e rode:  bash instalar.sh
 set -e
 AQUI=$(cd "$(dirname "$0")" && pwd)
 PACOTE="$AQUI/kit-c-arduino-linux-x64.tar.xz"
@@ -15,4 +15,5 @@ tar -xJf "$PACOTE" -C "$HOME"
 echo
 "$HOME/kit-c-arduino/verificar-placa.sh" || true
 echo
-echo "Pronto! Abra \"Kit C e Arduino\" no menu de aplicativos (ou rode ~/kit-c-arduino/abrir-vscode.sh)."
+echo "Pronto! Abra \"Kit C e Arduino\" no menu de aplicativos ou pelo atalho na Área de Trabalho."
+echo "Os arquivos copiados do pendrive (kit-c-arduino-linux-x64.tar.xz e instalar.sh) já podem ser apagados."

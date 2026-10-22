@@ -12,7 +12,7 @@ Plano de Aula da disciplina Programação aplicada com C e Arduino (Automação 
 ## Kit portátil: VS Code + C + Arduino
 
 <div class="kit-card">
-  <p><strong>Instalado nos computadores do laboratório (Linux), sem precisar de administrador.</strong> O kit traz o VS Code em português, o seu próprio compilador C (gcc) e o arduino-cli com a placa Arduino Uno, além de todos os exemplos das aulas. O professor instala a partir de um pendrive com <code>bash instalar.sh</code>.</p>
+  <p><strong>Instalado nos computadores do laboratório (Linux), sem precisar de administrador.</strong> O kit traz o VS Code em português, o seu próprio compilador C (gcc) e o arduino-cli com a placa Arduino Uno, além de todos os exemplos das aulas. O professor copia o kit do pendrive para a Área de Trabalho e roda <code>bash instalar.sh</code> uma vez em cada computador.</p>
   <ol>
     <li>Abra <strong>Kit C e Arduino</strong> no menu de aplicativos. O VS Code abre a pasta <code>C-e-Arduino</code>, com <code>exemplos</code> (todas as aulas) e <code>trabalhos</code>.</li>
     <li>Em <code>trabalhos</code>, crie uma pasta com <strong>o seu nome</strong> e salve nela os seus programas. A conta do laboratório é compartilhada: no fim da aula, copie a sua pasta para o seu pendrive.</li>

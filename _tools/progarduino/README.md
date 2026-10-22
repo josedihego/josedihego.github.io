@@ -32,7 +32,7 @@ _tools/progarduino/testar_arduino.sh /tmp/kit/kit-c-arduino
 ## Kit portátil no laboratório (conta compartilhada, sem administrador, pendrive)
 
 - Copie para o pendrive os três arquivos que `construir_kit.sh` gera: `kit-c-arduino-linux-x64.tar.xz`, `instalar.sh` e `LEIA-ME.txt`.
-- Em cada computador: abra o terminal na pasta do pendrive e rode `bash instalar.sh` (FAT32 não guarda permissão de execução).
+- Em cada computador: copie os três arquivos do pendrive para a Área de Trabalho, abra o terminal ali e rode `bash instalar.sh`.
 - O VS Code abre `~/C-e-Arduino`: `exemplos` (link para o kit) e `trabalhos` (fora do kit: reinstalar não apaga).
 - `restaurar-exemplos.sh` desfaz alterações nos exemplos; `verificar-placa.sh` diz se o envio para a placa está liberado
   (o usuário precisa estar no grupo `dialout`, o que só um administrador faz).

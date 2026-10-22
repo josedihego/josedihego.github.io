@@ -3,12 +3,14 @@ https://josedihego.net/progarduino/
 
 Não precisa instalar nada no sistema nem ser administrador. Testado em Ubuntu 24.04, Debian 12 e Fedora 40.
 
-INSTALAR (uma vez por computador, a partir do pendrive)
-1. Copie para o pendrive os arquivos kit-c-arduino-linux-x64.tar.xz, instalar.sh e este LEIA-ME.txt.
-2. No computador do laboratório, abra o Terminal na pasta do pendrive (botão direito → Abrir no terminal) e rode:
+INSTALAR (uma vez por computador)
+1. Copie do pendrive para a Área de Trabalho: kit-c-arduino-linux-x64.tar.xz, instalar.sh e este LEIA-ME.txt.
+2. Na Área de Trabalho, clique com o botão direito → Abrir no terminal, e rode:
        bash instalar.sh
-   O kit vai para ~/kit-c-arduino e aparece "Kit C e Arduino" no menu de aplicativos.
+   O kit vai para ~/kit-c-arduino e aparece "Kit C e Arduino" no menu e na Área de Trabalho.
    No fim, o instalador verifica se o computador permite enviar programas para o Arduino.
+3. Depois disso, os arquivos copiados para a Área de Trabalho podem ser apagados.
+   (Também funciona extrair o .tar.xz direto na Área de Trabalho e abrir kit-c-arduino/abrir-vscode.sh.)
 
 USAR
 - Abra "Kit C e Arduino" no menu. O VS Code abre a pasta ~/C-e-Arduino com:
