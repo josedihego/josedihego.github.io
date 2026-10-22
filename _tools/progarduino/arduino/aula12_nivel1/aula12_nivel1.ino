@@ -1,6 +1,7 @@
 // Aula 12 – Nível 1: Revisão: tensão no Serial
 // pecas: pot A0
 // Revisão: tensão do A0 com 3 casas decimais
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                          // roda uma vez, quando a placa liga
   Serial.begin(9600);                   // abre o Monitor Serial a 9600 baud
 }

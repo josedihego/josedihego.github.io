@@ -1,5 +1,6 @@
 // Aula 14 – Nível 2: Média móvel (LDR suavizado)
 // Média das últimas 8 leituras: cada nova leitura substitui a mais antiga
+#include <Arduino.h>                             // funções do Arduino (pinMode, digitalWrite, delay...)
 const int N = 8;                                 // tamanho da janela da média
 int leituras[N];                                 // vetor guarda as últimas leituras
 int posicao = 0;                                 // onde entra a próxima

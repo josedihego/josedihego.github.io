@@ -1,5 +1,6 @@
 // Aula 2 – Nível 3: Tipos no Arduino e estouro do int
 // No Arduino Uno o int tem só 2 bytes: passa de 32767 e volta para -32768
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 int pequeno = 32760;                          // perto do limite
 long grande = 32760;                          // long tem 4 bytes
 

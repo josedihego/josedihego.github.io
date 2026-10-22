@@ -1,5 +1,6 @@
 // Aula 2 – Nível 1: Variáveis no Monitor Serial
 // Mostra variáveis no Monitor Serial (9600 baud)
+#include <Arduino.h>                  // funções do Arduino (pinMode, digitalWrite, delay...)
 int quantidade = 12;                  // inteiro
 float tensao = 4.75;                  // decimal
 char letra = 'A';                     // caractere

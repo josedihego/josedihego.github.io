@@ -1,5 +1,6 @@
 // Aula 1 – Nível 3: SOS em código Morse
 // Pisca S-O-S (· · ·  — — —  · · ·) no LED do pino 8
+#include <Arduino.h>                  // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINO_LED = 8;               // LED com resistor
 const int PONTO = 200;                // duração do ponto (ms)
 const int TRACO = 600;                // traço = 3 pontos

@@ -1,6 +1,7 @@
 // Aula 25 – Nível 2: Melodia com vetores
 // pecas: buzzer 8
 // Dois vetores do mesmo tamanho: notas (Hz) e durações (ms)
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BUZZER 8                          // buzzer no pino 8
 const int NOTAS[] = {262, 294, 330, 349, 392, 392, 440, 392};   // frequências em Hz (dó, ré, mi...)
 const int DURACAO[] = {300, 300, 300, 300, 400, 400, 300, 600};   // duração de cada nota (ms)

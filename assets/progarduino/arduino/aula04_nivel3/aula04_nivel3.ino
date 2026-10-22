@@ -1,5 +1,6 @@
 // Aula 4 – Nível 3: Porcentagem com map e o perigo do int
 // map converte faixas; a conta com int perde as casas decimais
+#include <Arduino.h>                                // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                      // roda uma vez, quando a placa liga
   Serial.begin(9600);                               // abre o Monitor Serial a 9600 baud
 }

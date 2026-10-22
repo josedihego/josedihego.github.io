@@ -1,6 +1,7 @@
 // Aula 15 – Nível 2: Esperar escurecer
 // pecas: ldr A0; led 8 amarelo
 // O programa espera (while) até ficar escuro, então pisca o LED 3 vezes
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                            // LED no pino 8
 
 void setup() {                                // roda uma vez, quando a placa liga

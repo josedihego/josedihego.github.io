@@ -46,6 +46,11 @@ export ARDUINO_DIRECTORIES_DATA=$KIT/arduino/data ARDUINO_DIRECTORIES_DOWNLOADS=
 "$KIT/arduino/arduino-cli" core update-index >/dev/null
 "$KIT/arduino/arduino-cli" core install arduino:avr >/dev/null
 "$KIT/arduino/arduino-cli" lib install Servo >/dev/null
+# IntelliSense dos sketches: só as pastas avr/ e util/ do avr-libc (sem o stdio.h do AVR, que atrapalharia os programas C)
+mkdir -p "$KIT/arduino/intellisense"
+AVR_INCLUDE=$(cd "$KIT/arduino/intellisense" && ls -d ../data/packages/arduino/tools/avr-gcc/*/avr/include | head -1)
+ln -sfn "$AVR_INCLUDE/avr" "$KIT/arduino/intellisense/avr"
+ln -sfn "$AVR_INCLUDE/util" "$KIT/arduino/intellisense/util"
 
 echo "== Scripts e exemplos"
 cp "$AQUI"/bin/* "$KIT/bin/"

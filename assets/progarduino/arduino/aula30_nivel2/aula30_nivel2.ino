@@ -1,5 +1,6 @@
 // Aula 30 – Nível 2: Uma leitura, duas respostas
 // ler_luz devolve a leitura e a tensão pelos ponteiros
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 void ler_luz(int *leitura, float *volts) {    // duas saídas por ponteiro
   *leitura = analogRead(A0);                  // grava a leitura na variável de quem chamou
   *volts = *leitura * 5.0 / 1023.0;           // grava a tensão na outra variável

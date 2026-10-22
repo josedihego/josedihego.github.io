@@ -1,5 +1,6 @@
 // Aula 21 – Nível 2: Calibração automática
 // Nos primeiros 5 s, cubra e descubra o sensor: a placa aprende o mínimo e o máximo
+#include <Arduino.h>                             // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 9                               // LED no pino 9
 int minimo = 1023, maximo = 0;                   // começam invertidos: a primeira leitura corrige
 

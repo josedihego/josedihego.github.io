@@ -1,6 +1,7 @@
 // Aula 10 – Nível 2: Alarme com botão
 // pecas: botao 2; buzzer 8; led 9 vermelho
 // Botão apertado: LED vermelho e sirene de duas notas
+#include <Arduino.h>                        // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                        // botão no pino 2
 #define PINO_BUZZER 8                       // buzzer no pino 8
 #define PINO_LED 9                          // LED no pino 9

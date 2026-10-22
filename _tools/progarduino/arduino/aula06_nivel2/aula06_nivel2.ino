@@ -1,6 +1,7 @@
 // Aula 6 – Nível 2: Luz automática com LDR
 // pecas: ldr A0; led 8 amarelo
 // Acende o LED quando o ambiente fica escuro (sensor de luz LDR no A0)
+#include <Arduino.h>                      // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINO_LED = 8;                   // pino do LED (com resistor de 220 ohms)
 const int LIMIAR = 500;                   // ajuste olhando os valores no Monitor Serial
 

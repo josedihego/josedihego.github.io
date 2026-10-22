@@ -1,6 +1,7 @@
 // Aula 13 – Nível 1: Piscar 5 vezes no início
 // pecas: led 8 vermelho
 // O for no setup pisca o LED 5 vezes e depois para
+#include <Arduino.h>                   // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                     // LED no pino 8
 
 void setup() {                         // roda uma vez, quando a placa liga

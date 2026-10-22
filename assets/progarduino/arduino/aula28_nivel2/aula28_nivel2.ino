@@ -1,5 +1,6 @@
 // Aula 28 – Nível 2: Função que mede a distância
 // A função esconde os detalhes do sensor e devolve centímetros
+#include <Arduino.h>                         // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                               // TRIG do HC-SR04 no pino 9
 #define ECHO 10                              // ECHO do HC-SR04 no pino 10
 

@@ -1,6 +1,7 @@
 // Aula 4 – Nível 2: Leitura em volts
 // pecas: pot A0
 // Converte a leitura do A0 em tensão (0 a 5 V)
+#include <Arduino.h>                                // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                      // roda uma vez, quando a placa liga
   Serial.begin(9600);                               // abre o Monitor Serial a 9600 baud
 }

@@ -1,5 +1,6 @@
 // Aula 5 – Nível 2: Porta E com dois botões
 // O LED só acende com os DOIS botões apertados (E lógico)
+#include <Arduino.h>                              // funções do Arduino (pinMode, digitalWrite, delay...)
 const int BOTAO_A = 2, BOTAO_B = 3, PINO_LED = 8;   // pinos dos dois botões e do LED
 
 void setup() {                                    // roda uma vez, quando a placa liga

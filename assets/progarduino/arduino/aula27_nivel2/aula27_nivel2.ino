@@ -1,5 +1,6 @@
 // Aula 27 – Nível 2: Comandos LIGA e DESLIGA
 // Controle por texto: LIGA, DESLIGA, ESTADO
+#include <Arduino.h>                                // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                                  // LED no pino 8
 bool aceso = false;                                 // estado do LED
 

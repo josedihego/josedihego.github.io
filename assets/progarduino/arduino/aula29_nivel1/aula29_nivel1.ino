@@ -1,5 +1,6 @@
 // Aula 29 – Nível 1: Função media(vetor, n)
 // Passa o vetor de leituras para uma função
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 float media(int v[], int n) {           // média de um vetor de leituras
   long soma = 0;                        // long: a soma de muitas leituras passa de 32767
   for (int i = 0; i < n; i++) soma += v[i];   // soma todas as leituras

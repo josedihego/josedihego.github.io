@@ -1,5 +1,6 @@
 // Aula 25 – Nível 1: Vetor de pinos
 // Os pinos ficam num vetor: o mesmo código serve para qualquer quantidade de LEDs
+#include <Arduino.h>                                    // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINOS[] = {3, 5, 6, 9};                       // pinos fora de ordem, sem problema
 const int N = sizeof(PINOS) / sizeof(PINOS[0]);         // quantidade de elementos
 

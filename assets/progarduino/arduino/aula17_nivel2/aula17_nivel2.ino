@@ -1,5 +1,6 @@
 // Aula 17 – Nível 2: Dado com 6 LEDs
 // Acende de 1 a 6 LEDs conforme o número sorteado
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                           // botão no pino 2
 
 void setup() {                                 // roda uma vez, quando a placa liga

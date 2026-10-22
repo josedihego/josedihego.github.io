@@ -1,5 +1,6 @@
 // Aula 19 – Nível 3: Semáforo com botão de pedestre
 // Máquina de estados: verde, amarelo, vermelho; o botão encurta o verde
+#include <Arduino.h>                            // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                            // botão no pino 2
 #define VERDE 8                                 // LED verde no pino 8
 #define AMARELO 9                               // LED amarelo no pino 9

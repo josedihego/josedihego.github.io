@@ -1,5 +1,6 @@
 // Aula 15 – Nível 1: Enquanto o botão estiver apertado
 // O while prende o programa enquanto o botão está apertado
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                          // botão no pino 2
 #define PINO_LED 8                            // LED no pino 8
 

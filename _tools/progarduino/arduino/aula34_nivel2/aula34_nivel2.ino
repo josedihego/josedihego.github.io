@@ -1,6 +1,7 @@
 // Aula 34 – Nível 2: Estação com alarmes
 // pecas: ldr A0; pot A1; led 8 amarelo; led 9 vermelho; buzzer 7
 // LED amarelo: escuro; LED vermelho e buzzer: temperatura acima de 35 °C
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define LED_ESCURO 8                    // LED de aviso de escuro no pino 8
 #define LED_QUENTE 9                    // LED de alarme de calor no pino 9
 #define PINO_BUZZER 7                   // buzzer no pino 7

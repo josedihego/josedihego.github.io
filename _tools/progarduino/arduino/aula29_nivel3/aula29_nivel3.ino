@@ -1,6 +1,7 @@
 // Aula 29 – Nível 3: Função mediana
 // pecas: ldr A0
 // mediana(v, n) ordena uma cópia do vetor e devolve o valor do meio
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 int mediana(const int v[], int n) {           // const: a função promete não alterar v
   int c[15];                                  // cópia: não altera o vetor original
   for (int i = 0; i < n; i++) c[i] = v[i];    // copia o vetor

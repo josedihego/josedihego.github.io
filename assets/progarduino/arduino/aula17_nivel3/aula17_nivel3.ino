@@ -1,5 +1,6 @@
 // Aula 17 – Nível 3: Teste de reflexo
 // O LED acende depois de um tempo aleatório; aperte o botão o mais rápido possível
+#include <Arduino.h>                             // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                             // botão no pino 2
 #define PINO_LED 8                               // LED no pino 8
 

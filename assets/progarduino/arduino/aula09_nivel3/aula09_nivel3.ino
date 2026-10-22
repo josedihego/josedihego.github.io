@@ -1,5 +1,6 @@
 // Aula 9 – Nível 3: Cores com LED RGB
 // LED RGB (cátodo comum): mistura vermelho, verde e azul com PWM
+#include <Arduino.h>                   // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_R 9                       // vermelho do LED RGB no pino 9
 #define PINO_G 10                      // verde do LED RGB no pino 10
 #define PINO_B 11                      // azul do LED RGB no pino 11

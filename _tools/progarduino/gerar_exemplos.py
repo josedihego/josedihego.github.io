@@ -110,7 +110,7 @@ def gerar(raiz, kit=None):
         linhas = open(fonte).read().split('\n')
         texto = '\n'.join(linhas[:1] + linhas[2:])            # tira a linha '// teste:'
         open(os.path.join(destino, 'c', nome), 'w').write(texto)
-        arquivos.append((f'{nome[:6]}/{nome}', texto))
+        arquivos.append((f'{nome[:6]}/c/{nome}', texto))
     for pasta in sorted(glob.glob(os.path.join(ferramentas, 'arduino', '*'))):
         nome = os.path.basename(pasta)
         linhas = open(os.path.join(pasta, nome + '.ino')).read().split('\n')
@@ -120,8 +120,8 @@ def gerar(raiz, kit=None):
         os.makedirs(os.path.join(destino, 'arduino', nome))
         open(os.path.join(destino, 'arduino', nome, nome + '.ino'), 'w').write(texto)
         open(os.path.join(destino, 'arduino', nome, 'diagram.json'), 'w').write(circuito)
-        arquivos.append((f'{nome[:6]}/{nome}/{nome}.ino', texto))
-        arquivos.append((f'{nome[:6]}/{nome}/diagram.json', circuito))
+        arquivos.append((f'{nome[:6]}/arduino/{nome}/{nome}.ino', texto))
+        arquivos.append((f'{nome[:6]}/arduino/{nome}/diagram.json', circuito))
     with zipfile.ZipFile(os.path.join(destino, 'exemplos-progarduino.zip'), 'w', zipfile.ZIP_DEFLATED) as z:
         for caminho, texto in arquivos:
             z.writestr('exemplos/' + caminho, texto)

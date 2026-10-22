@@ -1,5 +1,6 @@
 // Aula 32 – Nível 3: Animações escolhidas pelo botão
 // Matriz 3D: animação, quadro, LED. O botão troca a animação
+#include <Arduino.h>                                            // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 7                                            // botão no pino 7
 const byte ANIM[3][4][4] = {                                    // 3 animações × 4 quadros × 4 LEDs
   {{1, 0, 0, 0}, {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}},     // corrida

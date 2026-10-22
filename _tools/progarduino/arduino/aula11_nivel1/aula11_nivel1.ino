@@ -1,6 +1,7 @@
 // Aula 11 – Nível 1: Simulado: pisca com dois tempos
 // pecas: led 8 vermelho
 // Simulado: LED aceso 300 ms e apagado 700 ms
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                      // LED no pino 8
 
 void setup() {                          // roda uma vez, quando a placa liga

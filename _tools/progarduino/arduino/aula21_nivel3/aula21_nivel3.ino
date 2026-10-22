@@ -1,6 +1,7 @@
 // Aula 21 – Nível 3: Servo segue o potenciômetro
 // pecas: pot A0; servo 9
 // O ângulo do servo (0 a 180°) acompanha o potenciômetro
+#include <Arduino.h>                       // funções do Arduino (pinMode, digitalWrite, delay...)
 #include <Servo.h>                         // biblioteca do servo
 Servo motor;                               // objeto que controla o servo
 

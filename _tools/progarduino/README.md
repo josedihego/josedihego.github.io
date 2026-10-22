@@ -35,4 +35,6 @@ _tools/progarduino/testar_arduino.sh /tmp/kit/kit-c-arduino
 - `bin/gcc` chama o gcc do musl.cc com `-static`: os programas rodam em qualquer Linux sem gcc instalado.
 - `abrir-vscode.sh` ajusta PATH e as pastas do arduino-cli, corrige os caminhos do pacote de idioma e abre com `--no-sandbox`
   (necessário em distribuições como o Ubuntu 24.04 para programas fora do sistema).
-- `vscode/settings.json` desliga o Copilot e as boas-vindas, configura o Code Runner (▶/F5) para C e para `.ino`.
+- `vscode/settings.json` desliga o Copilot e as boas-vindas e configura o Code Runner (▶/F5): C compila para `.out`, `.ino` usa `arduino-rodar`.
+- `arduino/intellisense/` expõe só `avr/` e `util/` do avr-libc, para o editor entender os sketches sem trocar o `stdio.h` dos programas C.
+- Os sketches começam com `#include <Arduino.h>`: sem ele a extensão C/C++ marca `digitalWrite` etc. como erro.

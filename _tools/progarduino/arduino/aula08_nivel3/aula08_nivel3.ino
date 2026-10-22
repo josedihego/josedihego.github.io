@@ -1,6 +1,7 @@
 // Aula 8 – Nível 3: Do Monitor Serial para os LEDs
 // pecas: led 2 vermelho; led 3 vermelho; led 4 vermelho; led 5 vermelho
 // Digite 0 a 15: o valor aparece em binário, usando os operadores >> e &
+#include <Arduino.h>                                    // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                          // roda uma vez, quando a placa liga
   for (int pino = 2; pino <= 5; pino++) pinMode(pino, OUTPUT);   // pinos 2 a 5 como saída
   Serial.begin(9600);                                   // abre o Monitor Serial a 9600 baud

@@ -1,5 +1,6 @@
 // Aula 20 – Nível 3: Sensor de estacionamento
 // Bipes mais rápidos quanto mais perto; abaixo de 10 cm, som contínuo
+#include <Arduino.h>                                  // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                                        // TRIG do HC-SR04 no pino 9
 #define ECHO 10                                       // ECHO do HC-SR04 no pino 10
 #define PINO_BUZZER 8                                 // buzzer no pino 8

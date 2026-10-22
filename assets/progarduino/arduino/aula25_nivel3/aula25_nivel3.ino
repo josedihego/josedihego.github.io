@@ -1,5 +1,6 @@
 // Aula 25 – Nível 3: Guardar 10 leituras
 // Cada toque guarda uma leitura; com 10 guardadas, mostra todas
+#include <Arduino.h>                            // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                            // botão no pino 2
 int leituras[10];                               // declara leituras[10] (int)
 int quantidade = 0;                             // leituras guardadas até agora

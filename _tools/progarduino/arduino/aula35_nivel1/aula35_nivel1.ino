@@ -1,6 +1,7 @@
 // Aula 35 – Nível 1: Simulado: vetor de pinos
 // pecas: led 2 vermelho; led 3 amarelo; led 4 verde
 // Simulado: acende os LEDs do vetor do último para o primeiro
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINOS[] = {2, 3, 4};          // pinos dos LEDs
 
 void setup() {                          // roda uma vez, quando a placa liga

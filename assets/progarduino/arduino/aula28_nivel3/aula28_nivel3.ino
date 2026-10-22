@@ -1,5 +1,6 @@
 // Aula 28 – Nível 3: Funções para tocar música
 // tocar(nota, tempos) acende o LED junto com cada nota
+#include <Arduino.h>                                // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BUZZER 8                               // buzzer no pino 8
 #define PINO_LED 9                                  // LED no pino 9
 #define BATIDA 250                           // duração de um tempo (ms)

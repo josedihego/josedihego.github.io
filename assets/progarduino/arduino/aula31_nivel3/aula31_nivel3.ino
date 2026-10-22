@@ -1,5 +1,6 @@
 // Aula 31 – Nível 3: Memória livre
 // Mostra quanta RAM sobra; um vetor grande local consome memória enquanto a função roda
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 extern int __heap_start, *__brkval;            // símbolos do sistema AVR
 
 int memoria_livre() {                          // bytes livres entre o heap e a pilha

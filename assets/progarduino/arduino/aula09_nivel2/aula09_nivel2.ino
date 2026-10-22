@@ -1,5 +1,6 @@
 // Aula 9 – Nível 2: Dimmer com potenciômetro
 // O potenciômetro controla o brilho do LED
+#include <Arduino.h>                             // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 9                               // LED no pino 9
 
 void setup() {                                   // roda uma vez, quando a placa liga

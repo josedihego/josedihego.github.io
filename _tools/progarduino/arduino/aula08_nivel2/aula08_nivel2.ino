@@ -1,6 +1,7 @@
 // Aula 8 – Nível 2: Contador binário
 // pecas: led 2 vermelho; led 3 vermelho; led 4 vermelho; led 5 vermelho
 // Conta de 0 a 15 em binário, um número por segundo
+#include <Arduino.h>                                  // funções do Arduino (pinMode, digitalWrite, delay...)
 int numero = 0;                                       // contador
 
 void setup() {                                        // roda uma vez, quando a placa liga

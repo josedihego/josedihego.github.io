@@ -1,6 +1,7 @@
 // Aula 24 – Nível 1: Revisão: pisca com millis e potenciômetro
 // pecas: pot A0; led 8 vermelho
 // Revisão: período de 100 a 1000 ms escolhido no potenciômetro, sem delay
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                      // LED no pino 8
 unsigned long anterior = 0;             // instante da última troca
 bool aceso = false;                     // estado do LED

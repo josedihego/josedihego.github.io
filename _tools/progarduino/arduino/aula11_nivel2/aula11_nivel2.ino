@@ -1,6 +1,7 @@
 // Aula 11 – Nível 2: Simulado: botão e potenciômetro
 // pecas: botao 2; pot A0; led 9 azul
 // Simulado: com o botão apertado, o potenciômetro controla o brilho; solto, o LED apaga
+#include <Arduino.h>                             // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                             // botão no pino 2
 #define PINO_LED 9                               // LED no pino 9
 

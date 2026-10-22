@@ -1,6 +1,7 @@
 // Aula 5 – Nível 1: Ler um botão
 // pecas: botao 2
 // Botão no pino 2 com o resistor interno de pull-up: solto = 1, apertado = 0
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINO_BOTAO = 2;               // pino do botão
 
 void setup() {                          // roda uma vez, quando a placa liga

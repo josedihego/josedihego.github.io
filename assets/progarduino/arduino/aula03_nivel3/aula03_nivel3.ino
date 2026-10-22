@@ -1,5 +1,6 @@
 // Aula 3 – Nível 3: Lei de Ohm pelo Monitor Serial
 // Digite tensão e resistência (ex.: 12 470): a placa calcula corrente e potência
+#include <Arduino.h>                                  // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                        // roda uma vez, quando a placa liga
   Serial.begin(9600);                                 // abre o Monitor Serial a 9600 baud
   Serial.println("Digite: tensão(V) resistência(ohms)");   // envia o texto ao Monitor Serial e quebra a linha

@@ -1,5 +1,6 @@
 // Aula 29 – Nível 2: Função que acende a barra
 // acender_barra(nivel) usa o vetor de pinos
+#include <Arduino.h>                         // funções do Arduino (pinMode, digitalWrite, delay...)
 const int BARRA[] = {2, 3, 4, 5, 6};         // pinos da barra de LEDs
 const int N = 5;                             // quantidade de LEDs
 

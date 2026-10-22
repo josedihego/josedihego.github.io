@@ -1,6 +1,7 @@
 // Aula 23 – Nível 1: Simulado: N piscadas pelo potenciômetro
 // pecas: pot A0; botao 2; led 8 vermelho
 // Simulado: ao apertar o botão, pisca de 1 a 10 vezes conforme o potenciômetro
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                    // botão no pino 2
 #define PINO_LED 8                      // LED no pino 8
 

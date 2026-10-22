@@ -1,5 +1,6 @@
 // Aula 33 – Nível 3: Struct de estatísticas
 // Um struct acumula mínimo, máximo e média de uma série de leituras
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 struct Estatistica {                           // acumula uma série de leituras
   int minimo, maximo;                          // extremos
   long soma;                                   // declara soma (long)

@@ -1,5 +1,6 @@
 // Aula 22 – Nível 3: Bomba automática com histerese
 // LED azul = bomba. Liga abaixo de 30% e desliga acima de 90%; alarme abaixo de 10%
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                                 // TRIG do HC-SR04 no pino 9
 #define ECHO 10                                // ECHO do HC-SR04 no pino 10
 #define BOMBA 7                                // bomba (LED azul) no pino 7

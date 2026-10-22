@@ -1,6 +1,7 @@
 // Aula 35 – Nível 3: Simulado: comando e struct
 // pecas: led 8 vermelho
 // Simulado: comando "PERIODO n" muda o ritmo de um LED descrito por um struct
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 struct Led { int pino; unsigned long periodo; unsigned long ultimo; bool aceso; };   // um LED que pisca sozinho
 Led led = {8, 500, 0, false};           // pino 8, meio segundo
 

@@ -1,5 +1,6 @@
 // Aula 12 – Nível 3: Revisão: binário com PWM
 // Revisão: o potenciômetro escolhe 0 a 15, mostrado em binário nos LEDs
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                          // roda uma vez, quando a placa liga
   for (int pino = 2; pino <= 5; pino++) pinMode(pino, OUTPUT);   // pinos 2 a 5 como saída
 }

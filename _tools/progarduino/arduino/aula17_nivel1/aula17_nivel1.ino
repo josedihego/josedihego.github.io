@@ -1,6 +1,7 @@
 // Aula 17 – Nível 1: Dado no Monitor Serial
 // pecas: botao 2
 // Cada toque no botão joga um dado de 6 faces
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                           // botão no pino 2
 
 void setup() {                                 // roda uma vez, quando a placa liga

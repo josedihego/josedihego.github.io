@@ -1,5 +1,6 @@
 // Aula 30 – Nível 1: Endereços na memória do Arduino
 // Variáveis têm endereços; no Uno eles cabem em 2 KB de RAM
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 int tensao = 5;                               // variável comum
 int *p = &tensao;                             // p guarda o endereço de tensao
 

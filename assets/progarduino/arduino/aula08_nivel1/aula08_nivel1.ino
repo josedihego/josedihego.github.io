@@ -1,5 +1,6 @@
 // Aula 8 – Nível 1: Um número em 4 LEDs
 // Mostra o número 11 (1011 em binário) nos LEDs dos pinos 5 (bit 3) a 2 (bit 0)
+#include <Arduino.h>                            // funções do Arduino (pinMode, digitalWrite, delay...)
 int numero = 11;                                // troque por 0 a 15
 
 void setup() {                                  // roda uma vez, quando a placa liga

@@ -1,5 +1,6 @@
 // Aula 22 – Nível 2: Nível do tanque na barra de LEDs
 // Cada LED representa 20% do tanque
+#include <Arduino.h>                                   // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                                         // TRIG do HC-SR04 no pino 9
 #define ECHO 10                                        // ECHO do HC-SR04 no pino 10
 #define ALTURA 100.0                                   // constante ALTURA = 100.0

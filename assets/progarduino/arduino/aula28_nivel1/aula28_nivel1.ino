@@ -1,5 +1,6 @@
 // Aula 28 – Nível 1: Função piscar(pino, vezes)
 // Uma função com parâmetros evita repetir código
+#include <Arduino.h>                        // funções do Arduino (pinMode, digitalWrite, delay...)
 void piscar(int pino, int vezes) {          // dois parâmetros
   for (int i = 0; i < vezes; i++) {         // repete 'vezes' vezes
     digitalWrite(pino, HIGH); delay(200);   // acende/liga pino e espera 200 ms

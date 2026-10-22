@@ -1,5 +1,6 @@
 // Aula 8 – Nível 2: Contador binário
 // Conta de 0 a 15 em binário, um número por segundo
+#include <Arduino.h>                                  // funções do Arduino (pinMode, digitalWrite, delay...)
 int numero = 0;                                       // contador
 
 void setup() {                                        // roda uma vez, quando a placa liga

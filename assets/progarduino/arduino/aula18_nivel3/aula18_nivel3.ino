@@ -1,5 +1,6 @@
 // Aula 18 – Nível 3: Contagem regressiva na barra de LEDs
 // Barra cheia que vai esvaziando: um LED apaga a cada segundo
+#include <Arduino.h>                                        // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                              // roda uma vez, quando a placa liga
   for (int pino = 2; pino <= 6; pino++) pinMode(pino, OUTPUT);   // pinos 2 a 6 como saída
 }

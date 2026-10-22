@@ -1,5 +1,6 @@
 // Aula 1 – Nível 1: Pisca o LED da placa
 // O LED da própria placa (pino 13) acende e apaga a cada meio segundo
+#include <Arduino.h>                  // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                        // setup roda uma vez, quando a placa liga
   pinMode(LED_BUILTIN, OUTPUT);       // o pino do LED interno vira saída
 }

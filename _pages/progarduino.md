@@ -17,7 +17,7 @@ Plano de Aula da disciplina Programação aplicada com C e Arduino (Automação 
   <ol>
     <li>Extraia <code>{{ site.data.progarduino_kit.arquivo }}</code> na sua <strong>pasta pessoal</strong> (botão direito → <em>Extrair aqui</em>). Não rode direto do pendrive.</li>
     <li>Abra a pasta <code>kit-c-arduino</code> e execute <code>abrir-vscode.sh</code> (ou, no terminal, <code>./abrir-vscode.sh</code>). Opcional: <code>./criar-atalho.sh</code> cria um atalho no menu.</li>
-    <li>Arquivos <code>.c</code>: clique em ▶ ou F5 para compilar e rodar. Arquivos <code>.ino</code>: ▶ compila e, com a placa conectada pelo USB, envia e abre o Monitor Serial.</li>
+    <li>Arquivos <code>.c</code>: clique em ▶ ou F5 para compilar e rodar. Arquivos <code>.ino</code>: ▶ compila e, com a placa conectada pelo USB, envia e abre o Monitor Serial. Comece seus sketches com <code>#include &lt;Arduino.h&gt;</code> para o editor reconhecer as funções do Arduino.</li>
   </ol>
   <p class="files-hint">Enviar para a placa exige permissão na porta serial; se aparecer "Sem permissão", o técnico do laboratório roda uma vez <code>sudo usermod -aG dialout NOME_DO_USUARIO</code>. Testado em Ubuntu 24.04, Debian 12 e Fedora 40.</p>
 </div>

@@ -1,5 +1,6 @@
 // Aula 7 – Nível 3: Comandos por letra com switch
 // No Monitor Serial: L liga, D desliga, P pisca 3 vezes
+#include <Arduino.h>                            // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINO_LED = 8;                         // pino do LED (com resistor de 220 ohms)
 
 void setup() {                                  // roda uma vez, quando a placa liga

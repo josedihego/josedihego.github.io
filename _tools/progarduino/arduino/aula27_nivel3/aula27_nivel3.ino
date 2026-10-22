@@ -1,6 +1,7 @@
 // Aula 27 – Nível 3: Comando com parâmetro
 // pecas: led 8 vermelho; buzzer 7
 // PISCA 5, BIP 880, BRILHO? -> separa o comando do número
+#include <Arduino.h>                                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                                      // LED no pino 8
 #define PINO_BUZZER 7                                   // buzzer no pino 7
 

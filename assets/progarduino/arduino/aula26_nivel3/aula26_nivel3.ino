@@ -1,5 +1,6 @@
 // Aula 26 – Nível 3: Mediana × média
 // Compara média e mediana no Plotter Serial: a mediana ignora picos
+#include <Arduino.h>                                  // funções do Arduino (pinMode, digitalWrite, delay...)
 const int N = 7;                                      // leituras por bloco (ímpar: tem um elemento do meio)
 int v[N];                                             // declara v[N] (int)
 

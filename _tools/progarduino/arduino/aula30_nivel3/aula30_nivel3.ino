@@ -1,6 +1,7 @@
 // Aula 30 – Nível 3: Trocar o estado de dois LEDs
 // pecas: botao 2; led 8 vermelho; led 9 verde
 // Cada toque troca os estados dos LEDs usando uma função com ponteiros
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                    // botão no pino 2
 bool vermelho = true, verde = false;    // estado de cada LED
 

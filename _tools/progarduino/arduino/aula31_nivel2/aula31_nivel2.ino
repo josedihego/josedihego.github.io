@@ -1,6 +1,7 @@
 // Aula 31 – Nível 2: Percorrer um vetor com ponteiro
 // pecas: 
 // O ponteiro avança de elemento em elemento
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 int leituras[] = {512, 498, 530, 505};         // vetor de exemplo
 
 void setup() {                                 // roda uma vez, quando a placa liga

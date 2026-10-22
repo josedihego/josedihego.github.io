@@ -1,6 +1,7 @@
 // Aula 19 – Nível 1: Piscar sem delay
 // pecas: led 8 vermelho
 // millis() no lugar de delay(): o loop nunca fica parado
+#include <Arduino.h>                 // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                   // LED no pino 8
 unsigned long anterior = 0;          // última troca
 bool aceso = false;                  // estado do LED

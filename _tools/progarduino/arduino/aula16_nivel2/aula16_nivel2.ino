@@ -1,6 +1,7 @@
 // Aula 16 – Nível 2: Contar toques sem repique
 // pecas: botao 2
 // Debounce: só aceita um novo toque 50 ms depois do anterior
+#include <Arduino.h>                              // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                              // botão no pino 2
 int toques = 0;                                   // contador de toques
 int anterior = HIGH;                              // estado na volta anterior (começa solto)

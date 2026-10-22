@@ -1,6 +1,7 @@
 // Aula 22 – Nível 1: Nível do tanque em %
 // pecas: ultrassom 9 10
 // Sensor no alto de um tanque de 100 cm: quanto mais perto a água, mais cheio
+#include <Arduino.h>                                  // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                                        // TRIG do HC-SR04 no pino 9
 #define ECHO 10                                       // ECHO do HC-SR04 no pino 10
 #define ALTURA 100.0                                  // altura do tanque em cm

@@ -1,5 +1,6 @@
 // Aula 33 – Nível 1: Um struct para um LED
 // O struct junta tudo o que descreve um LED que pisca sozinho
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 struct Led {                                   // tudo o que descreve um LED que pisca sozinho
   int pino;                                    // declara pino (int)
   unsigned long periodo;                       // declara periodo (unsigned long)

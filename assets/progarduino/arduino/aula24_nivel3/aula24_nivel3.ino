@@ -1,5 +1,6 @@
 // Aula 24 – Nível 3: Revisão: servo pelo ultrassom
 // Revisão: 5 a 50 cm de distância viram 0 a 180° no servo
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #include <Servo.h>
 #define TRIG 9                          // TRIG do HC-SR04 no pino 9
 #define ECHO 10                         // ECHO do HC-SR04 no pino 10

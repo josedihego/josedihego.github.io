@@ -1,5 +1,6 @@
 // Aula 20 – Nível 1: Distância com o HC-SR04
 // Mede a distância com o sensor ultrassônico (TRIG no 9, ECHO no 10)
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                                 // TRIG do HC-SR04 no pino 9
 #define ECHO 10                                // ECHO do HC-SR04 no pino 10
 

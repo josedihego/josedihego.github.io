@@ -1,6 +1,7 @@
 // Aula 12 – Nível 2: Revisão: liga e desliga com um toque
 // pecas: botao 2; led 8 vermelho
 // Revisão: cada toque no botão inverte o LED (com espera para o botão ser solto)
+#include <Arduino.h>                             // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                             // botão no pino 2
 #define PINO_LED 8                               // LED no pino 8
 bool aceso = false;                              // estado do LED

@@ -1,5 +1,6 @@
 // Aula 16 – Nível 1: Contar toques
 // Conta quantas vezes o botão foi apertado (detecta a mudança de solto para apertado)
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                          // botão no pino 2
 int toques = 0;                               // contador de toques
 int anterior = HIGH;                          // estado na volta anterior do loop

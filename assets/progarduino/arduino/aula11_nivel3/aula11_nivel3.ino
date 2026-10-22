@@ -1,5 +1,6 @@
 // Aula 11 – Nível 3: Simulado: semáforo de nível
 // Simulado: nível de 0 a 100% no Serial e no semáforo (até 50 verde, até 80 amarelo, acima vermelho)
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define VERDE 8                         // LED verde no pino 8
 #define AMARELO 9                       // LED amarelo no pino 9
 #define VERMELHO 10                     // LED vermelho no pino 10

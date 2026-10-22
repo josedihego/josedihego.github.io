@@ -1,6 +1,7 @@
 // Aula 3 – Nível 2: Piscar N vezes
 // pecas: led 8 verde
 // Digite quantas vezes o LED do pino 8 deve piscar
+#include <Arduino.h>                          // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINO_LED = 8;                       // pino do LED (com resistor de 220 ohms)
 
 void setup() {                                // roda uma vez, quando a placa liga

@@ -1,6 +1,7 @@
 // Aula 22 – Nível 2: Nível do tanque na barra de LEDs
 // pecas: ultrassom 9 10; led 2 vermelho; led 3 amarelo; led 4 amarelo; led 5 verde; led 6 verde
 // Cada LED representa 20% do tanque
+#include <Arduino.h>                                   // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                                         // TRIG do HC-SR04 no pino 9
 #define ECHO 10                                        // ECHO do HC-SR04 no pino 10
 #define ALTURA 100.0                                   // constante ALTURA = 100.0

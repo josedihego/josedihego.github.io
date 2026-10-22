@@ -1,5 +1,6 @@
 // Aula 7 – Nível 1: Três faixas, três LEDs
 // Potenciômetro baixo = verde, médio = amarelo, alto = vermelho
+#include <Arduino.h>                        // funções do Arduino (pinMode, digitalWrite, delay...)
 const int VERDE = 8, AMARELO = 9, VERMELHO = 10;   // pinos dos 3 LEDs
 
 void setup() {                              // roda uma vez, quando a placa liga

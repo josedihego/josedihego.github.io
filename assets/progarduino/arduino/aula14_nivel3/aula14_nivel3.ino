@@ -1,5 +1,6 @@
 // Aula 14 – Nível 3: Mínimo, máximo e média de 50 leituras
 // A cada 50 leituras mostra o mínimo, o máximo e a média
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                          // roda uma vez, quando a placa liga
   Serial.begin(9600);                   // abre o Monitor Serial a 9600 baud
 }

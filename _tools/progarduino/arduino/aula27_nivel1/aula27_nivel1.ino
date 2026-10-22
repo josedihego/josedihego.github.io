@@ -1,6 +1,7 @@
 // Aula 27 – Nível 1: Ler uma linha do Monitor Serial
 // pecas: 
 // Lê uma linha inteira (até o Enter) e responde
+#include <Arduino.h>                                // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                      // roda uma vez, quando a placa liga
   Serial.begin(9600);                               // abre o Monitor Serial a 9600 baud
   Serial.println("Escreva seu nome:");              // envia o texto ao Monitor Serial e quebra a linha

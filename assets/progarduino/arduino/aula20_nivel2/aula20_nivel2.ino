@@ -1,5 +1,6 @@
 // Aula 20 – Nível 2: Alarme de aproximação
 // Acende o LED quando algo chega a menos de 20 cm
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                          // TRIG do HC-SR04 no pino 9
 #define ECHO 10                         // ECHO do HC-SR04 no pino 10
 #define PINO_LED 8                      // LED no pino 8

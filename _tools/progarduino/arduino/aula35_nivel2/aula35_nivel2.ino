@@ -1,6 +1,7 @@
 // Aula 35 – Nível 2: Simulado: função de média com mediana
 // pecas: ldr A0
 // Simulado: função que devolve a média das 5 leituras sem a maior e a menor
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 int media_aparada(int v[], int n) {     // média sem o maior e o menor
   int mn = v[0], mx = v[0];             // extremos começam no primeiro elemento
   long soma = 0;                        // long: a soma de muitas leituras passa de 32767

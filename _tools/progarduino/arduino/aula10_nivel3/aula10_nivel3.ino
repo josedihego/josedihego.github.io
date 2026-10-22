@@ -1,6 +1,7 @@
 // Aula 10 – Nível 3: Termômetro simulado com alarme
 // pecas: pot A0; led 8 verde; led 9 amarelo; led 10 vermelho; buzzer 7
 // O potenciômetro simula um sensor de 0 a 100 °C: verde, amarelo ou vermelho com alarme
+#include <Arduino.h>                                      // funções do Arduino (pinMode, digitalWrite, delay...)
 #define VERDE 8                                           // LED verde no pino 8
 #define AMARELO 9                                         // LED amarelo no pino 9
 #define VERMELHO 10                                       // LED vermelho no pino 10

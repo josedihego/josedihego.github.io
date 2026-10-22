@@ -1,6 +1,7 @@
 // Aula 23 – Nível 3: Simulado: distância em 3 faixas
 // pecas: ultrassom 9 10; led 4 verde; led 5 amarelo; led 6 vermelho
 // Simulado: verde acima de 50 cm, amarelo de 20 a 50, vermelho abaixo de 20
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define TRIG 9                          // TRIG do HC-SR04 no pino 9
 #define ECHO 10                         // ECHO do HC-SR04 no pino 10
 

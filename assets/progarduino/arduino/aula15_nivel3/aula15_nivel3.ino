@@ -1,5 +1,6 @@
 // Aula 15 – Nível 3: Quanto tempo o botão ficou apertado?
 // Mede em milissegundos quanto tempo o botão ficou apertado
+#include <Arduino.h>                                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                                    // botão no pino 2
 
 void setup() {                                          // roda uma vez, quando a placa liga

@@ -1,5 +1,6 @@
 // Aula 34 – Nível 3: Estação com comandos e struct
 // Comandos: LIMITE n (temperatura de alarme), INTERVALO ms, STATUS
+#include <Arduino.h>                            // funções do Arduino (pinMode, digitalWrite, delay...)
 #define LED_QUENTE 9                            // LED de alarme de calor no pino 9
 #define PINO_BUZZER 7                           // buzzer no pino 7
 

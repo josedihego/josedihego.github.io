@@ -1,5 +1,6 @@
 // Aula 34 – Nível 1: Estação: leituras em CSV
 // Uma linha CSV por segundo: tempo, luz, temperatura simulada (cole no Google Planilhas)
+#include <Arduino.h>                               // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                     // roda uma vez, quando a placa liga
   Serial.begin(9600);                              // abre o Monitor Serial a 9600 baud
   Serial.println("segundos,luz,temperatura");      // cabeçalho

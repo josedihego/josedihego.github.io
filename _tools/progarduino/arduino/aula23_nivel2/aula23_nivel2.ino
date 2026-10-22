@@ -1,6 +1,7 @@
 // Aula 23 – Nível 2: Simulado: média de 20 leituras do LDR
 // pecas: ldr A0
 // Simulado: média de 20 leituras a cada segundo
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                          // roda uma vez, quando a placa liga
   Serial.begin(9600);                   // abre o Monitor Serial a 9600 baud
 }

@@ -1,5 +1,6 @@
 // Aula 5 – Nível 3: Portas OU e OU exclusivo
 // LED vermelho = A OU B; LED verde = A XOR B (um ou outro, não os dois)
+#include <Arduino.h>                              // funções do Arduino (pinMode, digitalWrite, delay...)
 const int BOTAO_A = 2, BOTAO_B = 3, LED_OU = 8, LED_XOR = 9;   // pinos dos botões e dos LEDs
 
 void setup() {                                    // roda uma vez, quando a placa liga

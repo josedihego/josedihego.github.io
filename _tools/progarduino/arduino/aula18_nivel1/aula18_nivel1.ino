@@ -1,6 +1,7 @@
 // Aula 18 – Nível 1: Padrão com laços aninhados
 // pecas: led 8 vermelho
 // 3 séries de 2 piscadas rápidas, separadas por uma pausa
+#include <Arduino.h>                               // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_LED 8                                 // LED no pino 8
 
 void setup() {                                     // roda uma vez, quando a placa liga

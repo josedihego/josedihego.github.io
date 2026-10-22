@@ -15,7 +15,8 @@ No VS Code:
 - Programas em C (.c): clique no ▶ no canto superior direito (ou F5). O programa compila e roda no terminal.
 - Sketches Arduino (.ino): o ▶ compila; com a placa conectada, também envia e abre o monitor serial.
   Também em Terminal → Executar Tarefa: "Arduino: compilar", "Arduino: enviar para a placa", "Arduino: monitor serial".
-- A pasta exemplos/ tem todos os códigos das aulas.
+- A pasta exemplos/ tem todos os códigos das aulas (aulaNN/c e aulaNN/arduino).
+- Comece seus sketches com #include <Arduino.h>: assim o editor reconhece as funções do Arduino.
 
 Enviar para a placa exige permissão na porta serial. Se aparecer "Sem permissão", o técnico do laboratório
 precisa rodar uma vez: sudo usermod -aG dialout NOME_DO_USUARIO

@@ -1,5 +1,6 @@
 // Aula 24 – Nível 2: Revisão: contador de toques com limite
 // Revisão: depois de 5 toques o LED acende e a contagem recomeça
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                    // botão no pino 2
 #define PINO_LED 8                      // LED no pino 8
 int toques = 0;                         // contador de toques

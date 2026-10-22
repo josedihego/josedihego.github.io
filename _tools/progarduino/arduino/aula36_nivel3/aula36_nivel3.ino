@@ -1,6 +1,7 @@
 // Aula 36 – Nível 3: Revisão: registro CSV com média móvel
 // pecas: ldr A0
 // Revisão: CSV com leitura bruta e média das últimas 5 (vetor circular)
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 int janela[5] = {0, 0, 0, 0, 0};        // as 5 últimas leituras
 int pos = 0;                            // onde entra a próxima
 

@@ -1,5 +1,6 @@
 // Aula 13 – Nível 3: Vai e volta (efeito scanner)
 // A luz vai e volta; o potenciômetro controla a velocidade
+#include <Arduino.h>                                     // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                           // roda uma vez, quando a placa liga
   for (int pino = 2; pino <= 6; pino++) pinMode(pino, OUTPUT);   // pinos 2 a 6 como saída
 }

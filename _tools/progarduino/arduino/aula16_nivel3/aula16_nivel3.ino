@@ -1,6 +1,7 @@
 // Aula 16 – Nível 3: Contador em binário com reset
 // pecas: botao 2; led 4 vermelho; led 5 vermelho; led 6 vermelho; led 7 vermelho
 // Cada toque soma 1 (0 a 15 em binário nos LEDs); segurar 1 s zera
+#include <Arduino.h>                               // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BOTAO 2                               // botão no pino 2
 int contagem = 0;                                  // valor mostrado em binário
 

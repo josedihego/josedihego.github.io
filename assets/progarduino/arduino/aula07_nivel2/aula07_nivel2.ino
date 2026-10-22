@@ -1,5 +1,6 @@
 // Aula 7 – Nível 2: Barra de 5 LEDs
 // Quanto maior a leitura, mais LEDs acesos (gráfico de barras)
+#include <Arduino.h>                                // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                      // roda uma vez, quando a placa liga
   for (int pino = 2; pino <= 6; pino++) pinMode(pino, OUTPUT);   // pinos 2 a 6 como saída
 }

@@ -1,5 +1,6 @@
 // Aula 32 – Nível 1: Melodia numa matriz
 // Cada linha da matriz é {nota, duração}
+#include <Arduino.h>                                       // funções do Arduino (pinMode, digitalWrite, delay...)
 #define PINO_BUZZER 8                                      // buzzer no pino 8
 const int MUSICA[][2] = {{262, 250}, {262, 250}, {294, 500}, {262, 500}, {349, 500}, {330, 1000}};   // cada linha: {nota em Hz, duração em ms}
 const int N = sizeof(MUSICA) / sizeof(MUSICA[0]);          // quantidade de linhas

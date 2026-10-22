@@ -1,6 +1,7 @@
 // Aula 4 – Nível 1: Ler o potenciômetro
 // pecas: pot A0
 // Mostra a leitura analógica (0 a 1023) do potenciômetro no pino A0
+#include <Arduino.h>                  // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                        // roda uma vez, quando a placa liga
   Serial.begin(9600);                 // abre o Monitor Serial a 9600 baud
 }

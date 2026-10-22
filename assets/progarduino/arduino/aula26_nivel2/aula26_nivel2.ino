@@ -1,5 +1,6 @@
 // Aula 26 – Nível 2: Filtro de mediana
 // Ordena 5 leituras e pega a do meio: elimina picos de ruído
+#include <Arduino.h>                                  // funções do Arduino (pinMode, digitalWrite, delay...)
 int v[5];                                             // declara v[5] (int)
 
 void setup() {                                        // roda uma vez, quando a placa liga

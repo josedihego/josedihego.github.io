@@ -1,5 +1,6 @@
 // Aula 6 – Nível 1: Botão acende o LED
 // Enquanto o botão estiver apertado o LED fica aceso
+#include <Arduino.h>                      // funções do Arduino (pinMode, digitalWrite, delay...)
 const int PINO_BOTAO = 2, PINO_LED = 8;   // pinos do botão e do LED
 
 void setup() {                            // roda uma vez, quando a placa liga

@@ -1,6 +1,7 @@
 // Aula 33 – Nível 2: Vetor de structs: vários LEDs
 // pecas: led 8 vermelho; led 9 amarelo; led 10 verde
 // Cada LED pisca no seu ritmo; uma função atualiza qualquer LED
+#include <Arduino.h>                           // funções do Arduino (pinMode, digitalWrite, delay...)
 struct Led {                                   // tudo o que descreve um LED que pisca sozinho
   int pino;                                    // declara pino (int)
   unsigned long periodo;                       // declara periodo (unsigned long)

@@ -1,5 +1,6 @@
 // Aula 26 – Nível 1: Maior de 10 leituras
 // A cada segundo: 10 leituras guardadas num vetor e a maior delas
+#include <Arduino.h>                    // funções do Arduino (pinMode, digitalWrite, delay...)
 int v[10];                              // declara v[10] (int)
 
 void setup() {                          // roda uma vez, quando a placa liga

@@ -1,6 +1,7 @@
 // Aula 32 – Nível 2: Padrões de LEDs numa matriz
 // pecas: led 2 vermelho; led 3 vermelho; led 4 vermelho; led 5 vermelho
 // Cada linha é um quadro da animação: 1 = aceso
+#include <Arduino.h>                              // funções do Arduino (pinMode, digitalWrite, delay...)
 const byte QUADROS[][4] = {                       // byte ocupa 1 byte: economiza a RAM do Uno
   {1, 0, 0, 1},                                   // quadro 1: pontas
   {0, 1, 1, 0},                                   // quadro 2: meio

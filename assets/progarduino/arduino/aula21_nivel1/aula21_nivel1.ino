@@ -1,5 +1,6 @@
 // Aula 21 – Nível 1: Luz em porcentagem
 // map + constrain: converte a leitura do LDR em 0 a 100% de escuridão
+#include <Arduino.h>                             // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                   // roda uma vez, quando a placa liga
   Serial.begin(9600);                            // abre o Monitor Serial a 9600 baud
 }

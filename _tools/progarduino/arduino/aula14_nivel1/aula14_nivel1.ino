@@ -1,6 +1,7 @@
 // Aula 14 – Nível 1: Média de 10 leituras
 // pecas: pot A0
 // Soma 10 leituras e mostra a média: o valor fica mais estável
+#include <Arduino.h>                            // funções do Arduino (pinMode, digitalWrite, delay...)
 void setup() {                                  // roda uma vez, quando a placa liga
   Serial.begin(9600);                           // abre o Monitor Serial a 9600 baud
 }

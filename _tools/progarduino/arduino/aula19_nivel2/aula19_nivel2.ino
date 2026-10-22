@@ -1,6 +1,7 @@
 // Aula 19 – Nível 2: Dois LEDs, dois ritmos
 // pecas: led 8 vermelho; led 9 verde
 // Vermelho troca a cada 300 ms e verde a cada 1100 ms, ao mesmo tempo
+#include <Arduino.h>                   // funções do Arduino (pinMode, digitalWrite, delay...)
 #define LED_A 8                        // primeiro LED no pino 8
 #define LED_B 9                        // segundo LED no pino 9
 unsigned long ultimoA = 0, ultimoB = 0;   // última troca de cada LED
