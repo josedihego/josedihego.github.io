@@ -1,0 +1,9 @@
+# Apps on Google Play, shown on the home page (newest first).
+# icon: 192 x 192 PNG in assets/images/apps/.
+- name: Gennaro
+  description: >-
+    Free picture communication (AAC) app for children who communicate with
+    pictures. No ads, works offline, and the family owns its data.
+    Portuguese and English.
+  icon: /assets/images/apps/gennaro.png
+  url: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=pt_BR

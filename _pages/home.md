@@ -14,27 +14,19 @@ classes: home-page
   <li>Mobile Development</li>
 </ul>
 
-<div class="card-grid">
-  <a class="card" href="/courses/">
-    <i class="fas fa-book" aria-hidden="true"></i>
-    <strong>Courses</strong>
-    <span>Slides, code and exercises for my classes</span>
+## Apps on Google Play
+
+<div class="app-list">
+{% for app in site.data.apps %}
+  <a class="app-card" href="{{ app.url }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ app.icon | relative_url }}" alt="" width="64" height="64">
+    <div>
+      <strong>{{ app.name }}</strong>
+      <span>{{ app.description }}</span>
+      <span class="app-store"><i class="fab fa-google-play" aria-hidden="true"></i> Google Play</span>
+    </div>
   </a>
-  <a class="card" href="/tccs/">
-    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-    <strong>Supervision</strong>
-    <span>Theses and projects I have supervised</span>
-  </a>
-  <a class="card" href="/schedule/">
-    <i class="fas fa-calendar-days" aria-hidden="true"></i>
-    <strong>Schedule</strong>
-    <span>Office hours, rooms and academic calendars</span>
-  </a>
-  <a class="card" href="https://bitbrabo.josedihego.net/">
-    <i class="fas fa-laptop-code" aria-hidden="true"></i>
-    <strong>BitBrabo</strong>
-    <span>Programming contest judge (DOMjudge)</span>
-  </a>
+{% endfor %}
 </div>
 
 ## Selected publications
