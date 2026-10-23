@@ -1,0 +1,74 @@
+{% comment %}
+  Home page body, shared by the English (/) and Portuguese (/pt/) versions.
+  Usage: {% include home-content.html lang="en" %} or lang="pt".
+{% endcomment %}
+{% assign pt = false %}{% if include.lang == "pt" %}{% assign pt = true %}{% endif %}
+
+{% if pt %}
+<p class="home-intro">Professor Titular do Instituto Federal da Bahia (<a href="https://portal.ifba.edu.br/">IFBA</a>), Campus Salvador, desde 2010. Doutor em Ciência da Computação pelo <a href="https://www.cin.ufpe.br">CIn-UFPE</a>.</p>
+
+<ul class="chips" aria-label="Interesses">
+  <li>Métodos Formais</li>
+  <li>Linguagens de Programação</li>
+  <li>Desenvolvimento Mobile</li>
+</ul>
+{% else %}
+<p class="home-intro">Full Professor at the Federal Institute of Bahia (<a href="https://portal.ifba.edu.br/">IFBA</a>), Campus Salvador, since 2010. PhD in Computer Science from <a href="https://www.cin.ufpe.br">CIn-UFPE</a>.</p>
+
+<ul class="chips" aria-label="Interests">
+  <li>Formal Methods</li>
+  <li>Programming Languages</li>
+  <li>Mobile Development</li>
+</ul>
+{% endif %}
+
+<h2>{% if pt %}Apps no Google Play{% else %}Apps on Google Play{% endif %}</h2>
+
+<div class="app-list">
+{% for app in site.data.apps %}
+  <a class="app-card" href="{{ app.url }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ app.icon | relative_url }}" alt="" width="64" height="64">
+    <div>
+      <strong>{{ app.name }}</strong>
+      <span>{% if pt and app.description_pt %}{{ app.description_pt }}{% else %}{{ app.description }}{% endif %}</span>
+      <span class="app-store"><i class="fab fa-google-play" aria-hidden="true"></i> Google Play</span>
+    </div>
+  </a>
+{% endfor %}
+</div>
+
+<h2>{% if pt %}Publicações selecionadas{% else %}Selected publications{% endif %}</h2>
+
+<ul class="pub-list">
+{% assign pubs = site.data.publications | sort: "year" | reverse %}
+{% for p in pubs %}
+  <li>
+    <span class="pub-year">{{ p.year }}</span>
+    <div>
+      <a class="pub-title" href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>
+      <span class="pub-authors">{{ p.authors }}</span>
+    </div>
+  </li>
+{% endfor %}
+</ul>
+
+{% if pt %}{% assign repo = "Repositório" %}{% else %}{% assign repo = "Repository" %}{% endif %}
+<h2>{% if pt %}Formação{% else %}Education{% endif %}</h2>
+
+<ul class="edu-list">
+  <li><strong>{% if pt %}Doutorado em Ciência da Computação{% else %}PhD in Computer Science{% endif %}</strong>, UFPE, 2016
+    <a class="tag" href="https://drive.google.com/file/d/1o2ebNJ8OmKo23rNcTv-97Jzzs-rEPqhE/view?usp=drive_link">PDF</a>
+    <a class="tag" href="https://www.repositorio.ufpe.br/handle/123456789/19522">{{ repo }}</a></li>
+  <li><strong>{% if pt %}Mestrado em Ciência da Computação{% else %}MSc in Computer Science{% endif %}</strong>, UFPE, 2010
+    <a class="tag" href="https://drive.google.com/file/d/1EOZVxCfB_jia1Dx-MPKoAqs8_z4HtRxN/view?usp=drive_link">PDF</a>
+    <a class="tag" href="https://www.repositorio.ufpe.br/handle/123456789/2660">{{ repo }}</a></li>
+  <li><strong>{% if pt %}Graduação em Ciência da Computação{% else %}BSc in Computer Science{% endif %}</strong>, UFPE, 2008
+    <a class="tag" href="https://drive.google.com/file/d/1MFuxt_-J5zLWGaxqcb2p9GfOUZSzICLa/view?usp=drive_link">PDF</a>
+    <a class="tag" href="https://www.cin.ufpe.br/~tg/2008-2/">{{ repo }}</a></li>
+</ul>
+
+<h2>{% if pt %}Endereço profissional{% else %}Professional address{% endif %}</h2>
+
+<p>{% if pt %}Instituto Federal de Educação, Ciência e Tecnologia da Bahia (IFBA){% else %}Federal Institute of Education, Science and Technology of Bahia (IFBA){% endif %}<br>
+R. Emídio dos Santos, s/n – Barbalho, Salvador – BA, 40301-015<br>
+<a class="tag" href="https://www.google.com/maps/search/?api=1&query=IFBA+Campus+Salvador"><i class="fas fa-location-dot" aria-hidden="true"></i> {% if pt %}Abrir no Google Maps{% else %}Open in Google Maps{% endif %}</a></p>

@@ -3,6 +3,14 @@
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 <meta name="theme-color" content="#1d4ed8">
 
+{% if page.translation %}
+<!-- This page exists in Portuguese and English: alternates for search engines; footer/custom.html builds the PT | EN switch from them -->
+{% assign here_lang = page.locale | default: site.locale | slice: 0, 2 %}
+{% if here_lang == "pt" %}{% assign other_lang = "en" %}{% else %}{% assign other_lang = "pt" %}{% endif %}
+<link rel="alternate" hreflang="{{ here_lang }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ other_lang }}" href="{{ page.translation | absolute_url }}">
+{% endif %}
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">

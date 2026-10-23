@@ -1,5 +1,6 @@
 # Site settings
 title: Prof. José Dihego
+locale: "en-US"
 subtitle: 真実は勝つ
 email: josedihego@gmail.com
 url: "https://josedihego.net"
@@ -151,13 +152,16 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
+  # _pages: Portuguese by default (menu, sidebar bio and theme texts follow `locale`).
+  # English pages set `locale: en-US` and `author: en`; pages with both versions set `translation:`.
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
+      locale: "pt-BR"
+      author: pt
 
 category_archive:
   type: liquid

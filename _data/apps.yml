@@ -5,5 +5,9 @@
     Free picture communication (AAC) app for children who communicate with
     pictures. No ads, works offline, and the family owns its data.
     Portuguese and English.
+  description_pt: >-
+    App gratuito de comunicação por figuras (CAA) para crianças que se comunicam
+    com imagens. Sem anúncios, funciona offline e os dados ficam com a família.
+    Em português e inglês.
   icon: /assets/images/apps/gennaro.png
   url: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=pt_BR

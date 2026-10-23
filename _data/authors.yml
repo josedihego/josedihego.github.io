@@ -1,0 +1,28 @@
+# Sidebar profile per language (pages pick one with `author:`; see defaults in _config.yml)
+en:
+  name: "José Dihego"
+  avatar: "/assets/images/bio-photo.jpg"
+  home: "/"
+  bio: "Full Professor (Professor Titular <img src='/assets/images/br-flag.svg' alt='Brazilian flag' style='width:20px;height:14px;vertical-align:middle;border-radius:2px;'/>) at <a href='https://portal.ifba.edu.br/'>IFBA</a>.<br>Graduated (2008), Master (2010) and Doctorate (2016) in Computer Science, all three at <a href='https://www.cin.ufpe.br'>CIn-UFPE</a>"
+  links:
+    - { label: "Email", icon: "fas fa-fw fa-envelope", url: "mailto:josedihego@gmail.com" }
+    - { label: "Google Classroom", icon: "fas fa-fw fa-link", url: "https://classroom.google.com/u/1/" }
+    - { label: "LinkedIn", icon: "fab fa-fw fa-linkedin", url: "https://www.linkedin.com/in/josedihego" }
+    - { label: "GitHub", icon: "fab fa-fw fa-github", url: "https://github.com/josedihego" }
+    - { label: "Lattes CV", icon: "fas fa-fw fa-link", url: "https://lattes.cnpq.br/1085956076115293" }
+    - { label: "ORCID", icon: "fab fa-fw fa-orcid", url: "https://orcid.org/0000-0002-1320-5262" }
+    - { label: "Google Scholar", icon: "fas fa-fw fa-graduation-cap", url: "https://scholar.google.com/citations?user=eJbmo3kAAAAJ&hl=en" }
+
+pt:
+  name: "José Dihego"
+  avatar: "/assets/images/bio-photo.jpg"
+  home: "/pt/"
+  bio: "Professor Titular <img src='/assets/images/br-flag.svg' alt='Bandeira do Brasil' style='width:20px;height:14px;vertical-align:middle;border-radius:2px;'/> do <a href='https://portal.ifba.edu.br/'>IFBA</a>.<br>Graduação (2008), Mestrado (2010) e Doutorado (2016) em Ciência da Computação, os três no <a href='https://www.cin.ufpe.br'>CIn-UFPE</a>"
+  links:
+    - { label: "E-mail", icon: "fas fa-fw fa-envelope", url: "mailto:josedihego@gmail.com" }
+    - { label: "Google Classroom", icon: "fas fa-fw fa-link", url: "https://classroom.google.com/u/1/" }
+    - { label: "LinkedIn", icon: "fab fa-fw fa-linkedin", url: "https://www.linkedin.com/in/josedihego" }
+    - { label: "GitHub", icon: "fab fa-fw fa-github", url: "https://github.com/josedihego" }
+    - { label: "Currículo Lattes", icon: "fas fa-fw fa-link", url: "https://lattes.cnpq.br/1085956076115293" }
+    - { label: "ORCID", icon: "fab fa-fw fa-orcid", url: "https://orcid.org/0000-0002-1320-5262" }
+    - { label: "Google Acadêmico", icon: "fas fa-fw fa-graduation-cap", url: "https://scholar.google.com/citations?user=eJbmo3kAAAAJ&hl=pt-BR" }

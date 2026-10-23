@@ -1,3 +1,4 @@
+# Top menu: `main` on English pages, `main_pt` on Portuguese pages (see _includes/masthead.html)
 main:
   - title: "<i class='fas fa-book' aria-hidden='true'></i> Courses"
     url: /courses/
@@ -15,3 +16,17 @@ main:
   #  url: /news/
   - title: "About"
     url: /about/
+
+main_pt:
+  - title: "<i class='fas fa-book' aria-hidden='true'></i> Cursos"
+    url: /courses/
+  - title: "<i class='fas fa-graduation-cap' aria-hidden='true'></i> Orientações"
+    url: /tccs/
+  - title: "<i class='fas fa-calendar-days' aria-hidden='true'></i> Atendimento"
+    url: /schedule/
+  - title: "<i class='fas fa-laptop-code' aria-hidden='true'></i> BitBrabo"
+    url: https://bitbrabo.josedihego.net/
+  - title: "<i class='fas fa-microchip' aria-hidden='true'></i> Arduino"
+    url: /arduino/
+  - title: "Sobre"
+    url: /pt/sobre/
