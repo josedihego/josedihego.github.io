@@ -147,7 +147,7 @@ def quadro_teoria(q, pdf_cormen, tmp):
                 f"\\end{{column}}\\begin{{column}}{{{0.96 - lt:.2f}\\textwidth}}", '\n'.join(visual), '\\end{column}\\end{columns}']
     else:
         if texto:
-            out.append('\\small ' + texto)
+            out.append(('\\footnotesize ' if len(texto) > 900 else '\\small ') + texto)
         out += visual
     if q.get('rodape'):
         out.append(f"\\vfill\\begin{{destaque}}{q['rodape']}\\end{{destaque}}")
@@ -259,11 +259,13 @@ def rodar_experimento(arquivo, tmp):
 
 
 def ajustar(dados, col, expr, x='n'):
-    """Least-squares constant c for col ≈ c·f(n). Returns c and the largest relative deviation over the upper half of n."""
+    """Least-squares constant c for col ≈ c·f(n) over the upper half of n (the asymptotic regime). Returns c and the
+    largest relative deviation over that half."""
     fs = [avalia(expr, d[x]) for d in dados]
     ys = [d[col] for d in dados]
-    c = sum(y * f for y, f in zip(ys, fs)) / sum(f * f for f in fs)
-    metade = len(dados) // 2
+    metade = len(dados) // 2                                   # ajuste e teste na metade superior de n:
+    c = (sum(y * f for y, f in zip(ys[metade:], fs[metade:]))   # é o comportamento assintótico
+         / sum(f * f for f in fs[metade:]))
     desvio = max(abs(y - c * f) / (c * f) for y, f in zip(ys[metade:], fs[metade:]) if f > 0)
     return c, desvio
 
@@ -327,7 +329,7 @@ def quadros_experimento(a, tmp):
                + ''.join(f'\\item {m}' for m in e['metodo']) + "\\end{enumerate}\\end{column}\\end{columns}\\end{frame}")
     resumo = []
     for k, g in enumerate(e['graficos']):
-        corpo, teorias = grafico(g, tabelas, f"exp{a['n']:02d}_{k}", tmp)
+        corpo, teorias = grafico(g, tabelas, f"exp_{ident(a)}_{k}", tmp)
         dados = tabelas[g.get('tabela', 0)]
         tab = ''
         if teorias:
@@ -348,6 +350,24 @@ def quadros_experimento(a, tmp):
 
 
 # ------------------------------------------------------------------ deck
+def ident(a):
+    """File name of the class deck: aula04 (numbered classes) or the explicit id (compl1)."""
+    return a['id'] if 'id' in a else f"aula{a['n']:02d}"
+
+
+def rotulo(a):
+    return a.get('rotulo', f"Aula {a['n']}")
+
+
+def referencia(a):
+    """Reference line of a deck: Cormen by default, or the class's own 'fonte' (the C annex)."""
+    return a['fonte'] if 'fonte' in a else f"Cormen et al., \\emph{{Algoritmos}}: {a['cormen']}"
+
+
+def rotulo_bloco(b):
+    return b.get('rotulo', f"Bloco {b['n']}")
+
+
 def titulo_deck(a, bloco):
     barras = '\n'.join(f"\\fill[white,opacity={0.10 + 0.05 * (k % 4):.2f}] ({10.4 + k * 0.36:.2f},0.9) rectangle +(0.24,{0.3 + h * 0.3:.2f});"
                        for k, h in enumerate([1, 3, 2, 5, 4, 7, 6, 9, 8, 10, 11, 12]))
@@ -357,9 +377,9 @@ def titulo_deck(a, bloco):
 \\begin{{scope}}[shift={{(current page.south west)}}]
 {barras}
 \\fill[cteoria] (0.9,6.55) rectangle +(1.2,0.08);
-\\node[anchor=north west,text=white!70,font=\\small\\bfseries] at (0.9,6.4) {{AULA {a['n']:02d} \\enspace·\\enspace BLOCO {bloco['n']}: {bloco['titulo'].upper()}}};
+\\node[anchor=north west,text=white!70,font=\\small\\bfseries] at (0.9,6.4) {{{rotulo(a).upper()} \\enspace·\\enspace {rotulo_bloco(bloco).upper()}: {bloco['titulo'].upper()}}};
 \\node[anchor=north west,text=white,font=\\huge\\bfseries,text width=9.6cm,align=left] at (0.9,5.7) {{{a['tema']}}};
-\\node[anchor=north west,text=white!75,font=\\normalsize,text width=9.6cm] at (0.9,3.55) {{Cormen et al., \\emph{{Algoritmos}}: {a['cormen']}}};
+\\node[anchor=north west,text=white!75,font=\\normalsize,text width=9.6cm] at (0.9,3.55) {{{referencia(a)}}};
 \\node[anchor=south west,text=white!60,font=\\scriptsize] at (0.9,0.9) {{Estruturas de dados e seus algoritmos \\enspace·\\enspace José Dihego \\enspace·\\enspace IFBA}};
 \\end{{scope}}
 \\end{{tikzpicture}}
@@ -381,7 +401,7 @@ def abertura_segmento(nome, itens):
 
 
 def deck(a, bloco, pdf_cormen, tmp):
-    out = [PREAMBULO, f"\\title[Aula {a['n']} · {a['curto']}]{{{a['tema']}}}", '\\begin{document}', titulo_deck(a, bloco)]
+    out = [PREAMBULO, f"\\title[{rotulo(a)} · {a['curto']}]{{{a['tema']}}}", '\\begin{document}', titulo_deck(a, bloco)]
     # roteiro
     out.append(seg('teoria'))
     out.append("\\begin{frame}{Roteiro da aula}\n\\begin{columns}[T,onlytextwidth]\\begin{column}{0.56\\textwidth}\\small\\textbf{Ao final, você será capaz de}"
@@ -391,7 +411,7 @@ def deck(a, bloco, pdf_cormen, tmp):
                          for s, d in [('teoria', a['roteiro'][0]), ('pratica', a['roteiro'][1]), ('experimento', a['roteiro'][2]), ('conexoes', a['roteiro'][3])])
                + "\\end{column}\\end{columns}\\end{frame}")
     # teoria
-    out.append(abertura_segmento('teoria', [f"Cormen et al., {a['cormen']}"] + [q['titulo'] for q in a['teoria'][:5]]))
+    out.append(abertura_segmento('teoria', [referencia(a)] + [q['titulo'] for q in a['teoria'][:5]]))
     out += [quadro_teoria(q, pdf_cormen, tmp) for q in a['teoria']]
     # prática
     p = a['pratica']
@@ -417,7 +437,8 @@ def deck(a, bloco, pdf_cormen, tmp):
         out.append(f"\\begin{{frame}}{{Onde isso aparece na computação{' (cont.)' if k else ''}}}\n" + '\\vspace{2pt}'.join(linhas) + '\n\\end{frame}')
     # fechamento
     out.append(seg('fechamento'))
-    out.append("\\begin{frame}{Para casa}\n\\begin{columns}[T,onlytextwidth]\\begin{column}{0.58\\textwidth}\\small\\textbf{Exercícios}"
+    fonte_ex = '\\footnotesize' if sum(len(x) for x in a['exercicios']) > 380 else '\\small'
+    out.append("\\begin{frame}{Para casa}\n\\begin{columns}[T,onlytextwidth]\\begin{column}{0.58\\textwidth}" + fonte_ex + "\\textbf{Exercícios}"
                "\\begin{enumerate}\\setlength{\\itemsep}{2pt}" + ''.join(f'\\item {x}' for x in a['exercicios'])
                + "\\end{enumerate}\\end{column}\\begin{column}{0.38\\textwidth}\\begin{destaque}[cink]\\textbf{Leitura}\\par\\footnotesize "
                + a['leitura'] + f"\\end{{destaque}}\\begin{{destaque}}[cpratica]\\textbf{{Código}}\\par\\footnotesize\\href{{{SITE}/estruturas/\\#aula-{a['n']}}}{{josedihego.net/estruturas}}"
@@ -490,9 +511,9 @@ def gerar(raiz, pdf_cormen, slides=True, so=None):
     if slides:
         with tempfile.TemporaryDirectory() as tmp:
             for a in AULAS:
-                if a.get('tipo') or (so and a['n'] not in so):
+                if a.get('tipo') or (so and str(a['n']) not in so):
                     continue
-                nome = f"aula{a['n']:02d}"
+                nome = ident(a)
                 fonte, resumo = deck(a, blocos[a['bloco']], pdf_cormen, tmp)
                 pdf, avisos, faltando = compilar(nome, fonte, tmp)
                 shutil.copy2(pdf, os.path.join(destino, 'slides', nome + '.pdf'))
@@ -507,18 +528,19 @@ def gerar(raiz, pdf_cormen, slides=True, so=None):
                 d['descricao'] = sem_latex(a['descricao'])
                 d['entregas'] = [sem_latex(e) for e in a['entregas']]
             else:
-                d.update({'cormen': a['cormen'], 'slides': f"aula{a['n']:02d}.pdf",
+                d.update({'cormen': sem_latex(a['fonte']) if 'fonte' in a else 'Cormen, ' + a['cormen'], 'slides': ident(a) + '.pdf',
                           'objetivos': [sem_latex(o) for o in a['objetivos']],
                           'codigo': [{'arquivo': f, 'titulo': t} for f, t in a['pratica']['arquivos']],
                           'experimento': {'arquivo': a['experimento']['programa'], 'pergunta': sem_latex(a['experimento']['pergunta']),
                                           'conclusao': sem_latex(re.sub(r'\\s+', ' ', a['experimento']['conclusao']))},
                           'conexoes': [{'area': sem_latex(ar), 'texto': sem_latex(tx)} for _, ar, tx in a['conexoes']]})
             aulas.append(d)
-        saida.append({'bloco': b['n'], 'titulo': b['titulo'], 'resumo': b['resumo'], 'aulas': aulas})
+        saida.append({'bloco': b['n'], 'rotulo': rotulo_bloco(b), 'opcional': b.get('opcional', False), 'tag': b.get('tag', ''),
+                      'titulo': b['titulo'], 'resumo': b['resumo'], 'aulas': aulas})
     with open(os.path.join(raiz, '_data', 'estruturas.yml'), 'w') as y:
         y.write('# Gerado por _tools/estruturas/gerar.py a partir de plano.py – não edite à mão\n' + yml(saida))
 
 
 if __name__ == '__main__':
-    so = {int(x) for x in sys.argv[sys.argv.index('--aulas') + 1].split(',')} if '--aulas' in sys.argv else None
+    so = set(sys.argv[sys.argv.index('--aulas') + 1].split(',')) if '--aulas' in sys.argv else None
     gerar(sys.argv[1], sys.argv[2], '--sem-slides' not in sys.argv, so)

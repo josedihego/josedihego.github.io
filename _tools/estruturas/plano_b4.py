@@ -1,4 +1,4 @@
-"""Bloco 4 – Grafos e técnicas de projeto (aulas 28 a 36)."""
+"""Bloco 4 – Grafos (aulas 28 a 36)."""
 
 AULA_28 = dict(
     n=28, bloco=4, tema='Grafos e busca em largura', curto='Busca em largura',
@@ -33,7 +33,7 @@ AULA_28 = dict(
 \EndWhile''',
              texto=r'''\begin{itemize}\setlength{\itemsep}{4pt}
 \item Explora em \textbf{camadas}: todos à distância $k$ antes de qualquer um à distância $k + 1$.
-\item Fila FIFO (aula 16).
+\item Fila FIFO (aula 12).
 \item Cada vértice entra na fila uma vez; cada lista é percorrida uma vez: $O(V + E)$.
 \item \textbf{Teorema 22.5:} $v.d = \delta(s, v)$, a distância mínima em arestas.
 \end{itemize}''', largura_texto=0.34),
@@ -128,7 +128,7 @@ AULA_29 = dict(
         resumo=['DAG aleatório com $E = 8V$, ordem escondida por uma permutação', 'DFS iterativa (a recursiva estouraria a pilha)',
                 'Verificação: toda aresta respeita a ordem produzida'],
         hipotese=r'''A DFS descobre cada vértice uma vez e examina cada aresta uma vez: com $E = 8V$, exatamente $9V$ operações.
-No modelo RAM, o tempo também seria linear. Mas a DFS salta pela memória (como a lista ligada da aula 17): esperamos o tempo crescer \textbf{mais} que linearmente quando o grafo sair do cache.''',
+No modelo RAM, o tempo também seria linear. Mas a DFS salta pela memória (como a lista ligada da aula 14): esperamos o tempo crescer \textbf{mais} que linearmente quando o grafo sair do cache.''',
         metodo=['$V = 2^{14}$ a $2^{21}$; arestas sempre de rótulo menor para maior (acíclico)', 'Pilha explícita com a posição na lista de cada vértice',
                 'Conferência da ordem topológica em todas as arestas', 'Tempo com \\texttt{CLOCK\\_MONOTONIC}'],
         graficos=[
@@ -507,7 +507,7 @@ AULA_34 = dict(
              legenda='construção do código de Huffman: juntar sempre os dois menos frequentes.',
              texto=r'''\Nome{Huffman}($C$): coloque os símbolos numa fila de mínimo por frequência; $n - 1$ vezes, retire os dois menores $x$ e $y$, crie $z$ com $z.\mathit{freq} = x.\mathit{freq} + y.\mathit{freq}$ e filhos $x$, $y$, e reinsira $z$.
 
-\medskip Custo $O(n\lg n)$ com heap (aula 10).
+\medskip Custo $O(n\lg n)$ com heap (aula 17).
 
 \medskip\textbf{Lemas 16.2 e 16.3:} a escolha gulosa é segura e o problema restante tem subestrutura ótima.''', largura_texto=0.44),
     ],

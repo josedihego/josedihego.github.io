@@ -1,12 +1,152 @@
 # Gerado por _tools/estruturas/gerar.py a partir de plano.py – não edite à mão
+- bloco: 0
+  rotulo: "Anexo"
+  opcional: false
+  tag: "Anexo"
+  titulo: "Base Prática em C"
+  resumo: "Cinco módulos de apoio, antes do bloco 1, com o C que as estruturas de dados exigem além do básico: memória e alocação dinâmica, ponteiros (simples, duplos, para funções e para structs), structs, funções genéricas e arquivos."
+  aulas:
+    - n: "B1"
+      tema: "Memória: pilha, heap e alocação dinâmica"
+      tipo: "aula"
+      cormen: "Kernighan e Ritchie, C: a linguagem de programação, seções 5.4 e 8.7; Cormen et al., seção 10.3"
+      slides: "base1.pdf"
+      objetivos:
+        - "Distinguir a pilha (variáveis locais) do heap (alocação dinâmica)"
+        - "Usar malloc, calloc, realloc e free corretamente"
+        - "Reconhecer vazamentos, ponteiros soltos e liberações duplas"
+        - "Medir quanto um malloc pequeno custa em bytes e em tempo"
+      codigo:
+        - arquivo: "base1_memoria.c"
+          titulo: "Alocação dinâmica em C"
+      experimento:
+        arquivo: "base1_experimento.c"
+        pergunta: "Quantos bytes de heap e quantos nanossegundos custa cada malloc de 16 bytes?"
+        conclusao: "Cada malloc de 16 bytes ocupa 32 bytes e custa dezenas de nanossegundos. Uma lista ligada de inteiros gasta muito mais memória e tempo que um vetor com os mesmos dados.\nÉ por isso que estruturas de alto desempenho alocam em blocos (pools) e por isso a aula 16 mostra listas guardadas em vetores."
+      conexoes:
+        - area: "Sistemas operacionais"
+          texto: "malloc pede páginas ao kernel com brk e mmap; a memória virtual e a paginação ficam por trás de cada ponteiro."
+        - area: "Segurança"
+          texto: "Estouros de buffer e uso após free são as falhas mais exploradas da história; linguagens como Rust impedem esses erros já na compilação."
+        - area: "Linguagens com coleta de lixo"
+          texto: "Java, Python e Go liberam a memória sozinhas (coletor de lixo); C dá controle total, e a responsabilidade junto."
+        - area: "Sistemas embarcados"
+          texto: "Em microcontroladores com poucos KB, o heap fragmenta: por isso o padrão MISRA C proíbe malloc depois da inicialização."
+    - n: "B2"
+      tema: "Ponteiros: endereços, aritmética e ponteiro para ponteiro"
+      tipo: "aula"
+      cormen: "Kernighan e Ritchie, C: a linguagem de programação, capítulo 5; Cormen et al., seção 10.3"
+      slides: "base2.pdf"
+      objetivos:
+        - "Usar & e * e entender o que um ponteiro guarda"
+        - "Relacionar vetores e ponteiros pela aritmética de ponteiros"
+        - "Passar parâmetros por referência e alterar um ponteiro dentro de uma função (int **)"
+        - "Alocar matrizes dinâmicas e medir o efeito da ordem de percurso"
+      codigo:
+        - arquivo: "base2_ponteiros.c"
+          titulo: "Ponteiros em C"
+      experimento:
+        arquivo: "base2_experimento.c"
+        pergunta: "Percorrer uma matriz por linhas e por colunas custa o mesmo tempo por elemento?"
+        conclusao: "A mesma conta, na ordem errada, fica 30 vezes mais lenta para \\(n = 4096\\). Ponteiros dão acesso direto à memória, e a memória tem geografia: vizinhos são baratos, saltos são caros.\nNas próximas aulas, a mesma lição aparece em listas ligadas (aula 14) e em grafos (aula 29)."
+      conexoes:
+        - area: "Sistemas operacionais"
+          texto: "O kernel manipula páginas, processos e dispositivos por ponteiros; um ponteiro inválido no kernel derruba a máquina inteira."
+        - area: "Compiladores"
+          texto: "Otimizadores trocam a ordem de laços (loop interchange) para percorrer matrizes por linhas; a análise de aliasing decide se dois ponteiros podem se sobrepor."
+        - area: "Hardware e GPUs"
+          texto: "Bibliotecas de álgebra linear (BLAS) e GPUs dividem matrizes em blocos que cabem no cache: o mesmo efeito do experimento, explorado ao máximo."
+        - area: "Bancos de dados"
+          texto: "Bancos orientados a linhas (OLTP) e a colunas (OLAP, como DuckDB) são as duas ordens do experimento: cada um vence num tipo de consulta."
+    - n: "B3"
+      tema: "Structs: registros, ponteiros para structs e nós"
+      tipo: "aula"
+      cormen: "Kernighan e Ritchie, C: a linguagem de programação, capítulo 6; Cormen et al., seção 10.3"
+      slides: "base3.pdf"
+      objetivos:
+        - "Declarar structs com typedef e acessar campos com . e ->"
+        - "Construir vetores de structs e structs autorreferentes (nós)"
+        - "Entender alinhamento e preenchimento (sizeof, offsetof)"
+        - "Medir vetor de structs (AoS) contra struct de vetores (SoA)"
+      codigo:
+        - arquivo: "base3_structs.c"
+          titulo: "Structs em C"
+      experimento:
+        arquivo: "base3_experimento.c"
+        pergunta: "Somar um único campo de n registros custa o mesmo num vetor de structs (AoS) e num vetor só com aquele campo (SoA)?"
+        conclusao: "A organização dos dados na memória muda o desempenho em 5 vezes, com o mesmo algoritmo. Agrupar em structs é o natural para programar; separar em vetores é o natural para o hardware.\nBancos colunares, motores de jogos e bibliotecas de ciência de dados escolhem SoA pelo mesmo motivo."
+      conexoes:
+        - area: "Redes"
+          texto: "Cabeçalhos IP, TCP e Ethernet são structs com campos em posições fixas; o preenchimento errado corrompe pacotes (__attribute__((packed)))."
+        - area: "Sistemas de arquivos"
+          texto: "O inode do Linux e as entradas de diretório são structs gravadas no disco byte a byte."
+        - area: "Motores de jogos"
+          texto: "Arquiteturas entity component system guardam cada componente (posição, velocidade) num vetor próprio: SoA para atualizar milhões de objetos por quadro."
+        - area: "Ciência de dados"
+          texto: "NumPy, pandas e Apache Arrow guardam cada coluna num vetor contíguo: é o SoA do experimento, e a razão de serem tão rápidos."
+    - n: "B4"
+      tema: "Funções: recursão, ponteiros para funções e código genérico"
+      tipo: "aula"
+      cormen: "Kernighan e Ritchie, C: a linguagem de programação, seções 4.10, 5.11 e B.5"
+      slides: "base4.pdf"
+      objetivos:
+        - "Entender a pilha de chamadas e o custo de memória da recursão"
+        - "Declarar e usar ponteiros para funções"
+        - "Escrever código genérico com void * e qsort"
+        - "Medir os bytes de pilha por chamada e as comparações do qsort"
+      codigo:
+        - arquivo: "base4_funcoes.c"
+          titulo: "Funções e ponteiros para funções"
+      experimento:
+        arquivo: "base4_experimento.c"
+        pergunta: "Quantos bytes de pilha cada chamada recursiva usa? Quantas vezes o qsort chama o comparador?"
+        conclusao: "A pilha cresce exatamente em linha reta com a profundidade (um quadro de tamanho fixo por chamada), e o qsort chama o comparador \\(n\\lg n - 1{,}26\\,n\\) vezes: a fórmula do merge sort.\nMedir revela o que a biblioteca faz por dentro: o nome diz “quick”, mas o comportamento é de merge sort."
+      conexoes:
+        - area: "Sistemas operacionais"
+          texto: "Tratadores de sinais e de interrupções, pthread_create e os drivers de dispositivo (struct file_operations) são tabelas de ponteiros para funções."
+        - area: "Interfaces gráficas"
+          texto: "Botões e eventos chamam funções registradas (callbacks): GTK, o DOM do navegador e o Android funcionam assim."
+        - area: "Programação orientada a objetos"
+          texto: "Métodos virtuais do C++ são ponteiros para funções numa tabela (vtable); o mesmo padrão aparece no kernel escrito em C."
+        - area: "Inteligência artificial"
+          texto: "Funções de ativação, de perda e otimizadores são passados como parâmetros: um treinador genérico recebe “qual função usar."
+    - n: "B5"
+      tema: "Arquivos, argumentos e erros"
+      tipo: "aula"
+      cormen: "Kernighan e Ritchie, C: a linguagem de programação, capítulo 7 e seção 5.10"
+      slides: "base5.pdf"
+      objetivos:
+        - "Ler e escrever arquivos texto e binários"
+        - "Receber parâmetros pela linha de comando (argc, argv)"
+        - "Tratar erros com valores de retorno, perror e assert"
+        - "Medir o tamanho e o tempo de arquivos texto contra binários"
+      codigo:
+        - arquivo: "base5_arquivos.c"
+          titulo: "Arquivos e erros em C"
+      experimento:
+        arquivo: "base5_experimento.c"
+        pergunta: "Quantos bytes e quantos nanossegundos custa cada número gravado e relido em texto e em binário?"
+        conclusao: "Os dois formatos são lineares, mas com constantes muito diferentes: o texto é 72% maior e 35 vezes mais lento. O binário é exatamente \\(4n\\) bytes.\nPor isso bancos de dados, imagens e modelos de IA são guardados em binário, e dados para trocar com pessoas e outras ferramentas, em texto."
+      conexoes:
+        - area: "Bancos de dados"
+          texto: "Tabelas e índices ficam em arquivos binários de páginas de tamanho fixo (4 a 16 KB); fseek para a página \\(k\\) é k * tamanho."
+        - area: "Redes"
+          texto: "Protocolos binários (TCP/IP, gRPC/Protobuf) são compactos e rápidos; protocolos de texto (HTTP/1.1, JSON) são legíveis. A escolha é a mesma do experimento."
+        - area: "Ciência de dados"
+          texto: "CSV é universal, mas Parquet e Arrow (binários e colunares) são até dezenas de vezes menores e mais rápidos para grandes volumes."
+        - area: "Ferramentas de linha de comando"
+          texto: "grep, sort e gcc leem argv, leem stdin, escrevem stdout e devolvem um código de saída: é o que permite encadeá-los com |."
 - bloco: 1
-  titulo: "Fundamentos e ordenação"
-  resumo: "Análise de algoritmos, notação assintótica, recorrências, dividir e conquistar e heapsort. Termina com o Projeto 1."
+  rotulo: "Bloco 1"
+  opcional: false
+  tag: ""
+  titulo: "Fundamentos, ordenação e custo"
+  resumo: "Análise de algoritmos, ordenação por inserção, merge sort, notação assintótica, recorrências, dividir e conquistar e heaps. Termina com o Projeto 1."
   aulas:
     - n: 1
       tema: "Algoritmos, eficiência e o método experimental"
       tipo: "aula"
-      cormen: "capítulo 1"
+      cormen: "Cormen, capítulo 1"
       slides: "aula01.pdf"
       objetivos:
         - "Definir algoritmo, instância e corretude"
@@ -32,7 +172,7 @@
     - n: 2
       tema: "Ordenação por inserção e invariantes de laço"
       tipo: "aula"
-      cormen: "seção 2.1"
+      cormen: "Cormen, seção 2.1"
       slides: "aula02.pdf"
       objetivos:
         - "Executar a ordenação por inserção à mão, passo a passo"
@@ -58,7 +198,7 @@
     - n: 3
       tema: "Análise de algoritmos: o modelo RAM e os casos"
       tipo: "aula"
-      cormen: "seção 2.2"
+      cormen: "Cormen, seção 2.2"
       slides: "aula03.pdf"
       objetivos:
         - "Descrever o modelo RAM e o que ele ignora"
@@ -84,7 +224,7 @@
     - n: 4
       tema: "Dividir e conquistar: merge sort"
       tipo: "aula"
-      cormen: "seção 2.3"
+      cormen: "Cormen, seção 2.3"
       slides: "aula04.pdf"
       objetivos:
         - "Aplicar o paradigma dividir, conquistar e combinar"
@@ -110,7 +250,7 @@
     - n: 5
       tema: "Notação assintótica: \\(O\\), \\(\\Omega\\) e \\(\\Theta\\)"
       tipo: "aula"
-      cormen: "capítulo 3"
+      cormen: "Cormen, capítulo 3"
       slides: "aula05.pdf"
       objetivos:
         - "Definir \\(\\Theta\\), \\(O\\), \\(\\Omega\\), \\(o\\) e \\(\\omega\\) e interpretá-las graficamente"
@@ -136,7 +276,7 @@
     - n: 6
       tema: "Recorrências: árvore de recursão e teorema mestre"
       tipo: "aula"
-      cormen: "seções 4.3 a 4.5"
+      cormen: "Cormen, seções 4.3 a 4.5"
       slides: "aula06.pdf"
       objetivos:
         - "Modelar algoritmos recursivos por recorrências"
@@ -162,7 +302,7 @@
     - n: 7
       tema: "Subarranjo máximo: três algoritmos, três ordens"
       tipo: "aula"
-      cormen: "seção 4.1"
+      cormen: "Cormen, seção 4.1"
       slides: "aula07.pdf"
       objetivos:
         - "Reduzir o problema de compra e venda de ações ao subarranjo máximo"
@@ -188,7 +328,7 @@
     - n: 8
       tema: "Heaps e heapsort"
       tipo: "aula"
-      cormen: "capítulo 6 (seções 6.1 a 6.4)"
+      cormen: "Cormen, capítulo 6 (seções 6.1 a 6.4)"
       slides: "aula08.pdf"
       objetivos:
         - "Representar uma árvore binária quase completa em um vetor"
@@ -210,7 +350,7 @@
         - area: "Sistemas embarcados"
           texto: "Heapsort garante \\(O(n\\lg n)\\) sem memória extra nem recursão profunda; o std::sort do C++ (introsort) recorre a ele quando o quicksort degenera."
         - area: "Jogos e mapas"
-          texto: "Dijkstra e A*, usados em GPS e na movimentação de personagens, dependem de uma fila de prioridade em heap (aulas 10 e 31)."
+          texto: "Dijkstra e A*, usados em GPS e na movimentação de personagens, dependem de uma fila de prioridade em heap (aulas 17 e 31)."
     - n: 9
       tema: "Projeto 1: laboratório de ordenação"
       tipo: "projeto"
@@ -222,24 +362,211 @@
         - "O melhor limiar \\(k\\) do híbrido na máquina da equipe, com justificativa"
         - "Apresentação de 10 minutos: hipótese, método, resultados, o que não bateu com a teoria e por quê"
 - bloco: 2
-  titulo: "Ordenação avançada e estruturas lineares"
-  resumo: "Filas de prioridade, quicksort, limite inferior, ordenação linear, seleção, pilhas, filas e listas. Termina com o Projeto 2."
+  rotulo: "Bloco 2"
+  opcional: false
+  tag: ""
+  titulo: "Dicionários e estruturas lineares"
+  resumo: "Dicionários, pilhas, filas, vetores dinâmicos e listas: simplesmente e duplamente ligadas, circulares, com sentinela e em vetores; filas de prioridade. Termina com o Projeto 2."
   aulas:
     - n: 10
+      tema: "Dicionários e conjuntos dinâmicos"
+      tipo: "aula"
+      cormen: "Cormen, introdução da parte III e seção 10.1"
+      slides: "aula10.pdf"
+      objetivos:
+        - "Definir conjunto dinâmico e as operações de dicionário"
+        - "Separar consultas (busca, mínimo, máximo, sucessor) de modificações (inserção, remoção)"
+        - "Implementar um dicionário em vetor ordenado com busca binária"
+        - "Medir o custo de inserir e de buscar em vetor ordenado e desordenado"
+      codigo:
+        - arquivo: "aula10_dicionario.c"
+          titulo: "Dicionário em vetor ordenado"
+      experimento:
+        arquivo: "aula10_experimento.c"
+        pergunta: "Quanto custam n inserções e n buscas num dicionário em vetor ordenado e em vetor desordenado?"
+        conclusao: "As três previsões se confirmam: \\(n^2/4\\) deslocamentos e \\(n\\lg n\\) comparações no vetor ordenado, \\(n(n+1)/2\\) comparações no desordenado.\nVetores obrigam a escolher entre inserir rápido e buscar rápido. O resto do curso mostra estruturas que fazem as duas coisas em \\(O(1)\\) ou \\(O(\\lg n)\\)."
+      conexoes:
+        - area: "Bancos de dados"
+          texto: "Uma tabela é um conjunto dinâmico de registros; índices são dicionários sobre uma coluna, e o otimizador escolhe entre varrer e buscar conforme o custo."
+        - area: "Linguagens"
+          texto: "dict e set do Python, Map do JavaScript, std::map e std::unordered_map do C++: o mesmo tipo abstrato com implementações diferentes."
+        - area: "Compiladores"
+          texto: "A tabela de símbolos é um dicionário de identificadores; escopos aninhados viram uma pilha de dicionários (aula 11)."
+        - area: "Redes"
+          texto: "Tabelas ARP, de rotas e de conexões são dicionários consultados milhões de vezes por segundo: a implementação define a latência."
+    - n: 11
+      tema: "Pilhas"
+      tipo: "aula"
+      cormen: "Cormen, seção 10.1"
+      slides: "aula11.pdf"
+      objetivos:
+        - "Implementar pilhas em vetor (com transbordamento) e em lista ligada"
+        - "Analisar Push e Pop em \\(O(1)\\)"
+        - "Avaliar expressões pós-fixas com uma pilha"
+        - "Medir o custo por operação das duas implementações"
+      codigo:
+        - arquivo: "aula11_pilha.c"
+          titulo: "Pilhas e expressões pós-fixas em C"
+      experimento:
+        arquivo: "aula11_experimento.c"
+        pergunta: "Quanto custa, em nanossegundos, cada operação de pilha em vetor e em lista ligada?"
+        conclusao: "As duas implementações têm custo constante por operação, como prevê a análise, mas a lista ligada é cerca de 25 vezes mais cara: malloc, free e saltos pela memória.\nA notação \\(O\\) esconde constantes; quando a capacidade é previsível, o vetor (ou o vetor dinâmico da aula 13) é a melhor pilha."
+      conexoes:
+        - area: "Compiladores"
+          texto: "Analisadores sintáticos casam parênteses e blocos com pilhas; a máquina virtual da JVM e a do Python são máquinas de pilha: iadd desempilha dois e empilha a soma."
+        - area: "Navegadores e editores"
+          texto: "Voltar e avançar, desfazer e refazer: duas pilhas. Calculadoras HP usavam notação pós-fixa por ser mais rápida de digitar e de avaliar."
+        - area: "Sistemas operacionais"
+          texto: "Cada thread tem sua pilha de chamadas; o estouro dela (stack overflow) é o transbordamento desta aula, em hardware."
+        - area: "Inteligência artificial"
+          texto: "Busca em profundidade com backtracking (labirintos, sudoku, provadores de teoremas) guarda as alternativas pendentes numa pilha (aula 29)."
+    - n: 12
+      tema: "Filas"
+      tipo: "aula"
+      cormen: "Cormen, seção 10.1"
+      slides: "aula12.pdf"
+      objetivos:
+        - "Implementar filas em vetor circular e em lista ligada"
+        - "Distinguir fila cheia de fila vazia"
+        - "Conhecer deques (filas de duas pontas)"
+        - "Simular uma fila de atendimento e conferir com a teoria das filas"
+      codigo:
+        - arquivo: "aula12_fila.c"
+          titulo: "Filas em C"
+      experimento:
+        arquivo: "aula12_experimento.c"
+        pergunta: "Na simulação de uma fila M/M/1, o tempo médio de espera segue ρ/(1−ρ)?"
+        conclusao: "A simulação reproduz \\(\\rho/(1-\\rho)\\) com erro de poucos por cento. A fila FIFO, uma estrutura simples, é o coração de toda simulação de atendimento.\nA lição prática: um sistema com 85% de ocupação já tem esperas longas; perto de 100%, elas explodem."
+      conexoes:
+        - area: "Sistemas operacionais"
+          texto: "Processos prontos esperam numa fila; o escalonamento round robin é uma fila circular. Buffers de teclado, disco e impressão são filas."
+        - area: "Redes"
+          texto: "Roteadores guardam pacotes em filas de saída; a teoria das filas desta aula explica o atraso e a perda quando o enlace fica congestionado."
+        - area: "Computação em nuvem"
+          texto: "Filas de mensagens (RabbitMQ, Kafka, SQS) desacoplam serviços: quem produz enfileira, quem consome desenfileira no seu ritmo."
+        - area: "Algoritmos de grafos"
+          texto: "A busca em largura (aula 28) explora um grafo camada por camada usando exatamente uma fila FIFO."
+    - n: 13
+      tema: "Vetores dinâmicos e análise amortizada"
+      tipo: "aula"
+      cormen: "Cormen, seções 17.1 e 17.4"
+      slides: "aula13.pdf"
+      objetivos:
+        - "Fazer um vetor crescer e encolher conforme o uso"
+        - "Calcular o custo amortizado pelo método agregado"
+        - "Entender por que encolher só com \\(1/4\\) de ocupação"
+        - "Medir \\(2n\\) cópias contra \\(n^2/2000\\) para duas estratégias de crescimento"
+      codigo:
+        - arquivo: "aula13_vetor_dinamico.c"
+          titulo: "Vetor dinâmico em C"
+      experimento:
+        arquivo: "aula13_experimento.c"
+        pergunta: "Quantas cópias custam n inserções num vetor que dobra e num que cresce 1000 posições por vez?"
+        conclusao: "Dobrar custa \\(\\approx 2n\\) cópias: \\textbf{amortizado \\(O(1)\\)} por inserção. Somar uma constante custa \\(\\approx n^2/2000\\): quadrático, por maior que seja a constante.\nPor isso std::vector, ArrayList e as listas do Python crescem por um fator (1,5 ou 2), nunca por uma quantidade fixa."
+      conexoes:
+        - area: "Linguagens"
+          texto: "A lista do Python cresce cerca de 12%, o vector do C++ (GCC) dobra e o ArrayList do Java cresce 50%: fatores diferentes, todos amortizados \\(O(1)\\)."
+        - area: "Bancos de dados"
+          texto: "Tabelas hash de bancos e caches (Redis) dobram de tamanho e reinserem tudo, às vezes aos poucos (rehash incremental) para não travar o serviço."
+        - area: "Redes"
+          texto: "O TCP aumenta a janela de envio por fator e a reduz pela metade em congestionamento: crescimento multiplicativo, como o vetor dinâmico."
+        - area: "Sistemas embarcados"
+          texto: "Em tempo real, um pico de \\(\\Theta(n)\\) numa cópia pode estourar um prazo: lá se prefere capacidade fixa ou crescimento sem cópia (listas de blocos)."
+    - n: 14
+      tema: "Listas simplesmente ligadas"
+      tipo: "aula"
+      cormen: "Cormen, seção 10.2"
+      slides: "aula14.pdf"
+      objetivos:
+        - "Representar uma sequência com nós e ponteiros"
+        - "Inserir no início e no fim, buscar e remover"
+        - "Inverter uma lista sem memória extra"
+        - "Medir a vantagem da lista na inserção e o custo do cache no percurso"
+      codigo:
+        - arquivo: "aula14_lista_simples.c"
+          titulo: "Lista simplesmente ligada em C"
+      experimento:
+        arquivo: "aula14_experimento.c"
+        pergunta: "Quanto custa inserir no início de um vetor? E percorrer uma lista ligada cujos nós estão espalhados pela memória?"
+        conclusao: "Inserir no início confirma a teoria: \\(n(n-1)/2\\) movimentos no vetor, nenhum na lista.\nNo percurso, os dois são \\(\\Theta(n)\\), mas a lista espalhada fica até 200 vezes mais lenta que o vetor quando sai do cache. O modelo RAM não vê a hierarquia de memória; a medição vê."
+      conexoes:
+        - area: "Sistemas operacionais"
+          texto: "Filas de processos, listas de arquivos abertos e de páginas livres são listas ligadas dentro do kernel; a inserção \\(O(1)\\) é essencial."
+        - area: "Alocação de memória"
+          texto: "malloc encadeia os blocos livres numa lista; programas em C que vazam memória costumam “perder a cabeça de uma lista."
+        - area: "Arquitetura de computadores"
+          texto: "O experimento mostra a hierarquia de memória: L1 (\\(\\approx\\)1 ns), L2, L3 e RAM (\\(\\approx\\)100 ns). Estruturas cache-friendly vencem na prática."
+        - area: "Linguagens funcionais"
+          texto: "Em Lisp, Haskell e Erlang a lista ligada é a estrutura básica: inserir na cabeça cria uma lista nova compartilhando o resto, sem copiar nada."
+    - n: 15
+      tema: "Listas duplamente ligadas e listas circulares"
+      tipo: "aula"
+      cormen: "Cormen, seção 10.2"
+      slides: "aula15.pdf"
+      objetivos:
+        - "Implementar a lista duplamente ligada e seus casos especiais sem sentinela"
+        - "Remover um nó dado em \\(O(1)\\)"
+        - "Fechar a lista num círculo e percorrê-la sem fim"
+        - "Resolver o problema de Josefo e comparar lista circular com vetor"
+      codigo:
+        - arquivo: "aula15_dupla_circular.c"
+          titulo: "Lista dupla e circular em C"
+      experimento:
+        arquivo: "aula15_experimento.c"
+        pergunta: "Quantos passos a lista circular e quantos deslocamentos o vetor gastam para resolver o problema de Josefo?"
+        conclusao: "A lista circular resolve Josefo em exatamente \\((n-1)(k-1)\\) passos; o vetor, em \\(\\approx 0{,}3\\,n^2\\) deslocamentos: 4.800 vezes mais trabalho para \\(n = 32.000\\).\nQuando a operação dominante é remover no meio, a lista ligada vence; quando é acessar por posição, o vetor vence."
+      conexoes:
+        - area: "Sistemas operacionais"
+          texto: "O kernel Linux usa listas duplas circulares (list_head) em toda parte; o escalonador round robin percorre uma lista circular de processos."
+        - area: "Navegadores"
+          texto: "O histórico com voltar e avançar e as abas em ordem são listas duplas: sair de uma aba no meio é remover um nó em \\(O(1)\\)."
+        - area: "Caches LRU"
+          texto: "Um cache LRU combina uma tabela hash com uma lista dupla: o item usado vai para a frente, o mais antigo sai do fim, tudo em \\(O(1)\\)."
+        - area: "Jogos"
+          texto: "Turnos de jogadores, animações em laço e trilhas de áudio em repetição são percorridos como listas circulares."
+    - n: 16
+      tema: "Sentinelas e listas sem ponteiros"
+      tipo: "aula"
+      cormen: "Cormen, seções 10.2 e 10.3"
+      slides: "aula16.pdf"
+      objetivos:
+        - "Usar uma sentinela para eliminar os casos especiais das listas"
+        - "Implementar a lista circular duplamente ligada com sentinela do livro"
+        - "Representar listas com vetores e gerenciar posições livres"
+        - "Medir quantos testes a sentinela economiza numa busca"
+      codigo:
+        - arquivo: "aula16_lista_sentinela.c"
+          titulo: "Lista com sentinela em C"
+        - arquivo: "aula16_lista_vetor.c"
+          titulo: "Lista em vetores com lista livre"
+      experimento:
+        arquivo: "aula16_experimento.c"
+        pergunta: "Quantos testes uma busca sem sucesso faz com e sem sentinela? E quanto tempo?"
+        conclusao: "A sentinela corta os testes exatamente pela metade (\\(n + 1\\) contra \\(2n + 1\\)) e economiza cerca de 10% do tempo. Mais importante: elimina os casos especiais de lista vazia, cabeça e cauda, que são a fonte da maioria dos erros com listas.\nNa representação em vetores, a lista livre faz o papel do malloc: alocar e liberar em \\(O(1)\\)."
+      conexoes:
+        - area: "Kernel Linux"
+          texto: "Toda lista do kernel (list_head) é circular, dupla e com sentinela: a “cabeça é um nó sem dados, exatamente \\(L.\\mathit{nil}\\)."
+        - area: "Alocadores de memória"
+          texto: "malloc mantém listas livres de blocos por tamanho; alocadores de pool (jogos, servidores) usam a pilha livre da Figura 10.7."
+        - area: "Sistemas de arquivos"
+          texto: "O FAT do MS-DOS e de pendrives é uma lista em vetor: cada posição diz o próximo bloco do arquivo; os blocos livres formam outra lista."
+        - area: "Bancos de dados"
+          texto: "Páginas livres de um arquivo de banco são encadeadas numa lista livre guardada no próprio arquivo, com índices no lugar de ponteiros."
+    - n: 17
       tema: "Filas de prioridade"
       tipo: "aula"
-      cormen: "seção 6.5"
-      slides: "aula10.pdf"
+      cormen: "Cormen, seção 6.5"
+      slides: "aula17.pdf"
       objetivos:
         - "Definir as operações de uma fila de prioridade"
         - "Implementar inserção, extração do máximo e aumento de chave num heap"
         - "Comparar heap, vetor ordenado e vetor desordenado como filas de prioridade"
         - "Medir \\(\\Theta(n\\lg n)\\) contra \\(\\Theta(n^2)\\) em \\(n\\) inserções e \\(n\\) extrações"
       codigo:
-        - arquivo: "aula10_fila_prioridade.c"
+        - arquivo: "aula17_fila_prioridade.c"
           titulo: "Fila de prioridade em C"
       experimento:
-        arquivo: "aula10_experimento.c"
+        arquivo: "aula17_experimento.c"
         pergunta: "Para n inserções seguidas de n extrações, quantas comparações fazem heap, vetor ordenado e vetor desordenado?"
         conclusao: "O vetor desordenado faz exatamente \\(n(n-1)/2\\) comparações e o ordenado, \\(n^2/4\\); o heap fica em \\(\\approx 1{,}8\\,n\\lg n\\).\nPara \\(n = 16.000\\), o heap é 150 vezes mais barato que o vetor ordenado. A estrutura certa muda a ordem de crescimento."
       conexoes:
@@ -251,206 +578,27 @@
           texto: "Simuladores (filas de banco, tráfego, epidemias) processam eventos em ordem de tempo: o próximo evento sai de uma fila de mínimo."
         - area: "Compressão de dados"
           texto: "O código de Huffman (aula 34) junta repetidamente os dois símbolos menos frequentes, retirados de uma fila de prioridade."
-    - n: 11
-      tema: "Quicksort"
-      tipo: "aula"
-      cormen: "seções 7.1 e 7.2"
-      slides: "aula11.pdf"
-      objetivos:
-        - "Executar Partition e provar sua corretude pelo invariante das quatro regiões"
-        - "Analisar o pior caso (\\(\\Theta(n^2)\\)) e o melhor caso (\\(\\Theta(n\\lg n)\\))"
-        - "Entender por que partições desbalanceadas em proporção constante ainda dão \\(n\\lg n\\)"
-        - "Medir \\(\\approx 2n\\ln n\\) comparações em entradas aleatórias e \\(n^2/2\\) em entradas ordenadas"
-      codigo:
-        - arquivo: "aula11_quicksort.c"
-          titulo: "Quicksort em C"
-      experimento:
-        arquivo: "aula11_experimento.c"
-        pergunta: "Quantas comparações o quicksort faz em vetores aleatórios e em vetores já ordenados?"
-        conclusao: "A previsão de caso médio, \\(2(n+1)H_n - 4n \\approx 1{,}39\\,n\\lg n\\), se confirma com desvio de cerca de 1%.\nE o pior caso é exatamente \\(n(n-1)/2\\), justamente na entrada mais “fácil”, o vetor ordenado. A próxima aula elimina esse risco com aleatoriedade."
-      conexoes:
-        - area: "Bibliotecas padrão"
-          texto: "qsort (C), std::sort (introsort em C++), Arrays.sort para primitivos (quicksort de dois pivôs no Java) e sort do Go (pdqsort)."
-        - area: "Bancos de dados"
-          texto: "Ordenar resultados em memória (ORDER BY) e preparar joins usa quicksort ou variações; a partição também aparece na seleção do \\(k\\)-ésimo (LIMIT)."
-        - area: "Segurança"
-          texto: "Um adversário que conhece o pivô pode montar entradas \\(\\Theta(n^2)\\) (“McIlroy killer): por isso as bibliotecas aleatorizam ou usam introsort."
-        - area: "Computação paralela"
-          texto: "Depois de particionar, as duas partes são independentes; GPUs ordenam com variações paralelas da partição."
-    - n: 12
-      tema: "Quicksort aleatorizado e a análise do caso médio"
-      tipo: "aula"
-      cormen: "seções 7.3 e 7.4"
-      slides: "aula12.pdf"
-      objetivos:
-        - "Aleatorizar a escolha do pivô e entender o que isso garante"
-        - "Calcular o número esperado de comparações com variáveis indicadoras"
-        - "Distinguir caso médio (sobre entradas) de tempo esperado (sobre sorteios)"
-        - "Medir a concentração das comparações em torno da esperança"
-      codigo:
-        - arquivo: "aula12_quicksort_aleatorio.c"
-          titulo: "Quicksort aleatorizado em C"
-      experimento:
-        arquivo: "aula12_experimento.c"
-        pergunta: "Com entrada já ordenada, o pivô sorteado faz o quicksort voltar a 2(n+1)H_n − 4n comparações?"
-        conclusao: "Na entrada que destrói o pivô fixo (\\(n(n-1)/2\\) comparações), o pivô sorteado volta à esperança \\(2(n+1)H_n - 4n\\).\nO histograma mostra execuções concentradas: a probabilidade de algo perto do pior caso é desprezível. Aleatoriedade troca uma entrada ruim por uma sorte ruim, e sorte ruim é rara."
-      conexoes:
-        - area: "Segurança"
-          texto: "Tabelas hash de linguagens (Python, Rust) sorteiam a semente da função hash a cada execução pelo mesmo motivo: impedir que um atacante escolha a entrada do pior caso."
-        - area: "Redes"
-          texto: "O Ethernet usa recuo exponencial aleatório após colisões; balanceadores de carga usam “a melhor de duas escolhas aleatórias para distribuir requisições."
-        - area: "Aprendizado de máquina"
-          texto: "Gradiente estocástico, random forests e dropout: a aleatoriedade torna algoritmos mais rápidos e mais robustos, com garantias em esperança."
-        - area: "Sistemas distribuídos"
-          texto: "Protocolos de fofoca (gossip) e eleição de líder no Raft usam tempos aleatórios para evitar empates e espalhar informação em \\(O(\\lg n)\\) rodadas."
-    - n: 13
-      tema: "O limite inferior da ordenação por comparação"
-      tipo: "aula"
-      cormen: "seção 8.1"
-      slides: "aula13.pdf"
-      objetivos:
-        - "Modelar algoritmos de ordenação por comparação como árvores de decisão"
-        - "Provar que todo algoritmo desse tipo faz \\(\\Omega(n\\lg n)\\) comparações no pior caso"
-        - "Usar a aproximação de Stirling para \\(\\lg(n!)\\)"
-        - "Medir quão perto do limite o merge sort chega"
-      codigo:
-        - arquivo: "aula13_arvore_decisao.c"
-          titulo: "A altura da árvore do merge sort"
-      experimento:
-        arquivo: "aula13_experimento.c"
-        pergunta: "O pior caso do merge sort fica acima de ⌈lg n!⌉? Quão perto do limite ele chega em média?"
-        conclusao: "Em todos os \\(n\\) testados, o pior caso do merge sort ficou acima de \\(\\lceil\\lg n!\\rceil\\), como o teorema exige, e para \\(n \\le 4\\) ele atinge o limite.\nPara \\(n = 2^{20}\\), o merge sort faz só 1% mais comparações que \\(\\lg n!\\). Não há como fazer muito melhor comparando; para ir além, é preciso usar a estrutura das chaves."
-      conexoes:
-        - area: "Teoria da informação"
-          texto: "O argumento é de Shannon: uma comparação gera no máximo 1 bit. O mesmo raciocínio dá limites para busca (\\(\\lg n\\)) e para jogos como “vinte perguntas."
-        - area: "Compressão"
-          texto: "Nenhum compressor sem perdas reduz todos os arquivos: há \\(2^n\\) arquivos de \\(n\\) bits e menos códigos menores. É o argumento de contagem das folhas."
-        - area: "Criptografia"
-          texto: "Uma chave de 128 bits tem \\(2^{128}\\) possibilidades: um ataque de força bruta precisa de \\(\\Omega(2^{127})\\) tentativas em média. Limites inferiores são a base da segurança."
-        - area: "Computação quântica"
-          texto: "O algoritmo de Grover busca em \\(O(\\sqrt n)\\), e há prova de que nenhum algoritmo quântico faz melhor: limites inferiores também valem no modelo quântico."
-    - n: 14
-      tema: "Ordenação em tempo linear: contagem e radix"
-      tipo: "aula"
-      cormen: "seções 8.2 e 8.3"
-      slides: "aula14.pdf"
-      objetivos:
-        - "Ordenar inteiros em \\(0..k\\) por contagem em \\(\\Theta(n + k)\\)"
-        - "Explicar por que a estabilidade é essencial para o radix sort"
-        - "Ordenar \\(d\\) dígitos em \\(\\Theta(d(n + k))\\) e escolher a base"
-        - "Medir tempo por elemento: constante no radix, \\(\\lg n\\) no qsort"
-      codigo:
-        - arquivo: "aula14_contagem_radix.c"
-          titulo: "Contagem e radix sort em C"
-      experimento:
-        arquivo: "aula14_experimento.c"
-        pergunta: "O tempo por elemento do radix sort fica constante enquanto o do qsort cresce como lg n?"
-        conclusao: "O tempo por elemento do radix sort é praticamente constante (linear no total) e mais de 10 vezes menor que o do qsort, cujo custo por elemento cresce como \\(\\lg n\\).\nO limite \\(\\Omega(n\\lg n)\\) não se aplica porque o radix sort não compara chaves: usa os bits delas."
-      conexoes:
-        - area: "GPUs"
-          texto: "Radix sort é o padrão para ordenar em GPU (CUB, Thrust): as contagens e somas de prefixo paralelizam muito bem."
-        - area: "Bancos de dados"
-          texto: "Ordenar por chaves inteiras (datas, códigos) com radix e agrupar por contagem (GROUP BY) aparecem em bancos colunares como DuckDB."
-        - area: "Bioinformática"
-          texto: "Arranjos de sufixos de genomas são construídos com radix sort sobre o alfabeto \\(\\{A, C, G, T\\}\\): base 4, chaves curtas."
-        - area: "Processamento de imagens"
-          texto: "O histograma de uma imagem é a primeira etapa da contagem; a equalização de histograma usa exatamente as somas acumuladas de \\(C\\)."
-    - n: 15
-      tema: "Bucket sort e seleção em tempo linear"
-      tipo: "aula"
-      cormen: "seção 8.4 e capítulo 9"
-      slides: "aula15.pdf"
-      objetivos:
-        - "Ordenar dados uniformes em \\([0, 1)\\) em tempo esperado linear com baldes"
-        - "Achar o \\(i\\)-ésimo menor sem ordenar, em tempo esperado \\(\\Theta(n)\\)"
-        - "Conhecer a seleção determinística linear (mediana das medianas)"
-        - "Medir \\(\\approx 3{,}39\\,n\\) comparações para a mediana"
-      codigo:
-        - arquivo: "aula15_selecao.c"
-          titulo: "Seleção aleatorizada em C"
-      experimento:
-        arquivo: "aula15_experimento.c"
-        pergunta: "A seleção da mediana faz cerca de 3,39 n comparações? E o bucket sort depende da distribuição?"
-        conclusao: "A seleção da mediana fica em \\(\\approx 3{,}39\\,n\\) comparações em média: linear, sem ordenar.\nO bucket sort é linear se a hipótese de uniformidade vale; com todos os dados num balde, volta a ser quadrático.\nAlgoritmos de caso médio dependem da distribuição da entrada; aleatorizados, só da sorte."
-      conexoes:
-        - area: "Estatística e dados"
-          texto: "Mediana, quartis e percentis (p50, p99) são seleções. Ferramentas de monitoramento calculam percentis de latência sem ordenar milhões de amostras."
-        - area: "Bancos de dados"
-          texto: "ORDER BY ... LIMIT k e PERCENTILE_CONT usam seleção; histogramas em baldes guiam o otimizador de consultas."
-        - area: "Aprendizado de máquina"
-          texto: "Árvores de decisão (k-d trees) dividem pela mediana de cada coordenada; a mediana é um estimador robusto contra valores extremos."
-        - area: "Tabelas hash"
-          texto: "O bucket sort é uma tabela hash ordenada: a análise dos baldes (\\(E[n_i^2]\\)) é a mesma do encadeamento da aula 19."
-    - n: 16
-      tema: "Pilhas, filas e vetores dinâmicos"
-      tipo: "aula"
-      cormen: "seção 10.1 e seção 17.4"
-      slides: "aula16.pdf"
-      objetivos:
-        - "Implementar pilha (LIFO) e fila circular (FIFO) com vetores"
-        - "Tratar transbordamento e esvaziamento"
-        - "Analisar o vetor que dobra de tamanho: custo amortizado \\(O(1)\\)"
-        - "Medir \\(2n\\) cópias contra \\(n^2/2000\\) para duas estratégias de crescimento"
-      codigo:
-        - arquivo: "aula16_pilha_fila.c"
-          titulo: "Pilha e fila em C"
-      experimento:
-        arquivo: "aula16_experimento.c"
-        pergunta: "Quantas cópias custam n inserções num vetor que dobra e num que cresce 1000 posições por vez?"
-        conclusao: "Dobrar custa \\(\\approx 2n\\) cópias: \\textbf{amortizado \\(O(1)\\)} por inserção. Somar uma constante custa \\(\\approx n^2/2000\\): quadrático, por maior que seja a constante.\nPor isso std::vector, ArrayList e as listas do Python crescem por um fator (1,5 ou 2), nunca por uma quantidade fixa."
-      conexoes:
-        - area: "Compiladores"
-          texto: "Analisadores sintáticos usam pilhas para casar parênteses e blocos; a pilha de chamadas guarda variáveis locais e endereços de retorno."
-        - area: "Navegadores e editores"
-          texto: "Voltar e avançar, desfazer e refazer: duas pilhas. O DOM é percorrido com pilha (profundidade) ou fila (largura)."
-        - area: "Sistemas operacionais"
-          texto: "Buffers de teclado, de rede e de impressão são filas circulares; o ring buffer é a estrutura dos drivers de rede de alto desempenho."
-        - area: "Linguagens"
-          texto: "A lista do Python, o vector do C++ e o slice do Go são vetores dinâmicos com crescimento por fator, exatamente a análise desta aula."
-    - n: 17
-      tema: "Listas ligadas e sentinelas"
-      tipo: "aula"
-      cormen: "seções 10.2 e 10.3"
-      slides: "aula17.pdf"
-      objetivos:
-        - "Implementar busca, inserção e remoção em listas duplamente ligadas"
-        - "Usar uma sentinela para eliminar casos especiais"
-        - "Representar listas com vetores (sem ponteiros)"
-        - "Medir a vantagem da lista na inserção e o custo do cache no percurso"
-      codigo:
-        - arquivo: "aula17_lista.c"
-          titulo: "Lista com sentinela em C"
-      experimento:
-        arquivo: "aula17_experimento.c"
-        pergunta: "Quanto custa inserir no início de um vetor? E percorrer uma lista ligada cujos nós estão espalhados pela memória?"
-        conclusao: "Inserir no início confirma a teoria: \\(n(n-1)/2\\) movimentos no vetor, nenhum na lista.\nNo percurso, os dois são \\(\\Theta(n)\\), mas a lista espalhada fica até 200 vezes mais lenta que o vetor quando sai do cache. O modelo RAM não vê a hierarquia de memória; a medição vê."
-      conexoes:
-        - area: "Sistemas operacionais"
-          texto: "O kernel Linux usa listas duplamente ligadas circulares com sentinela (list_head) em processos, arquivos abertos e filas de espera."
-        - area: "Alocação de memória"
-          texto: "malloc guarda os blocos livres em listas livres, como na Figura 10.5; coletores de lixo percorrem listas de objetos."
-        - area: "Arquitetura de computadores"
-          texto: "O experimento mostra a hierarquia de memória: L1 (\\(\\approx\\)1 ns), L2, L3 e RAM (\\(\\approx\\)100 ns). Estruturas cache-friendly vencem na prática."
-        - area: "Editores de texto"
-          texto: "Editores mantêm o texto em listas de linhas ou em piece tables ligadas: inserir no meio de um documento grande custa \\(O(1)\\)."
     - n: 18
       tema: "Projeto 2: simulador de escalonamento de processos"
       tipo: "projeto"
       descricao: "Apresentação dos projetos do Bloco 2. Cada equipe constrói um simulador de escalonamento de CPU com as estruturas do bloco e compara políticas com experimentos."
       entregas:
-        - "Simulador em C: processos chegam com tempo de execução e prioridade; fila (FIFO), heap (prioridade e menor trabalho primeiro) e lista ligada (processos bloqueados)"
+        - "Simulador em C: processos chegam com tempo de execução e prioridade; fila circular (FIFO e round robin), lista duplamente ligada com sentinela (processos bloqueados), pilha (chamadas de cada processo) e fila de prioridade em heap (menor trabalho primeiro)"
         - "Três políticas: FIFO, menor trabalho primeiro (heap) e round robin (fila circular)"
         - "Experimento: tempo médio de espera e vazão para 1.000 a 1.000.000 de processos, com o custo das operações confrontado com a teoria"
         - "Relatório: qual política vence em cada carga e quanto custa cada estrutura (gráficos com curvas teóricas)"
         - "Apresentação de 10 minutos com demonstração ao vivo"
 - bloco: 3
-  titulo: "Dicionários: hash e árvores"
-  resumo: "Tabelas hash, árvores binárias de busca, AVL, rubro-negras e árvores B. Termina com o Projeto 3."
+  rotulo: "Bloco 3"
+  opcional: false
+  tag: ""
+  titulo: "Tabelas hash e árvores"
+  resumo: "Tabelas hash (encadeamento, funções hash, endereçamento aberto), árvores binárias de busca, AVL, rubro-negras e árvores B. Termina com o Projeto 3."
   aulas:
     - n: 19
       tema: "Tabelas hash com encadeamento"
       tipo: "aula"
-      cormen: "seções 11.1 e 11.2"
+      cormen: "Cormen, seções 11.1 e 11.2"
       slides: "aula19.pdf"
       objetivos:
         - "Explicar endereçamento direto e por que ele não escala"
@@ -476,7 +624,7 @@
     - n: 20
       tema: "Funções hash e hashing universal"
       tipo: "aula"
-      cormen: "seção 11.3"
+      cormen: "Cormen, seção 11.3"
       slides: "aula20.pdf"
       objetivos:
         - "Construir funções hash pelos métodos da divisão e da multiplicação"
@@ -502,7 +650,7 @@
     - n: 21
       tema: "Endereçamento aberto"
       tipo: "aula"
-      cormen: "seção 11.4"
+      cormen: "Cormen, seção 11.4"
       slides: "aula21.pdf"
       objetivos:
         - "Guardar todas as chaves no próprio vetor, sem listas"
@@ -528,7 +676,7 @@
     - n: 22
       tema: "Árvores binárias de busca: percursos e consultas"
       tipo: "aula"
-      cormen: "seções 12.1 e 12.2"
+      cormen: "Cormen, seções 12.1 e 12.2"
       slides: "aula22.pdf"
       objetivos:
         - "Enunciar a propriedade de árvore binária de busca"
@@ -554,7 +702,7 @@
     - n: 23
       tema: "Inserção, remoção e altura das árvores de busca"
       tipo: "aula"
-      cormen: "seções 12.3 e 12.4"
+      cormen: "Cormen, seções 12.3 e 12.4"
       slides: "aula23.pdf"
       objetivos:
         - "Inserir mantendo a propriedade de ABB"
@@ -580,7 +728,7 @@
     - n: 24
       tema: "Árvores AVL"
       tipo: "aula"
-      cormen: "problema 13-3 e seção 13.2 (rotações)"
+      cormen: "Cormen, problema 13-3 e seção 13.2 (rotações)"
       slides: "aula24.pdf"
       objetivos:
         - "Definir o fator de balanceamento AVL"
@@ -606,7 +754,7 @@
     - n: 25
       tema: "Árvores rubro-negras"
       tipo: "aula"
-      cormen: "seções 13.1 a 13.3"
+      cormen: "Cormen, seções 13.1 a 13.3"
       slides: "aula25.pdf"
       objetivos:
         - "Enunciar as cinco propriedades rubro-negras"
@@ -632,7 +780,7 @@
     - n: 26
       tema: "Árvores B e memória secundária"
       tipo: "aula"
-      cormen: "capítulo 18 (seções 18.1 e 18.2)"
+      cormen: "Cormen, capítulo 18 (seções 18.1 e 18.2)"
       slides: "aula26.pdf"
       objetivos:
         - "Explicar por que o acesso ao disco muda o modelo de custo"
@@ -666,13 +814,16 @@
         - "Consultas por prefixo e por intervalo alfabético: quais estruturas permitem e a que custo"
         - "Apresentação de 10 minutos com demonstração de buscas ao vivo"
 - bloco: 4
-  titulo: "Grafos e técnicas de projeto"
-  resumo: "Buscas em grafos, árvores geradoras, caminhos mínimos, programação dinâmica, algoritmos gulosos e casamento de cadeias. Termina com o Projeto 4."
+  rotulo: "Bloco 4"
+  opcional: false
+  tag: ""
+  titulo: "Grafos"
+  resumo: "Buscas em largura e em profundidade, ordenação topológica, árvores geradoras mínimas e caminhos mínimos; programação dinâmica, algoritmos gulosos e casamento de cadeias. Termina com o Projeto 4."
   aulas:
     - n: 28
       tema: "Grafos e busca em largura"
       tipo: "aula"
-      cormen: "seções 22.1 e 22.2"
+      cormen: "Cormen, seções 22.1 e 22.2"
       slides: "aula28.pdf"
       objetivos:
         - "Representar grafos por listas de adjacência e por matriz de adjacência"
@@ -698,7 +849,7 @@
     - n: 29
       tema: "Busca em profundidade e ordenação topológica"
       tipo: "aula"
-      cormen: "seções 22.3 e 22.4"
+      cormen: "Cormen, seções 22.3 e 22.4"
       slides: "aula29.pdf"
       objetivos:
         - "Executar a DFS e registrar tempos de descoberta e de término"
@@ -724,7 +875,7 @@
     - n: 30
       tema: "Conjuntos disjuntos e árvores geradoras mínimas"
       tipo: "aula"
-      cormen: "capítulo 21 e capítulo 23"
+      cormen: "Cormen, capítulo 21 e capítulo 23"
       slides: "aula30.pdf"
       objetivos:
         - "Implementar conjuntos disjuntos com união por posto e compressão de caminho"
@@ -750,7 +901,7 @@
     - n: 31
       tema: "Caminhos mínimos: Bellman-Ford e Dijkstra"
       tipo: "aula"
-      cormen: "seções 24.1 e 24.3"
+      cormen: "Cormen, seções 24.1 e 24.3"
       slides: "aula31.pdf"
       objetivos:
         - "Definir caminhos mínimos com pesos e o papel dos ciclos negativos"
@@ -776,7 +927,7 @@
     - n: 32
       tema: "Caminhos mínimos entre todos os pares: Floyd-Warshall"
       tipo: "aula"
-      cormen: "seção 25.2"
+      cormen: "Cormen, seção 25.2"
       slides: "aula32.pdf"
       objetivos:
         - "Formular caminhos mínimos entre todos os pares por programação dinâmica"
@@ -802,7 +953,7 @@
     - n: 33
       tema: "Programação dinâmica"
       tipo: "aula"
-      cormen: "seções 15.1, 15.3 e 15.4"
+      cormen: "Cormen, seções 15.1, 15.3 e 15.4"
       slides: "aula33.pdf"
       objetivos:
         - "Reconhecer subestrutura ótima e subproblemas sobrepostos"
@@ -828,7 +979,7 @@
     - n: 34
       tema: "Algoritmos gulosos: seleção de atividades e Huffman"
       tipo: "aula"
-      cormen: "seções 16.1 a 16.3"
+      cormen: "Cormen, seções 16.1 a 16.3"
       slides: "aula34.pdf"
       objetivos:
         - "Reconhecer a propriedade da escolha gulosa e a subestrutura ótima"
@@ -854,7 +1005,7 @@
     - n: 35
       tema: "Casamento de cadeias: o algoritmo de Knuth-Morris-Pratt"
       tipo: "aula"
-      cormen: "seções 32.1 e 32.4"
+      cormen: "Cormen, seções 32.1 e 32.4"
       slides: "aula35.pdf"
       objetivos:
         - "Definir o problema de casamento de cadeias e o algoritmo ingênuo"
@@ -887,3 +1038,140 @@
         - "Rede de menor custo ligando pontos de interesse (escolas, postos de saúde) com Kruskal ou Prim"
         - "Uma técnica de projeto aplicada: programação dinâmica (por exemplo, rota que visita pontos em ordem) ou gulosa (por exemplo, cobertura de pontos)"
         - "Apresentação de 10 minutos com mapa e demonstração ao vivo"
+- bloco: 5
+  rotulo: "Bloco complementar"
+  opcional: true
+  tag: "Opcional"
+  titulo: "Ordenação avançada (opcional)"
+  resumo: "Cinco módulos opcionais, fora das 36 aulas, para quem quer ir além do bloco 1: quicksort, quicksort aleatorizado, limite inferior, ordenação em tempo linear e seleção."
+  aulas:
+    - n: "C1"
+      tema: "Quicksort"
+      tipo: "aula"
+      cormen: "Cormen, seções 7.1 e 7.2"
+      slides: "compl1.pdf"
+      objetivos:
+        - "Executar Partition e provar sua corretude pelo invariante das quatro regiões"
+        - "Analisar o pior caso (\\(\\Theta(n^2)\\)) e o melhor caso (\\(\\Theta(n\\lg n)\\))"
+        - "Entender por que partições desbalanceadas em proporção constante ainda dão \\(n\\lg n\\)"
+        - "Medir \\(\\approx 2n\\ln n\\) comparações em entradas aleatórias e \\(n^2/2\\) em entradas ordenadas"
+      codigo:
+        - arquivo: "compl1_quicksort.c"
+          titulo: "Quicksort em C"
+      experimento:
+        arquivo: "compl1_experimento.c"
+        pergunta: "Quantas comparações o quicksort faz em vetores aleatórios e em vetores já ordenados?"
+        conclusao: "A previsão de caso médio, \\(2(n+1)H_n - 4n \\approx 1{,}39\\,n\\lg n\\), se confirma com desvio de cerca de 1%.\nE o pior caso é exatamente \\(n(n-1)/2\\), justamente na entrada mais “fácil”, o vetor ordenado. A próxima aula elimina esse risco com aleatoriedade."
+      conexoes:
+        - area: "Bibliotecas padrão"
+          texto: "qsort (C), std::sort (introsort em C++), Arrays.sort para primitivos (quicksort de dois pivôs no Java) e sort do Go (pdqsort)."
+        - area: "Bancos de dados"
+          texto: "Ordenar resultados em memória (ORDER BY) e preparar joins usa quicksort ou variações; a partição também aparece na seleção do \\(k\\)-ésimo (LIMIT)."
+        - area: "Segurança"
+          texto: "Um adversário que conhece o pivô pode montar entradas \\(\\Theta(n^2)\\) (“McIlroy killer): por isso as bibliotecas aleatorizam ou usam introsort."
+        - area: "Computação paralela"
+          texto: "Depois de particionar, as duas partes são independentes; GPUs ordenam com variações paralelas da partição."
+    - n: "C2"
+      tema: "Quicksort aleatorizado e a análise do caso médio"
+      tipo: "aula"
+      cormen: "Cormen, seções 7.3 e 7.4"
+      slides: "compl2.pdf"
+      objetivos:
+        - "Aleatorizar a escolha do pivô e entender o que isso garante"
+        - "Calcular o número esperado de comparações com variáveis indicadoras"
+        - "Distinguir caso médio (sobre entradas) de tempo esperado (sobre sorteios)"
+        - "Medir a concentração das comparações em torno da esperança"
+      codigo:
+        - arquivo: "compl2_quicksort_aleatorio.c"
+          titulo: "Quicksort aleatorizado em C"
+      experimento:
+        arquivo: "compl2_experimento.c"
+        pergunta: "Com entrada já ordenada, o pivô sorteado faz o quicksort voltar a 2(n+1)H_n − 4n comparações?"
+        conclusao: "Na entrada que destrói o pivô fixo (\\(n(n-1)/2\\) comparações), o pivô sorteado volta à esperança \\(2(n+1)H_n - 4n\\).\nO histograma mostra execuções concentradas: a probabilidade de algo perto do pior caso é desprezível. Aleatoriedade troca uma entrada ruim por uma sorte ruim, e sorte ruim é rara."
+      conexoes:
+        - area: "Segurança"
+          texto: "Tabelas hash de linguagens (Python, Rust) sorteiam a semente da função hash a cada execução pelo mesmo motivo: impedir que um atacante escolha a entrada do pior caso."
+        - area: "Redes"
+          texto: "O Ethernet usa recuo exponencial aleatório após colisões; balanceadores de carga usam “a melhor de duas escolhas aleatórias para distribuir requisições."
+        - area: "Aprendizado de máquina"
+          texto: "Gradiente estocástico, random forests e dropout: a aleatoriedade torna algoritmos mais rápidos e mais robustos, com garantias em esperança."
+        - area: "Sistemas distribuídos"
+          texto: "Protocolos de fofoca (gossip) e eleição de líder no Raft usam tempos aleatórios para evitar empates e espalhar informação em \\(O(\\lg n)\\) rodadas."
+    - n: "C3"
+      tema: "O limite inferior da ordenação por comparação"
+      tipo: "aula"
+      cormen: "Cormen, seção 8.1"
+      slides: "compl3.pdf"
+      objetivos:
+        - "Modelar algoritmos de ordenação por comparação como árvores de decisão"
+        - "Provar que todo algoritmo desse tipo faz \\(\\Omega(n\\lg n)\\) comparações no pior caso"
+        - "Usar a aproximação de Stirling para \\(\\lg(n!)\\)"
+        - "Medir quão perto do limite o merge sort chega"
+      codigo:
+        - arquivo: "compl3_arvore_decisao.c"
+          titulo: "A altura da árvore do merge sort"
+      experimento:
+        arquivo: "compl3_experimento.c"
+        pergunta: "O pior caso do merge sort fica acima de ⌈lg n!⌉? Quão perto do limite ele chega em média?"
+        conclusao: "Em todos os \\(n\\) testados, o pior caso do merge sort ficou acima de \\(\\lceil\\lg n!\\rceil\\), como o teorema exige, e para \\(n \\le 4\\) ele atinge o limite.\nPara \\(n = 2^{20}\\), o merge sort faz só 1% mais comparações que \\(\\lg n!\\). Não há como fazer muito melhor comparando; para ir além, é preciso usar a estrutura das chaves."
+      conexoes:
+        - area: "Teoria da informação"
+          texto: "O argumento é de Shannon: uma comparação gera no máximo 1 bit. O mesmo raciocínio dá limites para busca (\\(\\lg n\\)) e para jogos como “vinte perguntas."
+        - area: "Compressão"
+          texto: "Nenhum compressor sem perdas reduz todos os arquivos: há \\(2^n\\) arquivos de \\(n\\) bits e menos códigos menores. É o argumento de contagem das folhas."
+        - area: "Criptografia"
+          texto: "Uma chave de 128 bits tem \\(2^{128}\\) possibilidades: um ataque de força bruta precisa de \\(\\Omega(2^{127})\\) tentativas em média. Limites inferiores são a base da segurança."
+        - area: "Computação quântica"
+          texto: "O algoritmo de Grover busca em \\(O(\\sqrt n)\\), e há prova de que nenhum algoritmo quântico faz melhor: limites inferiores também valem no modelo quântico."
+    - n: "C4"
+      tema: "Ordenação em tempo linear: contagem e radix"
+      tipo: "aula"
+      cormen: "Cormen, seções 8.2 e 8.3"
+      slides: "compl4.pdf"
+      objetivos:
+        - "Ordenar inteiros em \\(0..k\\) por contagem em \\(\\Theta(n + k)\\)"
+        - "Explicar por que a estabilidade é essencial para o radix sort"
+        - "Ordenar \\(d\\) dígitos em \\(\\Theta(d(n + k))\\) e escolher a base"
+        - "Medir tempo por elemento: constante no radix, \\(\\lg n\\) no qsort"
+      codigo:
+        - arquivo: "compl4_contagem_radix.c"
+          titulo: "Contagem e radix sort em C"
+      experimento:
+        arquivo: "compl4_experimento.c"
+        pergunta: "O tempo por elemento do radix sort fica constante enquanto o do qsort cresce como lg n?"
+        conclusao: "O tempo por elemento do radix sort é praticamente constante (linear no total) e mais de 10 vezes menor que o do qsort, cujo custo por elemento cresce como \\(\\lg n\\).\nO limite \\(\\Omega(n\\lg n)\\) não se aplica porque o radix sort não compara chaves: usa os bits delas."
+      conexoes:
+        - area: "GPUs"
+          texto: "Radix sort é o padrão para ordenar em GPU (CUB, Thrust): as contagens e somas de prefixo paralelizam muito bem."
+        - area: "Bancos de dados"
+          texto: "Ordenar por chaves inteiras (datas, códigos) com radix e agrupar por contagem (GROUP BY) aparecem em bancos colunares como DuckDB."
+        - area: "Bioinformática"
+          texto: "Arranjos de sufixos de genomas são construídos com radix sort sobre o alfabeto \\(\\{A, C, G, T\\}\\): base 4, chaves curtas."
+        - area: "Processamento de imagens"
+          texto: "O histograma de uma imagem é a primeira etapa da contagem; a equalização de histograma usa exatamente as somas acumuladas de \\(C\\)."
+    - n: "C5"
+      tema: "Bucket sort e seleção em tempo linear"
+      tipo: "aula"
+      cormen: "Cormen, seção 8.4 e capítulo 9"
+      slides: "compl5.pdf"
+      objetivos:
+        - "Ordenar dados uniformes em \\([0, 1)\\) em tempo esperado linear com baldes"
+        - "Achar o \\(i\\)-ésimo menor sem ordenar, em tempo esperado \\(\\Theta(n)\\)"
+        - "Conhecer a seleção determinística linear (mediana das medianas)"
+        - "Medir \\(\\approx 3{,}39\\,n\\) comparações para a mediana"
+      codigo:
+        - arquivo: "compl5_selecao.c"
+          titulo: "Seleção aleatorizada em C"
+      experimento:
+        arquivo: "compl5_experimento.c"
+        pergunta: "A seleção da mediana faz cerca de 3,39 n comparações? E o bucket sort depende da distribuição?"
+        conclusao: "A seleção da mediana fica em \\(\\approx 3{,}39\\,n\\) comparações em média: linear, sem ordenar.\nO bucket sort é linear se a hipótese de uniformidade vale; com todos os dados num balde, volta a ser quadrático.\nAlgoritmos de caso médio dependem da distribuição da entrada; aleatorizados, só da sorte."
+      conexoes:
+        - area: "Estatística e dados"
+          texto: "Mediana, quartis e percentis (p50, p99) são seleções. Ferramentas de monitoramento calculam percentis de latência sem ordenar milhões de amostras."
+        - area: "Bancos de dados"
+          texto: "ORDER BY ... LIMIT k e PERCENTILE_CONT usam seleção; histogramas em baldes guiam o otimizador de consultas."
+        - area: "Aprendizado de máquina"
+          texto: "Árvores de decisão (k-d trees) dividem pela mediana de cada coordenada; a mediana é um estimador robusto contra valores extremos."
+        - area: "Tabelas hash"
+          texto: "O bucket sort é uma tabela hash ordenada: a análise dos baldes (\\(E[n_i^2]\\)) é a mesma do encadeamento da aula 19."

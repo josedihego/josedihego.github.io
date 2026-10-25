@@ -1000,3 +1000,12 @@
   padding-left: 1.2em;
   font-size: 0.9em;
 }
+
+/* Optional (complementary) block of a course */
+.page__content .unit-title--opcional .unit-num {
+  color: var(--c-muted);
+}
+
+.tool--opcional {
+  border-style: dashed;
+}

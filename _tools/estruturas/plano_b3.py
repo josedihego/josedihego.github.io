@@ -1,4 +1,4 @@
-"""Bloco 3 – Dicionários: hash e árvores (aulas 19 a 27)."""
+"""Bloco 3 – Tabelas hash e árvores (aulas 19 a 27)."""
 
 AULA_19 = dict(
     n=19, bloco=3, tema='Tabelas hash com encadeamento', curto='Hash com encadeamento',
@@ -43,7 +43,7 @@ AULA_19 = dict(
 \item \textbf{Teorema 11.2} (com sucesso): examina em média $1 + \frac{\alpha}{2} - \frac{\alpha}{2n}$ elementos.
 \item Se $m$ cresce junto com $n$ ($n = O(m)$), então $\alpha = O(1)$ e \textbf{todas as operações são $O(1)$ em média}.
 \end{itemize}''',
-             rodape=r'Na prática: dobre $m$ (e reinsira tudo) quando $\alpha$ passar de um limite, como no vetor dinâmico da aula 16: custo amortizado $O(1)$.'),
+             rodape=r'Na prática: dobre $m$ (e reinsira tudo) quando $\alpha$ passar de um limite, como no vetor dinâmico da aula 13: custo amortizado $O(1)$.'),
     ],
     pratica=dict(
         resumo=['Hash de strings: polinômio em base 31, resto por $m = 101$ (primo)', 'Listas na cabeça; busca antes de inserir para contar repetições',
@@ -228,7 +228,7 @@ A sondagem linear sofre com aglomerados: $\frac12(1 + 1/(1-\alpha)^2)$ sem suces
         ],
         conclusao=r'''As quatro fórmulas se confirmam com desvios de poucos por cento. Até $\alpha \approx 0{,}5$, linear e duplo empatam; acima disso, os \textbf{aglomerados} da linear explodem o custo.
 Regra prática: endereçamento aberto com $\alpha \le 0{,}7$; acima disso, redimensione.''',
-        extra=r'A linear ainda é muito usada: suas sondagens são vizinhas na memória e aproveitam o cache (aula 17). Meça o \textbf{tempo}, não só as sondagens.'),
+        extra=r'A linear ainda é muito usada: suas sondagens são vizinhas na memória e aproveitam o cache (aula 14). Meça o \textbf{tempo}, não só as sondagens.'),
     conexoes=[
         ('\\faMicrochip', 'Hardware', 'Caches de CPU são tabelas hash em hardware: o endereço escolhe o conjunto, e cada conjunto tem poucas ``posições'' (associatividade).'),
         ('\\faRust', 'Linguagens', 'O \\texttt{HashMap} do Rust (SwissTable), o \\texttt{dict} do Python e o \\texttt{absl::flat\\_hash\\_map} do C++ usam endereçamento aberto pela localidade de memória.'),

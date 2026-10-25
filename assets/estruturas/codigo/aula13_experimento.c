@@ -1,63 +1,18 @@
-// Aula 13 – Experimento: quão perto do limite lg n! chega o merge sort?
-// Tabela 1 (n, pior_merge, limite): pior caso sobre TODAS as n! permutações, n = 2..10
-// Tabela 2 (n, media_merge): média em vetores aleatórios, n até 2^20
+// Aula 13 – Experimento: custo amortizado do vetor dinâmico
+// Saída CSV: n, dobra, mais_mil (cópias de elementos para fazer n inserções)
+// n = 2^k + 1: logo depois de uma expansão, o pior momento para o vetor que dobra
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-long comp;
-int *aux;
-
-void merge_sort(int A[], int p, int r) {
-    if (p >= r) return;
-    int q = (p + r) / 2;
-    merge_sort(A, p, q);
-    merge_sort(A, q + 1, r);
-    for (int k = p; k <= r; k++) aux[k] = A[k];
-    for (int k = p, i = p, j = q + 1; k <= r; k++)
-        if (i > q) A[k] = aux[j++];
-        else if (j > r) A[k] = aux[i++];
-        else A[k] = (comp++, aux[i] <= aux[j]) ? aux[i++] : aux[j++];
-}
-
-/* Todas as n! permutações (algoritmo de Heap): o maior número de comparações. */
-long pior_caso(int n) {
-    int P[16], c[16] = {0}, A[16];
-    for (int k = 0; k < n; k++) P[k] = k;
-    long pior = 0;
-    for (int i = 0;;) {
-        for (int k = 0; k < n; k++) A[k] = P[k];
-        comp = 0;
-        merge_sort(A, 0, n - 1);
-        if (comp > pior) pior = comp;
-        while (i < n && c[i] >= i) c[i++] = 0;
-        if (i >= n) return pior;
-        int t, j = i % 2 ? c[i] : 0;
-        t = P[j]; P[j] = P[i]; P[i] = t;
-        c[i]++;
-        i = 0;
-    }
-}
 
 int main(void) {
-    srand(13);
-    int N = 1 << 20;
-    aux = malloc(N * sizeof(int));
-    printf("n,pior_merge,limite\n");
-    for (int n = 2; n <= 10; n++)
-        printf("%d,%ld,%.0f\n", n, pior_caso(n), ceil(lgamma(n + 1) / log(2) - 1e-9));
-    printf("\nn,media_merge\n");
-    int *A = malloc(N * sizeof(int));
-    for (int n = 1 << 10; n <= N; n *= 2) {
-        double soma = 0;
-        for (int r = 0; r < 3; r++) {
-            for (int k = 0; k < n; k++) A[k] = rand();
-            comp = 0;
-            merge_sort(A, 0, n - 1);
-            soma += comp;
-        }
-        printf("%d,%.0f\n", n, soma / 3);
+    printf("n,dobra,mais_mil\n");
+    for (long n = (1 << 10) + 1; n <= (1 << 20) + 1; n = 2 * (n - 1) + 1) {
+        long cap = 1, copias = 0;              // estratégia 1: dobrar a capacidade
+        for (long tam = 0; tam < n; tam++)
+            if (tam == cap) { copias += tam; cap *= 2; }
+        long cap2 = 1000, copias2 = 0;          // estratégia 2: somar 1000 posições
+        for (long tam = 0; tam < n; tam++)
+            if (tam == cap2) { copias2 += tam; cap2 += 1000; }
+        printf("%ld,%ld,%ld\n", n, copias, copias2);
     }
-    free(A); free(aux);
     return 0;
 }

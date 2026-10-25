@@ -5,7 +5,8 @@ Pasta ignorada pelo Jekyll (começa com `_`), não é publicada.
 | O quê | Fonte (edite aqui) | Gerado em |
 |---|---|---|
 | Blocos e as 36 aulas (texto dos slides, em LaTeX) | `plano.py`, `plano_b1.py` … `plano_b4.py` | `assets/estruturas/slides/aulaNN.pdf`, `_data/estruturas.yml` |
-| Implementações e experimentos em C (64 arquivos) | `c/aulaNN_*.c` | `assets/estruturas/codigo/*.c` |
+| Anexo Base Prática em C (B1–B5) e bloco complementar opcional (C1–C5) | `plano_base.py`, `plano_compl.py` | `slides/baseK.pdf`, `slides/complK.pdf` |
+| Implementações e experimentos em C (85 arquivos) | `c/aulaNN_*.c`, `c/baseK_*.c`, `c/complK_*.c` | `assets/estruturas/codigo/*.c` |
 | Figuras do Cormen (3ª ed.) | recortadas do PDF local por `cormen_fig.py` | cache em `~/.cache/estruturas-cormen` (fora do repositório) |
 
 Cada deck tem quatro partes: Teoria (Cormen, figuras e pseudocódigo em português), Prática em C, Experimento e
@@ -17,7 +18,7 @@ Conexões. Os slides usam xelatex, a fonte Inter e os pacotes tcolorbox, pgfplot
 as séries e as curvas teóricas (`f` é uma expressão em `n`, que é o valor do eixo x):
 
 - `ajustar=False`: a teoria dá a constante; o gerador compara direto.
-- sem `ajustar`: o gerador ajusta `c·f(n)` por mínimos quadrados.
+- sem `ajustar`: o gerador ajusta `c·f(n)` por mínimos quadrados na metade superior de `n` (o regime assintótico).
 - `limite='inferior'` ou `'superior'`: o medido tem de ficar sempre acima (ou abaixo) de `f(n)`.
 
 Se o medido se afastar da teoria mais que `tolerancia` (na metade superior de `n`), a geração **falha**: o slide
@@ -32,6 +33,6 @@ python3 _tools/estruturas/encurta.py _tools/estruturas/c/arquivo.c   # move come
 
 # gera slides (rodando todos os experimentos), código publicado e _data/estruturas.yml
 python3 _tools/estruturas/gerar.py . ~/Documents/Books/algoritmos/Cormen_Introduction_to_Algorithms_3rd_edition.pdf
-python3 _tools/estruturas/gerar.py . <pdf> --aulas 4,8        # só essas aulas
+python3 _tools/estruturas/gerar.py . <pdf> --aulas 4,8,B2,C1   # só essas aulas ou módulos
 python3 _tools/estruturas/gerar.py . <pdf> --sem-slides       # só dados e código
 ```

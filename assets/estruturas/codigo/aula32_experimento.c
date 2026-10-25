@@ -61,34 +61,42 @@ int main(void) {
         heap = malloc(n * sizeof(int));
         pos = malloc(n * sizeof(int));
         int *D = malloc((long)n * n * sizeof(int));
-        for (long k = 0; k < (long)n * n; k++) D[k] = 1 << 29;
         for (int u = 0; u <= n; u++) ini[u] = 8 * u;
         for (int k = 0; k < m; k++) {
             dest[k] = k % 8 == 0 ? (k / 8 + 1) % n : (int)sorteia(n);
             peso[k] = 1 + sorteia(100);
-            int u = k / 8;
-            if (peso[k] < D[(long)u * n + dest[k]]) D[(long)u * n + dest[k]] = peso[k];
         }
-        for (int u = 0; u < n; u++) D[(long)u * n + u] = 0;
-        double t0 = agora();
-        for (int k = 0; k < n; k++)
-            for (int i = 0; i < n; i++) {
-                int dik = D[(long)i * n + k];
-                for (int j = 0; j < n; j++)
-                    if (dik + D[(long)k * n + j] < D[(long)i * n + j])
-                        D[(long)i * n + j] = dik + D[(long)k * n + j];
+        double melhor_f = 1e30, melhor_d = 1e30;
+        long soma1 = 0, soma2 = 0;
+        for (int rep = 0; rep < 2; rep++) {     // melhor de 2: o relógio tem ruído
+            for (long k = 0; k < (long)n * n; k++) D[k] = 1 << 29;
+            for (int k = 0; k < m; k++) {
+                long pos_uv = (long)(k / 8) * n + dest[k];
+                if (peso[k] < D[pos_uv]) D[pos_uv] = peso[k];
             }
-        double t1 = agora();
-        long soma1 = 0, soma2 = 0;              // confere: as duas respostas coincidem
-        for (long k = 0; k < (long)n * n; k++) soma1 += D[k];
-        double t2 = agora();
-        for (int s = 0; s < n; s++) {
-            dijkstra(n, s);
-            for (int u = 0; u < n; u++) soma2 += d[u];
+            for (int u = 0; u < n; u++) D[(long)u * n + u] = 0;
+            double t0 = agora();
+            for (int k = 0; k < n; k++)
+                for (int i = 0; i < n; i++) {
+                    int dik = D[(long)i * n + k];
+                    for (int j = 0; j < n; j++)
+                        if (dik + D[(long)k * n + j] < D[(long)i * n + j])
+                            D[(long)i * n + j] = dik + D[(long)k * n + j];
+                }
+            double t1 = agora();
+            soma1 = soma2 = 0;                  // confere: as duas respostas coincidem
+            for (long k = 0; k < (long)n * n; k++) soma1 += D[k];
+            double t2 = agora();
+            for (int s = 0; s < n; s++) {
+                dijkstra(n, s);
+                for (int u = 0; u < n; u++) soma2 += d[u];
+            }
+            double t3 = agora();
+            if (t1 - t0 < melhor_f) melhor_f = t1 - t0;
+            if (t3 - t2 < melhor_d) melhor_d = t3 - t2;
         }
-        double t3 = agora();
         if (soma1 != soma2) { fprintf(stderr, "respostas diferentes!\n"); return 1; }
-        printf("%d,%.2f,%.2f\n", n, (t1 - t0) * 1000, (t3 - t2) * 1000);
+        printf("%d,%.2f,%.2f\n", n, melhor_f * 1000, melhor_d * 1000);
         free(ini); free(dest); free(peso); free(d); free(heap); free(pos); free(D);
     }
     return 0;

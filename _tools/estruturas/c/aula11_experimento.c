@@ -1,51 +1,47 @@
-// Aula 11 – Experimento: comparações do quicksort em entradas aleatórias e ordenadas
-// Tabela 1 (n, aleatorio): média de 5 vetores aleatórios, n até 2^20
-// Tabela 2 (n, ordenado): vetor já ordenado (pior caso da partição de Lomuto)
+// Aula 11 – Experimento: custo por operação de pilha em vetor e em lista ligada
+// Saída CSV: n, vetor_ns, lista_ns (n PUSH seguidos de n POP; tempo por operação)
+#define _POSIX_C_SOURCE 199309L   // clock_gettime com -std=c17
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-long comp;
-
-void troca(int A[], int i, int j) { int t = A[i]; A[i] = A[j]; A[j] = t; }
-
-int particiona(int A[], int p, int r) {
-    int x = A[r], i = p - 1;
-    for (int j = p; j < r; j++)
-        if (comp++, A[j] <= x) troca(A, ++i, j);
-    troca(A, i + 1, r);
-    return i + 1;
+double agora(void) {
+    struct timespec t;
+    clock_gettime(CLOCK_MONOTONIC, &t);
+    return t.tv_sec + t.tv_nsec / 1e9;
 }
 
-void quicksort(int A[], int p, int r) {
-    while (p < r) {                         // recursão só no lado menor: pilha O(lg n)
-        int q = particiona(A, p, r);
-        if (q - p < r - q) { quicksort(A, p, q - 1); p = q + 1; }
-        else { quicksort(A, q + 1, r); r = q - 1; }
-    }
-}
+typedef struct No { long x; struct No *prox; } No;
+volatile long ralo;
 
 int main(void) {
-    srand(11);
-    int N = 1 << 20;
-    int *A = malloc(N * sizeof(int));
-    printf("n,aleatorio\n");
-    for (int n = 1 << 12; n <= N; n *= 2) {
-        double soma = 0;
+    printf("n,vetor_ns,lista_ns\n");
+    for (long n = 1 << 12; n <= 1 << 22; n *= 2) {
+        double tv = 1e30, tl = 1e30;
         for (int rep = 0; rep < 5; rep++) {
-            for (int k = 0; k < n; k++) A[k] = rand();
-            comp = 0;
-            quicksort(A, 0, n - 1);
-            soma += comp;
+            long *v = malloc(n * sizeof(long)), topo = 0, s = 0;
+            double t0 = agora();
+            for (long i = 0; i < n; i++) v[topo++] = i;           // PUSH
+            while (topo) s += v[--topo];                           // POP
+            double t1 = agora();
+            free(v);
+            No *pilha = NULL;
+            double t2 = agora();
+            // PUSH: um malloc por nó
+            for (long i = 0; i < n; i++) {
+                No *no = malloc(sizeof(No));
+                no->x = i; no->prox = pilha; pilha = no;
+            }
+            // POP: um free por nó
+            while (pilha) {
+                No *no = pilha; s += no->x; pilha = no->prox; free(no);
+            }
+            double t3 = agora();
+            ralo = s;
+            if (t1 - t0 < tv) tv = t1 - t0;
+            if (t3 - t2 < tl) tl = t3 - t2;
         }
-        printf("%d,%.0f\n", n, soma / 5);
+        printf("%ld,%.3f,%.3f\n", n, tv / (2 * n) * 1e9, tl / (2 * n) * 1e9);
     }
-    printf("\nn,ordenado\n");
-    for (int n = 1000; n <= 16000; n += 1000) {
-        for (int k = 0; k < n; k++) A[k] = k;
-        comp = 0;
-        quicksort(A, 0, n - 1);
-        printf("%d,%ld\n", n, comp);
-    }
-    free(A);
     return 0;
 }

@@ -1,4 +1,4 @@
-"""Bloco 1 – Fundamentos e ordenação (aulas 1 a 9)."""
+"""Bloco 1 – Fundamentos, ordenação e custo (aulas 1 a 9)."""
 
 AULA_01 = dict(
     n=1, bloco=1, tema='Algoritmos, eficiência e o método experimental', curto='Algoritmos e eficiência',
@@ -764,7 +764,7 @@ O heapsort completo fica perto de $1{,}8\,n\lg n$: o dobro de comparações do m
         ('\\faDesktop', 'Sistemas operacionais', 'Temporizadores do kernel, filas de prioridade de processos e o temporizador do runtime de Go usam heaps para achar o próximo evento em $O(\\lg n)$.'),
         ('\\faNetworkWired', 'Simulação de redes', 'Simuladores de eventos discretos (ns-3, OMNeT++) mantêm uma fila de eventos ordenada por tempo: extrair o próximo é \\Nome{Extract-Min}.'),
         ('\\faMicrochip', 'Sistemas embarcados', 'Heapsort garante $O(n\\lg n)$ sem memória extra nem recursão profunda; o \\texttt{std::sort} do C++ (introsort) recorre a ele quando o quicksort degenera.'),
-        ('\\faRoute', 'Jogos e mapas', 'Dijkstra e A*, usados em GPS e na movimentação de personagens, dependem de uma fila de prioridade em heap (aulas 10 e 31).'),
+        ('\\faRoute', 'Jogos e mapas', 'Dijkstra e A*, usados em GPS e na movimentação de personagens, dependem de uma fila de prioridade em heap (aulas 17 e 31).'),
     ],
     exercicios=['(6.1-1) Quais o mínimo e o máximo de elementos num heap de altura $h$?',
                 '(6.2-1) Ilustre \\Nome{Max-Heapify}($A$, 3) em $A = \\langle 27,17,3,16,13,10,1,5,7,12,4,8,9,0\\rangle$.',

@@ -1,56 +1,44 @@
-// Aula 12 – Experimento: o quicksort aleatorizado não tem entrada ruim
-// Tabela 1 (n, fixo, aleatorizado): comparações com entrada JÁ ORDENADA
-// Tabela 2 (comparacoes, frequencia): 20.000 execuções em n = 1000 ordenado
+// Aula 12 – Experimento: simulação de uma fila de atendimento (M/M/1)
+// Saída CSV: rho, espera (tempo médio na fila; atendimento médio = 1)
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-long comp;
-
-void troca(int A[], int i, int j) { int t = A[i]; A[i] = A[j]; A[j] = t; }
-
-int particiona(int A[], int p, int r) {
-    int x = A[r], i = p - 1;
-    for (int j = p; j < r; j++)
-        if (comp++, A[j] <= x) troca(A, ++i, j);
-    troca(A, i + 1, r);
-    return i + 1;
+/* Clientes chegam com intervalos exponenciais de média 1/rho e são atendidos em
+   ordem de chegada (FIFO) com tempos exponenciais de média 1. A fila guarda os
+   instantes de chegada; a teoria das filas prevê espera média rho/(1 - rho). */
+unsigned long long estado = 0x452821E638D01377ULL;
+double uniforme(void) {
+    estado ^= estado << 13; estado ^= estado >> 7; estado ^= estado << 17;
+    return ((estado >> 11) + 0.5) / 9007199254740992.0;
 }
-
-void quick(int A[], int p, int r, int sorteia) {
-    while (p < r) {
-        if (sorteia) troca(A, p + rand() % (r - p + 1), r);
-        int q = particiona(A, p, r);
-        if (q - p < r - q) { quick(A, p, q - 1, sorteia); p = q + 1; }
-        else { quick(A, q + 1, r, sorteia); r = q - 1; }
-    }
-}
+double exponencial(double media) { return -media * log(uniforme()); }
 
 int main(void) {
-    srand(12);
-    int *A = malloc(16000 * sizeof(int));
-    printf("n,fixo,aleatorizado\n");
-    for (int n = 1000; n <= 16000; n += 1000) {
-        for (int k = 0; k < n; k++) A[k] = k;
-        comp = 0; quick(A, 0, n - 1, 0);
-        long fixo = comp;
-        double soma = 0;
-        for (int rep = 0; rep < 20; rep++) {
-            for (int k = 0; k < n; k++) A[k] = k;
-            comp = 0; quick(A, 0, n - 1, 1);
-            soma += comp;
+    int N = 2000000, cap = 1 << 22;
+    double *fila = malloc(cap * sizeof(double));   // fila circular de chegadas
+    printf("rho,espera\n");
+    for (int q = 1; q <= 17; q++) {
+        double rho = q * 0.05;
+        int cabeca = 0, cauda = 0, tam = 0;
+        double t_chegada = exponencial(1 / rho), t_fim = INFINITY, soma = 0;
+        int atendidos = 0;
+        while (atendidos < N) {
+            if (t_chegada < t_fim) {               // evento: chegada
+                if (tam == 0 && t_fim == INFINITY) t_fim = t_chegada + exponencial(1);
+                else { fila[cauda] = t_chegada; cauda = (cauda + 1) % cap; tam++; }
+                t_chegada += exponencial(1 / rho);
+            } else {                               // evento: fim de um atendimento
+                atendidos++;
+                if (tam == 0) { t_fim = INFINITY; continue; }
+                double chegou = fila[cabeca];      // DEQUEUE: o mais antigo
+                cabeca = (cabeca + 1) % cap; tam--;
+                soma += t_fim - chegou;            // quanto ele esperou na fila
+                t_fim += exponencial(1);
+            }
         }
-        printf("%d,%ld,%.0f\n", n, fixo, soma / 20);
+        printf("%.2f,%.4f\n", rho, soma / N);
     }
-    printf("\ncomparacoes,frequencia\n");
-    int hist[400] = {0};
-    for (int rep = 0; rep < 20000; rep++) {
-        for (int k = 0; k < 1000; k++) A[k] = k;
-        comp = 0; quick(A, 0, 999, 1);
-        int b = comp / 250;
-        if (b < 400) hist[b]++;
-    }
-    for (int b = 0; b < 400; b++)
-        if (hist[b]) printf("%d,%d\n", b * 250 + 125, hist[b]);
-    free(A);
+    free(fila);
     return 0;
 }

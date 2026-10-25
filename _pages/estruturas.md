@@ -8,7 +8,7 @@ mathjax: true
 ---
 [← Cursos](/courses/){: .back-link}
 
-Plano de aulas da disciplina de Estruturas de Dados e Algoritmos (ADS, INF006). São 36 encontros em quatro blocos: 32 aulas e 4 apresentações de projeto (aulas 9, 18, 27 e 36).
+Plano de aulas da disciplina de Estruturas de Dados e Algoritmos (ADS, INF006). São 36 encontros em quatro blocos: 32 aulas e 4 apresentações de projeto (aulas 9, 18, 27 e 36). Fora dos 36 encontros há um anexo, <strong>Base Prática em C</strong> (módulos B1 a B5, para estudar antes do bloco 1), e um bloco complementar opcional que aprofunda a ordenação (C1 a C5).
 
 <div class="kit-card">
 <strong>Como é cada aula</strong>: um conjunto de slides em quatro partes.
@@ -22,7 +22,7 @@ As figuras dos slides são reproduzidas de Cormen, Leiserson, Rivest e Stein (MI
 </div>
 
 {% for b in site.data.estruturas %}
-<h2 class="unit-title" id="bloco-{{ b.bloco }}"><span class="unit-num">Bloco {{ b.bloco }}</span> {{ b.titulo }}</h2>
+<h2 class="unit-title{% if b.tag != "" %} unit-title--opcional{% endif %}" id="bloco-{{ b.bloco }}"><span class="unit-num">{{ b.rotulo }}</span> {{ b.titulo }}</h2>
 <p class="unit-summary">{{ b.resumo }}</p>
 <div class="lesson-list">
   {% for a in b.aulas %}
@@ -31,13 +31,13 @@ As figuras dos slides são reproduzidas de Cormen, Leiserson, Rivest e Stein (MI
       <span class="lesson-num">{{ a.n }}</span>
       <span class="lesson-head">
         <strong>{{ a.tema | escape }}</strong>
-        <span class="lesson-tools">{% if a.tipo == 'aula' %}<span class="tool">Cormen, {{ a.cormen }}</span>{% else %}<span class="tool tool--prova">Projeto</span>{% endif %}</span>
+        <span class="lesson-tools">{% if a.tipo == 'aula' %}{% if b.tag != "" %}<span class="tool tool--opcional">{{ b.tag }}</span>{% endif %}<span class="tool">{{ a.cormen }}</span>{% else %}<span class="tool tool--prova">Projeto</span>{% endif %}</span>
       </span>
     </summary>
     <div class="lesson-body">
       {% if a.tipo == 'aula' %}
       <div class="lesson-files">
-        <a class="file-btn" href="/assets/estruturas/slides/{{ a.slides }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> Slides da aula {{ a.n }}</a>
+        <a class="file-btn" href="/assets/estruturas/slides/{{ a.slides }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> Slides{% if b.tag != "" %} do módulo{% else %} da aula{% endif %} {{ a.n }}</a>
         {% for c in a.codigo %}<a class="file-btn" href="/assets/estruturas/codigo/{{ c.arquivo }}" download><i class="fas fa-code" aria-hidden="true"></i> {{ c.arquivo }}</a>{% endfor %}
         <a class="file-btn" href="/assets/estruturas/codigo/{{ a.experimento.arquivo }}" download><i class="fas fa-flask" aria-hidden="true"></i> {{ a.experimento.arquivo }}</a>
       </div>
