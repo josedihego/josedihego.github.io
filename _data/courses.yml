@@ -5,6 +5,7 @@
     - { title: "Informática – Planilhas, Documentos, Python e Scratch - Integrado", code: "36 aulas", url: "/infobasica/", nivel: "Integrado" }
     - { title: "Programação aplicada com C e Arduino - Integrado", code: "36 aulas", url: "/progarduino/", nivel: "Integrado" }
     - { title: "Lógica de Programação - Superior", code: "36 aulas", url: "/logica/", nivel: "Superior" }
+    - { title: "Estruturas de dados e seus algoritmos - Superior", code: "36 aulas", url: "/estruturas/", nivel: "Superior" }
 - group: "Superior"
   icon: "fa-building-columns"
   courses:

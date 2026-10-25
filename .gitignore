@@ -4,3 +4,6 @@ _site
 Gemfile.lock
 # File-manager metadata
 .comments/
+
+# caches do Python (geradores em _tools)
+__pycache__/
