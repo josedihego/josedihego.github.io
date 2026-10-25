@@ -8,7 +8,7 @@ import sys, os, re, json, glob, shutil, subprocess, tempfile
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
-from plano import BLOCOS, AULAS
+from plano import BLOCOS, AULAS, EXCLUIDAS
 
 SITE = 'https://josedihego.net'
 PROVAS = 'https://github.com/josedihego/programacaoC/blob/main/INF027_listas_provas_PDF/'
@@ -69,10 +69,8 @@ def md(s):
 
 
 MESA_C = r'''#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-#include <math.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #define MESA(...) (printf(__VA_ARGS__), printf(" \\\\\n"))
 int main(void) {
 %s
@@ -84,7 +82,7 @@ return 0;
 def rodar_mesa(codigo, tmp):
     fonte, exe = os.path.join(tmp, 'mesa.c'), os.path.join(tmp, 'mesa')
     open(fonte, 'w').write(MESA_C % codigo)
-    c = subprocess.run(['gcc', '-std=c17', '-w', fonte, '-o', exe, '-lm'], capture_output=True, text=True)
+    c = subprocess.run(['gcc', '-std=c17', '-w', '-Werror=implicit-function-declaration', fonte, '-o', exe], capture_output=True, text=True)
     if c.returncode:
         raise RuntimeError('teste de mesa não compila:\n' + c.stderr + codigo)
     return subprocess.run([exe], capture_output=True, text=True, timeout=5).stdout
@@ -330,7 +328,7 @@ def gerar(raiz, slides=True, so_aulas=None):
         saida.append({'bloco': b['n'], 'titulo': b['titulo'], 'resumo': b['resumo'], 'aulas': aulas})
     # banco: questões não usadas, pela avaliação de origem (A1 → bloco 1, A2 → bloco 2, A3/Final → bloco 3)
     for b in saida:
-        resto = [q for q in Q.values() if q['id'] not in usadas and min(q['avaliacao'], 3) == b['bloco']]
+        resto = [q for q in Q.values() if q['id'] not in usadas | EXCLUIDAS and min(q['avaliacao'], 3) == b['bloco']]
         b['banco'] = [questao_yml(q, sol_dir) for q in sorted(resto, key=lambda q: (q['periodo'], q['pdf'], q['questao']))]
     with open(os.path.join(raiz, '_data', 'logica.yml'), 'w') as y:
         y.write('# Gerado por _tools/logica/gerar.py a partir de plano.py e questoes.json – não edite à mão\n')

@@ -1,6 +1,5 @@
 // A3-2023.1 – Questão I: Caça-palavras (horizontal e vertical) – pontuação
 #include <stdio.h>                                      // printf e scanf
-#include <string.h>                                     // strlen
 #define MAX 100                                         // maior grade aceita
 
 int main(void) {                                        // início do programa
@@ -9,7 +8,8 @@ int main(void) {                                        // início do programa
     scanf("%d %d", &m, &n);                             // lê as dimensões
     for (int i = 0; i < m; i++) scanf("%s", g[i]);      // lê as linhas da grade
     scanf("%s", palavra);                               // lê a palavra
-    int t = strlen(palavra), achou = 0;                 // tamanho da palavra e resultado
+    int t = 0, achou = 0;                               // tamanho da palavra e resultado
+    while (palavra[t] != '\0') t++;                     // conta as letras até o '\0'
     for (int i = 0; i < m && !achou; i++) {             // cada posição inicial
         for (int j = 0; j < n && !achou; j++) {         // (para assim que achar)
             int h = j + t <= n, v = i + t <= m;         // cabe na horizontal? na vertical?

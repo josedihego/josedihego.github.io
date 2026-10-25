@@ -16,7 +16,7 @@ Plano de aulas da disciplina de Lógica de Programação (INF027), em linguagem 
   <li><strong>Resolvida em sala</strong>: uma questão de prova anterior, resolvida passo a passo, com o código comentado.</li>
   <li><strong>Para você</strong>: outra questão de prova anterior, para resolver. A solução comentada fica disponível para conferir depois.</li>
 </ol>
-Toda questão indica a prova de origem e o número da questão, com link para o PDF original no repositório <a href="https://github.com/josedihego/programacaoC/tree/main/INF027_listas_provas_PDF">programacaoC</a>. Para compilar: <code>gcc -Wall arquivo.c -o programa -lm</code>, ou no navegador em <a href="https://www.onlinegdb.com/online_c_compiler">OnlineGDB</a>.
+Toda questão indica a prova de origem e o número da questão, com link para o PDF original no repositório <a href="https://github.com/josedihego/programacaoC/tree/main/INF027_listas_provas_PDF">programacaoC</a>. Os programas usam só <code>stdio.h</code>, <code>stdlib.h</code> e <code>stdbool.h</code>. Para compilar: <code>gcc -Wall arquivo.c -o programa</code>, ou no navegador em <a href="https://www.onlinegdb.com/online_c_compiler">OnlineGDB</a>.
 </div>
 
 {% for b in site.data.logica %}

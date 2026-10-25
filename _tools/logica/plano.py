@@ -1,6 +1,7 @@
 """Course plan for /logica/ (Lógica de Programação – Superior): 3 blocks, 36 classes.
 Each content class: the theme, the question solved in class and the one proposed (ids from questoes.json), plus the
 material of the slide deck. Markup in the texts: `code` and **bold**.
+The course uses only <stdio.h>, <stdlib.h> and <stdbool.h>, and does not cover struct.
 mesa = desk-check: C snippet run by the generator; each MESA(...) line prints one table row and is hidden on the slide."""
 
 BLOCOS = [
@@ -8,8 +9,8 @@ BLOCOS = [
      'resumo': 'Entrada e saída, tipos, `/` e `%`, dígitos, bases, `if`/`else`, `switch` e bits. Termina com a Avaliação I.'},
     {'n': 2, 'titulo': 'Repetição, funções e vetores',
      'resumo': '`while` e `for`, acumuladores, laços aninhados, funções, vetores, janelas e simulação. Termina com a Avaliação II.'},
-    {'n': 3, 'titulo': 'Strings, matrizes e structs',
-     'resumo': 'Strings e a tabela ASCII, vetores de contagem, matrizes, simulação em grade e `struct`. Termina com a Avaliação III e a Reavaliação.'},
+    {'n': 3, 'titulo': 'Strings, matrizes e tabelas',
+     'resumo': 'Strings e a tabela ASCII, vetores de contagem, matrizes, simulação em grade e tabelas de dados. Termina com a Avaliação III e a Reavaliação.'},
 ]
 
 AULAS = [
@@ -160,27 +161,32 @@ for (int i = 0; i < 3; i++) {
          dica=['Desconto = 11% do salário',
                'Teto: `if (desconto > TETO) desconto = TETO;`',
                'Teste um salário baixo e um bem alto (que bate no teto)']),
-    dict(n=6, tema='Decisões encadeadas e arredondamento',
-         objetivo='Escolher um valor por faixa ou categoria e arredondar para cima com `ceil`.',
+    dict(n=6, tema='Decisões encadeadas e arredondamento para cima',
+         objetivo='Escolher um valor por faixa ou categoria e arredondar para cima só com aritmética.',
          resolvida='A1-2015.2-QIII-B', proposta='A1-2026.2-QIb',
          conceitos=['Categoria → valor: `if (c == 1) v = ...; else if (c == 2) ...`',
-                    '`ceil(x)` (de `<math.h>`) arredonda para cima: `ceil(2.1)` = 3',
-                    'Compile com `-lm` quando usar `<math.h>` no Linux',
+                    'Converter para `int` **trunca**: `(int)2.9` vale 2',
+                    'Arredondar para cima sem biblioteca: trunca e, se sobrou, soma 1',
+                    'Com inteiros positivos: `(a + b - 1) / b` é a divisão arredondada para cima',
                     'Trate a categoria inválida no `else` final'],
-         padrao='''#include <math.h>
-double potencia = area * watts_m2;
-int lampadas = (int)ceil(potencia / 60);  // nunca falta luz''',
-         erros=[('int q = potencia / 60;', 'int q = (int)ceil(potencia / 60);', 'truncar deixa o cômodo escuro'),
-                ('ceil(450 / 60)', 'ceil(450 / 60.0)', 'a divisão inteira acontece antes do `ceil`'),
+         padrao='''double potencia = area * watts_m2;
+int lampadas = (int)(potencia / 60);   // parte inteira
+if (lampadas * 60 < potencia)          // sobrou potência?
+    lampadas++;                        // mais uma lâmpada''',
+         erros=[('int q = potencia / 60;', 'if (q * 60 < potencia) q++;', 'truncar deixa o cômodo escuro'),
+                ('q = (int)(potencia / 60) + 1;', '/* só soma se sobrou */', '360 W pede 6 lâmpadas, não 7'),
                 ('/* sem else final */', 'else printf("inválido");', 'entrada fora das opções')],
-         mesa=dict(cab=['potência', 'potência/60', 'truncado', 'ceil'], codigo='''double p[3] = {360, 450, 600};
-for (int i = 0; i < 3; i++)
-    MESA("%.0f & %.2f & %d & %.0f", p[i], p[i] / 60, (int)(p[i] / 60), ceil(p[i] / 60));'''),
+         mesa=dict(cab=['potência', 'potência/60', 'truncado', 'sobrou?', 'lâmpadas'], codigo='''double p[3] = {360, 450, 600};
+for (int i = 0; i < 3; i++) {
+    int q = (int)(p[i] / 60);
+    int sobrou = q * 60 < p[i];
+    MESA("%.0f & %.2f & %d & %s & %d", p[i], p[i] / 60, q, sobrou ? "sim" : "não", q + sobrou);
+}'''),
          passos=['Classe do cômodo → potência por m² (12, 15 ou 20 W)',
                  'Potência total = largura × comprimento × W/m²',
-                 'Lâmpadas = `ceil(total / 60)`'],
-         dica=['Pontuação = soma das duas cartas; iguais dobra, consecutivas (`abs(a - b) == 1`) triplica',
-               'Calcule a pontuação de cada jogadora numa variável',
+                 'Lâmpadas = parte inteira de total / 60, mais 1 se sobrou'],
+         dica=['Pontuação = soma das duas cartas; iguais dobra, consecutivas triplica',
+               'Consecutivas: `a - b == 1 || b - a == 1` (ou `abs(a - b) == 1`, de `<stdlib.h>`)',
                'Compare: Lia, Mia ou empate (teste o empate de propósito)']),
     dict(n=7, tema='Comparações em vários níveis',
          objetivo='Decidir comparando critérios em ordem de prioridade (anos, depois meses, depois dias).',
@@ -657,56 +663,68 @@ for (int i = 0; i < 5; i++) {
          objetivo='Prova do Bloco 2, no formato das avaliações anteriores. Abaixo, uma prova-modelo com duas questões de provas passadas.'),
     # ---------------------------------------------------------------- Bloco 3
     dict(n=25, tema='Strings: vetor de char terminado em \\0',
-         objetivo='Ler, percorrer e comparar caracteres de uma string.',
+         objetivo='Ler, percorrer e comparar caracteres de uma string sem bibliotecas extras.',
          resolvida='A3-2023.2-QII', proposta='A3-2014.2-QII',
          conceitos=['`char s[100];` guarda até 99 letras + o `\'\\0\'` final',
                     'Uma palavra: `scanf("%99s", s)`; uma linha: `fgets(s, sizeof s, stdin)`',
                     'Percorrer: `for (i = 0; s[i] != \'\\0\'; i++)`',
-                    'Caracteres são números (ASCII): `\'a\' < \'b\'`; `tolower`, `isalpha` em `<ctype.h>`'],
-         padrao='''#include <ctype.h>
+                    'Caracteres são números (ASCII): letras são consecutivas, `\'a\' < \'b\'`',
+                    'Minúscula de uma maiúscula: `c - \'A\' + \'a\'` (escreva sua função)'],
+         padrao='''int minuscula(char c) {
+    if (c >= 'A' && c <= 'Z') return c - 'A' + 'a';
+    return c;
+}
+/* no main */
 int ordenada = 1;
 for (int i = 1; s[i] != '\\0'; i++)
-    if (tolower(s[i - 1]) > tolower(s[i]))
+    if (minuscula(s[i - 1]) > minuscula(s[i]))
         ordenada = 0;''',
-         erros=[('if (s == "sim")', 'if (strcmp(s, "sim") == 0)', '`==` compara endereços, não textos'),
+         erros=[('if (s == "sim")', '/* compare letra a letra */', '`==` compara endereços, não textos'),
                 ('scanf("%s", &s);', 'scanf("%99s", s);', 'o vetor já é um endereço'),
-                ('char s[5] = "maçãs";', 'char s[20];', 'faltou espaço para o `\\0` (e acentos ocupam 2 bytes)')],
+                ('char s[5] = "maçãs";', 'char s[20];', 'faltou espaço para o `\\0` (e acentos ocupam 2 bytes)'),
+                ("if (c >= 'A' || c <= 'Z')", "if (c >= 'A' && c <= 'Z')", 'com `||` todo caractere passa')],
          mesa=dict(cab=['i', 's[i-1]', 's[i]', 'ordenada'], codigo='''char s[] = "FLoRa"; int ordenada = 1;
 for (int i = 1; s[i] != '\\0'; i++) {
-    if (tolower(s[i - 1]) > tolower(s[i])) ordenada = 0;
+    char a = s[i - 1], b = s[i];
+    if (a >= 'A' && a <= 'Z') a = a - 'A' + 'a';
+    if (b >= 'A' && b <= 'Z') b = b - 'A' + 'a';
+    if (a > b) ordenada = 0;
     MESA("%d & %c & %c & %d", i, s[i - 1], s[i], ordenada);
 }'''),
          passos=['Ler a palavra com `scanf("%99s", p)`',
-                 'Comparar cada letra com a anterior, sem diferenciar maiúsculas',
+                 'Comparar cada letra com a anterior, ambas em minúscula',
                  'Uma inversão basta para "não ordenada"'],
          dica=['Leia a frase inteira com `fgets`',
-               'Função `consoante(c)`: letra que não está em "aeiou"',
+               'Função `consoante(c)`: letra (faixas `a-z`, `A-Z`) que não é vogal',
                'Conte consoantes seguidas; a 2ª do grupo forma um encontro']),
     dict(n=26, tema='Vetor de contagem por letra',
          objetivo='Indexar um vetor de 26 posições pela letra (`c - \'A\'`).',
          resolvida='A3-2024.2-QII', proposta='A3-2026.1-QII',
-         conceitos=['Índice da letra: `toupper(c) - \'A\'` vai de 0 (A) a 25 (Z)',
+         conceitos=['Índice da letra: `c - \'A\'` (maiúscula) ou `c - \'a\'` (minúscula), de 0 a 25',
                     'Volta: `\'A\' + k` é a letra de índice k',
                     'Contagem: `cont[k]++`; primeira posição: guardar só se ainda for −1',
                     'Inicialize com um laço quando o valor inicial não for 0'],
          padrao='''int primeira[26];
 for (int k = 0; k < 26; k++) primeira[k] = -1;
-for (int i = 0; s[i] != '\\0'; i++)
-    if (isalpha(s[i])) {
-        int k = toupper(s[i]) - 'A';
-        if (primeira[k] == -1) primeira[k] = i;
-    }''',
-         erros=[('cont[s[i]]++;', 'cont[toupper(s[i]) - \'A\']++;', 'índice 97 não existe num vetor de 26'),
+for (int i = 0; s[i] != '\\0'; i++) {
+    int k = -1;
+    if (s[i] >= 'A' && s[i] <= 'Z') k = s[i] - 'A';
+    if (s[i] >= 'a' && s[i] <= 'z') k = s[i] - 'a';
+    if (k != -1 && primeira[k] == -1) primeira[k] = i;
+}''',
+         erros=[('cont[s[i]]++;', "cont[s[i] - 'A']++;", 'índice 97 não existe num vetor de 26'),
                 ('int primeira[26] = {-1};', 'laço preenchendo -1', 'só a posição 0 recebe −1'),
-                ('/* conta espaço e pontuação */', 'if (isalpha(s[i]))', 'só letras têm índice')],
+                ("cont[s[i] - 'A']++; /* com espaço */", '/* teste a faixa antes */', "`' ' - 'A'` é negativo")],
          mesa=dict(cab=['i', 's[i]', 'k', 'primeira[k]'], codigo='''char s[] = "Oba, boa"; int primeira[26];
 for (int k = 0; k < 26; k++) primeira[k] = -1;
-for (int i = 0; s[i] != '\\0'; i++)
-    if (isalpha((unsigned char)s[i])) {
-        int k = toupper((unsigned char)s[i]) - 'A';
-        if (primeira[k] == -1) primeira[k] = i;
-        MESA("%d & %c & %d & %d", i, s[i], k, primeira[k]);
-    }'''),
+for (int i = 0; s[i] != '\\0'; i++) {
+    int k = -1;
+    if (s[i] >= 'A' && s[i] <= 'Z') k = s[i] - 'A';
+    if (s[i] >= 'a' && s[i] <= 'z') k = s[i] - 'a';
+    if (k == -1) continue;
+    if (primeira[k] == -1) primeira[k] = i;
+    MESA("%d & %c & %d & %d", i, s[i], k, primeira[k]);
+}'''),
          passos=['Ler a linha com `fgets`',
                  'Para cada letra, guardar a posição só na primeira vez',
                  'Imprimir em ordem alfabética as letras que apareceram'],
@@ -714,27 +732,33 @@ for (int i = 0; s[i] != '\\0'; i++)
                'A fórmula vem em pares dígito + letra: `exigido[letra - \'A\'] = dígito - \'0\'`',
                'Todas as letras precisam bater']),
     dict(n=27, tema='Validação de strings',
-         objetivo='Verificar se uma string obedece a regras usando `strchr` e laços.',
+         objetivo='Verificar se uma string obedece a regras, escrevendo as próprias funções de busca.',
          resolvida='A3-2025.2-QI', proposta='A3-2019.1-QI',
-         conceitos=['`strchr(s, c)` devolve NULL se `c` não está em `s` (`<string.h>`)',
-                    '`fgets` guarda o `\'\\n\'`; remova com `s[strcspn(s, "\\n")] = \'\\0\'`',
+         conceitos=['Buscar um caractere: laço até o `\'\\0\'`; achou, devolve 1',
+                    '`fgets` guarda o `\'\\n\'`: troque-o por `\'\\0\'`',
                     'Validação: começa válido; qualquer violação torna inválido',
-                    'Pode parar no primeiro erro (`break`)'],
-         padrao='''fgets(msg, sizeof msg, stdin);
-msg[strcspn(msg, "\\n")] = '\\0';     // tira o Enter
+                    'Uma função por pergunta: `contem(s, c)`, `tira_enter(s)`'],
+         padrao='''int contem(char s[], char c) {
+    for (int i = 0; s[i] != '\\0'; i++)
+        if (s[i] == c) return 1;
+    return 0;
+}
+/* no main */
 int pode = 1;
 for (int i = 0; msg[i] != '\\0'; i++)
-    if (strchr(alfabeto, msg[i]) == NULL)
-        pode = 0;''',
-         erros=[('fgets(...); /* e o \\n? */', 's[strcspn(s, "\\n")] = \'\\0\';', 'o Enter vira um caractere inválido'),
-                ('scanf("%d", &n); fgets(s, ...);', 'getchar(); antes do fgets', 'o Enter do número fica no buffer')],
-         mesa=dict(cab=['msg[i]', 'está no alfabeto?', 'pode'], codigo='''const char *alf = "!1ob"; const char *msg = "ob1!x!"; int pode = 1;
+    if (!contem(alfabeto, msg[i])) pode = 0;''',
+         erros=[('fgets(...); /* e o \\n? */', "if (s[i] == '\\n') s[i] = '\\0';", 'o Enter vira um caractere inválido'),
+                ('scanf("%d", &n); fgets(s, ...);', 'getchar(); antes do fgets', 'o Enter do número fica no buffer'),
+                ('else return 0; /* dentro do laço */', 'return 0; /* depois do laço */', 'desistiu no primeiro caractere')],
+         mesa=dict(cab=['msg[i]', 'está no alfabeto?', 'pode'], codigo='''char alf[] = "!1ob"; char msg[] = "ob1!x!"; int pode = 1;
 for (int i = 0; msg[i] != '\\0'; i++) {
-    if (strchr(alf, msg[i]) == NULL) pode = 0;
-    MESA("%c & %s & %d", msg[i], strchr(alf, msg[i]) ? "sim" : "não", pode);
+    int achou = 0;
+    for (int j = 0; alf[j] != '\\0'; j++) if (alf[j] == msg[i]) achou = 1;
+    if (!achou) pode = 0;
+    MESA("%c & %s & %d", msg[i], achou ? "sim" : "não", pode);
 }'''),
-         passos=['Ler o alfabeto e a mensagem com `fgets` (podem ter espaços)',
-                 'Cada caractere da mensagem tem que estar no alfabeto',
+         passos=['Ler o alfabeto e a mensagem com `fgets` (podem ter espaços) e tirar o Enter',
+                 'Cada caractere da mensagem tem que estar no alfabeto (`contem`)',
                  'Imprimir a mensagem correspondente'],
          dica=['Marque as letras presentes: `tem[s[i] - \'a\'] = 1`',
                'Faixa começa numa letra presente cuja anterior não está presente',
@@ -743,21 +767,22 @@ for (int i = 0; msg[i] != '\\0'; i++) {
          objetivo='Converter caracteres usando uma tabela indexada e a aritmética de `char`.',
          resolvida='A3-2019.1-QII', proposta='A4-2024.2-QI',
          conceitos=['Tabela como string: `"22233344455566677778889999"[c - \'A\']`',
-                    'Dígito → número: `c - \'0\'`',
+                    'Dígito → número: `c - \'0\'` (se `c >= \'0\' && c <= \'9\'`)',
                     'Letra hexadecimal → valor: `c - \'A\' + 10`',
                     'Conversão de base com string: `valor = valor * base + digito` (da esquerda para a direita)'],
          padrao='''int valor = 0;
 for (int i = 0; s[i] != '\\0'; i++) {
     int d;
-    if (isdigit(s[i])) d = s[i] - '0';
-    else d = toupper(s[i]) - 'A' + 10;
+    if (s[i] >= '0' && s[i] <= '9') d = s[i] - '0';
+    else if (s[i] >= 'A' && s[i] <= 'F') d = s[i] - 'A' + 10;
+    else d = s[i] - 'a' + 10;
     valor = valor * 16 + d;
 }''',
-         erros=[('d = s[i];', 'd = s[i] - \'0\';', '`\'7\'` vale 55 na tabela ASCII'),
+         erros=[('d = s[i];', "d = s[i] - '0';", "`'7'` vale 55 na tabela ASCII"),
                 ('valor += d * 16;', 'valor = valor * 16 + d;', 'regra de Horner')],
-         mesa=dict(cab=['s[i]', 'd', 'valor'], codigo='''const char *s = "1F4"; int valor = 0;
+         mesa=dict(cab=['s[i]', 'd', 'valor'], codigo='''char s[] = "1F4"; int valor = 0;
 for (int i = 0; s[i] != '\\0'; i++) {
-    int d = isdigit((unsigned char)s[i]) ? s[i] - '0' : toupper((unsigned char)s[i]) - 'A' + 10;
+    int d = (s[i] >= '0' && s[i] <= '9') ? s[i] - '0' : s[i] - 'A' + 10;
     valor = valor * 16 + d;
     MESA("%c & %d & %d", s[i], d, valor);
 }'''),
@@ -765,7 +790,7 @@ for (int i = 0; s[i] != '\\0'; i++) {
                  'Letra → `tabela[letra - \'A\']`; o resto (dígitos e hífens) fica igual',
                  'Imprimir a string convertida'],
          dica=['Leia o hexadecimal como string',
-               'Converta cada caractere em 0..15',
+               'Converta cada caractere em 0..15 (dígito, `A-F` ou `a-f`)',
                'Horner: `valor = valor * 16 + d`']),
     dict(n=29, tema='Palavras numa frase',
          objetivo='Separar as palavras de uma frase com uma variável de estado (dentro/fora de palavra).',
@@ -773,10 +798,10 @@ for (int i = 0; s[i] != '\\0'; i++) {
          conceitos=['Estado `dentro`: 1 quando o caractere anterior era letra',
                     'Começo de palavra: letra com `dentro == 0`',
                     'Fim de palavra: não-letra (ou `\'\\0\'`) com `dentro == 1`',
-                    'Trate o fim da string como separador'],
+                    'É letra: `(c >= \'a\' && c <= \'z\') || (c >= \'A\' && c <= \'Z\')`'],
          padrao='''int palavras = 0, dentro = 0;
 for (int i = 0; ; i++) {
-    if (isalpha(s[i])) {
+    if (e_letra(s[i])) {
         dentro = 1;
     } else {
         if (dentro) palavras++;   // terminou uma palavra
@@ -786,9 +811,10 @@ for (int i = 0; ; i++) {
 }''',
          erros=[('palavras = espacos + 1;', '/* estado dentro/fora */', 'espaços duplos e pontuação quebram a conta'),
                 ('for (...; s[i] != \'\\0\'; ...)', '/* conte a última palavra */', 'a última palavra não tem espaço depois')],
-         mesa=dict(cab=['i', 's[i]', 'dentro', 'palavras'], oculto=True, legenda='Frase "Ser ou  nao!" (dois espaços seguidos e pontuação no fim):', codigo='''const char *s = "Ser ou  nao!"; int palavras = 0, dentro = 0;
+         mesa=dict(cab=['i', 's[i]', 'dentro', 'palavras'], oculto=True, legenda='Frase "Ser ou  nao!" (dois espaços seguidos e pontuação no fim):', codigo='''char s[] = "Ser ou  nao!"; int palavras = 0, dentro = 0;
 for (int i = 0; ; i++) {
-    if (isalpha((unsigned char)s[i])) dentro = 1;
+    int letra = (s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z');
+    if (letra) dentro = 1;
     else { if (dentro) palavras++; dentro = 0; }
     MESA("%d & %s & %d & %d", i, s[i] == ' ' ? "\\\\textvisiblespace" : s[i] ? (char[]){s[i], 0} : "\\\\textbackslash 0", dentro, palavras);
     if (s[i] == '\\0') break;
@@ -918,35 +944,42 @@ for (int i = 0; i < 3; i++)
          dica=['As 5 fitas formam uma matriz 5 × 8',
                'Para cada coluna, conte A, C, G e T',
                'A mais frequente vence; empate vira `?`']),
-    dict(n=34, tema='struct: registros',
-         objetivo='Agrupar dados de um item com `struct` e processar um vetor de registros.',
-         resolvida='A3-2014.2-QIII', proposta='A4-2026.1-QII',
-         conceitos=['`typedef struct { char nome[50]; double preco; } Produto;`',
-                    'Vetor de structs: `Produto p[100];` e acesso `p[i].preco`',
-                    'Duas passadas: a primeira calcula a média, a segunda aplica a regra',
-                    'Guarde o **índice** do melhor, não só o valor'],
-         padrao='''typedef struct {
-    char nome[50];
-    double preco;
-} Produto;
-
-Produto p[100];
-scanf("%49s %lf", p[i].nome, &p[i].preco);''',
-         erros=[('scanf("%s", &p[i].nome);', 'scanf("%49s", p[i].nome);', 'string não leva `&`'),
-                ('if (p[i].preco < media) /* média parcial */', '/* média antes */', 'a média precisa de todos os preços'),
-                ('double menor = p[i].preco;', 'int barato = i;', 'sem o índice, perde-se o nome')],
-         mesa=dict(cab=['nome', 'preço', '< média?', 'novo preço'], codigo='''const char *nome[3] = {"arroz", "feijao", "cafe"}; double preco[3] = {10, 8, 20}, media = (10 + 8 + 20) / 3.0;
-for (int i = 0; i < 3; i++)
-    MESA("%s & %.2f & %s & %.2f", nome[i], preco[i], preco[i] < media ? "sim" : "não", preco[i] < media ? preco[i] * 1.10 : preco[i]);
-MESA("\\\\multicolumn{4}{c}{média = %.2f}", media);'''),
-         passos=['Struct com nome e preço; vetor de 100',
-                 '1ª passada: ler e somar; média',
-                 '2ª passada: +10% nos abaixo da média e procurar o mais barato'],
-         dica=['Cada paciente: pressão, glicemia, risco (+1 ou −1)',
-               'Distância de Manhattan: |Δpressão| + |Δglicemia|',
-               'Vizinhos votam; empate (inclusive nenhum vizinho) é INCONCLUSIVO']),
+    dict(n=34, tema='Tabelas de dados: linhas de matriz e vetores paralelos',
+         objetivo='Guardar registros (vários dados de um mesmo item) em linhas de matriz ou em vetores paralelos.',
+         resolvida='A4-2026.1-QII', proposta='A2-2014.2-QIV',
+         conceitos=['Registro: cada item é uma **linha** e cada dado, uma **coluna**: `tab[i][0]`, `tab[i][1]`',
+                    'Vetores paralelos: `pressao[i]`, `glicemia[i]` e `risco[i]` falam do mesmo paciente i',
+                    'Varrer a tabela: um laço nas linhas, comparando com o item novo',
+                    'Lista sem repetição: procure antes de inserir em `v[total++]`',
+                    '`abs` (valor absoluto) vem de `<stdlib.h>`'],
+         padrao='''int tab[MAX][3];                  // pressão, glicemia, risco
+for (int i = 0; i < m; i++)
+    scanf("%d %d %d", &tab[i][0], &tab[i][1], &tab[i][2]);
+int votos = 0;
+for (int i = 0; i < m; i++) {
+    int d = abs(p - tab[i][0]) + abs(g - tab[i][1]);
+    if (d < limiar) votos += tab[i][2];
+}''',
+         erros=[('tab[0][i]', 'tab[i][0]', 'linha = paciente, coluna = dado'),
+                ('d = (p - tab[i][0]) + (g - tab[i][1]);', 'abs(...) + abs(...)', 'diferenças negativas cancelam as positivas'),
+                ('if (d <= limiar)', 'if (d < limiar)', 'leia se o limite é estrito')],
+         mesa=dict(cab=['pressão', 'glicemia', 'risco', 'dist.', 'votos'], codigo='''int tab[4][3] = {{120, 80, -1}, {140, 86, 1}, {125, 110, 1}, {115, 75, -1}}, p = 118, g = 85, limiar = 25, votos = 0;
+for (int i = 0; i < 4; i++) {
+    int d = abs(p - tab[i][0]) + abs(g - tab[i][1]);
+    if (d < limiar) votos += tab[i][2];
+    MESA("%d & %d & %+d & %d & %d", tab[i][0], tab[i][1], tab[i][2], d, votos);
+}'''),
+         passos=['Tabela M × 3: pressão, glicemia e risco (+1 alto, −1 baixo)',
+                 'Distância de Manhattan do novo paciente a cada linha',
+                 'Vizinhos (distância menor que o limiar) votam; o sinal da soma decide'],
+         dica=['Vetor `presentes[]` e contador `total`',
+               'Para cada número da lista, procure em `presentes`; se não achar, guarde em `presentes[total++]`',
+               'Imprima o total e os números na ordem em que apareceram']),
     dict(n=35, tipo='avaliacao', tema='Avaliação III', questoes=['A4-2025.1-QI', 'A4-2024.2-QII'],
          objetivo='Prova do Bloco 3, no formato das avaliações anteriores. Abaixo, uma prova-modelo com duas questões de provas passadas.'),
     dict(n=36, tipo='reavaliacao', tema='Reavaliação', questoes=['A1-2022.1-QII', 'A4-2025.1-QII'],
          objetivo='Reavaliação: substitui a menor nota. Abaixo, uma prova-modelo com duas questões de provas passadas.'),
 ]
+
+# Questões fora do conteúdo da disciplina (não aparecem nem no banco)
+EXCLUIDAS = {'A3-2014.2-QIII'}   # pede struct

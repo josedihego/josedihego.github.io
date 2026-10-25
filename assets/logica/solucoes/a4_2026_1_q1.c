@@ -1,6 +1,14 @@
 // A4-2026.1 – Questão I: Porcentagem de palavras que contêm uma letra
 #include <stdio.h>                                      // printf e fgets
-#include <ctype.h>                                      // isalpha e tolower
+
+int minuscula(char c) {                                 // 'A'..'Z' vira 'a'..'z'; o resto fica igual
+    if (c >= 'A' && c <= 'Z') return c - 'A' + 'a';     // na tabela ASCII, as letras são consecutivas
+    return c;                                           // já é minúscula (ou não é letra)
+}
+
+int e_letra(char c) {                                   // 1 se c for uma letra sem acento
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');   // letras são consecutivas na tabela ASCII
+}
 
 int main(void) {                                        // início do programa
     char letra;                                         // letra procurada
@@ -10,13 +18,13 @@ int main(void) {                                        // início do programa
     getchar();                                          // consome o Enter que sobrou
     printf("Texto: ");                                  // pede o texto
     fgets(texto, sizeof texto, stdin);                  // lê a linha inteira
-    letra = tolower((unsigned char)letra);              // compara sem diferenciar maiúsculas
+    letra = minuscula(letra);              // compara sem diferenciar maiúsculas
     int palavras = 0, com_letra = 0;                    // contadores
     int dentro = 0, achou = 0;                          // estou dentro de uma palavra? ela já tem a letra?
     for (int i = 0; ; i++) {                            // percorre até o '\0' (tratado no fim)
-        if (isalpha((unsigned char)texto[i])) {         // letra: faz parte de uma palavra
+        if (e_letra(texto[i])) {         // letra: faz parte de uma palavra
             if (!dentro) { dentro = 1; achou = 0; }     // começou uma palavra nova
-            if (tolower((unsigned char)texto[i]) == letra) achou = 1;   // a palavra contém a letra
+            if (minuscula(texto[i]) == letra) achou = 1;   // a palavra contém a letra
         } else {                                        // espaço, Enter ou fim: termina a palavra
             if (dentro) {                               // havia uma palavra aberta
                 palavras++;                             // conta a palavra

@@ -1,6 +1,5 @@
 // A1-2015.2 (B) – Questão III: Número de lâmpadas de 60 W para um cômodo
 #include <stdio.h>                                      // printf e scanf
-#include <math.h>                                       // ceil (compile com -lm)
 
 int main(void) {                                        // início do programa
     int classe;                                         // 1 (I), 2 (II) ou 3 (III)
@@ -13,7 +12,8 @@ int main(void) {                                        // início do programa
     else if (classe == 3) watts_m2 = 20;                // banheiro, escritório
     else { printf("Classe inválida\n"); return 1; }     // qualquer outro valor é erro
     double potencia = largura * comprimento * watts_m2; // potência total exigida
-    int lampadas = (int)ceil(potencia / 60);            // ceil arredonda para cima: 2,4 lâmpadas viram 3
+    int lampadas = (int)(potencia / 60);                // parte inteira: 2,4 lâmpadas viram 2...
+    if (lampadas * 60 < potencia) lampadas++;           // ...e se sobrou potência, mais uma: arredonda para cima
     printf("%d lâmpada(s) de 60 W\n", lampadas);        // resultado
     return 0;                                           // fim sem erro
 }

@@ -1,10 +1,18 @@
 // A3-2014.2 – Questão II: Encontros consonantais numa frase
 #include <stdio.h>                                      // printf e fgets
-#include <ctype.h>                                      // isalpha e tolower
-#include <string.h>                                     // strchr
+
+int minuscula(char c) {                                 // 'A'..'Z' vira 'a'..'z'; o resto fica igual
+    if (c >= 'A' && c <= 'Z') return c - 'A' + 'a';     // na tabela ASCII, as letras são consecutivas
+    return c;                                           // já é minúscula (ou não é letra)
+}
+
+int e_letra(char c) {                                   // 1 se c for uma letra sem acento
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');   // letras são consecutivas na tabela ASCII
+}
 
 int consoante(char c) {                                 // 1 se c for uma letra sem acento que não é vogal
-    return isalpha((unsigned char)c) && strchr("aeiou", tolower((unsigned char)c)) == NULL; // letra que não está em "aeiou"
+    char m = minuscula(c);                              // compara sem diferenciar maiúsculas
+    return e_letra(c) && m != 'a' && m != 'e' && m != 'i' && m != 'o' && m != 'u';// letra que não é vogal
 }
 
 int main(void) {                                        // início do programa
