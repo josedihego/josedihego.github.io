@@ -1,0 +1,871 @@
+[
+ {
+  "id": "A1-2012.2-QI",
+  "avaliacao": 1,
+  "periodo": "2012.2",
+  "pdf": "avaliacao_1_ano_2012_2.pdf",
+  "questao": "I",
+  "texto": "Questão I\nEscreva um algoritmo em linguagem C que leia um número de até três dígitos (menor\nou igual a (777)8) em octal (sistema de numeração base 8) e escreva o seu equivalente\nem base 10. Por exemplo, o número (435)8, equivale ao número (285)10. (4*82 + 3*81 +\n5*80 = 4*64+ 3*8+5*1=256+24+5=285). Demonstre um teste de mesa considerando os\nvalores indicados (entrada = 435; saída=285). (Valor 2,0)",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2012.2-QII",
+  "avaliacao": 1,
+  "periodo": "2012.2",
+  "pdf": "avaliacao_1_ano_2012_2.pdf",
+  "questao": "II",
+  "texto": "Questão II\nEscreva um algoritmo em linguagem C que leia o horário de entrada (hora, minuto) e o\nhorário de saída (hora, minuto) de uma aula e escreva o tempo de duração desta aula, no\nformato hora:minuto. (Valor 2,5)",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2012.2-QIII",
+  "avaliacao": 1,
+  "periodo": "2012.2",
+  "pdf": "avaliacao_1_ano_2012_2.pdf",
+  "questao": "III",
+  "texto": "Questão III\nEscreva um algoritmo em linguagem C que calcule e imprima a média obtida pelo aluno\npara aprovação direta (se superior a 7.0) ou o valor mínimo que o aluno (não aprovado\npor média) precisa obter numa prova final para ser aprovado. Considere que são\nrealizadas três provas durante o semestre e que para aprovação em final a média obtida\nde acordo com a equação abaixo precisa ser igual ou superior a 5.0. (Valor 2,0)\n\n                (média aritmética das três avaliações parciais)x 2+( notada prova final) x 1\n Média Final=\n                                                     3",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2012.2-QIV",
+  "avaliacao": 1,
+  "periodo": "2012.2",
+  "pdf": "avaliacao_1_ano_2012_2.pdf",
+  "questao": "IV",
+  "texto": "Questão IV\nEscreva um algoritmo em linguagem C que leia dois valores numéricos, representando\num dia e um mês e escreva a data equivalente por extenso. Por exemplo, se os números\ninformados forem 02 e 06, a saída deverá ser ‘dois de junho’; caso a data informada seja\n01 e 12, a saída deverá ser ‘primeiro de dezembro’. (Valor 2,5)\n\n\n                                                           Orientações:\n\n                                          Leia toda a avaliação antes de começar.\n                                          A interpretação faz parte da questão.\n                                          Responda as questões com clareza na folha de\n                                         respostas.\n                                          É permitida consulta a material próprio,\n                                         sendo vedada a troca ou empréstimo de material.\n                                          Controle o seu tempo. Ele faz parte de sua\n                                         avaliação.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2014.2-QI",
+  "avaliacao": 1,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_1_ano_2014_2.pdf",
+  "questao": "I",
+  "texto": "Questão I (2,0)\nEscreva um programa em C, que leia a probabilidade de dois eventos independentes\nacontecerem. Em seguida, o programa deverá calcular e imprimir a probabilidade de um\ndos dois eventos ocorrer, bem como dos dois eventos ocorrerem. A probabilidade é dada\npelas fórmulas abaixo:\nP (A e B) = P(A) x P(B)\nP(A ou B) = P(A) + P (B) – P(A e B)",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2014.2-QII",
+  "avaliacao": 1,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_1_ano_2014_2.pdf",
+  "questao": "II",
+  "texto": "Questão II (3,0)\nEscreva um programa em C, que receba três números representando uma coordenada\ngeográfica expressa em graus, minutos e segundos, calcule e imprima este valor em\ngraus decimais. Para tanto, considere que 60 minutos equivalem a um grau e 60\nsegundos equivalem a um minuto. Assim, por exemplo, 37º39’20’’ (37 graus, 39 minutos\ne 20 segundos) equivalem, aproximadamente, a 37.65556 graus decimais.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2014.2-QIII",
+  "avaliacao": 1,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_1_ano_2014_2.pdf",
+  "questao": "III",
+  "texto": "Questão III (2,0)\nSabendo que triângulo é uma figura geométrica de três lados onde cada um dos lados é\nmenor que a soma dos outros dois, escreva um programa em C, que receba três valores e\nverifique e imprima se eles podem ser os comprimentos dos lados de um triângulo.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2014.2-QIV",
+  "avaliacao": 1,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_1_ano_2014_2.pdf",
+  "questao": "IV",
+  "texto": "Questão IV (3,0)\nO algoritmo ou fórmula de Luhn é um algoritmo para validação de números de\nidentificação. O maior uso do algoritmo de Luhn é na validação de números de cartões\nde crédito. Contudo o algoritmo de Luhn pode ser utilizado em sequencia de números de\ntamanho qualquer. Para a verificação do número o algoritmo se baseia nas seguintes\noperações:\nDada uma sequência de números inteiros positivos (inclusive o dígito verificador), a\ninverta. Em seguida, adicione o primeiro número a um somatório geral. Multiplique o\nsegundo número por 2 e execute a operação \"noves fora\", adicionando o resultado ao\nsomatório. Faça o mesmo com os demais números, ou seja ora adicione diretamente o\nnúmero ao somatório, ora o multiplique por 2, realizando \"noves fora\" e adicionando ao\nsomatório.\nPor fim, verifique se o somatório é divisível por 10. Se for, o número é válido. Senão, é\ninválido.\n\nNúmero Original               1              8               6             7\nAlternando o x2               2              8               12            7\nFazendo o “noves fora”        2              8               3             7\nSoma                          20             Divisível por 10. Número Válido\n\nEscreva um algoritmo em C que lê um número de até quatro dígitos e verifica se é um\nnúmero de identificação válido de acordo com a fórmula de Luhn e imprima “Número\nVálido”ou “Número Inválido”conforme o caso.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2015.2-QI",
+  "avaliacao": 1,
+  "periodo": "2015.2",
+  "pdf": "avaliacao_1_ano_2015_2.pdf",
+  "questao": "I",
+  "texto": "Questão\t\n  I\t\n  (2,0)\t\n  \nEscreva\t\n   um\t\n   programa\t\n   em\t\n   C,\t\n   que\t\n   leia\t\n   um\t\n   número\t\n   menor\t\n   que\t\n   9999\t\n   e\t\n   mostre\t\n   a\t\n  \nsoma\t\n   dos\t\n   dígitos\t\n   centrais\t\n   (2º\t\n   e\t\n   3º\t\n   dígitos).\t\n   Assim,\t\n   se\t\n   o\t\n   número\t\n   informado\t\n   for\t\n  \n4326,\t\n  a\t\n  saída\t\n  do\t\n  programa\t\n  deverá\t\n  ser\t\n  5\t\n  (3+2).",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2015.2-QII",
+  "avaliacao": 1,
+  "periodo": "2015.2",
+  "pdf": "avaliacao_1_ano_2015_2.pdf",
+  "questao": "II",
+  "texto": "Questão\t\n  II\t\n  (3,0)\t\n  \nEscreva\t\n   um\t\n   programa\t\n   em\t\n   C,\t\n   que\t\n   leia\t\n   um\t\n   número\t\n   menor\t\n   que\t\n   9999,\t\n  \nrepresentando\t\n   uma\t\n   senha.\t\n   O\t\n   programa\t\n   deve\t\n   verificar\t\n   se\t\n   a\t\n   senha\t\n   é\t\n   válida\t\n   (e\t\n  \nimprimir\t\n  “Senha\t\n  válida”),\t\n  ou\t\n  se\t\n  a\t\n  senha\t\n  viola\t\n  alguma\t\n  das\t\n  seguintes\t\n  regras,\t\n  caso\t\n  \nem\t\n  que,\t\n  o\t\n  programa\t\n  deverá\t\n  apresentar\t\n  a\t\n  mensagem\t\n  de\t\n  violação\t\n  correspondente:\t\n  \n\t\n  \n                             Regra\t\n                                                                     Mensagem\t\n  \n1\t\n   –\t\n   Algarismos\t\n   iguais:\t\n   a\t\n   senha\t\n   é\t\n   formada\t\n           “A\t\n  senha\t\n  é\t\n  formada\t\n  por\t\n  algarismos\t\n  iguais”\t\n  \npor\t\n  quatro\t\n  algarismos\t\n  idênticos.\t\n  Ex:\t\n  5555\t\n  \n2\t\n   –\t\n   Sequencia\t\n   crescente:\t\n   a\t\n   senha\t\n   é\t\n                     “A\t\n   senha\t\n   é\t\n   formada\t\n   por\t\n   uma\t\n   sequencia\t\n  \nformada\t\n   por\t\n   algarismos\t\n   que\t\n   formam\t\n   uma\t\n                      crescente”\t\n  \nsequencia\t\n  crescente.\t\n  Ex.:\t\n  3456\t\n  \n2\t\n   –\t\n   Sequencia\t\n   decrescente:\t\n   a\t\n   senha\t\n   é\t\n                   “A\t\n   senha\t\n   é\t\n   formada\t\n   por\t\n   uma\t\n   sequencia\t\n  \nformada\t\n   por\t\n   algarismos\t\n   que\t\n   formam\t\n   uma\t\n                      decrescente”\t\n  \nsequencia\t\n  decrescente.\t\n  Ex.:\t\n  4321",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2015.2-QIII",
+  "avaliacao": 1,
+  "periodo": "2015.2",
+  "pdf": "avaliacao_1_ano_2015_2.pdf",
+  "questao": "III",
+  "texto": "Questão\t\n  III\t\n  (2,0)\t\n  \nEscreva\t\n   um\t\n   programa\t\n   em\t\n   C,\t\n   que\t\n   leia\t\n   quatro\t\n   notas\t\n   de\t\n   um\t\n   aluno\t\n   e\t\n   imprima\t\n   a\t\n   nota\t\n  \nfinal\t\n   deste\t\n   aluno.\t\n   O\t\n   cálculo\t\n   da\t\n   nota\t\n   final,\t\n   é\t\n   feito\t\n   descartando-­‐se\t\n   a\t\n   menor\t\n   das\t\n  \nquatro\t\n  notas\t\n  e\t\n  calculando\t\n  a\t\n  média\t\n  aritmética\t\n  das\t\n  três\t\n  notas\t\n  restantes.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2015.2-QIV",
+  "avaliacao": 1,
+  "periodo": "2015.2",
+  "pdf": "avaliacao_1_ano_2015_2.pdf",
+  "questao": "IV",
+  "texto": "Questão\t\n  IV\t\n  (3,0)\t\n  \nEscreva\t\n   um\t\n   programa\t\n   em\t\n   C,\t\n   que\t\n   leia\t\n   duas\t\n   sequencias\t\n   de\t\n   três\t\n   números\t\n  \ncorrespondendo\t\n   a\t\n   idade\t\n   em\t\n   anos,\t\n   meses\t\n   e\t\n   dias\t\n   de\t\n   duas\t\n   pessoas.\t\n   O\t\n   programa\t\n  \ndeve\t\n  verificar\t\n  e\t\n  imprimir\t\n  qual\t\n  das\t\n  duas\t\n  pessoas\t\n  (a\t\n  primeira\t\n  ou\t\n  a\t\n  segunda)\t\n  é\t\n  mais\t\n  \nvelha\t\n   ou\t\n   se\t\n   elas\t\n   possuem\t\n   a\t\n   mesma\t\n   idade.\t\n   Por\t\n   exemplo,\t\n   se\t\n   os\t\n   valores\t\n   lidos\t\n   forem\t\n  \n8\t\n   anos,\t\n   4\t\n   meses\t\n   e\t\n   2\t\n   dias\t\n   para\t\n   primeira\t\n   pessoa\t\n   e\t\n   8\t\n   anos,\t\n   3\t\n   meses\t\n   e\t\n   15\t\n   dias\t\n   para\t\n   a\t\n  \nsegunda;\t\n  o\t\n  programa\t\n  deve\t\n  imprimir:\t\n  “A\t\n  primeira\t\n  pessoa\t\n  é\t\n  mais\t\n  velha”.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2015.2-QI-B",
+  "avaliacao": 1,
+  "periodo": "2015.2",
+  "pdf": "avaliacao_1_ano_2015_2_B.pdf",
+  "questao": "I",
+  "texto": "Questão\t\n  I\t\n  (2.0)\t\n  \nEscreva\t\n   um\t\n   programa\t\n   em\t\n   C\t\n   que\t\n   calcule\t\n   o\t\n   desconto\t\n   previdenciário\t\n   de\t\n   um\t\n   funcionário.\t\n  \nDado\t\n   um\t\n   salário,\t\n   o\t\n   programa\t\n   deve\t\n   imprimir\t\n   o\t\n   valor\t\n   do\t\n   desconto\t\n   proporcional\t\n   ao\t\n  \nmesmo.\t\n  O\t\n  cálculo\t\n  segue\t\n  a\t\n  regra:\t\n  o\t\n  desconto\t\n  é\t\n  de\t\n  11%\t\n  do\t\n  valor\t\n  do\t\n  salário,\t\n  entretanto,\t\n  o\t\n  \nvalor\t\n  máximo\t\n  de\t\n  desconto\t\n  é\t\n  570,88.",
+  "tambem_em": [
+   "avaliacao_1_ano_2016_1"
+  ]
+ },
+ {
+  "id": "A1-2015.2-QII-B",
+  "avaliacao": 1,
+  "periodo": "2015.2",
+  "pdf": "avaliacao_1_ano_2015_2_B.pdf",
+  "questao": "II",
+  "texto": "Questão\t\n  II\t\n  (4.0)\t\n  \nEscreva\t\n  um\t\n  programa\t\n  em\t\n  C,\t\n  que\t\n  receba\t\n  como\t\n  entrada\t\n  três\t\n  inteiros\t\n  representando\t\n  uma\t\n  \ndata\t\n   (dia,\t\n   mês\t\n   e\t\n   ano),\t\n   calcule\t\n   e\t\n   escreva\t\n   como\t\n   saída\t\n   o\t\n   dia\t\n   seguinte\t\n   (dia,\t\n   mês\t\n   e\t\n   ano).\t\n  \nLembre-­‐se\t\n  que\t\n  os\t\n  meses\t\n  01,\t\n  03,\t\n  05,\t\n  07,\t\n  08,\t\n  10\t\n  e\t\n  12\t\n  possuem\t\n  31\t\n  dias,\t\n  os\t\n  meses\t\n  04,\t\n  06,\t\n  09\t\n  \ne\t\n   11\t\n   possuem\t\n   30\t\n   dias\t\n   e\t\n   o\t\n   mês\t\n   02\t\n   pode\t\n   possuir\t\n   28\t\n   ou\t\n   29\t\n   dias\t\n   (em\t\n   caso\t\n   de\t\n   ano\t\n   bissexto).\t\n  \nUm\t\n   ano\t\n   é\t\n   bissexto\t\n   se\t\n   ele\t\n   é\t\n   divisível\t\n   por\t\n   4.\t\n   Mas,\t\n   se\t\n   o\t\n   ano\t\n   é\t\n   divisível\t\n   por\t\n   100,\t\n   e\t\n   não\t\n  \nfor\t\n  divisível\t\n  por\t\n  400,\t\n  ele\t\n  não\t\n  é\t\n  bissexto.",
+  "tambem_em": [
+   "avaliacao_1_ano_2016_1"
+  ]
+ },
+ {
+  "id": "A1-2015.2-QIII-B",
+  "avaliacao": 1,
+  "periodo": "2015.2",
+  "pdf": "avaliacao_1_ano_2015_2_B.pdf",
+  "questao": "III",
+  "texto": "Questão\t\n  III\t\n  (4.0)\t\n  \nPara\t\n   se\t\n   determinar\t\n   o\t\n   número\t\n   de\t\n   lâmpadas\t\n   necessárias\t\n   para\t\n   um\t\n   cômodo\t\n   de\t\n   uma\t\n  \nresidência,\t\n   existem\t\n   normas\t\n   que\t\n   dão\t\n   o\t\n   mínimo\t\n   de\t\n   potencia\t\n   de\t\n   iluminação\t\n   exigida\t\n   por\t\n  \nmetro\t\n   quadrado\t\n   (m2),\t\n   conforme\t\n   a\t\n   classe\t\n   deste\t\n   cômodo.\t\n   A\t\n   tabela\t\n   abaixo\t\n   exibe\t\n   estes\t\n  \nvalores\t\n  \n                                                                                                 \t\n  \n                           Classe\t\n                           Utilização\t\n                            Potência\t\n  (W)\t\n  /\t\n  m2\t\n  \n                                   I\t\n                            Quarto\t\n                                        12\t\n  \n                                                              Sala\t\n  de\t\n  TV\t\n  \n                                  II\t\n                               Sala\t\n                                       15\t\n  \n                                                               Cozinha\t\n  \n                                                               Varanda\t\n  \n                                 III\t\n                         Banheiro\t\n                                         20\t\n  \n                                                              Escritório\t\n  \n                                                                                                 \t\n  \nSuponha\t\n   que\t\n   serão\t\n   usadas\t\n   na\t\n   iluminação\t\n   apenas\t\n   lâmpadas\t\n   de\t\n   60W\t\n   e\t\n   escreva\t\n   um\t\n  \nprograma\t\n  em\t\n  C,\t\n  que\t\n  leia\t\n  a\t\n  classe\t\n  de\t\n  utilização\t\n  do\t\n  cômodo\t\n  e\t\n  suas\t\n  dimensões\t\n  (largura\t\n  e\t\n  \ncomprimento),\t\n   calcule\t\n   e\t\n   imprima\t\n   o\t\n   número\t\n   de\t\n   lâmpadas\t\n   de\t\n   60W\t\n   necessárias\t\n   para\t\n   a\t\n  \niluminação\t\n  do\t\n  cômodo.\t\n  \n\t\n  \n                                                                                                 Orientações:\n                                                                              • Leia toda a avaliação antes de começar.\n                                                                              • A interpretação faz parte da questão.\n                                                                              • Responda as questões com clareza na folha de\n                                                                              respostas.\n                                                                              • É permitida consulta a material próprio, sendo\n                                                                              vedada a troca ou empréstimo de material.\n                                                                              • Controle o seu tempo. Ele faz parte de sua\n                                                                              avaliação.",
+  "tambem_em": [
+   "avaliacao_1_ano_2016_1"
+  ]
+ },
+ {
+  "id": "A1-2017.1-QI",
+  "avaliacao": 1,
+  "periodo": "2017.1",
+  "pdf": "avaliacao_1_ano_2017_1.pdf",
+  "questao": "I",
+  "texto": "Questão I – 3.0\n\nFlíper é um tipo de jogo onde uma bolinha de metal cai por\num labirinto de caminhos até chegar na parte de baixo do\nlabirinto. A quantidade de pontos que o jogador ganha\ndepende do caminho que a bolinha seguir. O jogador pode\ncontrolar o percurso da bolinha mudando a posição de\nalgumas portinhas do labirinto. Cada portinha pode estar\nna posição 0, que significa virada para a esquerda, ou na\nposição 1 que quer dizer virada para a direita. Considere o\nflíper da figura abaixo, que tem três portinhas. A portinha\nQ está na posição 0 e a portinha R, na posição 1. Desse\njeito, a bolinha vai cair pelo caminho C.\n\nEscreva um programa em C, que leia a posição das portinhas P, Q e R e indique em qual das saídas a\nbolinha irá cair.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2017.1-QII",
+  "avaliacao": 1,
+  "periodo": "2017.1",
+  "pdf": "avaliacao_1_ano_2017_1.pdf",
+  "questao": "II",
+  "texto": "Questão II – 4.0\n\nEm um país muito distante, as pessoas são viciadas em um jogo de apostas bastante simples. O jogo é\nbaseado em números e é chamado jogo do bicho. O nome do jogo deriva do fato que os números são\ndivididos em 25 grupos, dependendo do valor dos dois últimos dígitos (dezenas e unidades), e cada\ngrupo recebe o nome de um animal. Cada grupo é associado a um animal da seguinte forma: o primeiro\ngrupo (burro) consiste nos números 01, 02, 03 e 04; o segundo grupo (águia) é composto dos números\n05, 06, 07 e 08; e assim em diante, até o ultimo grupo contendo os números 97, 98, 99 e 00.\nAs regras do jogo são simples. No momento da aposta, o jogador decide o valor da aposta V e um\nnúmero N (0 <= N <= 99999). Todos os dias, na praça principal da cidade, um número M é sorteado (0 <=\nM <= 99999). O prêmio de cada apostador é calculado da seguinte forma:\n\n    •   se M e N têm os mesmos quatro últimos dígitos (milhar, centena, dezena e unidade), o\n        apostador recebe V × 3000 (por exemplo, N = 14302 e M = 34302);\n    •   se M e N têm os mesmos três últimos dígitos (centena, dezena e unidade), o apostador\n        recebe V × 500 (por exemplo, N = 33444 e M = 22444);\n    •   se M e N têm os mesmos dois últimos dígitos (dezena e unidades), o apostador recebe V ×\n        50 (por exemplo, N = 112 e M = 142212);\n    •   se M e N têm os dois últimos dígitos no mesmo grupo, correspondendo ao mesmo animal, o\n        apostador recebe V × 16 (por exemplo, N = 82197 and M = 337600);\n    •   se nenhum dos casos acima ocorrer, o apostador não recebe nada.\n\nObviamente, o prêmio dado a cada apostador é o máximo possível de acordo com as regras acima. No\nentanto, não é possível acumular prêmios, de forma que apenas um dos critérios acima deve ser\naplicado no cálculo do prêmio. Escreva um programa em C, que leia o valor apostado, o número\nescolhido pelo apostador, e o número sorteado, calcule e imprima qual o prêmio que o apostador deve\nreceber.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2017.1-QIII",
+  "avaliacao": 1,
+  "periodo": "2017.1",
+  "pdf": "avaliacao_1_ano_2017_1.pdf",
+  "questao": "III",
+  "texto": "Questão III – 3.0\n\nArquimedes acaba de mudar de escola e a primeira coisa que percebeu na nova escola é que a gangorra\ndo parquinho não é simétrica, uma das extremidades é mais longa que a outra. Após brincar algumas\nvezes com um amigo de mesmo peso, ele percebeu que quando está em uma extremidade, a gangorra\nse desequilibra para o lado dele (ou seja, ele fica na parte de baixo, e o amigo na parte de cima), mas\nquando eles trocam de lado, a gangorra se desequilibra para o lado do amigo. Sem entender a situação,\nArquimedes pediu ajuda a outro amigo de outra série, que explicou que o comprimento do lado\ninterfere no equilíbrio da gangorra, pois a gangorra estará equilibrada quando P1 x C1 = P2 x C2, onde\nP1 e P2 são os pesos da criança no lado esquerdo e direito, respectivamente, e C1 e C2 são os\ncomprimentos da gangorra do lado esquerdo e direito, respectivamente. Com a equação, Joãozinho já\nconsegue dizer se a gangorra está equilibrada ou não, mas, além disso, ele quer saber para qual lado a\ngangorra descerá caso esteja desequilibrada. Escreva um programa em C, que leia os pesos das crianças\ne os comprimentos dos lados da gangorra, calcule e diga se a gangorra ficará equilibrada, penderá pro\nlado 1 ou pro lado 2.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2018.2-QI",
+  "avaliacao": 1,
+  "periodo": "2018.2",
+  "pdf": "avaliacao_1_ano_2018_2.pdf",
+  "questao": "I",
+  "texto": "1) (5.0) - Carl aprendeu recentemente o que é o sistema binário. Ele aprendeu, por exemplo, que a\nrepresentação binária de um inteiro positivo k é uma string anan−1...a1a0 onde cada ai é um dígito binário\n0 ou 1, iniciando com an = 1, e de tal forma que k = Σ ai × 2i.\nCésar, o irmão mais velho de Carl, resolveu lhe propor um desafio: \"Olhe Carl, eu tenho uma pergunta\nfácil para você: eu te darei um valor inteiro, e você tem que me diz quantos dígitos 1 existem na\nrepresentação binária deste número. Se prepare!\". Carl aceitou o desafio.\nPara ajudar Carl, você deve escrever um algoritmo em C, que o ajude nesta tarefa. O algoritmo deverá\nler um inteiro entre 0 e 32 e imprimir o total de dígitos 1 existentes no número.",
+  "tambem_em": [
+   "avaliacao_1_ano_2018_2_B"
+  ]
+ },
+ {
+  "id": "A1-2018.2-QII",
+  "avaliacao": 1,
+  "periodo": "2018.2",
+  "pdf": "avaliacao_1_ano_2018_2.pdf",
+  "questao": "II",
+  "texto": "2) (5.0) - Um algoritmo de dígito verificador da setelândia é baseado na conversão de números para a\nbase sete como descrito a seguir:\nLê-se um número de 0 a 999 escrito na base 10. Em seguida, converte-se esse número para a base 7.\nSoma-se os algarismos do número na base 7, e, por fim, calcula-se o resto da divisão desta soma por 7.\nEste número deve ser inserido à direita do número original (como dígito verificador), e o número\ngerado deve ser impresso.\nPor exemplo: Caso o número lido seja (999)10, o algoritmo deverá calcular a representação na base 7\ndeste número: (2625)7. Deve-se buscar o resto da divisão, da soma destes algarismos (2+6+2=5=15)\npor 7 (1). O número gerado com DV, será 9991. Apenas um número deve ser impresso como saída do\nalgoritmo.\nEscreva um algoritmo em C, que realize a geração do número com DV de acordo com as regras\napresentadas.\n\n\n\n\n       INF027 – Graduação Tecnológica em Análise e Desenvolvimento de Sistemas – Iª Avaliação Individual – 2ª Chamada – 2017.1",
+  "tambem_em": [
+   "avaliacao_1_ano_2018_2_B"
+  ]
+ },
+ {
+  "id": "A1-2022.1-QI",
+  "avaliacao": 1,
+  "periodo": "2022.1",
+  "pdf": "avaliacao_1_ano_2022_1.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I (5.0)\nNa álgebra de inteiros foi definida uma nova operação chamada de maximização de inteiros. A\nmaximização de dois números inteiros A e B segue as seguintes regras:\n1. Inicialmente fazemos A e B terem o mesmo número de dígitos, adicionando zeros à esquerda\nconforme necessário.\n2. Então cada dígito de A (do menos significativo ao mais significativo) é comparado com o dígito\ncorrespondente de B. Nesta comparação, o dígito de menor valor é eliminado do número a que\npertence (se eles são iguais, nenhum é eliminado).\n3. O resultado da operação é a dupla de números formados pelos dígitos remanescentes. Caso não\nhaja dígitos remanescentes em um dos números, o equivalente na dupla resultado para este número\né -1.\nPor exemplo, considere a maximização de 453 e 92. Após o passo 1, teremos: 453 e 092; em\nseguida compara-se 4 > 0; 5 < 9 e 3>2. Será eliminado o 5 do primeiro número e serão eliminados\no 0 e o 2 do segundo número. A dupla resultado será (43 e 5).\nSua tarefa é escrever um programa em C, que calcule a operação maximização para dois inteiros\nentre 0 e 999",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2022.1-QII",
+  "avaliacao": 1,
+  "periodo": "2022.1",
+  "pdf": "avaliacao_1_ano_2022_1.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II (5.0)\n\nChronos possui um relógio muito antigo e valioso. Contudo, embora seus ponteiros ainda\nfuncionem perfeitamente, seus marcadores e números se tornaram ilegíveis. Para a sorte de\nChronos, o relógio foi construído com um mostrador que indica o valor dos ângulos medidos entre\nos ponteiros de hora e minutos e a posição de repouso, equivalente a 00:00. Assim, quando for\n00:00 o marcador indica de ângulos indica 000 e 000. Às 06:00, o marcador de ângulos, indicará:\n180 e 000. Às 06:30, contudo o valor do marcador de ângulos será: 195 e 180. Você deve escrever\num programa, que leia os valores do marcador de ângulos e calcule a hora indicada pelo relógio.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2022.1-QI-B",
+  "avaliacao": 1,
+  "periodo": "2022.1",
+  "pdf": "avaliacao_1_ano_2022_1_B.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I (5.0)\nUm grupo de estudantes de ADS, está desenvolvendo uma nova notação posicional para representar\nnúmeros inteiros. Este grupo chamou esta representação de \"A Curious Method\" (\"Um Método\nCurioso\"), representado pela sigla ACM. A notação ACM usa os mesmos dígitos que a notação\ndecimal, isto é, de 0 a 9.\nPara converter um número A da notação ACM para a notação decimal, você deve adicionar k\ntermos, onde k é o número de dígitos de A (na notação ACM), O valor do i-ésimo termo,\ncorrespondente ao i-ésimo dígito ai, contando da direita para a esquerda, é ai × i!. Por exemplo,\n719(ACM) é equivalente a 53(10), já que 7 × 3! + 1 × 2! + 9 × 1! = 53.\nEscreva um programa em C, que leia um número na notação ACM e imprima o equivalente na\nnotação decimal.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2022.1-QII-B",
+  "avaliacao": 1,
+  "periodo": "2022.1",
+  "pdf": "avaliacao_1_ano_2022_1_B.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II (5.0)\n\nConsidere uma lista com todos os inteiros positivos entre A e B (inclusive), na base decimal e sem\nzeros à esquerda. Deseja-se saber quantas vezes cada um dos dígitos aparece nesta lista.\n\nPor exemplo, se a entrada for 1 e 9, a saída deverá ser 0 1 1 1 1 1 1 1 1 1.\nSe a entrada for 10 e 22, a saída deverá ser 2 12 5 1 1 1 1 1 1 1\n\n\nEscreva um programa em C, que leia os números A e B, onde 1 ≤ A ≤ B ≤ 1000, e imprima a\nsequência de vezes que cada dígito aparece no intervalo.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2023.1-QI",
+  "avaliacao": 1,
+  "periodo": "2023.1",
+  "pdf": "avaliacao_1_ano_2023_1.pdf",
+  "questao": "I",
+  "texto": "Questão I (5,0) - O Instituto Jaguaribe, voltado à preservação de grandes felinos, está\nbuscando definir áreas de reserva para o manejo de onças-pintadas e suçuaranas.\nSegundo as regras definidas pelos biólogos, uma área de reserva pode ser confirmada\ncomo tal, se ela oferecer aos felinos, simultaneamente uma i) área de floresta densa, para\nsua movimentação e acasalamento e ii) área de caça com a presença de mamíferos de\nmédio porte.\n\nÉ sua tarefa fazer a validação e definição dos limites sugeridos para uma reserva de\ngrandes felinos. Para tanto, seu programa deve ler oito valores sendo, que os quatro\nprimeiros dizem respeito a uma das duas áreas (de floresta densa ou de caça) e os quatro\núltimos, à área restante.\n\n   1. o primeiro e segundo, são as coordenadas (x, y) do canto superior esquerdo (em um\n      mapa bidimensional) do primeiro terreno;\n   2. o terceiro, a dimensão vertical do primeiro terreno;\n   3. o quarto, diz respeito à dimensão horizontal do primeiro terreno;\n   4. o quinto e sexto, são as coordenadas (x, y) do canto superior esquerdo (em um\n      mapa bidimensional) do segundo terreno;\n   5. o sétimo, a dimensão vertical do segundo terreno; e\n   6. o oitavo, diz respeito à dimensão horizontal do segundo terreno.\n\nConsidere que os terrenos são quadriláteros regulares, define-se como área sugerida de\nreserva, a área de sobreposição dos dois terrenos, caso ela exista.\n\nSeu programa deve indicar as coordenadas do canto superior da área sugerida, bem como\na dimensão horizontal e vertical desta área, ou informar que não existe área sugerida de\nreserva, se não houver a superposição.\n\nComo exemplo, considere o mapa I abaixo:\n\fNesse caso, a entrada seria representada pelos valores 0 0 5 3 2 1 1 3 e a saída deve ser 2\n111\n\nJá no mapa II abaixo, a entrada seria 0 0 5 3 6 1 1 3, a saída deveria ser “NÃO EXISTE\nÁREA SUGERIDA”",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2023.1-QII",
+  "avaliacao": 1,
+  "periodo": "2023.1",
+  "pdf": "avaliacao_1_ano_2023_1.pdf",
+  "questao": "II",
+  "texto": "Questão II (5,0) - O código de Gray é um sistema de código binário inventado por Frank\nGray. O código é não ponderado onde de um número para outro apenas um bit varia. Este\nsistema de codificação surgiu quando os circuitos lógicos digitais se realizavam com\nválvulas termoiônicas e dispositivos eletromecânicos. Os contadores necessitavam de\npotências muito elevadas e geravam ruído quando vários bits modificavam-se\nsimultaneamente. O uso do código Gray garantiu que qualquer mudança variaria apenas\num bit.\n\nEscreva um programa em C, que leia dois inteiros codificados em decimal entre 0 e 7 e\nverifique se eles são números POTENCIALMENTE sequenciais no código Gray. Por\nexemplo, os números 4 (100) e 5 (101) são números potencialmente sequenciais no código\nGray, no entanto 5 (101) e 6 (110) não são.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2023.2-QI",
+  "avaliacao": 1,
+  "periodo": "2023.2",
+  "pdf": "avaliacao_1_ano_2023_2.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I (5.0)\n\nComputadores são autômatos com a capacidade de realizar cálculos muito rapidamente. Contudo,\nnem todo cálculo pode ser feito num computador, pois, por uma limitação física de recursos, ele\nnão consegue representar todos os números dentro de sua memória. Por exemplo, em um\ncomputador cujo tipo inteiro seja representado por 64 bits, o maior inteiro que se pode representar\né 4.294.967.295.\n\nCaso alguma conta executada pelo computador dê um resultado acima desse número, ocorrerá o\nque chamamos de overflow, que é quando o computador faz uma conta e o resultado não pode ser\nrepresentado, por ser maior do que o valor máximo permitido (em inglês overflow significa\ntransbordar).\n\nPor exemplo, se um computador só pode representar números menores do que 256 e mandamos\nele executar a conta 250 + 8, vai ocorrer overflow.\n\nSua tarefa é escrever um programa em C, que leia um inteiro, indicando o maior número que um\ncomputador consegue representar, e, uma expressão codificada por um inteiro de até 7 dígitos,\nonde os três menos significativos, compõem o segundo operando, o quarto dígito menos\nsignificativo codifica a operação desejada (1 - para adição, 2 - para subtração, 3 - para\nmultiplicação, 4 - para divisão), os restantes mais significativos compõem o primeiro operando e\nindique o resultado da operação ou se ocorrerá overflow.\n\nPor exemplo, para um computador cujo maior inteiro seja 256, e a expressão de entrada seja\n2501008, a saída indicará overflow. Mas, se a entrada for 502008, a saída deverá ser 42.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2023.2-QII",
+  "avaliacao": 1,
+  "periodo": "2023.2",
+  "pdf": "avaliacao_1_ano_2023_2.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II (5.0)\n\n\nUm algoritmo genético pode ser definido como uma técnica utilizada para encontrar soluções\naproximadas em problemas de otimização e busca. Uma das operações utilizadas durante a\nexecução de um algoritmo genético é a mutação por swap. Nesta operação um dos bits do algoritmo\ntem o valor trocado por seu complementar. Por exemplo, considerando a seguinte numeração de\nbits - b4b3b2b1b0 - o indivíduo 28 (11100) após a operação de swap que modifica o seu bit 3 passa\na representar o indivíduo 20 (10100).\n\nEscreva um programa em C, que leia um indivíduo entre 0 e 35, e um valor de bit entre 0 e 4,\naplique a operação de mutação por swap e escreva o novo inteiro gerado.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2024.1-QI",
+  "avaliacao": 1,
+  "periodo": "2024.1",
+  "pdf": "avaliacao_1_ano_2024_1.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I (5.0)\nUm centro de pesquisas está inaugurando um grande acelerador de partículas, com um emissor e\ntrês sensores, numerados 1, 2 e 3. Uma partícula, após sair do emissor, entra no acelerador onde\npode dar várias voltas sendo acelerada a velocidades muito altas. Num determinado momento, a\npartícula sai do acelerador por uma das três saídas, atingindo um dos sensores. A figura mostra o\ncaminho por onde as partículas trafegam, com uma graduação de 1 quilômetro. Por exemplo, do\nemissor até o acelerador são 3 quilômetros e a circunferência do acelerador tem 8 quilômetros.\n\n\n\n\nEscreva um programa em C, que dada a distância total, em quilômetros, percorrida por uma certa\npartícula trafegando do emissor até algum sensor, calcule e informe qual será o sensor atingido\npela partícula. Por exemplo, veja que se a distância total for 23 quilômetros, então a partícula tem\nque ter atingido o sensor 2.\nADAPTADO DA OBI 2020",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2024.1-QII",
+  "avaliacao": 1,
+  "periodo": "2024.1",
+  "pdf": "avaliacao_1_ano_2024_1.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II (5.0)\nUm cadeado possui um sistema de código para ser aberto em vez de uma chave. O cadeado\ncontém uma sequência de três rodas. Cada roda possui os 9 dígitos (0..9) em ordem. Se você\nmove uma roda para cima, o dígito que ela mostra muda para o próximo dígito (se o dígito\nmostrado for '9', então ela muda para '0'). Se você move uma roda para baixo, ela muda para o\ndígito anterior (se a dígito mostrado for '0', ela muda para '9').\nO cadeado abre quando as rodas mostrarem uma determinada sequência numérica. Escreva um\nprograma que leia a configuração atual do cadeado (número atualmente exibido pelas rodas) e o\nnúmero de desbloqueio (a senha armazenada nas rodas) e indique qual o menor número de\nmovimentos necessários para abrir o cadeado. Por exemplo, se o número atual for 152 e o\nsegredo for 971, serão precisos: dois movimentos para o primeiro número (1→0→9), dois\nmovimentos para o segundo número (5→6→7) e um número para o terceiro número (1→2), logo a\nsaída deverá ser 5.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2024.1-QI-B",
+  "avaliacao": 1,
+  "periodo": "2024.1",
+  "pdf": "avaliacao_1_ano_2024_1_B.pdf",
+  "questao": "I",
+  "texto": "Questão I\nA conjectura de Collatz é uma conjectura matemática que recebeu este nome em referência ao matemático\nalemão Lothar Collatz, que foi o primeiro a propô-la, em 1937. Esta conjectura aplica-se a qualquer número\nnatural inteiro, e diz-nos para, se este número for par, o dividir por 2; e se for ímpar, para multiplicá-lo por 3\ne adicionar 1. Desta forma, por exemplo, se a sequência iniciar com o número 5 ter-se-á: 5; 16; 8; 4; 2; 1. A\nconjectura apresenta uma regra dizendo que, qualquer número natural inteiro, quando aplicado a esta\nregra, eventualmente sempre chegará a 4, que se converte em 2 e termina em 1. Essa sequência em\nquestão também pode ser chamada de Números de Granizo ou Números Maravilhosos. A explicação destes\núltimos nomes está em \"como o granizo nas nuvens antes de cair, os números saltam de um lugar ao outro\nantes de chegar ao 4, 2, 1\".\nEscreva um programa em C, que calcule quantos números são necessários para que um número inteiro chegue\na 1 quando aplicada regra da conjectura de Collatz. Por exemplo, caso o número informado seja 5, a saída\ndeverá ser 6 (5, 16, 8, 4, 2 e 1).",
+  "tambem_em": [
+   "avaliacao_2_ano_2024_1"
+  ]
+ },
+ {
+  "id": "A1-2024.1-QII-B",
+  "avaliacao": 1,
+  "periodo": "2024.1",
+  "pdf": "avaliacao_1_ano_2024_1_B.pdf",
+  "questao": "II",
+  "texto": "Questão II\nA sala de aulas utilizadas no campus Salvador do IFBA tem uma grande janela, composta de três folhas de\nvidro. A janela tem um metro de altura por seis metros (600 centimetros) de comprimento. Cada folha da\njanela tem um metro de altura e comprimento de tamanho variável (porém, de até seis metros, para caber\nna janela). As folhas deslizam sobre trilhos, e podem ser colocadas em qualquer ponto ao longo do\ncomprimento da janela, de forma que é possível controlar a abertura da janela, para circulação de ar.\nA figura abaixo ilustra duas configurações das folhas da janela. Considerou-se nestes dois exemplos que as\nfolhas possuem o mesmo tamanho de dois metros, cada uma. Na figura, os cantos inferiores esquerdos de\ncada folha são indicados por F1, F2 e F3. Na configuração (a) a janela está totalmente fechada, e portanto o\ntotal da área aberta é igual a zero. Na configuração (b) há duas aberturas, e o total de área aberta é igual a\n(100 x 100) + (50 x 100) = 15.000 cm2.\n\fEscreva um programa em C, que leia as posições das três folhas da janela, bem como os respectivos\ncomprimentos e determine qual a área da janela que está aberta, em centímetros quadrados.\n\n\nADAPTADO DA OBI",
+  "tambem_em": [
+   "avaliacao_2_ano_2024_1"
+  ]
+ },
+ {
+  "id": "A1-2024.2-QI",
+  "avaliacao": 1,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_1_ano_2024_2.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I\nSabendo que a á rea do quadrado é calculada elevando ao quadrado a medida de um dos seus\nlados, ou seja, Aquadrado = a²; e que a á rea do círculo é calculada multiplicando PI\n(aproximadamente 3.14) pelo quadrado do raio (A circulo = π r²); sua tarefa é, considerando as\nrelaçõ es apresentadas e a figura abaixo, escrever um programa em C, que leia o valor de r,\ncalcule e imprima o valor da área sombreada.\n\n\n\n\nPor exemplo, se o valor de r for 1, a á rea do círculo é igual a 3.14 (3.14 * 12), a á rea do quadrado\né igual a 4 (22) e a á rea sombreada é igual a 0.86 (4 – 3.14).",
+  "tambem_em": [
+   "avaliacao_1_ano_2024_2_B"
+  ]
+ },
+ {
+  "id": "A1-2024.2-QII",
+  "avaliacao": 1,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_1_ano_2024_2.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II\nUm treinador de basquete deseja otimizar a pontuaçã o dos seus atletas durante os jogos. Para\ntanto, ele mediu o percentual de acertos dos atletas em três faixas de distâ ncia para a cesta:\narremessos realizados dentro do garrafã o (valem dois pontos), arremessos de meia distâ ncia\n(feitos fora do garrafã o, mas dentro da linha de três pontos, que também valem dois pontos) e\narremessos de longa distâ ncia (além da linha de três pontos e que valem 3 pontos).\n\n\nCom estes percentuais de acerto, ele consegue calcular a esperança de pontuaçã o por arremesso\ndo jogador. Assim, para Stephen Curry o mapa de lançamentos, o percentual de acertos e a\nesperança de pontos por arremesso está apresentado na tabela abaixo:\n\n\n\n\n                                               Percentual de        Esperança de Pontos por\n              Área de Jogo\n                                                  Acerto                  Arremesso\n\n     Arremessos dentro do Garrafã o                0.580                 0.580 * 2 = 1.160\n\n      Arremessos de Meia Distâ ncia                0.460                 0.460 * 2 = 0.920\n\n     Arremessos de Longa Distâ ncia                0.450                 0.450 * 3 = 1.350\n\n\nEscreva um programa em C que receba como entrada as porcentagens de acerto de cada\ntipo de arremesso (em valores decimais entre 0 e 1, representando a probabilidade de\nacerto) e imprima qual tipo de arremesso, o jogador deve priorizar. Por exemplo, no caso\nde Curry, o programa deve gerar como saída: “Preferir arremessos de longa distância\n(1.350 pontos por arremesso)”.",
+  "tambem_em": [
+   "avaliacao_1_ano_2024_2_B",
+   "avaliacao_1_ano_2024_2_C"
+  ]
+ },
+ {
+  "id": "A1-2024.2-QI-C",
+  "avaliacao": 1,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_1_ano_2024_2_C.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I\nO hotel da Colô nia de Férias dos Professores está com uma promoçã o para as férias de julho. A\npromoçã o é vá lida para quem chegar a partir do dia 1 de julho e sair no dia 1 de agosto. O preço\nda diá ria do hotel é menor para quem chegar mais cedo, e vai aumentando a cada dia.\n\n\nMais precisamente, a promoçã o funciona assim:\n       • A diá ria do hotel para cada quem chegar no dia 1 é D Reais. Assim, quem chegar no dia 1\n           vai pagar um total de 31 × D Reais.\n       • A diá ria do hotel aumenta A reais por dia. Ou seja, a diá ria é D + A Reais para quem\n           chegar no dia 2; D + 2 × A Reais no dia 3; D + 3 × A Reais no dia 4 e assim por diante.\n       • A partir do dia 16 a diá ria nã o aumenta mais.\n\n\nNote que quem chegar no dia 2 vai pagar um total de 30 × (D + A) reais; quem chegar no dia 3\nvai pagar um total de 29 × (D + 2 × A) reais, e assim por diante.\n\n\nA sua tarefa é escrever um programa em C que leia férias, o valor da diária (D), o valor do\naumento diário (A) e a data de entrada do professor hóspede, calcule e escreva o valor total\nda hospedagem.\n\n\n\nADAPTADO DA OBI2022",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2024.2-QI-D",
+  "avaliacao": 1,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_1_ano_2024_2_D.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I - Escreva um programa em C capaz de gerar uma sequência numérica inteira, com as\nseguintes características:\n     O primeiro número da sequência é uma entrada fornecida pelo usuário, sendo uma entrada\n           válida valores inteiros não negativos e menores que 100.\n        A partir daí, o próximo número da sequência é obtido somando os quadrados dos dígitos do\n           número anterior.\n        Caso este número seja maior ou igual a 100, o número da sequência é obtido através da\n           divisão deste número por dois.\n        A sequência se encerra quando um número repetido é encontrado (ciclo).\nO exemplo abaixo mostra a sequência gerada, quando o número 16 é informado como entrada ao\nalgoritmo:\n1² + 6² = 1 + 36 = 37\n3² + 7² = 9 + 49 = 58\n5² + 8² = 25 + 64 = 89\n8² + 9² = 64 + 81 = 145 / 2 = 72\n7² + 2² = 49 + 4 = 53\n5² + 3² = 25 + 9 = 34\n3² + 4² = 9 + 16 = 25\n2² + 5² = 4 + 25 = 29\n2² + 9² = 4 + 81 = 85\n8² + 5² = 64 + 25 = 89 -- CICLO ENCONTRADO\nSequência: 16, 37, 58, 89, 72, 53, 34, 25, 29, 85",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2024.2-QII-D",
+  "avaliacao": 1,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_1_ano_2024_2_D.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II - A Liga do Reizinho resolveu inovar mais uma vez e adotou no seu campeonato o\nseguinte sistema de pontuação:\n\nO número de pontos de uma equipe é calculado exclusivamente em função da sequência formada\npelo número de gols marcados nas suas partidas, não importando o resultado destas. Assim,\nconsidere que cada time joga P partidas p0, p1, ..., pP-1, que são agrupadas em janelas sobrepostas de J\npartidas. A i-ésima janela é formada pelas partidas {p i, pi+1, ..., pi+J-1}. Assim, a primeira janela do\ncampeonato (Janela 0) corresponde às partidas {p 0, p1, ..., pj-1}, a segunda janela (Janela 1)\ncorresponde às partidas {p1, p2, ..., pJ}, e assim por diante, totalizando P-J+1 janelas no campeonato.\nSejam g0, g1, ..., gJ-1 os gols marcados por uma equipe em uma determinada janela do campeonato. A\npontuação da equipe nessa janela é dada pelo menor número de gols ma janela em questão, somado\nao maior número de gols na mesma janela: (min{g0, g1, ..., gJ-1}) + max{g0, g1, ..., gJ-1}.\nA pontuação total de um time no campeonato é igual ao somatório da sua pontuação em cada janela\ndo campeonato.\nPor exemplo, se um time jogou 5 partidas em um campeonato com janelas de 3 jogos, tendo marcado\n1, 3, 2, 1, 4 gols, sua pontuação total será igual a (min{1,3,2}+max{1,3,2}) + (min{3,2,1}+max{3,2,1}) +\n(min{2,1,4}+max{2,1,4}) = (1+3)+(1+3)+(1+4) = 13 pontos.\nSua tarefa é fazer um programa para calcular o número de pontos de uma equipe, dada a quantidade\nde gols marcados em cada um das P partidas do campeonato. Seu algoritmo deve ser genérico o\nsuficiente, mas considere que o campeonato atual será composto de 5 partidas e janela de tamanho 3",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2025.2-QI",
+  "avaliacao": 1,
+  "periodo": "2025.2",
+  "pdf": "avaliacao_1_ano_2025_2.pdf",
+  "questao": "I",
+  "texto": "Questão I\n\nCom a crescente popularidade dos campeonatos de “Beach Tennis”, uma empresa está\ndesenvolvendo um aplicativo para celular para ser usado por juízes. O objetivo é que,\ndepois de configurar o aplicativo, um “juiz de vídeo” possa usar a câmera do celular para\ndeterminar se o impacto da bola com o piso foi dentro ou fora do campo de jogo.\n\nO campo de jogo é um retângulo de dimensões 2k : k . A imagem a seguir exemplifica uma\nquadra de “Beach Tennis” onde o valor de k é igual a 8m.\n\n\n\n\nA coordenada (0,0) é sempre considerada a posição do juiz, como mostrado na figura (a). A\nfigura (a) também mostra duas marcações de bolas dentro do campo de jogo (círculos\npretos), nas coordenadas (−6, 6) e (8, 2). Note que uma bola em cima da linha é\nconsiderada dentro do campo de jogo.\n\nA figura (b) mostra duas marcações de bolas fora do campo de jogo (estrelas pretas), nas\ncoordenadas (−4, 10) e (6,−2).\n\nVocê faz parte da equipe de desenvolvimento do novo aplicativo. Neste protótipo, considere\nque as coordenadas são sempre valores inteiros.\n\nEscreva um programa em C que, leia o valor k que define a dimensão da quadra e a\ncoordenada de uma marcação da bola identificada pelo aplicativo, determine e informe se a\nmarcação está dentro ou fora do campo de jogo.\n\nADAPTADO DA OBI 2023",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2025.2-QII",
+  "avaliacao": 1,
+  "periodo": "2025.2",
+  "pdf": "avaliacao_1_ano_2025_2.pdf",
+  "questao": "II",
+  "texto": "Questão II\n\nLuiza está se preparando para começar a estudar em uma nova escola que será\ninaugurada na avenida em que ela mora. A avenida possui M metros de comprimento e\nexiste um ponto de ônibus a cada P metros (onde M é sempre divisível por P), incluindo no\ninício e no fim da avenida. A tabela abaixo indica a distância de cada ponto de ônibus para\no início da avenida. Considerando um M de 2 Km e um P de 400 metros.\n\n\n\n  Ponto nº1      Ponto nº2       Ponto nº3      Ponto nº4      Ponto nº5       Ponto nº6\n\n      0m            400m           800m           1200m          1600m           2000m\n\n\nA casa de Luiza está localizada no início da avenida, junto ao primeiro ponto de ônibus. A\nescola, por outro lado, está localizada a uma distância D do início da avenida.\n\nLuiza pretende pegar o ônibus na porta de casa, descer no ponto de ônibus mais próximo\nda escola e andar a pé o restante do trajeto. Assim, por exemplo, se a escola está a uma\ndistância D = 720 m do início da avenida, ela vai descer no terceiro ponto de ônibus,\nlocalizado a 800 metros do início, e andar 80 metros (em direção ao início da avenida) para\nchegar à escola.\n\nLuiza pediu sua ajuda para descobrir quantos metros ela precisaria andar, dados: o\ntamanho M da avenida, a distância P entre os pontos e a distância em metros D da escola\npara o início da avenida.\n\nEscreva um programa em C, que use estas informações como entrada e, como saída,\ndetermine qual o ponto Luiza deverá descer e qual a distância e direção (“Inicio da Avenida”\n/ “Fim da Avenida”), Luiza deverá caminhar.\n\nADAPTADO DA OBI 2024",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2026.1-QI",
+  "avaliacao": 1,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_1_ano_2026_1.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0) - A turma do colégio vai fazer uma excursão na serra e todos os alunos e monitores\nvão tomar um teleférico para subir até o pico de uma montanha. A cabine do teleférico pode levar\numa quantidade máxima de pessoas, contando alunos e monitores, durante uma viagem até o pico.\nPor questão de segurança, o colégio estabeleceu que, a cada viagem, deveria haver pelo menos um\nmonitor dentro da cabine junto com os alunos.\n\nPor exemplo, se cabem 10 pessoas na cabine e a turma tem 20 alunos, a quantidade mínimas de\nviagem que o colégio poderia fazer, seriam três: a primeira com 8 alunos e um monitor; a segunda\ncom 6 alunos e um monitor; e a terceira com 6 alunos e um monitor (ou 9 alunos e um monitor, 9\nalunos e um monitor e a última com 2 alunos e um monitor). Independente da combinação, neste\ncaso, não seria possível fazer apenas duas viagens.\n\n\n\n\nEscreva um programa em C , que considere como entradas a capacidade da cabine (considere que a\ncabine possui capacidade de transporte de pelo menos duas pessoas) e o número total de alunos na\nexcursão, calcule e imprima o número mínimo de viagens do teleférico.\nADAPTADO DA OBI2017",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2026.1-QII",
+  "avaliacao": 1,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_1_ano_2026_1.pdf",
+  "questao": "II",
+  "texto": "Questão II (5.0) - Dois números são \"n-binariamente distintos\" se, ao compararmos suas\nrepresentações binárias bit a bit, a quantidade total de bits diferentes entre eles for maior ou igual a\nn.\n\nPor exemplo, considere os números 10 e 12. A representação binária de 12 é 1100, enquanto a de\n1010. Como temos dois bits distintos nas representações 10 e 12 são 2-binariamente distintos, mas\nnão são 3-binariamente distintos.\n\nEscreva um programa em C, que leia um valor n e dois números menores que 16, calcule e informe\nse os dois números lidos são ou não são n-binariamente distintos.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2026.2-QIa",
+  "avaliacao": 1,
+  "periodo": "2026.2",
+  "pdf": "avaliacao_1_ano_2026_2.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0) - Hugo é um corredor profissional que participa de diversos campeonatos\nde atletismo ao redor do mundo. Entretanto, o tamanho das pistas, nestes campeonatos,\nnão é padronizado.\n\nPor isso, Hugo, que treina em um clube que possui uma pista circular, resolveu fixar seu\ntreinamento em C metros, ao invés de um número fixo de voltas na pista. Após cada sessão\nde treinamento, Hugo deve tomar meio litro de água antes de fazer qualquer esforço, e por\nisso quer deixar sua garrafa de água exatamente no ponto da pista onde ele termina o seu\ntreinamento.\n\nSabendo o comprimento da pista de corrida que Hugo pretende treinar, ele resolveu pedir\nsua ajuda para calcular o local do ponto de término do treinamento. O ponto de término é o\nlocal da pista onde ele termina o percurso de C metros considerando que ele parte do ponto\nde partida e se movimenta sempre na mesma direção. O ponto de término é dado pelo\nnúmero de metros entre o ponto de partida e o local onde Hugo termina seu treinamento,\ncontados na direção do percurso. Hugo quer deixar sua garrafa de água neste ponto.\n\nPor exemplo, se a pista tem 800 metros de comprimento e Hugo definiu seu treino para 21\nquilômetros, o ponto final é 200 metros.\n\nSua tarefa é, dado o número C de metros que Hugo pretende correr e o comprimento N em\nmetros da pista circular, determinar o ponto de onde Leonardo precisa deixar a sua garrafa\nde água.",
+  "tambem_em": []
+ },
+ {
+  "id": "A1-2026.2-QIb",
+  "avaliacao": 1,
+  "periodo": "2026.2",
+  "pdf": "avaliacao_1_ano_2026_2.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0) - Zip é um jogo de cartas muito popular em SoFarAway. Nesse jogo, são\nutilizados apenas os valores das cartas (Ás ao Rei), ignorando-se os naipes. Para\nsimplificar, neste problema, consideramos os valores das cartas como números inteiros de 1\na 13.\n\nEm cada partida, cada jogador recebe duas cartas. Cada jogador mostra uma de suas\ncartas e os jogadores fazem suas apostas. Após apostar, os jogadores mostram a segunda\ncarta. As regras para determinar o vencedor são simples, baseadas no valor das cartas de\ncada jogador:\n\n   ●​ Se as duas cartas tiverem o mesmo valor, o jogador recebe como pontuação a soma\n      dos valores das cartas multiplicadas por dois.\n   ●​ Se os valores das duas cartas forem números consecutivos (por exemplo, 2 e 3, ou\n      13 e 12), o jogador recebe como pontuação a soma dos valores das cartas\n      multiplicada por três.\n   ●​ Caso contrário, o jogador recebe a soma dos valores das cartas como pontuação.\n   ●​ O jogador que obtiver a maior pontuação vence a partida. Em caso de empate, a\n      aposta acumula para a próxima partida.\n\nLia e Mia estão jogando Zip e querem que você escreva um programa para verificar quem\nganhou cada partida.",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2014.2-QI",
+  "avaliacao": 2,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_2_ano_2014_2.pdf",
+  "questao": "I",
+  "texto": "Questão I​ – Valor 2,0\n    Uma das maneiras de conseguir a raiz quadrada de um número é subtrair do número os ímpares consecutivos a partir\n    de 1, até que o resultado da subtração seja menor ou igual a zero. O número de vezes que se conseguir fazer esta\n    subtração é a raiz quadrada exata (quando o resultado da última subtração é 0) ou aproximada do número (quando o\n    resultado da última subtração é negativo).\n    Ex,.: Raiz de 16: 16­1 => 15­3 => 12­5 => 7­7 = 0 Logo, a raiz de 16 é 4.\n    Raiz de 27: 27 – 1 => 26 – 3 => 23 – 5 => 18 – 7 => 11 – 9 => 2 – 11 = ­ 9. Logo, a raiz de 27 é 6.\n    Escreva em C um algoritmo que use esta técnica para calcular a raiz quadrada (exata ou aproximada) de um número\n    inteiro.",
+  "tambem_em": [
+   "avaliacao_2_ano_2015_2"
+  ]
+ },
+ {
+  "id": "A2-2014.2-QII",
+  "avaliacao": 2,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_2_ano_2014_2.pdf",
+  "questao": "II",
+  "texto": "Questão II​\n              – Valor 3,0\n    Números primos gêmeos ​\n                          na ​\n                             teoria dos números ​\n                                                são dois ​\n                                                         números primos ​\n                                                                        cuja diferença é igual a dois. Os primeiros\n                                      (​\n    pares de números primos gêmeos são​3, 5), (5, 7), (11, 13), (17, 19), (29, 31) e (41, 43).\n    Escreva um programa em C que imprima os primeiros N pares de números primos, onde N é uma entrada para o\n    programa em questão.",
+  "tambem_em": [
+   "avaliacao_2_ano_2015_2"
+  ]
+ },
+ {
+  "id": "A2-2014.2-QIII",
+  "avaliacao": 2,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_2_ano_2014_2.pdf",
+  "questao": "III",
+  "texto": "Questão III​\n               – Valor 2,0\n   Um ​ número triangular ​  é um ​\n                                  número natural ​ que pode ser representado na forma de ​ triângulo equilátero​\n                                                                                                               . Foi\n   desenvolvido por Gauss em 1788 quando ele tinha apenas 10 anos. Para encontrar o n­ésimo número triangular a\n   partir do anterior basta somar­lhe n unidades. Os primeiros 5 números triangulares são:\n∙​ ​\n   1=1\n∙​ ​\n   3 = 1+2\n∙​ ​\n   6 = 1+ 2+ 3\n∙​ ​\n   10 = 1+2+3+4\n∙​ ​\n   15 = 1+2+3+4+5\n   Escreva um programa em C que calcule a soma dos recíprocos dos números triangulares para N termos, onde N é\n   uma entrada para o programa em questão.\n   S=1/1+1/3+1/6+1/10+1/15+...",
+  "tambem_em": [
+   "avaliacao_2_ano_2015_2"
+  ]
+ },
+ {
+  "id": "A2-2014.2-QIV",
+  "avaliacao": 2,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_2_ano_2014_2.pdf",
+  "questao": "IV",
+  "texto": "Questão IV – Valor 3,0\n    Certa vez, numa aula, a professora passou um filme para os alunos assistirem. Durante este filme, ela passou uma\n    lista de presença em sua sala para verificar a presença dos alunos, onde cada aluno deveria inserir apenas seu\n    número de registro (um número inteiro). Alguns alunos contudo, como possuem amigos que fogem da aula,\n    decidiram ser camaradas e inseriram os números de registro de seus amigos fujões. O problema é que muitos alunos\n    são amigos de alunos que fogem da aula e alguns números de registro acabaram sendo repetidamente inseridos na\n    lista de presença. Além de tudo, alguns dos alunos que se esperava que não estivessem na aula de fato estavam! A\n    professora, ao notar que a lista de presença continha alguns números repetidos, ficou sem entender, mas decidiu dar\n    um voto de confiança e dar presença a todos os alunos cujos números de registro estavam na lista. Como são muitos\n    alunos na sala e muitos números com repetição, ela pediu a sua ajuda para determinar o total de alunos que\n\freceberam presença na aula e a o número destes alunos. Considere que a lista original possuía 50 números de\nregistro. (Adaptado OBI2012)\n\nUm exemplo considerando uma lista com 10 números.\n\nENTRADA\n1 – 10\n2 – 20\n3 – 50\n4 – 15\n5 – 50\n6 – 50\n7 – 20\n8 – 10\n9–7\n10 – 50\n\fSAIDA\n5 Alunos\n1 – 10\n2 – 20\n3 – 50\n4 – 15\n5–7\n\n                                                                                ●       Leia toda a avaliação antes de começar.\n                                                                                    ●     A interpretação faz parte da questão.\n           ●   É permitido o uso de material próprio para consulta, sendo vedado o compartilhamento de material, em qualquer\n                                                                                                                    hipótese.\n                                                                                      ● Controle o tempo da sua avaliação\n                                                       ●    Qualquer assunção adicional deverá ser explicitamente registrada\n                                                                                                            ●    BOA SORTE",
+  "tambem_em": [
+   "avaliacao_2_ano_2015_2"
+  ]
+ },
+ {
+  "id": "A2-2016.1-QI",
+  "avaliacao": 2,
+  "periodo": "2016.1",
+  "pdf": "avaliacao_2_ano_2016_1.pdf",
+  "questao": "I",
+  "texto": "Questão I - Valor 2.0\nChico tem 1,50 metro e cresce 2 centímetros por ano, enquanto Zé tem 1,10 metro e cresce\n3 centímetros por ano. Construa um programa em C que calcule e imprima quantos anos\nserão necessários para que Zé seja maior que Chico.",
+  "tambem_em": [
+   "avaliacao_2_ano_2016_1_B"
+  ]
+ },
+ {
+  "id": "A2-2016.1-QII",
+  "avaliacao": 2,
+  "periodo": "2016.1",
+  "pdf": "avaliacao_2_ano_2016_1.pdf",
+  "questao": "II",
+  "texto": "Questão II - Valor 4.0\nNúmeros Brasileiros são os números naturais N tais que existe um número natural B com\n1 < B < N-1, cuja representação de B na base N tem todos os dígitos iguais. Por exemplo, 7\né um número brasileiro pois (111)2= 7. O número 8 é um número brasileiro, pois é igual\na (22)3 = 8.\nEscreva um programa em C que leia um número qualquer e informe se o número é ou não\num número brasileiro.\n\nLista de números Brasileiros:\n7, 8, 10, 12, 13, 14, 15, 16, 18, 20, 21, 22, 24, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 38, 39,\n40, 42, 43, 44, 45, 46, 48, 50, 51, 52, 54, 55, 56, 57, 58, 60, 62, 63, 64, 65, 66, 68, 69, 70, 72,\n73, 74, 75, 76, 77, 78, 80, 81, 82, 84, 85, 86, 87, 88, 90,...",
+  "tambem_em": [
+   "avaliacao_2_ano_2016_1_B"
+  ]
+ },
+ {
+  "id": "A2-2016.1-QIII",
+  "avaliacao": 2,
+  "periodo": "2016.1",
+  "pdf": "avaliacao_2_ano_2016_1.pdf",
+  "questao": "III",
+  "texto": "Questão III - Valor 4.0\nBruninho está programando um personagem virtual para o próximo desafio de um jogo\nde aventura em que, numa das fases, o personagem tem que entrar em um corredor,\npercorrer algumas salas e depois sair do corredor. Ele pode entrar apenas uma vez, e\npassar por cada sala apenas uma vez. Todas as salas possuem uma porta de entrada e uma\nde saída. Ao passar por uma sala o jogador ganha um certo número de vidas (que pode\nser negativo!). O objetivo é passar pelo corredor coletando a maior quantidade possível\nde vidas! Por sorte, sempre existe ao menos uma sala onde se ganha um número positivo\nde vidas.\n\n     0              1             2               3               4               5                6\n     -2             5             -1              8              -11              7                3\n\nNo exemplo acima, o personagem de Bruninho pode ganhar, no máximo, 12 vidas, por\nexemplo, entrando pela sala 1 e saindo pela sala 3 (5-1+8 = 12). Você deve escrever um\nprograma que, leia o número de vidas correspondentes a cada sala do corredor (o\ncorredor possui dez salas), calcule e imprima a quantidade máxima de vidas que será\npossível ganhar.\n\nBaseado na OBI 2014.\n\n                                                                       Orientações:\n                                                 • Leia toda a avaliação antes de começar.\n                                                 • A interpretação faz parte da questão.\n                                                 • Responda as questões com clareza na folha de\n                                                 respostas.\n                                                 • É permitida consulta a material próprio, sendo vedada\n                                                 a troca ou empréstimo de material.\n                                                 • Controle o seu tempo. Ele faz parte de sua avaliação.",
+  "tambem_em": [
+   "avaliacao_2_ano_2016_1_B"
+  ]
+ },
+ {
+  "id": "A2-2016.2-QI",
+  "avaliacao": 2,
+  "periodo": "2016.2",
+  "pdf": "avaliacao_2_ano_2016_2.pdf",
+  "questao": "I",
+  "texto": "Questão I (3.5)\nUm número primo é um número que possui somente dois divisores: ele mesmo e o\nnúmero 1. Um número primo p é um número primo de Chen se o próximo número\nímpar (p + 2) é primo ou o produto de dois primos (subprimo).\nEscreva um programa em C, que leia um número e verifique se ele é um número primo\nde Chen. Por exemplo,\n\n2 é um primo de Chen, pois 2+2 = 4 e 4 é subprimo (2*2).\n3 é um primo de Chen, pois 3+2 = 5 e 5 é primo.",
+  "tambem_em": [
+   "avaliacao_2_ano_2017_1",
+   "avaliacao_2_ano_2025_1_C"
+  ]
+ },
+ {
+  "id": "A2-2016.2-QII",
+  "avaliacao": 2,
+  "periodo": "2016.2",
+  "pdf": "avaliacao_2_ano_2016_2.pdf",
+  "questao": "II",
+  "texto": "Questão II (3.5)\nA sequencia de Recamán é uma sequência, onde seus os termos são dados pela seguinte\nrelação:\n\n      A0 = 0; para n > 0,\n      An = An-1 – n, se o termo for positivo e já não estiver na sequência,\n       An = An-1 + n, caso contrário.\n\nEscreva um programa em C, que gere e armazene em um vetor de vinte posições, os 20\nprimeiros termos da série (seu algoritmo deverá ser feito de forma a permitir a mudança\ndo tamanho do vetor com o mínimo de impacto).\n\nExemplo da série de Recamán até o nono termo: 0, 1, 3, 6, 2, 7, 13, 20, 12, 21...",
+  "tambem_em": [
+   "avaliacao_2_ano_2017_1",
+   "avaliacao_2_ano_2025_1_C"
+  ]
+ },
+ {
+  "id": "A2-2016.2-QIII",
+  "avaliacao": 2,
+  "periodo": "2016.2",
+  "pdf": "avaliacao_2_ano_2016_2.pdf",
+  "questao": "III",
+  "texto": "Questão III (3.0)\nDizemos que um número i é congruente módulo m a j se i % m = j % m.\nPor exemplo, exemplo: 35 é congruente módulo 4 a 39, pois 35 % 4 = 3 = 39 % 4.\nEscreva um programa em C, que leia i, j e m e imprima todos os pares de números i*\ncongruente modulo m a j*, onde i* <= i e j* <= j.",
+  "tambem_em": [
+   "avaliacao_2_ano_2017_1",
+   "avaliacao_2_ano_2025_1_C"
+  ]
+ },
+ {
+  "id": "A2-2019.2-QI",
+  "avaliacao": 2,
+  "periodo": "2019.2",
+  "pdf": "avaliacao_2_ano_2019_2.pdf",
+  "questao": "I",
+  "texto": "1) (3.5) - Escreva um programa em C, que receba uma sequência de N números inteiros e um valor X. Este pro-\ngrama deverá computar e imprimir qual a quantidade de subsequencias de inteiros consecutivos em N, que quan-\ndo somados resultam exatamente em X.\n\nPor exemplo, a figura abaixo mostra uma sequência de N = 10, para a qual existem 5 subsequencias cuja soma\ndos números é igual a K = 5.\n\n1      0     2      2       0       0       8        5      3       2\n1      0     2      2       0       0       8        5      3       2\n1      0     2      2       0       0       8        5      3       2\n1      0     2      2       0       0       8        5      3       2\n1      0     2      2       0       0       8        5      3       2",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2019.2-QII",
+  "avaliacao": 2,
+  "periodo": "2019.2",
+  "pdf": "avaliacao_2_ano_2019_2.pdf",
+  "questao": "II",
+  "texto": "2) (3.5) - Uma pesquisa genética sobre populações de repteis extintos na Ilha de Soforuei, busca verificar se indi -\nvíduos fossilizados são da mesma família. Indivíduos são considerados da mesma família se partilham de uma\nparte idêntica e contígua de código genético de no mínimo P% do tamanho da menor fita genética dentre os indi -\nvíduos.\n\nPor exemplo, um indivíduo A possui o código genético GATTACTGAGTCA e o indivíduo B possui o código\ngenético CATACAGT. Se aplicarmos um critério de parentesco de 62%, os indivíduos A e B devem ser\nconsiderados parentes, pois a fita AGTCA é uma parte contígua da sequência dos dois indivíduos e possui\ncomprimento de tamanho 5, onde 5 >= 8 * 62%. Observe, que a menor das sequências é a de tamanho 8 do\nindivíduo B. Observe que as fitas são avaliadas em cadeias circulares (seguindo o último elemento da cadeia,\nestá o primeiro).\n\nEscreva um programa em C que leia as duas cadeias (o tamanho máximo da cadeia é 512) e o valor de P e indi -\nque se os indivíduos são parentes.",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2019.2-QIII",
+  "avaliacao": 2,
+  "periodo": "2019.2",
+  "pdf": "avaliacao_2_ano_2019_2.pdf",
+  "questao": "III",
+  "texto": "3) (3.0) Escreva um programa em C, que leia um número natural positivo N e gere a lista de todos os\nelementos da lista a(n) = sigma(n), onde sigma(n) é a somatória dos divisores de n com n <= N, por\nexemplo, para N = 10, o programa deverá imprimir: 1, 3, 4, 7, 6, 12, 8, 15, 13, 18\n\n\n\n\n             INF027 – Graduação Tecnológica em Análise e Desenvolvimento de Sistemas – IIª Avaliação Individual – 2019.2",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2021.1-QI",
+  "avaliacao": 2,
+  "periodo": "2021.1",
+  "pdf": "avaliacao_2_ano_2021_1.pdf",
+  "questao": "I",
+  "texto": "1) (5.0) - Diferente dos computadores binários tradicionais, que fazem representações numéricas\nusando dígitos binários, os computadores ternários balanceados fazem sua representação numérica\natravés de dígitos ternários balanceados ou trits.\n\nNo sistema de numeração ternário balanceado, de forma similar aos sistemas de representação tradi-\ncionais, os valores numéricos são posicionais. Nesse caso, a base aplicada é a base três. Assim, o dígito\nmais à direita vale um, contudo, deslocá-lo uma posição à esquerda, equivale a multiplicá-lo por três.\n\nExistem três trits possíveis: 2, 1 e 0. O trit 2 adiciona o valor posicional correspondente, o 1 não adici-\nona nem subtrai e o 0, subtrai o valor em questão. Por exemplo: o número 222 em ternário balancea-\ndo equivale a: 9 + 3 + 1 = 13. Já o número 2010, equivale a 27-9+0-1=17.\n\nEscreva um programa em C, que leia um número de até quatro trits e imprima o seu equivalente em\ndecimal.",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2021.1-QII",
+  "avaliacao": 2,
+  "periodo": "2021.1",
+  "pdf": "avaliacao_2_ano_2021_1.pdf",
+  "questao": "II",
+  "texto": "2) (5.0) - O código de confirmação de uma transação bancária é calculada considerando os quatro dígi-\ntos finais do cartão e o horário da transação no formato HHMM. Para o cálculo, são gerados dois nú -\nmeros considerando para o primeiro os maiores numerais de cada posição, e para o segundo o menor\nnúmeral de cada posição. Em seguida, o menor número é subtraído do maior e seu invertido é gera-\ndo. Este último valor é o código de confirmação da transação.\n\nPor exemplo, para o cartão 4392 e uma transação realizada às 12:15, o código de confirmação será\nigual a 3813; calculado da seguinte forma: 4395 - 1212 = 3183, que quando invertido, gera o número\n3813.\n\nEscreva um programa em C, que leia um número de quatro dígitos do cartão e um outro representan-\ndo o horário no formato HHMM e imprima o código de confirmação calculado.\n\n\n                       INF027 – Graduação Tecnológica em Análise e Desenvolvimento de Sistemas – Iª Avaliação – 2021.2",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2023.2-QI",
+  "avaliacao": 2,
+  "periodo": "2023.2",
+  "pdf": "avaliacao_2_ano_2023_2.pdf",
+  "questao": "I",
+  "texto": "Questão I (5,0) - Seu chefe está ao telefone, nervoso. Ele quer que você compute a soma\nde uma sequência de números que ele vai falar para você ao telefone, para saber o total\ndas vendas em sua mais recente viagem de negócios. Infelizmente, de vez em quando seu\nchefe fala números errados para você ao telefone. Felizmente, seu chefe rapidamente\npercebe que falou um número errado e diz \"zero\", que como combinado previamente quer\ndizer ignore o último número corrente.\n\nPor fim, seu chefe sinalizará    que terminou a lista de vendas, através de um número\nnegativo.\n\nInfelizmente, seu chefe pode cometer erros repetidos, e diz \"zero\" para cada erro. Por\nexemplo, seu chefe pode falar ao telefone \"Um, três, cinco, quatro, zero, zero, sete, zero,\nzero, seis, menos um\", o que significa uma soma total igual a 7, conforme explicado na\ntabela abaixo.\n\n\n Fala do Chefe             Números Atuais      Significado\n\n um, três, cinco, quatro   1,3,5,4             registre os quatro números\n\n zero, zero                1,3                 ignore os dois últimos números\n\n sete                      1,3,7               registre os número sete\n\n zero, zero                1                   ignore os dois últimos números\n\n seis                      1,6                 registre o número seis\n\n menos um                  1+6=7               finalize a conta e me informe o resultado\n\n\nSua tarefa é escrever um programa que determine a soma das vendas de seu chefe.\n\nA entrada será uma sequência de inteiros com os valores das vendas (incluindo os\ncomandos de exclusão ‘zeros’) e a saída deverá ser um único valor representando o total\nvendido pelo seu chefe.\nPara fins de teste, considere que o seu chefe irá informar no máximo 10 inteiros, contudo\nseu algoritmo deve ser genérico o suficiente para executar em sequências de qualquer\ntamanho.\nQuestão adaptada da OBI2021",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2023.2-QII",
+  "avaliacao": 2,
+  "periodo": "2023.2",
+  "pdf": "avaliacao_2_ano_2023_2.pdf",
+  "questao": "II",
+  "texto": "Questão II (5,0) - Um Expoente de Mersenne é um número natural n, tal que o número de\nMersenne (número da forma Mn = 2n -1) por ele gerado também é primo. Escreva um\nprograma em C, que gere a lista dos primeiros 20 Expoentes de Mersenne, com seus\nrespectivos números de Mersenne.",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2024.2-QI",
+  "avaliacao": 2,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_2_ano_2024_2.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I - Na usina de Angra dos Reis, os técnicos analisam a perda de massa de um material\nradioativo. Sabendo-se que este perde 10% de sua massa a cada 1 minuto. Criar um programa em C\nque leia o valor da massa inicial e da massa final desejada, calcule e imprima o tempo necessário em\nminutos para que o material radioativo alcance a massa final indicada. (5,0)",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2024.2-QII",
+  "avaliacao": 2,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_2_ano_2024_2.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II - Escreva um programa em C capaz de gerar uma sequência numérica inteira, com as\nseguintes características:\n    • O primeiro número da sequência é uma entrada fornecida pelo usuário, sendo uma entrada\n           válida valores inteiros não negativos e menores que 100.\n       • A partir daí, o próximo número da sequência é obtido somando os quadrados dos dígitos do\n           número anterior.\n       • Caso este número seja maior ou igual a 100, o número da sequência é obtido através da\n           divisão deste número por dois.\n       • A sequência se encerra quando um número repetido é encontrado (ciclo).\nO exemplo abaixo mostra a sequência gerada, quando o número 16 é informado como entrada ao\nalgoritmo:\n1² + 6² = 1 + 36 = 37\n3² + 7² = 9 + 49 = 58\n5² + 8² = 25 + 64 = 89\n8² + 9² = 64 + 81 = 145 / 2 = 72\n7² + 2² = 49 + 4 = 53\n5² + 3² = 25 + 9 = 34\n3² + 4² = 9 + 16 = 25\n2² + 5² = 4 + 25 = 29\n2² + 9² = 4 + 81 = 85\n8² + 5² = 64 + 25 = 89 -- CICLO ENCONTRADO\nSequência: 16, 37, 58, 89, 72, 53, 34, 25, 29, 85",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2025.1-QI",
+  "avaliacao": 2,
+  "periodo": "2025.1",
+  "pdf": "avaliacao_2_ano_2025_1.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I: O sistema de segredo para abrir um cofre é bastante complexo. Ao invés de girar\num botã o vá rias vezes, o dono do cofre tem que deslizar um controle para a esquerda e para a\ndireita, em cima de uma barra, vá rias vezes, parando em determinadas posiçõ es. A barra possui\nN posiçõ es e cada posiçã o contém um nú mero inteiro entre 0 e 9, inclusive. No exemplo da\nfigura, a barra tem 14 posiçõ es e o controle inicia na posiçã o 1.\n\n\n\n\nFaça um programa em C, que leia uma sequência de inteiros (obrigatoriamente, o primeiro valor\nlido será sempre 1), representando a sequência de posiçõ es entre as quais o dono desliza o\ncontrole. O programa encerra quando o valor da posiçã o informado seja menor ou igual a zero.\nO programa deve contar e imprimir quantas vezes cada inteiro, entre 0 e 9, vai aparecer dentro\ndo controle. Considere que o seu algoritmo irá executar sobre uma barra de 14 posiçõ es, mas\nele deve ser facilmente recompilado para barras de tamanhos quaisquer.\n\nComo exemplo, uma sequencia de entrada: 1 9 4 11 13\nirá gerar como saída: 1 6 3 1 4 3 0 1 0 4\n\nBASEADO NA OBI2017",
+  "tambem_em": [
+   "avaliacao_2_ano_2025_1_B"
+  ]
+ },
+ {
+  "id": "A2-2025.1-QII",
+  "avaliacao": 2,
+  "periodo": "2025.1",
+  "pdf": "avaliacao_2_ano_2025_1.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II: Um fazendeiro comprou um robô -espantalho para espantar os pá ssaros de sua\nplantaçã o de milho. O robô se move ao longo de um caminho que circunda a plantaçã o. No\ncaminho há N estaçõ es numeradas sequencialmente, a partir de 1, no sentido horá rio. A figura\nabaixo mostra um exemplo com oito estaçõ es.\n\n\n\n\nO robô inicia cada dia na estaçã o nú mero 1, e entã o obedece a uma sequência de comandos.\nCada comando faz com que o robô se mova para outra estaçã o, vizinha à estaçã o em que ele se\nencontra, ou no sentido horá rio ou no sentido anti-horá rio. O robô permanece nessa nova\nestaçã o até receber um novo comando. Apesar da promessa de que o robô protegeria a\nplantaçã o, ao final de um determinado dia o fazendeiro notou que parte de sua plantaçã o estava\ndevastada por pá ssaros. O fazendeiro agora quer entender melhor o que aconteceu. Dados o\nnú mero da estaçã o mais pró xima à á rea devastada e a sequência de comandos que o robô\nobedeceu naquele dia, escreva um programa para determinar quantas vezes o robô permaneceu\nna estaçã o mais pró xima à à rea devastada.\n\nSeu programa irá ler três inteiros, representando respectivamente o nú mero de estaçõ es, o\nnú mero de comandos e o nú mero da estaçã o mais pró xima à á rea devastada. Em seguida, o\nprogram irá ler uma sequencia de “nú mero de comandos”, que podem assumir os valores 1\n(caso o robô deva se mover no sentido horá rio) e -1 (para o robô se mover no sentido anti\nhorá rio). Como saída, o seu programa deve indicar quantas vezes o robô permaneceu na estaçã o\nnú mero estaçã o mais pró xima à á rea devastada durante o dia.\n\nComo exemplo, a entrada: 8 8 3\nseguida dos comandos: 1 -1 1 1 1 -1 1 1\nirá gerar como saída: 2\n\nBASEADO NA OBI2021",
+  "tambem_em": [
+   "avaliacao_2_ano_2025_1_B"
+  ]
+ },
+ {
+  "id": "A2-2025.2-QI",
+  "avaliacao": 2,
+  "periodo": "2025.2",
+  "pdf": "avaliacao_2_ano_2025_2.pdf",
+  "questao": "I",
+  "texto": "Questão I\n\nSem as proteções da atmosfera e do cinturão magnético que existem na Terra, a Lua fica\nexposta ao ataque do Sol, que é um astro em constante explosão atômica. As explosões do Sol\nemitem ondas letais de partículas. Uma pessoa que ficasse desprotegida na superfície da Lua,\nnum lugar onde o Sol incidisse diretamente, sofreria um bombardeio radioativo tão intenso\nquanto se estivesse nas imediações da usina russa de Chernobyl no momento do acidente que\nmatou 31 pessoas, em 1986. Além da radiação solar, outro efeito dessa falta de proteção contra\no Sol que existe na Lua é a enorme variação de temperatura. Nas regiões próximas do equador\nlunar, a variação de temperatura é brutal, passando de cerca de 130 graus positivos durante o\ndia a 129 graus negativos à noite.\nPara estudar com mais precisão as variações de temperatura na superfície da Lua, a NASA\nenviou à Lua uma sonda com um sensor que mede a temperatura de 1 em 1 minuto. Um dado\nimportante que os pesquisadores desejam descobrir é como se comporta a média da\ntemperatura, considerada em intervalos de uma dada duração (uma hora, meia hora, oito horas,\netc.). Por exemplo, para a sequência de medições 8, 20, 30, 50, 40, 20, -10, e intervalos de\nquatro minutos, as médias são respectivamente 108/4=27, 140/4=35, 140/4=35 e 100/4=25.\nVocê foi recentemente contratado pela NASA, e sua primeira tarefa foi escrever um programa\nque, conhecidos a sequência de temperaturas medidas pelo sensor, e o tamanho do intervalo\ndesejado, informe qual a maior e qual a menor temperatura média observada, considerando o\ntamanho do intervalo dado.\nAssuma que são estudadas 12 temperaturas, e que o intervalo dependerá da necessidade do\npesquisador. O exemplo abaixo mostra uma execução com os 12 valores indicados e o intervalo\nde tamanho 6. A saída deveria ser 28 e -5,83.\n\n\n\n   8        20    30      50       40     20     -10     -30     60      15     -20     -50\n\n\nIntervalo: 6\n(8+20+30+50+40+20) / 6 = 28\n(20+30+50+40+20-10) / 6 = 25\n(30+50+40+20-10-30 ) / 6= 16,67\n(50+40+20-10-30+60) / 6 = 21,67\n(40+20-10-30+60+15) / 6= 15,83\n(20-10-30+60+15-20) / 6= 5,83\n(-10-30+60+15-20-50) / 6= -5,83\n\fSua tarefa é escrever um programa em C, que leia as 12 temperaturas e o tamanho do\nintervalo, calcule e informe a maior e a menor temperatura média observada. Para\nfacilitar, considere que a menor temperatura é superior a -500; e a maior, é inferior a 500.",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2025.2-QII",
+  "avaliacao": 2,
+  "periodo": "2025.2",
+  "pdf": "avaliacao_2_ano_2025_2.pdf",
+  "questao": "II",
+  "texto": "Questão II\n\nNum sorteio que distribui prêmios, cada participante sorteia 11 números. O número de pontos\nque o participante marca é o tamanho da maior sequência de valores consecutivos iguais. Por\nexemplo, se o participante sortear a seguinte sequência 30,30,30,30,40,40,40,40,40,30,30 ele\nterá marcado 5 pontos, correspondentes aos 5 valores 40 consecutivos. Note que o participante\nsorteou 6 valores iguais a 30, mas nem todos são consecutivos.\n\nSua tarefa é escrever um programa em C, que leia os 11 valores e informe a pontuação do\nparticipante.",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2026.1-QI",
+  "avaliacao": 2,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_2_ano_2026_1.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0) - Os medicamentos, imediatamente após a ingestão, começam a ser metabolizados\npelo organismo, o que faz com que sua concentração no sangue diminua gradualmente, num\nprocesso denominado decaimento. Denomina-se meia-vida de uma substância o tempo necessário\npara que o teor dessa substância no sangue se reduza à metade do valor inicial.\n\nConsidere a situação em que um médico prescreveu a um paciente uma dosagem de 800 mg de um\nmedicamento cuja meia-vida é 6 horas, com recomendação de tomar um comprimido a cada 12\nhoras, durante 3 dias. Para esse medicamento, considera-se superdosagem um teor superior a 1520\nmg, o que causa riscos de intoxicação.\n\nApressado em recuperar-se a tempo de ir a uma festa, o paciente sugeriu ao médico que mudasse a\nprescrição para 6 em 6 horas, imaginando que, assim, reduziria o tempo de tratamento. O médico\ncontra-argumentou, informando ao paciente que, caso antecipasse as doses, correria o risco de estar\nintoxicado em algumas horas.\n\nEscreva um programa em C, que calcule e informe em quantas horas o paciente estará intoxicado,\ncaso a prescrição passe a ser de 6 em 6 horas.",
+  "tambem_em": []
+ },
+ {
+  "id": "A2-2026.1-QII",
+  "avaliacao": 2,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_2_ano_2026_1.pdf",
+  "questao": "II",
+  "texto": "Questão II (5.0) - Em 1949, o matemático indiano D. R. Kaprekar descobriu uma propriedade\nenvolvendo números de quatro dígitos. O processo, conhecido como Rotina de Kaprekar, consiste\nem ordenar os dígitos de um número de forma decrescente e crescente, subtraindo o menor valor do\nmaior. Ao repetir esse processo sucessivamente com o resultado da subtração, quase todos os\nnúmeros de quatro dígitos eventualmente convergem para um mesmo valor constante: o número\n6174 (conhecido como a Constante de Kaprekar), onde o laço se estabiliza (pois 7641 - 1467 =\n6174).\n\nPor exemplo, começando com o número 8991:\n      9981 – 1899 = 8082\n      8820 – 288 = 8532\n      8532 – 2358 = 6174\n      7641 – 1467 = 6174\n\nQualquer número de quatro dígitos (na base 10) com pelo menos dois dígitos distintos atingirá 6174\nem até sete iterações.\n\nEscreva um programa na linguagem C que receba do usuário um número inteiro positivo de 4 dígitos\n(assuma que o número possui pelo menos dois dígitos distintos). O seu programa deve gerar e\nimprimir a sequência de transição até que a constante 6174 seja atingida.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2014.2-QI",
+  "avaliacao": 3,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_3_ano_2014_2.pdf",
+  "questao": "I",
+  "texto": "Questão I – Valor (3,0)\n\nNa matemática, na álgebra linear, uma matriz de permutação é uma matriz quadrada binária\nque tem o efeito de gerar uma permutação dos elementos de um vetor ou entre linhas ou\ncolunas de uma matriz. É formada apenas de zeros e uns, sendo o valor de apenas um\nelemento por linha e por coluna que igual a um.\nAs duas matrizes a seguir são matrizes de permutação:\n\n\n\n\nAs duas próximas matrizes não são:\n\n\n\nEscreva um programa em C, que leia uma matriz 10x10, verifique e imprima mensagem\ninformando se a matriz lida é uma matriz de permutação.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2014.2-QII",
+  "avaliacao": 3,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_3_ano_2014_2.pdf",
+  "questao": "II",
+  "texto": "Questão II – Valor (3,5)\n\nO agrupamento de duas ou mais consoantes, sem vogal intermediária, recebe o nome\nde encontro consonantal.\nEscreva um programa em C, que leia uma string de até 256 caracteres, conte e imprima o\nnúmero de encontros consonantais identificados na string.\nPor exemplo, na string “O istmo de Stradun não fica no Brasil”. O programa deverá imprimir o\nvalor 3.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2014.2-QIII",
+  "avaliacao": 3,
+  "periodo": "2014.2",
+  "pdf": "avaliacao_3_ano_2014_2.pdf",
+  "questao": "III",
+  "texto": "Questão III – Valor (3,5)\n\nEscreva um programa em C que crie uma estrutura que represente o nome e o preço dos\nprodutos de uma loja. O programa deverá ler 100 destes registros. Em seguida, o programa\ndeverá verificar todos os produtos cujo preço seja menor que a média dos preços dos produtos\ne aumentá-los em 10%. Por fim, o programa deve imprimir preço e nome do produto mais\nbarato após a majoração.\n\n                                                                                         Orientações:\n\n                                                             Leia toda a avaliação antes de começar.\n                                                              A interpretação faz parte da questão.\n                                              Responda as questões com clareza na folha de respostas.\n                                                Controle o seu tempo. Ele faz parte de sua avaliação.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2019.1-QI",
+  "avaliacao": 3,
+  "periodo": "2019.1",
+  "pdf": "avaliacao_3_ano_2019_1.pdf",
+  "questao": "I",
+  "texto": "Questão I\nUma faixa de letras é um conjunto de letras minúsculas alfabeticamente consecutivas tomadas\nde 'a' até 'z'. A menor e maior letras da faixa, separadas por dois pontos (o caractere ':'), são\nusadas para representar a faixa de letras. Por exemplo, a faixa \"a:c\" representa as letras\nconsecutivas 'a', 'b' e 'c'. (as aspas não fazem parte da faixa). A faixa \"w:z\" representa as letras\n'w', 'x', 'y' e 'z'. A faixa \"m:m\" representa apenas a letra 'm'. Escreva um programa em C, que leia\numa string composta por letras minúsculas e espaços em branco e imprima as faixas de letras\nque a compõe, ordenadas alfabeticamente pelo menor valor de cada faixa. Faixas de letras a\nserem impressas devem representar a maior sequência possível de letras de entrada em ordem\ncrescente. Ignore espaços e letras duplicadas contidas na entrada.\n\nPor exemplo, a string \"iron maiden\" tem cinco faixas de letras, \"a:a\" (a letra 'a'), \"d:e\" (as letras\n'd' e 'e'), \"i:i\" (a letra 'i'), \"m:o\" (as letras 'm', 'n' e 'o') e \"r:r\" (a letra 'x'). Assim a saída do\nprograma deveria ser: \"a:a d:e i:i m:o r:r\".",
+  "tambem_em": [
+   "avaliacao_3_ano_2019_1_v2"
+  ]
+ },
+ {
+  "id": "A3-2019.1-QII",
+  "avaliacao": 3,
+  "periodo": "2019.1",
+  "pdf": "avaliacao_3_ano_2019_1.pdf",
+  "questao": "II",
+  "texto": "Questão II\nEm alguns lugares é comum lembrar um número do telefone associando seus dígitos a letras.\nDessa maneira a expressão MY LOVE significa 69 5683. Claro que existem alguns problemas,\numa vez que alguns números de telefone não formam uma palavra ou uma frase e os dígitos 1 e\n0 não estão associados a nenhuma letra.\n\nLetras Número\n ABC     2\n DEF     3\n GHI     4\n JKL     5\nMNO      6\nPQRS     7\n TUV     8\nWXYZ     9\n\nEscreva um programa em C que dada uma expressão, construa e imprima o número de telefone\ncorrespondente baseado na tabela abaixo. Uma expressão é composta por letras maiúsculas\n(A-Z), hifens (-) e os números 1 e 0. Por exemplo, para a entrada 1-LAR-DOCE-LAR, a saída\ndeveria ser: 1-527-3623-527.",
+  "tambem_em": [
+   "avaliacao_3_ano_2019_1_v2"
+  ]
+ },
+ {
+  "id": "A3-2023.1-QI",
+  "avaliacao": 3,
+  "periodo": "2023.1",
+  "pdf": "avaliacao_3_ano_2023_1.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0)\nUm jogo de caças palavras é realizado através da apresentação de um conjunto de letras arranjadas de forma\naparentemente aleatórias em uma grade quadrada ou retangular. Nesta grade, os jogadores devem identificar,\nde forma alternada, palavras, que devem ser procuradas no sentido horizontal e/ou vertical da grade.\nNesta variação do jogo, a pontuação por palavra é dependente do tamanho da palavra encontrada: i) caso a\npalavra indicada pelo jogador não exista, ele recebe -5 pontos; caso exista, ii) a pontuação é o tamanho da\npalavra encontrada.\nPor exemplo, para a grade abaixo:\n                                        ABLNHEHLLTBQJFRGQH\n                                         KJULOCALIZARARVMNT\n                                         FEOGEQHTLOIDFMBAOE\n                                         RWBNUSGEVIXOIOXGUS\n                                         BRDARGTENTATIVAYJT\n                                         EARHSOWESLFVCDPZJE\n                                         WECSWATLXBMTLCDPNI\nAs palavras a seguir terão, respectivamente, a pontuação indicada:\n    •   LOCALIZAR - 9 pontos\n    •   TENTATIVA - 9 pontos\n    •   BAIXA - 5 pontos\n    •   TESTE - 5 pontos\n    •   LOGICA - -5 pontos.\n\nEscreva um programa que leia uma grade de MxN (para fins de teste, considere o valor de M como 7 e N\ncomo 17) caracteres e uma string (tamanho máximo igual ao maior(M,N) + 1, para fins de teste),\nprocure a string na grade e indique a pontuação marcada, segundo as regras apresentadas.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2023.1-QII",
+  "avaliacao": 3,
+  "periodo": "2023.1",
+  "pdf": "avaliacao_3_ano_2023_1.pdf",
+  "questao": "II",
+  "texto": "Questão II (5.0)\nUm laboratório é responsável pelo sequenciamento do DNA de vírus. O DNA dos vírus é uma sequência das\nenzimas: citosina, guanina, adenosina e timina (representados pelas letras C, G, A, e T). A manipulação do\nDNA pode acarretar em erro na identificação das enzimas. Para tentar recuperar as enzimas perdidas, o\nlaboratório usa a técnica de consenso que consiste na leitura de cinco sequências do DNA (todas do mesmo\ntamanho) e a montagem da sequência correta através do cálculo do caracter mais frequente de cada posição.\nEm caso de ausência de consenso (empate entre os caracteres mais frequentes), o caracter da posição será\nmarcado com ‘?’. Por exemplo, considere as fitas abaixo e o consenso montado segundo a técnica:\nFitas lidas\nCGGATTTT\nCGGAAATT\nGCGTTAAT\nGCGTTTTT\nACGGACAT\n\n\nCONSENSO:\n?CG?T?TT\n\n\nEscreva um programa em C, que leia 5 strings representando as fitas de DNA (strings de tamanho até 8\ncaracteres), calcule e imprima a fita de DNA montada por consenso",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2023.2-QI",
+  "avaliacao": 3,
+  "periodo": "2023.2",
+  "pdf": "avaliacao_3_ano_2023_2.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0) - Uma das fases de projeto de plantações suspensas é a de verificação das fases de\nirrigação e gotejamento. O gotejamento é o processo de fazer escorrer água verticalmente, a partir\nde um ponto no teto, numa parede onde há várias prateleiras horizontais. Quando a água bate em\numa prateleira, ela começa a escorrer horizontalmente para os dois lados, direita e esquerda, até as\nextremidades da prateleira, quando volta a escorrer verticalmente.\nRepresenta-se a parede por uma matriz de N linhas e M colunas de caracteres, como mostrado\nabaixo. As prateleiras serão representadas por \"#\" e a parede por \".\". Só existem prateleiras nas\nlinhas pares e elas nunca encostam na borda da parede. Há apenas um ponto de vazamento\nrepresentado pelo caractere \" o\" na primeira linha.\n\n.......o......\n.###...####.#.\n..............\n..######......\n..............\n.#.####....##.\n..............\n.....####.....\n..............\n\nA regra para explicar o gotejamento e o padrão de vazamento da água na plantação é descrita\nabaixo:\nseja c(i,j) o caractere na linha i coluna j; se c(i,j)= \".\", então ele deve virar \"o\" sempre que:\nc(i-1,j)= \"o\"; ou\nc(i,j-1)= \"o\" e c(i+1,j-1)= \"#\"; ou\nc(i,j+1)= \"o\" e c(i+1,j+1)= \"#\".\n\n......oooooo..\n.###..o####o#.\n.oooooooo..o..\n.o######o..o..\nooo.....o.oooo\no#o####.o.o##o\no.o.ooooooo..o\no.o.o####oo..o\no.o.o....oo..o\n\fVocê deve escrever um programa, que leia uma matriz de N linhas e M colunas (no exemplo, 9 linhas\ne 14 colunas), representando o padrão inicial da parede, prateleiras e ponto de início do gotejamento.\nO programa deve gerar e imprimir a representação do padrão final de gotejamento preenchendo com\n“o”, as posições que serão atingidas pela água ao final do processo, como ilustrado acima.\nQuestão adaptada da OBI2019",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2023.2-QII",
+  "avaliacao": 3,
+  "periodo": "2023.2",
+  "pdf": "avaliacao_3_ano_2023_2.pdf",
+  "questao": "II",
+  "texto": "Questão II (5.0) - Palavras como “Belo”, “fiNo”, “CrUz” e “FLor” possuem a interessante propriedade\nde que suas letras aparecem todas em ordem alfabética. Por exemplo, em “FLor”, F vem antes de L\nno alfabeto, L vem antes de o, e o vem antes de r. Dizemos que palavras com essa propriedade são\nordenadas.\n\nEscreva um programa em C, que leia uma palavra e determine se ela é uma palavra ordenada.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2024.2-QI",
+  "avaliacao": 3,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_3_ano_2024_2.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I - Em processamento de imagem, o Max Pooling é uma técnica utilizada para reduzir a\ndimensionalidade de uma imagem (ou feature map) e extrair as características mais importantes. Ele\ndivide a imagem em regiões menores (dadas pela dimensão do filtro de max pooling) e, para cada região,\nseleciona o valor máximo, representando aquela região com um único valor. Em seguida, o filtro é\ndeslocado uma quantidade de posições (chamada de passo), inicialmente na horizontal, e após percorrer\naquela dimensão, desloca-se a mesma quantidade de posições na vertical.\nA forma mais comum de uso do Max Pooling é com o passo do mesmo tamanho do filtro (kernel size), pois\nnesse caso, as janelas de pooling não se sobrepõem, permitindo a redução da dimensionalidade sem\nredundâncias. Por exemplo, se você tem uma janela de pooling de 2x2 e um passo de 2, cada região 2x2 é\nprocessada de forma independente.\nNo exemplo a seguir, é apresentada uma matriz de 4x4, onde cada posição representa um pixel de uma\nimagem (também de 4x4), assim como a imagem resultante da aplicação de um filtro de MaxPooling de\n2x2 com passo de tamanho 2 (passo com o mesmo tamanho do kernel size), resultando numa matriz\ntambém de 2x2.\n\n\n\n\nEscreva um programa em C, que leia uma matriz, calcule e imprima a matriz que representa a imagem\nreduzida. Seu algoritmo deve ser genérico para qualquer tamanho de imagem e filtro, mas deve\nconsiderar as restrições de: i) o filtro é quadrado; ii) o passo é do mesmo tamanho do filtro; iii) a\ndimensão da imagem é múltiplo da divisão do filtro. Para fins de exemplo, considere a execução em uma\nimagem de 4x4 com filtro de 2x2.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2024.2-QII",
+  "avaliacao": 3,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_3_ano_2024_2.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II - Escreva um programa em C, que leia uma string qualquer e como saída gere a posição da\nprimeira ocorrência de cada letra do alfabeto na string. Considere, que a letra pode ter sido digitada tanto\nem maiúscula como em minúscula.\n\nPor exemplo para a string: “Olha! Eu sei como processar Strings!”.\nO seu programa deve gerar como saída:\nA(3) C(13) E(6) G(33) H(2) I(11) L(1) M(15) N(32) O(0) P(18) R(19) S(9) T(29) U(7)",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2025.1-QI",
+  "avaliacao": 3,
+  "periodo": "2025.1",
+  "pdf": "avaliacao_3_ano_2025_1.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I - Grace Murray Hopper, também conhecida como \"vovó do COBOL\", foi analista de\nsistemas e almirante da Marinha dos Estados Unidos nas décadas de 1940 e 1950. Grace criou a\nlinguagem de programação Flow-Matic que serviu como base para a criação do COBOL, além disso,\nela também participou da criação do primeiro compilador de COBOL. Também conhecida por ter sido\na criadora do termo BUG ocasionalmente quando descobriu um problema no seu computador e\npercebeu que era um inseto morto na válvula, já que naquela época os computadores eram formados\npor válvulas. Desde então o termo BUG passou a ser usado para erros. Grace Hopper é uma das\nmulheres mais importantes na história da participação feminina na computação, tendo seu nome em\num dos congressos mais importantes, \"Grace Hopper Celebration of Women in Computing\". Neste\nserá fornecida uma string de entrada de tamanho menor que 5, composta de cinco palavras\nseparadas por hífen. As palavras estão escritas em letras minúsculas. Como saída será\nimpressa a palavra COBOL se no texto de entrada forem encontradas as letras que formam a\npalavra ‘COBOL’ no início ou fim de cada palavra em ordem. Caso não encontre, será impressa\na palavra 'BUG'. (5,0)\n\n\nExemplos:\n\n Entrada                                                                      Saída\n\n cap-one-best-opinion-language                                                COBOL\n\n caio-init-bug-bing-love                                                      BUG\n\n fantastic-officio-dumb-onto-label                                            COBOL",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2025.1-QII",
+  "avaliacao": 3,
+  "periodo": "2025.1",
+  "pdf": "avaliacao_3_ano_2025_1.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II – Uma fase de pré-processamento de imagens pode envolver um filtro que que\ntransforme uma imagem colorida, representada no formato RGB (Vermelho, Verde, Azul) em\numa imagem em tons de cinza. A imagem de entrada deve ter 100x100 pixels, onde cada cor é\nrepresentada em um canal diferente. Assim, as duas primeiras dimensões (100x100)\nrepresentam a largura e a altura da imagem em pixels. A terceira dimensão representa os três\ncanais de cor: o primeiro índice para o componente Vermelho (R), o segundo para o Verde (G) e\no terceiro para o Azul (B). Cada valor inteiro na matriz varia de 0 a 255, indicando a intensidade\nde cada componente de cor.\n\fPara a conversão para cinza, os três valores RGB são transformados em um único valor de\nacordo com a fómula de luminância, que considera a percepção humana das cores: Cinza =\n0.299×R + 0.587×G + 0.114×B. Por exemplo se o pixel RGB tiver os valores\n(R=200,G=150,B=100), o pixel cinza terá o valor 159.\n\nEscreva um programa em C, que leia a imagem em cores RGB, converta e exiba a imagem em\ntons de cinza. (5,0)",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2025.2-QI",
+  "avaliacao": 3,
+  "periodo": "2025.2",
+  "pdf": "avaliacao_3_ano_2025_2.pdf",
+  "questao": "I",
+  "texto": "Questão I - A Agência Ufológica de Varginha está interessada em investigar trocas de\nmensagens, supostamente entre alienígenas. Suspeita-se que alienígenas conseguiram se\ninfiltrar dentro da instituição e tem se comunicado secretamente. Os dispositivos de\ncomunicação usados pelos agentes possui as seguintes teclas: letras maiúsculas de A a Z,\nletras minúsculas de a a z, dígitos de 0 a 9, operadores aritméticos (+, -, *, /), hashtag (#) e\nponto de exclamação (!). Os agentes descobriram que sempre que dois alienígenas se\ncomunicam entre si usando o dispositivo, eles usam um alfabeto alienígena que possui um\nconjunto específico de símbolos. Assim, uma mensagem pode ter sido escrita por\nalienígenas se, e somente se, todos os símbolos que compõem ela pertencem ao alfabeto\nalienígena. Por exemplo, se o alfabeto alienígena for composto pelos caracteres !, 1, o e\nb, a mensagem ob1!! é uma mensagem que poderia ser escrita por alienígenas. Por outro\nlado, a mensagem Obi! não poderia ter sido escrita por alienígenas pois tanto o primeiro\ncaractere O (maiúsculo) quanto o terceiro caractere i não fazem parte do alfabeto\nalienígena.\n\nSua tarefa é escrever um programa em C que leia uma string com os caracteres do alfabeto\nalienígena e a mensagem interceptada e determine se a mensagem poderia ou não ter sido\nescrita por.\nADAPTADO DA OBI2024",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2025.2-QII",
+  "avaliacao": 3,
+  "periodo": "2025.2",
+  "pdf": "avaliacao_3_ano_2025_2.pdf",
+  "questao": "II",
+  "texto": "Questão II - Um jogo de tabuleiro eletrônico ambienta-se em uma arena quadrada de\ndimensão M x M, composta por quadrículas. Cada quadrícula contém areia movediça com\num sentido de fluxo específico. Ao ocupar uma posição no tabuleiro, o jogador é\nimediatamente transportado para a quadrícula vizinha, seguindo a direção indicada pelo\nfluxo daquela coordenada, com uma velocidade de deslocamento de uma unidade por\nminuto. A figura abaixo exemplifica um tabuleiro de dimensão M=4, detalhando os vetores\nde movimento da areia em cada região.\n\fNo jogo, um tesouro é ocultado em uma ou mais quadrículas, marcadas com o caractere\n'X'. Nas demais regiões, o mapa indica o sentido do fluxo da areia através de caracteres: 'N'\n(Norte), 'S' (Sul), 'L' (Leste) e 'O' (Oeste). A figura seguinte ilustra o mapa correspondente,\nassumindo que o tesouro está localizado na coordenada (2, 1)\n\n\n\n                                       S    S    O    S\n\n                                       S    L    L    S\n\n                                       O    X    O   O\n\n                                       N    S    S    N\n\n\n\nA dinâmica consiste em o jogador selecionar uma coordenada inicial para saltar de\nparaquedas, sem conhecer a configuração prévia do mapa. A partir do pouso, o programa\ndeve calcular o tempo necessário para o jogador alcançar o tesouro, sendo arrastado\npassivamente pelo fluxo. Existem três desfechos possíveis:\n\n   1. Vitória: O jogador alcança uma quadrícula marcada com 'X'.\n   2. Derrota (Fora dos limites): O jogador é arrastado para fora das bordas da arena.\n   3. Derrota (Preso na Areia): O jogador é arrastado para sempre na areia movediça e\n      nunca atinge o tesouro.\n\nAs figuras abaixo exemplificam: um jogador sendo lançado para fora do mapa ao iniciar na\nposição (0,0); e um jogador alcançando o tesouro em 7 minutos ao iniciar na posição (0,2).\n\n\n\n\nEscreva um programa em C que leia a configuração da matriz (mapa) e a posição inicial do\njogador, informando o tempo de chegada ao tesouro ou o tipo de derrota ocorrida (Fora dos\nLimites, Preso na Areia).\n\nADAPTADO DA OBI2023",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2026.1-QI",
+  "avaliacao": 3,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_3_ano_2026_1.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0) - Um laboratório de visão computacional está desenvolvendo uma nova arquitetura\nde Rede Neural Convolucional (CNN) para detecção de anomalias em exames de imagem. Para\ntornar seu modelo mais robusto a rotações de câmera, ela decidiu implementar uma etapa de Data\nAugmentation (Aumento de Dados) que gera versões rotacionadas das usadas no treinamento. Para\no Data Augmentation, uma das operações mais frequentes é a rotação de uma imagem em\nexatamente 90 graus no sentido horário.\n\n\n\n\nSua tarefa é ajudar Karina escrevendo um programa em C, que receba uma matriz quadrada de\n50x50 (neste grupo de imagens, N é igual a 50), representando uma imagem em tons de cinza (uma\ncor em tom de cinza pode ser representada por um valor entre 0 e 255) e gere como saída a matriz\nrotacionada em 90 graus no sentido horário.",
+  "tambem_em": []
+ },
+ {
+  "id": "A3-2026.1-QII",
+  "avaliacao": 3,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_3_ano_2026_1.pdf",
+  "questao": "II",
+  "texto": "Questão II (5.0) - Um sistema de alta segurança do para acesso a uma sala cofre, utiliza um método\ninovador de autenticação chamado \"Assinatura de Frequência\". Em vez de memorizar uma palavra\nexata em uma ordem específica, o usuário memoriza uma fórmula que descreve a quantidade exata\nde cada letra que a palavra deve conter.\n\nPor exemplo, se a fórmula da senha de um usuário for 2N3A1B, qualquer palavra passe digitada que\ncontenha exatamente 2 letras 'N', 3 letras 'A' e 1 letra 'B' (e nenhuma outra letra) será aceita. A\npalavra BANANA, assim como a palavra NABANA são válidas para essa fórmula, pois contém 1 'B', 3\n'A' e 2 'N'. Já a palavra BANANAS não é válida, pois contém uma letra 'S' que não estava prevista na\nfórmula, e a palavra ANANA também não, pois falta a letra 'B'.\n\n\n\n\nComo o algoritmo deve ser desenvolvido para executar em dispositivos de baixa capacidade,\nalgumas restrições foram estabelecidas:\n\n    1.​ Cada letra pode aparecer no máximo 9 vezes;\n    2.​ Tanto a fórmula da senha, quanto a palavra passe serão compostas exclusivamente de letras\n        maiúsculas.\n    3.​ A palavra passe terá no máximo 32 caracteres.\n\nEscreva um programa que receba a fórmula da senha e a palavra digitada pelo usuário, e determine\nse o acesso deve ser concedido (‘ACEITO’) ou bloqueado (‘RECUSADO’).",
+  "tambem_em": []
+ },
+ {
+  "id": "A4-2024.2-QI",
+  "avaliacao": 4,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_4_ano_2024_2.pdf",
+  "questao": "I",
+  "texto": "QUESTÃO I - A empresa \"HexaConvert\" está desenvolvendo um sistema embarcado para leitura de dados\nde sensores que operam em formato hexadecimal. Devido a limitações de hardware, o sistema não possui\nnativamente a capacidade de processar números hexadecimais diretamente. Para contornar essa\nlimitação, a empresa precisa de um algoritmo em linguagem C que receba uma string representando um\nnúmero hexadecimal (com até 255 caracteres) e a converta para o seu equivalente decimal (você deve\nassumir que não há problemas de overflow na representação inteira do HW para o limite de hexadecimal\ndefinido). O número hexadecimal fornecido pode conter os dígitos de 0 a 9 e letras de A a F (maiúsculas).\nComo exemplo, se a entrada for a string AA05FB, a saída deverá ser 11142651.",
+  "tambem_em": []
+ },
+ {
+  "id": "A4-2024.2-QII",
+  "avaliacao": 4,
+  "periodo": "2024.2",
+  "pdf": "avaliacao_4_ano_2024_2.pdf",
+  "questao": "II",
+  "texto": "QUESTÃO II – Estruturas em forma de pirâmide foram construídas por muitas civilizações antigas. Talvez\npor este motivo, elas ainda sejam muito utilizadas na arquitetura moderna. Uma equipe de arquitetos e\nengenheiros especializados na construção de pirâmides descreveu os seguintes requisitos para o\ndesenvolvimento destas estruturas:\n\nDeseja-se construir piramides com blocos quadrados de pedra. A dimensão de uma pirâmide é o número\nde cubos de pedra num dos lados da base (primeira camada) da pirâmide. A base da pirâmide é quadrada,\nou seja, cada lado tem o mesmo número de cubos de pedra.\n\nNa pirâmide, a partir da segunda camada, cada cubo de pedra deve ser empilhado exatamente em cima de\noutro cubo de pedra que não esteja na borda da camada abaixo. Além disso, o número de camadas deve\nser o maior possível para uma dada dimensão, e em cada camada deve ser usado o maior número de\ncubos de pedra possível. A figura abaixo à esquerda mostra uma pirâmide de dimensão 3; a figura à\ndireita mostra o plano de contrução para essa pirâmide, indicando quantos cubos de pedra devem ser\nempilhados em cada posição.\n\n\n\n\nSua tarefa é escrever um programa que, leia a dimensão da pirâmide, gere o seu plano de construção em\numa matriz e em seguida imprima a matriz que contem este plano de construção. Considere que a\ndimensão máxima da pirâmide é 100.\nADAPTADO DE QUESTÃO DA OBI2022",
+  "tambem_em": []
+ },
+ {
+  "id": "A4-2025.1-QI",
+  "avaliacao": 4,
+  "periodo": "2025.1",
+  "pdf": "avaliacao_4_ano_2025_1.pdf",
+  "questao": "I",
+  "texto": "Questão I (5,0) - Você está ajudando na implementação de um sistema para simular o\nalcance da lava de um vulcão em uma área, em função da força da erupção. O mapa da\nárea será representado simplificadamente por uma matriz quadrada de caracteres, de 1 a 9,\nindicando a altitude do terreno em cada posição da matriz. Devemos considerar que a\nerupção se inicie sempre na posição do canto superior esquerdo da matriz. Dada a força da\nerupção, que será um valor inteiro, de 0 a 9, seu programa deve imprimir a matriz de\ncaracteres representando o avanço final da lava. Se a lava consegue invadir uma posição\nda matriz, o caracter naquela posição deve ser trocado por um asterisco ('*'). Uma posição\nserá invadida pela lava se seu valor for menor ou igual à força da erupção e\n    ●​ a posição seja a posição inicial da erupção; ou\n    ●​ a posição esteja adjacente, ortogonalmente (abaixo, acima, à esquerda ou à direita),\n        a uma posição invadida.\n\nA figura abaixo mostra um exemplo de mapa e o avanço final da lava para quatro forças de\nerupção: 1, 3, 6 e 8, respectivamente da esquerda para a direita.\n\n         27755478                          *7755478                         *7755478   ********\n         29985439                          *9985439                         *9985439   *99****9\n         34899989                          *4899989                         **899989   ***999*9\n         22115569                          ****5569                         *******9   *******9\n         66736689                          667*6689                         **7***89   *******9\n         99886555                          99886555                         9988****   99******\n         44433399                          44433399                         ******99   ******99\n         99986991                          99986991                         9998*991   999**991\n\nSua tarefa é escrever um programa em C, que leia um mapa da área (considere uma área\nde 8x8) e a força da erupção, calcule e imprima o mapa com o alcance da lava.\n\n​\nBASEADO NA OBI2020​\n​",
+  "tambem_em": []
+ },
+ {
+  "id": "A4-2025.1-QII",
+  "avaliacao": 4,
+  "periodo": "2025.1",
+  "pdf": "avaliacao_4_ano_2025_1.pdf",
+  "questao": "II",
+  "texto": "Questão II (5,0) - Considere uma sequência de N quadrados desenhados lado a lado. Cada\nquadrado possui um número natural anotado dentro dele. Dados a sequência dos N\nquadrados e um valor K, quantos retângulos distintos existem cuja soma dos números\ndentro do retângulo é exatamente igual a K? Por exemplo, a figura mostra uma sequência\nde N=10 quadrados para a qual existem 5 retângulos cuja soma dos números é igual a K=4.\n\n\n\n\nEscreva um programa em C, que leia a sequência de N naturais (considere N igual a 10) e\nem seguida um outro número natural, contabilize e imprima a quantos retângulos possuem\nsoma exatamente igual ao número natural lido.\n\n\nBASEADO NA OBI2019",
+  "tambem_em": []
+ },
+ {
+  "id": "A4-2026.1-QI",
+  "avaliacao": 4,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_4_ano_2026_1.pdf",
+  "questao": "I",
+  "texto": "Questão I (5.0) - Uma editora aplica as seguintes definições:\n\n    ●​ Uma palavra é uma sequência de letras consecutivas.\n    ●​ Um texto é um conjunto de palavras separadas por um caracter espaço em branco.\n\nUm escritor dessa editora, está construindo uma série de artigos, que irá durar 26 dias. A cada dia\nele quer escrever um texto onde uma das letras do alfabeto apareça em uma quantidade de palavras\npercentualmente maior. Para garantir esse requisito, foi solicitado a você que escreva um programa\nque, tenha como entrada uma letra e um texto, determine e imprima a porcentagem de palavras do\ntexto que contém a letra dada. Por exemplo, se a letra for ‘s’ e o texto for \"Ser ou nao ser eis a\nquestao”. O seu programa deve identificar 7 palavras das quais 4 possuem a letra desejada. Assim a\nsaída deverá ser 4/7 = 0,57. Considere que o tamanho máximo do texto é de 256 caracteres.",
+  "tambem_em": []
+ },
+ {
+  "id": "A4-2026.1-QII",
+  "avaliacao": 4,
+  "periodo": "2026.1",
+  "pdf": "avaliacao_4_ano_2026_1.pdf",
+  "questao": "II",
+  "texto": "Questão II (5.0) - No contexto de Machine Learning e Clusterização, algoritmos baseados em raio\nde vizinhança — como o DBSCAN — dependem fundamentalmente do cálculo de uma distância e\nda verificação dos vizinhos que estão dentro do raio de limiar (e-neighborhood).\n\nUma clínica deseja utilizar um algoritmo baseado em DBSCAN para classificar se um novo paciente\npertence ao grupo de baixo ou alto risco com base em M exames de pacientes anteriores. Cada\npaciente possui dois indicadores de saúde: a pressão sistólica e a glicemia. Os M pacientes\nanteriores são dispostos numa tabela de M X 3 onde a primeira coluna possui a pressão sistólica, a\nsegunda o valor da glicemia e a terceira um valor +1 se o paciente é de alto risco e -1 se o paciente é\nde baixo risco. Por exemplo, considere uma tabela com quatro pacientes:\n\f               120                               80                                -1\n\n\n               140                               86                                 1\n\n\n               125                               110                                1\n\n\n               115                               75                                -1\n\n\nNesta tabela, por exemplo, a pressão sistólica do primeiro paciente é 120 e a sua glicemia é 80 e ele\né considerado de baixo risco.\n\nPara este classificador a clínica deseja que você utilize a Distância Manhattan para o cálculo de\nproximidade entre os pacientes. A Distância de Manhattan, mede a soma das diferenças absolutas\nentre as coordenadas de dois pontos. Por exemplo, considere que o paciente a ser categorizado\npossui como valores de pressão e glicemia, respectivamente: 118 e 85. Neste caso, a distância\ndesse paciente para cada um dos pacientes tabelados é dada por:\n\n    ●​   | 118 - 120 | + | 85 - 80 | = 2 + 5 = 7\n    ●​   | 118 - 140 | + | 85 - 86 | = 22 + 1 = 23\n    ●​   | 118 - 125 | + | 85 - 110| = 7 + 25 = 32\n    ●​   | 118 - 115 | + | 85 - 75 | = 3 + 10 = 13\n\nO classificador baseado no DBSCAN funciona como um votador simples que dado um parâmetro de\nlimiar seleciona todos os pacientes anteriores cuja distância do paciente que está sendo avaliado é\nestritamente menor que o parâmetro informado. Por exemplo, se o parâmetro de limiar for 25, no\nexemplo em questão serão selecionados como vizinhos os pacientes 1, 2 e 4. Neste caso, como o\npaciente 1 e 4 são de baixo risco e apenas o paciente 2 é de alto risco, o novo paciente é\ncategorizado como ‘BAIXO RISCO’ (2 a 1). Caso a distância limiar fosse 35, o resultado seria\n‘INCONCLUSIVO’ (2 a 2). Da mesma forma, caso o limiar usado fosse 5, o resultado também seria\n‘INCONCLUSIVO’ (0 a 0).\n\nEscreva um programa em C, que leia uma matriz Mx3 com os dados dos pacientes anteriores, um\nvalor de limiar e os dois valores de exame do paciente em avaliação e indique categorize o novo\npaciente como de ‘ALTO RISCO’, ‘BAIXO RISCO’ ou indique que a categorização é\n‘INCONCLUSIVO’. Para fins dessa questão, considere M como 10, mas mantenha o algoritmo\ngenérico, de forma que alterar este valor, não impacta no algoritmo.",
+  "tambem_em": []
+ }
+]

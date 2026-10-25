@@ -898,3 +898,65 @@
   color: var(--c-muted);
   font-size: 0.85em;
 }
+
+/* Lógica de Programação – Superior: questions of past exams in each class */
+.tool--prova {
+  border-color: transparent;
+  background: var(--c-accent);
+  color: #fff;
+}
+
+.page__content details.lesson--banco {
+  border-style: dashed;
+}
+
+.q-card {
+  margin: 1em 0 0;
+  padding: 0.3em 1em 0.8em;
+  border-left: 4px solid var(--c-accent);
+  border-radius: 6px;
+  background: var(--c-accent-soft);
+}
+
+.q-card--proposta {
+  border-left-color: var(--c-muted);
+  background: var(--c-surface);
+}
+
+.page__content .q-card h4 {
+  margin-top: 0.6em;
+}
+
+.page__content p.q-source {
+  margin: 0.2em 0 0.4em;
+  font-size: 0.88em;
+}
+
+.q-file {
+  color: var(--c-muted);
+  font-size: 0.85em;
+}
+
+.q-more summary {
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--c-accent);
+}
+
+.page__content pre.codigo {
+  max-height: 32em;
+  margin: 0.5em 0;
+  padding: 0.8em 1em;
+  overflow: auto;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  background: var(--c-surface);
+  font-size: 0.78em;
+  line-height: 1.45;
+}
+
+.page__content ul.q-bank {
+  padding-left: 1.2em;
+  font-size: 0.9em;
+}
