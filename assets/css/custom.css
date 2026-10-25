@@ -8,6 +8,7 @@
   --c-accent: #1d4ed8;
   --c-accent-soft: #e8eeff;
   --c-on-accent: #fff;
+  --c-integrado: #0f766e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,7 @@
     --c-accent: #93b4ff;
     --c-accent-soft: #2a3557;
     --c-on-accent: #10131a;
+    --c-integrado: #5eead4;
   }
 }
 
@@ -30,6 +32,7 @@
   --c-accent: #93b4ff;
   --c-accent-soft: #2a3557;
   --c-on-accent: #10131a;
+  --c-integrado: #5eead4;
 }
 
 /* Smooth cross-fade between pages (ignored by browsers without support) */
@@ -420,8 +423,45 @@
   border-color: var(--c-accent);
 }
 
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+/* Level of a course: Integrado (high school) and Superior (undergraduate) get different colors */
+.page__content a.course-card--integrado,
+.page__content a.course-card--superior {
+  border-left-width: 4px;
+}
+
+.page__content a.course-card--integrado {
+  border-left-color: var(--c-integrado);
+}
+
+.page__content a.course-card--superior {
+  border-left-color: var(--c-accent);
+}
+
+.page__content a.course-card--integrado:hover {
+  border-color: var(--c-integrado);
+}
+
+.course-level {
+  padding: 0.05em 0.55em;
+  border-radius: 999px;
+  background: var(--c-accent);
+  color: var(--c-on-accent);
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+.course-card--integrado .course-level {
+  background: var(--c-integrado);
+  color: var(--c-on-accent);
+}
+
 .course-code {
-  align-self: flex-start;
   padding: 0.05em 0.5em;
   border-radius: 999px;
   background: var(--c-accent-soft);

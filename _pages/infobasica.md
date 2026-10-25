@@ -1,5 +1,5 @@
 ---
-title: "Informática Básica – Plano de Aulas"
+title: "Informática – Plano de Aulas - Integrado"
 layout: single
 permalink: /infobasica/
 author_profile: true

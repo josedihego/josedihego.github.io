@@ -2,9 +2,9 @@
 - group: "Conteúdo Digital Completo"
   icon: "fa-laptop-code"
   courses:
-    - { title: "Informática – Planilhas, Documentos, Python e Scratch", code: "36 aulas", url: "/infobasica/" }
-    - { title: "Programação aplicada com C e Arduino", code: "36 aulas", url: "/progarduino/" }
-    - { title: "Lógica de Programação - Superior", code: "36 aulas", url: "/logica/" }
+    - { title: "Informática – Planilhas, Documentos, Python e Scratch - Integrado", code: "36 aulas", url: "/infobasica/", nivel: "Integrado" }
+    - { title: "Programação aplicada com C e Arduino - Integrado", code: "36 aulas", url: "/progarduino/", nivel: "Integrado" }
+    - { title: "Lógica de Programação - Superior", code: "36 aulas", url: "/logica/", nivel: "Superior" }
 - group: "Superior"
   icon: "fa-building-columns"
   courses:

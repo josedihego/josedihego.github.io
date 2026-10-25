@@ -1,5 +1,5 @@
 ---
-title: "Programação aplicada com C e Arduino – Plano de Aulas"
+title: "Programação aplicada com C e Arduino - Integrado"
 layout: single
 permalink: /progarduino/
 author_profile: true
