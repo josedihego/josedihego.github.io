@@ -27,24 +27,30 @@ int main(void) {
     for (int n = 1 << 14; n <= 1 << 21; n *= 2) {
         int *v = malloc(n * sizeof *v), *w = malloc(n * sizeof *w);
         for (int i = 0; i < n; i++) v[i] = rand() % 1000000;
-        double t0 = agora();
-        FILE *f = fopen(txt, "w");
-        for (int i = 0; i < n; i++) fprintf(f, "%d\n", v[i]);
-        fclose(f);
-        f = fopen(txt, "r");
-        for (int i = 0; i < n; i++)
-            if (fscanf(f, "%d", &w[i]) != 1) return 1;
-        fclose(f);
-        double t1 = agora();
-        f = fopen(bin, "wb");
-        fwrite(v, sizeof *v, n, f);
-        fclose(f);
-        f = fopen(bin, "rb");
-        if (fread(w, sizeof *w, n, f) != (size_t)n) return 1;
-        fclose(f);
-        double t2 = agora();
+        double melhor_txt = 1e30, melhor_bin = 1e30;
+        // melhor de 3: o disco e o cache variam
+        for (int rep = 0; rep < 3; rep++) {
+            double t0 = agora();
+            FILE *f = fopen(txt, "w");
+            for (int i = 0; i < n; i++) fprintf(f, "%d\n", v[i]);
+            fclose(f);
+            f = fopen(txt, "r");
+            for (int i = 0; i < n; i++)
+                if (fscanf(f, "%d", &w[i]) != 1) return 1;
+            fclose(f);
+            double t1 = agora();
+            f = fopen(bin, "wb");
+            fwrite(v, sizeof *v, n, f);
+            fclose(f);
+            f = fopen(bin, "rb");
+            if (fread(w, sizeof *w, n, f) != (size_t)n) return 1;
+            fclose(f);
+            double t2 = agora();
+            if (t1 - t0 < melhor_txt) melhor_txt = t1 - t0;
+            if (t2 - t1 < melhor_bin) melhor_bin = t2 - t1;
+        }
         printf("%d,%ld,%ld,%.2f,%.2f\n", n, tamanho(txt), tamanho(bin),
-               (t1 - t0) / n * 1e9, (t2 - t1) / n * 1e9);
+               melhor_txt / n * 1e9, melhor_bin / n * 1e9);
         free(v); free(w);
     }
     remove(txt);

@@ -364,6 +364,14 @@ def referencia(a):
     return a['fonte'] if 'fonte' in a else f"Cormen et al., \\emph{{Algoritmos}}: {a['cormen']}"
 
 
+def secao(a):
+    """Subtitle of the title slide: the section of the book (\"Seção 10.1\"), with no author: Cormen is credited
+    only under the figures taken from the book. Annex modules show their own C reference."""
+    if 'fonte' in a:
+        return a['fonte'].split(';')[0]
+    return a['cormen'][:1].upper() + a['cormen'][1:]
+
+
 def rotulo_bloco(b):
     return b.get('rotulo', f"Bloco {b['n']}")
 
@@ -379,7 +387,7 @@ def titulo_deck(a, bloco):
 \\fill[cteoria] (0.9,6.55) rectangle +(1.2,0.08);
 \\node[anchor=north west,text=white!70,font=\\small\\bfseries] at (0.9,6.4) {{{rotulo(a).upper()} \\enspace·\\enspace {rotulo_bloco(bloco).upper()}: {bloco['titulo'].upper()}}};
 \\node[anchor=north west,text=white,font=\\huge\\bfseries,text width=9.6cm,align=left] at (0.9,5.7) {{{a['tema']}}};
-\\node[anchor=north west,text=white!75,font=\\normalsize,text width=9.6cm] at (0.9,3.55) {{{referencia(a)}}};
+\\node[anchor=north west,text=white!75,font=\\normalsize,text width=9.6cm] at (0.9,3.55) {{{secao(a)}}};
 \\node[anchor=south west,text=white!60,font=\\scriptsize] at (0.9,0.9) {{Estruturas de dados e seus algoritmos \\enspace·\\enspace José Dihego \\enspace·\\enspace IFBA}};
 \\end{{scope}}
 \\end{{tikzpicture}}
@@ -411,7 +419,7 @@ def deck(a, bloco, pdf_cormen, tmp):
                          for s, d in [('teoria', a['roteiro'][0]), ('pratica', a['roteiro'][1]), ('experimento', a['roteiro'][2]), ('conexoes', a['roteiro'][3])])
                + "\\end{column}\\end{columns}\\end{frame}")
     # teoria
-    out.append(abertura_segmento('teoria', [referencia(a)] + [q['titulo'] for q in a['teoria'][:5]]))
+    out.append(seg('teoria'))                                  # a teoria começa sem slide de abertura
     out += [quadro_teoria(q, pdf_cormen, tmp) for q in a['teoria']]
     # prática
     p = a['pratica']
