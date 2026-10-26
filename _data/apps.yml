@@ -1,5 +1,20 @@
 # Apps on Google Play, shown on the home page (newest first).
 # icon: 192 x 192 PNG in assets/images/apps/.
+# url / url_pt: the Play listing in English and in Portuguese (Brazil).
+# privacy: the policy page; the home page links to its #en-GB or #pt-BR part.
+- name: Banana Math
+  description: >-
+    Free maths app for children aged 6 to 11: they write each step of the
+    written methods with a finger, as in their exercise book, and get gentle
+    help. No ads, no accounts. Portuguese and English.
+  description_pt: >-
+    App gratuito de matemática para crianças de 6 a 11 anos: a criança escreve
+    cada passo das contas armadas com o dedo, como no caderno, e recebe ajuda
+    com calma. Sem anúncios e sem cadastro. Em português e inglês.
+  icon: /assets/images/apps/banana-math.png
+  url: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=en
+  url_pt: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=pt_BR
+  privacy: /policies/banana-math-privacy.html
 - name: Gennaro
   description: >-
     Free picture communication (AAC) app for children who communicate with
@@ -10,4 +25,6 @@
     com imagens. Sem anúncios, funciona offline e os dados ficam com a família.
     Em português e inglês.
   icon: /assets/images/apps/gennaro.png
-  url: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=pt_BR
+  url: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=en
+  url_pt: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=pt_BR
+  privacy: /policies/gennaro-privacy.html

@@ -26,14 +26,24 @@
 
 <div class="app-list">
 {% for app in site.data.apps %}
-  <a class="app-card" href="{{ app.url }}" target="_blank" rel="noopener noreferrer">
+  {% if pt %}
+    {% assign store = app.url_pt | default: app.url %}
+    {% assign policy = app.privacy | append: "#pt-BR" %}
+  {% else %}
+    {% assign store = app.url %}
+    {% assign policy = app.privacy | append: "#en-GB" %}
+  {% endif %}
+  <div class="app-card">
     <img src="{{ app.icon | relative_url }}" alt="" width="64" height="64">
     <div>
-      <strong>{{ app.name }}</strong>
+      <a class="app-link" href="{{ store }}" target="_blank" rel="noopener noreferrer"><strong>{{ app.name }}</strong></a>
       <span>{% if pt and app.description_pt %}{{ app.description_pt }}{% else %}{{ app.description }}{% endif %}</span>
-      <span class="app-store"><i class="fab fa-google-play" aria-hidden="true"></i> Google Play</span>
+      <span class="app-links">
+        <span class="app-store"><i class="fab fa-google-play" aria-hidden="true"></i> Google Play</span>
+        {% if app.privacy %}<a class="app-privacy" href="{{ policy | relative_url }}" hreflang="{% if pt %}pt-BR{% else %}en-GB{% endif %}">{% if pt %}Política de privacidade{% else %}Privacy policy{% endif %}</a>{% endif %}
+      </span>
     </div>
-  </a>
+  </div>
 {% endfor %}
 </div>
 
