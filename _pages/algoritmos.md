@@ -11,8 +11,6 @@ classes: course-page
 
 <a class="repo-card" href="https://github.com/josedihego/ADS-ALG-C"><i class="fab fa-github" aria-hidden="true"></i><span><strong>Implementações em C</strong><small>github.com/josedihego/ADS-ALG-C</small></span></a>
 
-<a class="repo-card" href="https://github.com/josedihego/alg.codigo.2022.2"><i class="fab fa-github" aria-hidden="true"></i><span><strong>Implementações em Python</strong><small>github.com/josedihego/alg.codigo.2022.2</small></span></a>
-
 ## Livro texto
 - [Livro texto](https://resources.oreilly.com/examples/9781565924536/-/tree/master)
 {: .link-list}

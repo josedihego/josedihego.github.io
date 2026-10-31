@@ -10,8 +10,6 @@ classes: course-page
 ## Slides
 - [Slide 1](https://drive.google.com/file/d/1OBe12i1-ksyu6vYoCtiI0_6ZL9jGX0o6/view?usp=drive_link)
 - [Slide 2](https://drive.google.com/file/d/12oPA6u37wsIBTe9pfGBlcs3bb12rfc1P/view?usp=drive_link)
-- [Slide 3](https://drive.google.com/file/d/1WiBHLij4gTWmtt-afR180RHDgWq5ZTqH/view?usp=drive_link)
-- [Slide 4](https://drive.google.com/file/d/123GfkLJ2fEIFnz9ewtosJcnLyuzjwmvy/view?usp=drive_link)
 - [Slide 5](https://drive.google.com/file/d/1XEcyvvOHJFOLMu0-4toGLvXqOiN_FdXN/view?usp=drive_link)
 - [Slide 6](https://drive.google.com/file/d/1gWCi0cx1-Gaw-jpTKVCWWqXdXYopKBkp/view?usp=drive_link)
 - [Slide 7](https://drive.google.com/file/d/1MmfvteqfjfvcqlTtCHdlRyKn8gUIvbNX/view?usp=drive_link)

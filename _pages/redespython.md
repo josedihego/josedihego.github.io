@@ -7,10 +7,6 @@ classes: course-page
 ---
 [← Cursos](/courses/){: .back-link}
 
-## Código
-
-<a class="repo-card" href="https://github.com/josedihego/python_redes"><i class="fab fa-github" aria-hidden="true"></i><span><strong>Código da disciplina</strong><small>github.com/josedihego/python_redes</small></span></a>
-
 ## Slides
 - [Slide 1](https://drive.google.com/file/d/1qrsUNwHyxvJQZXDJeHJlH5QJMGaFM6zX/view?usp=sharing)
 - [Slide 2](https://drive.google.com/file/d/1UIrWmtY7-jTPpT_zysy0RG3pMWwvBM2r/view?usp=sharing)

@@ -7,8 +7,6 @@ classes: course-page
 ---
 [← Cursos](/courses/){: .back-link}
 
-<a class="repo-card" href="https://github.com/josedihego/selecao_problemas_resolvidos"><i class="fab fa-github" aria-hidden="true"></i><span><strong>Soluções</strong><small>github.com/josedihego/selecao_problemas_resolvidos</small></span></a>
-
 ## Parte 1
 
 1. Em uma empresa de transporte de mercadorias trabalham diversos funcionários.
