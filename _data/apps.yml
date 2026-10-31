@@ -1,7 +1,8 @@
-# Apps on Google Play, shown on the home page (newest first).
+# Apps and games, shown on the home page.
 # icon: 192 x 192 PNG in assets/images/apps/.
 # url / url_pt: the Play listing in English and in Portuguese (Brazil).
 # privacy: the policy page; the home page links to its #en-GB or #pt-BR part.
+# store: "roblox" for a Roblox game; Google Play when left out.
 - name: Banana Math
   description: >-
     Free maths app for children aged 6 to 11: they write each step of the
@@ -28,3 +29,15 @@
   url: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=en
   url_pt: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=pt_BR
   privacy: /policies/gennaro-privacy.html
+- name: Jungle School
+  description: >-
+    Free Roblox obby: run, jump and dodge through 24 stages where the wild
+    jungle meets a wild high school. Checkpoints on every stage and saved
+    progress. Animal paintings by Clara Souza Oliveira.
+  description_pt: >-
+    Obby gratuito no Roblox: corra, pule e desvie em 24 fases onde a selva
+    encontra uma escola muito agitada. Checkpoints em todas as fases e
+    progresso salvo. Pinturas de animais de Clara Souza Oliveira.
+  icon: /assets/images/apps/jungle-school.png
+  url: https://www.roblox.com/games/101318369509787/Jungle-School
+  store: roblox

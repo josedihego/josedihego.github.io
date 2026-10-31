@@ -22,7 +22,7 @@
 </ul>
 {% endif %}
 
-<h2>{% if pt %}Apps no Google Play{% else %}Apps on Google Play{% endif %}</h2>
+<h2>{% if pt %}Apps e jogos{% else %}Apps and games{% endif %}</h2>
 
 <div class="app-list">
 {% for app in site.data.apps %}
@@ -39,7 +39,7 @@
       <a class="app-link" href="{{ store }}" target="_blank" rel="noopener noreferrer"><strong>{{ app.name }}</strong></a>
       <span>{% if pt and app.description_pt %}{{ app.description_pt }}{% else %}{{ app.description }}{% endif %}</span>
       <span class="app-links">
-        <span class="app-store"><i class="fab fa-google-play" aria-hidden="true"></i> Google Play</span>
+        {% if app.store == "roblox" %}<span class="app-store"><i class="fas fa-gamepad" aria-hidden="true"></i> Roblox</span>{% else %}<span class="app-store"><i class="fab fa-google-play" aria-hidden="true"></i> Google Play</span>{% endif %}
         {% if app.privacy %}<a class="app-privacy" href="{{ policy | relative_url }}" hreflang="{% if pt %}pt-BR{% else %}en-GB{% endif %}">{% if pt %}Política de privacidade{% else %}Privacy policy{% endif %}</a>{% endif %}
       </span>
     </div>
