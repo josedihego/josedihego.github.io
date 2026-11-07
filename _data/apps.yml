@@ -29,6 +29,23 @@
   url: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=en
   url_pt: https://play.google.com/store/apps/details?id=net.josedihego.gennaro&hl=pt_BR
   privacy: /policies/gennaro-privacy.html
+- name: Preço do Remédio
+  description: >-
+    Free app that shows the maximum legal price of a medicine in Brazil
+    (official CMED list, with your state's ICMS), cheaper generics with the
+    same substance and dose, and Farmácia Popular status. Search by name or
+    scan the barcode. Prices only, not medical advice. No ads, works offline.
+    Portuguese (Brazil).
+  description_pt: >-
+    App gratuito que mostra o preço máximo que a farmácia pode cobrar por um
+    remédio (lista oficial da CMED, com o ICMS do seu estado), os genéricos com
+    a mesma substância e dose, e se está no Farmácia Popular. Busque pelo nome
+    ou leia o código de barras. Só preços, não é orientação médica. Sem
+    anúncios e funciona offline.
+  icon: /assets/images/apps/preco-do-remedio.png
+  url: https://play.google.com/store/apps/details?id=josedihego.generico&hl=en
+  url_pt: https://play.google.com/store/apps/details?id=josedihego.generico&hl=pt_BR
+  privacy: /policies/preco-do-remedio-privacy.html
 - name: Jungle School
   description: >-
     Free Roblox obby: run, jump and dodge through 24 stages where the wild
