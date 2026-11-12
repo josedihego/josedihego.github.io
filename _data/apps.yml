@@ -2,20 +2,7 @@
 # icon: 192 x 192 PNG in assets/images/apps/.
 # url / url_pt: the Play listing in English and in Portuguese (Brazil).
 # privacy: the policy page; the home page links to its #en-GB or #pt-BR part.
-# store: "roblox" for a Roblox game; Google Play when left out.
-- name: Banana Math
-  description: >-
-    Free maths app for children aged 6 to 11: they write each step of the
-    written methods with a finger, as in their exercise book, and get gentle
-    help. No ads, no accounts. Portuguese and English.
-  description_pt: >-
-    App gratuito de matemática para crianças de 6 a 11 anos: a criança escreve
-    cada passo das contas armadas com o dedo, como no caderno, e recebe ajuda
-    com calma. Sem anúncios e sem cadastro. Em português e inglês.
-  icon: /assets/images/apps/banana-math.png
-  url: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=en
-  url_pt: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=pt_BR
-  privacy: /policies/banana-math-privacy.html
+# store: "roblox" for a Roblox game, "web" for a web app; Google Play when left out.
 - name: Gennaro
   description: >-
     Free picture communication (AAC) app for children who communicate with
@@ -46,6 +33,33 @@
   url: https://play.google.com/store/apps/details?id=josedihego.generico&hl=en
   url_pt: https://play.google.com/store/apps/details?id=josedihego.generico&hl=pt_BR
   privacy: /policies/preco-do-remedio-privacy.html
+- name: Mundo Compacto
+  description: >-
+    Free hourly word wall of Brazilian news: the people, places, organisations
+    and topics most mentioned by the main outlets in the last 6 hours, 24 hours
+    or 7 days. Each headline links to the original article. No ads, no
+    accounts, open data pipeline. Portuguese (Brazil).
+  description_pt: >-
+    Mural gratuito, atualizado a cada hora, com as palavras mais presentes no
+    noticiário brasileiro: pessoas, lugares, organizações e temas citados pelos
+    principais veículos nas últimas 6 horas, 24 horas ou 7 dias. Cada manchete
+    leva à matéria original. Sem anúncios, sem cadastro e com dados abertos.
+  icon: /assets/images/apps/mundo-compacto.png
+  url: https://mundo.josedihego.net/
+  store: web
+- name: Banana Math
+  description: >-
+    Free maths app for children aged 6 to 11: they write each step of the
+    written methods with a finger, as in their exercise book, and get gentle
+    help. No ads, no accounts. Portuguese and English.
+  description_pt: >-
+    App gratuito de matemática para crianças de 6 a 11 anos: a criança escreve
+    cada passo das contas armadas com o dedo, como no caderno, e recebe ajuda
+    com calma. Sem anúncios e sem cadastro. Em português e inglês.
+  icon: /assets/images/apps/banana-math.png
+  url: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=en
+  url_pt: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=pt_BR
+  privacy: /policies/banana-math-privacy.html
 - name: Jungle School
   description: >-
     Free Roblox obby: run, jump and dodge through 24 stages where the wild
