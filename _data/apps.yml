@@ -60,6 +60,20 @@
   url: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=en
   url_pt: https://play.google.com/store/apps/details?id=josedihego.bananamath&hl=pt_BR
   privacy: /policies/banana-math-privacy.html
+- name: Unplugged
+  description: >-
+    Free Roblox adventure: The Algorithm's phones have blocked the world's
+    greatest art. Grab the Off Switch Hammer and rescue masterpieces like the
+    Mona Lisa, The Starry Night and The Great Wave, collect classical music
+    that gives you powers, and unplug THE ALGORITHM itself.
+  description_pt: >-
+    Aventura gratuita no Roblox: os celulares do Algoritmo bloquearam as
+    maiores obras de arte do mundo. Pegue o Martelo Desliga-Tudo e resgate
+    obras-primas como a Mona Lisa, A Noite Estrelada e A Grande Onda, colete
+    músicas clássicas que dão poderes e desligue O ALGORITMO.
+  icon: /assets/images/apps/unplugged.png
+  url: https://www.roblox.com/games/85344037670966/Unplugged
+  store: roblox
 - name: Jungle School
   description: >-
     Free Roblox obby: run, jump and dodge through 24 stages where the wild
