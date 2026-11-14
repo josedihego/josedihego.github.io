@@ -20,48 +20,39 @@ author_profile: true
   </div>
 </div>
 
-## Calendários acadêmicos 2026
+## Calendários acadêmicos
 
-Integrado: 2ª Retificação. Superior: 5ª Retificação.
-
-<div class="download-row">
-  <a class="download-btn" href="/assets/pdfs/integrado-2026.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Calendário Integrado 2026</a>
-  <a class="download-btn" href="/assets/pdfs/superior-2026.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Calendário Superior 2026</a>
+{% assign calendarios = "2026|integrado|Integrado|2ª Retificação;2026|superior|Superior|5ª Retificação;2027|integrado|Integrado|Resolução 01/2026;2027|superior|Superior|Resolução 01/2026" | split: ";" %}
+{% assign ano_atual = "" %}
+<div class="cal-list">
+{% for c in calendarios %}{% assign f = c | split: "|" %}{% assign pdf = "/assets/pdfs/" | append: f[1] | append: "-" | append: f[0] | append: ".pdf" %}
+  {% if f[0] != ano_atual %}<h3 class="cal-year">{{ f[0] }}</h3>{% assign ano_atual = f[0] %}{% endif %}
+  <details class="cal-item">
+    <summary>
+      <i class="fas fa-calendar-days" aria-hidden="true"></i>
+      <span class="cal-title">Calendário {{ f[2] }} {{ f[0] }}</span>
+      <span class="cal-note">{{ f[3] }}</span>
+      <i class="fas fa-chevron-down cal-chevron" aria-hidden="true"></i>
+    </summary>
+    <div class="cal-body">
+      <a class="download-btn" href="{{ pdf }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> Baixar PDF</a>
+      <object class="pdf-embed" data-src="{{ pdf }}#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600"></object>
+    </div>
+  </details>
+{% endfor %}
 </div>
 
-<div class="pdf-section">
-  <h3>Calendário Integrado 2026</h3>
-  <object class="pdf-embed" data="/assets/pdfs/integrado-2026.pdf#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600">
-    <p>Seu navegador não suporta visualização de PDF. <a href="/assets/pdfs/integrado-2026.pdf">Baixar PDF</a>.</p>
-  </object>
-</div>
-
-<div class="pdf-section">
-  <h3>Calendário Superior 2026</h3>
-  <object class="pdf-embed" data="/assets/pdfs/superior-2026.pdf#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600">
-    <p>Seu navegador não suporta visualização de PDF. <a href="/assets/pdfs/superior-2026.pdf">Baixar PDF</a>.</p>
-  </object>
-</div>
-
-## Calendários acadêmicos 2027
-
-Resolução 01/2026 do Conselho do Campus Salvador.
-
-<div class="download-row">
-  <a class="download-btn" href="/assets/pdfs/integrado-2027.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Calendário Integrado 2027</a>
-  <a class="download-btn" href="/assets/pdfs/superior-2027.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Calendário Superior 2027</a>
-</div>
-
-<div class="pdf-section">
-  <h3>Calendário Integrado 2027</h3>
-  <object class="pdf-embed" data="/assets/pdfs/integrado-2027.pdf#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600">
-    <p>Seu navegador não suporta visualização de PDF. <a href="/assets/pdfs/integrado-2027.pdf">Baixar PDF</a>.</p>
-  </object>
-</div>
-
-<div class="pdf-section">
-  <h3>Calendário Superior 2027</h3>
-  <object class="pdf-embed" data="/assets/pdfs/superior-2027.pdf#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600">
-    <p>Seu navegador não suporta visualização de PDF. <a href="/assets/pdfs/superior-2027.pdf">Baixar PDF</a>.</p>
-  </object>
-</div>
+<script>
+  // Load each PDF only when its calendar is opened
+  document.querySelectorAll('.cal-item').forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      var o = d.querySelector('object[data-src]');
+      if (d.open && o) {
+        var n = o.cloneNode(false);
+        n.removeAttribute('data-src');
+        n.setAttribute('data', o.dataset.src);
+        o.replaceWith(n);
+      }
+    });
+  });
+</script>

@@ -638,6 +638,79 @@
   filter: brightness(1.1);
 }
 
+/* Schedule: collapsible calendars, PDF shown on open */
+.page__content h3.cal-year {
+  margin: 1em 0 0.2em;
+  font-size: 1em;
+  color: var(--c-muted);
+}
+
+.cal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.page__content details.cal-item {
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  background: var(--c-surface);
+}
+
+.page__content details.cal-item[open] {
+  border-color: var(--c-accent);
+}
+
+.cal-item summary {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.7em 1em;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.95em;
+}
+
+.cal-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.cal-item summary:hover {
+  background: var(--c-surface-hover);
+  border-radius: 10px;
+}
+
+.cal-item summary > .fa-calendar-days {
+  color: var(--c-accent);
+}
+
+.cal-title {
+  font-weight: 600;
+}
+
+.cal-note {
+  color: var(--c-muted);
+  font-size: 0.85em;
+}
+
+.cal-chevron {
+  margin-left: auto;
+  color: var(--c-muted);
+  transition: transform 0.2s;
+}
+
+.cal-item[open] .cal-chevron {
+  transform: rotate(180deg);
+}
+
+.cal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7em;
+  padding: 0 1em 1em;
+}
+
 /* About one A4 page tall; the viewer fits the whole page (#view=Fit) and the rest scrolls */
 .pdf-embed {
   width: 100%;
@@ -648,14 +721,14 @@
   border-radius: 10px;
 }
 
-/* Phones: single-column grids; hide inline PDFs (mobile browsers can't embed them, the buttons remain) */
+/* Phones: single-column grids; hide inline PDFs (mobile browsers can't embed them, the download button remains) */
 @media (max-width: 500px) {
   .course-grid,
   .info-grid {
     grid-template-columns: 1fr;
   }
 
-  .pdf-section {
+  .cal-item .pdf-embed {
     display: none;
   }
 }
