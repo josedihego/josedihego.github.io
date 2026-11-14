@@ -36,7 +36,7 @@ author_profile: true
     </summary>
     <div class="cal-body">
       <a class="download-btn" href="{{ pdf }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> Baixar PDF</a>
-      <object class="pdf-embed" data-src="{{ pdf }}#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="600"></object>
+      <object class="pdf-embed" data-src="{{ pdf }}#page=1&view=Fit&zoom=page-fit" type="application/pdf" width="100%" height="500"></object>
     </div>
   </details>
 {% endfor %}
