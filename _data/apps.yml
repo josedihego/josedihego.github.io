@@ -3,6 +3,7 @@
 # url / url_pt: the Play listing in English and in Portuguese (Brazil).
 # privacy: the policy page; the home page links to its #en-GB or #pt-BR part.
 # store: "roblox" for a Roblox game, "web" for a web app; Google Play when left out.
+# web: the web version of an app that is also on Google Play (shown as a second link).
 - name: Gennaro
   description: >-
     Free picture communication (AAC) app for children who communicate with
@@ -38,15 +39,18 @@
     Free hourly word wall of Brazilian news: the people, places, organisations
     and topics most mentioned by the main outlets in the last 6 hours, 24 hours
     or 7 days. Each headline links to the original article. No ads, no
-    accounts, open data pipeline. Portuguese (Brazil).
+    accounts, open data pipeline. Android and web. Portuguese (Brazil).
   description_pt: >-
     Mural gratuito, atualizado a cada hora, com as palavras mais presentes no
     noticiário brasileiro: pessoas, lugares, organizações e temas citados pelos
     principais veículos nas últimas 6 horas, 24 horas ou 7 dias. Cada manchete
     leva à matéria original. Sem anúncios, sem cadastro e com dados abertos.
+    Para Android e na web.
   icon: /assets/images/apps/mundo-compacto.png
-  url: https://mundo.josedihego.net/
-  store: web
+  url: https://play.google.com/store/apps/details?id=br.mundocompacto.mundo_compacto&hl=en
+  url_pt: https://play.google.com/store/apps/details?id=br.mundocompacto.mundo_compacto&hl=pt_BR
+  web: https://mundo.josedihego.net/
+  privacy: /policies/mundo-compacto-privacy.html
 - name: Banana Math
   description: >-
     Free maths app for children aged 6 to 11: they write each step of the

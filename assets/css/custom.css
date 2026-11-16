@@ -334,6 +334,20 @@
   font-size: 1em;
 }
 
+/* Apps on both Google Play and the web: each store label is its own link,
+   above the card-wide link. */
+.page__content .app-card a.app-store {
+  position: relative;
+  z-index: 1;
+  font-size: 0.8em;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.page__content .app-card a.app-store:hover {
+  text-decoration: underline;
+}
+
 /* Above the card-wide link, so it opens the policy instead. */
 .page__content .app-card a.app-privacy {
   position: relative;
