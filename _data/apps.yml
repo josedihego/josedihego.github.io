@@ -51,6 +51,22 @@
   url_pt: https://play.google.com/store/apps/details?id=br.mundocompacto.mundo_compacto&hl=pt_BR
   web: https://mundo.josedihego.net/
   privacy: /policies/mundo-compacto-privacy.html
+- name: Raio-X do município
+  description: >-
+    Free website with a page for each of Brazil's 5,571 municipalities:
+    population, health and education from open public data, each compared with
+    towns of similar size in the same region, with the source and year of every
+    number. Compare cities, states or regions side by side. No ranking, no ads,
+    no tracking. Portuguese (Brazil).
+  description_pt: >-
+    Site gratuito com uma página para cada um dos 5.571 municípios do Brasil:
+    população, saúde e educação a partir de dados públicos abertos, comparadas
+    com cidades de tamanho parecido da mesma região, com a fonte e o ano de cada
+    número. Compare cidades, estados ou regiões lado a lado. Sem ranking, sem
+    anúncios e sem rastreamento.
+  icon: /assets/images/apps/raio-x.png
+  url: https://cidades.josedihego.net/
+  store: web
 - name: Banana Math
   description: >-
     Free maths app for children aged 6 to 11: they write each step of the
